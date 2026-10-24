@@ -57,6 +57,8 @@ The client and server split the work. The server owns the truth; the client owns
 - Learning this is also learning [JavaScript](runtimes/javascript.md), because it won by shipping in the only browser that mattered, not by design.
 - Learning this is also learning [forces](forces.md#distribution-and-platform-power), because whoever controls the path to users decides what you have to build.
 - Learning this is also learning [consistency](data/consistency.md), because the double booking was two copies of the truth disagreeing, the same problem Maya met with read replicas on [page 8](08-too-many-users-too-much-data.md).
+- Learning this is also learning [round trips](latency/round-trips.md), because every page reload was a round trip, and Ajax was a way to make fewer and smaller ones.
+- Learning this is also learning [state machines](dsa/state-machines.md), because a booking is free, held or booked, and the double booking was a move the server should never have allowed.
 
 ## Resources
 
