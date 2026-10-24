@@ -185,7 +185,7 @@ The aim of the stories is to make great engineers feel human: the reader should 
 
 ## 10. Decisions (resolved 2026-09-15)
 
-1. **The model on each page is accumulated.** Every spine page ends with the full model to that point, the new sentences marked. The duplication is accepted for the reading experience; edits to a sentence are made on its page, in `the-model.md`, and in every later page's copy, in one change.
+1. **The model on each page is accumulated.** Every spine page ends with the full model to that point, the new sentences marked. The duplication is accepted for the reading experience; edits to a sentence are made on its page, in `the-model.md`, and in every later page's copy, in one change. `scripts/check_model.py` checks that every copy, including section 4 of this spec, matches `the-model.md`, and that each page bolds only its own sentence.
 2. **"Go and look" prompts are in.** One optional line per page, no answers, no checks.
 3. **No personal trails in the repo.** Progress is a local, gitignored checklist (section 9).
 

@@ -62,6 +62,6 @@ The dots are the hubs: families of ideas every few pages come back to. Each fami
 
 ## Contributing
 
-Anyone may edit. The design is in [SPEC.md](SPEC.md). Changes to the model need review from one other person, because the model is what everyone carries. Every page has a `Last reviewed` date, because this wiki drifts too.
+Anyone may edit. The design is in [SPEC.md](SPEC.md). Changes to the model need review from one other person, because the model is what everyone carries. The model is copied onto every spine page, so after editing a sentence, run `python3 scripts/check_model.py` to find any copy you missed. Every page has a `Last reviewed` date, because this wiki drifts too.
 
 To track your own reading, keep a `progress.md` in your clone. It's gitignored, so the repo tracks no one's progress.
