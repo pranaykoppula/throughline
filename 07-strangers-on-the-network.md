@@ -59,6 +59,7 @@ Once strangers can reach a system, every boundary is a question of who is asking
 - Learning this is also learning [hashing](dsa/hashing.md), because the one-way fingerprint that hides Marcus's passwords also finds Elena's parts ([page 3](03-programs-too-big-for-one-head.md)), spreads Maya's data across machines ([page 8](08-too-many-users-too-much-data.md)), and names every git commit ([page 10](10-many-people-one-codebase.md)).
 - Learning this is also learning [input validation](auth/input-validation.md), because Marcus's search box, Hannah's browser ([page 6](06-anyone-can-publish.md)) and Nadia's support assistant ([page 12](12-machines-that-learn-from-data.md)) all needed the same rule: input from outside is data, never instructions.
 - Learning this is also learning [least privilege](auth/least-privilege.md), because Marcus's database account could delete everything and only needed to read products and write orders.
+- Learning this is also learning [TLS](auth/tls.md), because a password checked carefully on the server is no use if it crossed the internet in plain text to get there.
 
 ## Resources
 

@@ -60,6 +60,7 @@ Machines are rented by the unit, so cost is a live design variable: every archit
 - Learning this is also learning [profiling](tooling/profiling.md), because Tariq expected compute at the top of the bill and found data transfer: a bill is a profile of where the money goes.
 - Learning this is also learning [abstraction](03-programs-too-big-for-one-head.md), because a virtual machine hides the hardware but not the neighbours sharing it.
 - Learning this is also learning [caching](latency/caching.md), because caching popular lessons near students is what made the data-transfer line shrink.
+- Learning this is also learning [data gravity](data/data-gravity.md), because two petabytes in one provider is what made leaving so expensive, and why the schools stayed with Tariq.
 
 ## Resources
 
