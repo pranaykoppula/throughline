@@ -143,6 +143,23 @@ Sections in order. Lengths are limits, not targets; omit what a topic doesn't ha
 | **Go and look** | 1 line, optional | An invitation to find the subject in something you've built ("trace a request; count the round trips"). No answer, no check |
 | **The model so far** | The cumulative text | Full model to this point, this page's addition marked |
 
+### 7.1 Concept page shape
+
+Branch pages in the family folders (section 3.3) are shorter, and exist for one section: **Where it shows up**.
+
+| Section | Length | Notes |
+| --- | --- | --- |
+| **Problem** | 2–3 sentences | |
+| **The story** | Short | Same voice as the spine: third person limited, past tense, fiction labelled as such |
+| **Where it shows up** | A table | Every spine page that uses the concept, the job it does there, and one line on how. Then other places it appears. Then what the jobs have in common, and what separates them |
+| **It really happened** | 1–3 short cases | Primary sources |
+| **What it is** | 1 paragraph | Precise |
+| **Where it gets misapplied** | 1–4 items | Include the mirror |
+| **Connections** | 1 line each | To other concept pages, as specific as on the spine |
+| **Resources**, **Names you'll hear**, **Go and look** | As on the spine | |
+
+No model section: concept pages don't add to the model. `dsa/hashing.md` is the sample.
+
 ## 8. Voice
 
 Blunt and honest, plain sentences, no hype.
