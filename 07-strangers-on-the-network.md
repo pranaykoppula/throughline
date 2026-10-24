@@ -60,6 +60,7 @@ Once strangers can reach a system, every boundary is a question of who is asking
 - Learning this is also learning [input validation](auth/input-validation.md), because Marcus's search box, Hannah's browser ([page 6](06-anyone-can-publish.md)) and Nadia's support assistant ([page 12](12-machines-that-learn-from-data.md)) all needed the same rule: input from outside is data, never instructions.
 - Learning this is also learning [least privilege](auth/least-privilege.md), because Marcus's database account could delete everything and only needed to read products and write orders.
 - Learning this is also learning [TLS](auth/tls.md), because a password checked carefully on the server is no use if it crossed the internet in plain text to get there.
+- Learning this is also learning [password storage](auth/password-storage.md), because Marcus upgraded each password at its owner's next login, and the accounts nobody logs into stay weak until someone wraps them.
 
 ## Resources
 
