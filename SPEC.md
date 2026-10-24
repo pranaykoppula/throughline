@@ -24,7 +24,7 @@ It is a launchpad, not a curriculum. It gives general mental models and the star
 8. **Nothing is permanent.** Dependencies, data, prices, requirements, and reasons drift (the kinds are listed in appendix B). Maintenance is most of the job, and the wiki itself is subject to the same rule.
 9. **Blunt and honest.** See section 8.
 10. **Stack-agnostic.** General models transfer. The wiki names no employer or product; concreteness comes from cases with a primary source, not from a private system nobody else can check.
-11. **Short.** A page is at most a screen of prose. Most sections are one to three lines, and sections a topic doesn't need are omitted rather than padded.
+11. **Short, except the story.** The story gets the length it needs to put the reader in someone's shoes. Everything else on a page is at most a screen; most sections are one to three lines, and sections a topic doesn't need are omitted rather than padded.
 
 ## 3. Structure
 
@@ -130,12 +130,13 @@ Sections in order. Lengths are limits, not targets; omit what a topic doesn't ha
 | Section | Length | Notes |
 | --- | --- | --- |
 | **Problem** | 2–3 sentences | The limit that was hit |
-| **What survived** | 1 paragraph | The solution, cursory; the abstraction, precise |
+| **The story** | As long as it needs | Third person. Someone faces the problem without knowing the answer, or with only a vague idea. They make reasonable calls, at least one well-considered decision causes a new problem, and they go back to the drawing board until they reach a solution with staying power. Show the confusion, the guesses, and the people they ask. May be fiction, labelled as such; may be real. One or two "before reading on" pauses that ask the reader what they'd try |
+| **It really happened** | 1–2 short cases | When the story is fiction, the real case it mirrors, with primary sources, so the reader sees that their reasoning matched what real engineers did. Say which way the case moved on control vs ease |
+| **What survived** | 1 paragraph | The abstraction the story earned, stated precisely |
 | **Why it happened** | 1–3 items | "X exists because…", with a source each; may say "honestly: partly luck"; often absent |
 | **Where it lives today** | 1–2 lines | Concrete, but grounded in a documented public system, not a private one |
 | **Where it gets misapplied** | 1–3 items | With sources; include the mirror pitfall when it applies |
 | **Open, as of writing** | 1–2 lines | Only for a problem not yet closed: genuinely unsettled questions, dated. Framed as a question, not an answer. Usually absent — most pages describe a problem that's already been solved |
-| **Questions engineers have answered** | 1–2 cases | Question first, then the story in three beats: the decision and why it was reasonable; what it caused, and why nobody saw it (or reasonably didn't); the rethink, saying what was kept, what was replaced, and which limit moved. Then the primary source. Say which way the case moved on control vs ease and why |
 | **Connections** | 1 line each | "Learning this is also learning X, because Y." Dangling links allowed |
 | **Resources** | 3–5 | Ordered start-here → go-deeper → reference. Prefer free, durable, primary |
 | **Names you'll hear** | 1 line each | Only where jargon is a person's name or a historical accident. Usually absent |
@@ -145,6 +146,8 @@ Sections in order. Lengths are limits, not targets; omit what a topic doesn't ha
 ## 8. Voice
 
 Blunt and honest, plain sentences, no hype.
+
+The aim of the stories is to make great engineers feel human: the reader should finish a page believing they could have got there themselves. So the people in them are uncertain, guess, get things wrong for good reasons, ask for help, and recover. Nobody is a genius and nobody is a fool.
 
 - Say when a winner won by luck or timing. Don't invent a rationale afterwards.
 - Distinguish the reported reason from the likely reason. Engineering blogs are marketing; postmortems are edited; talks flatter the speaker. Link them anyway and say so.

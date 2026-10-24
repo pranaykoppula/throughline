@@ -6,77 +6,83 @@ Links marked with an HTML `verify` comment haven't been checked against the live
 
 ## Problem
 
-One machine holds only so much data and answers only so many requests. Past that point a bigger machine stops being the answer: the biggest one costs more than it's worth or doesn't exist, and when it fails, everything fails with it.
+One machine holds only so much data and answers only so many requests. Past that point a bigger machine stops being the answer: the biggest one costs more than it's worth, and when it fails, everything fails with it.
+
+## The story
+
+Maya is the second engineer at Crux, a small app where climbers post the routes they've done and follow each other. It runs on one web server and one database, and for two years that has been fine.
+
+Then a gym chain partners with them, and the app gets busy in the evenings. Every night around seven, pages start taking three seconds to load. Maya looks at the database server. The processor is at 95%, and almost all of the work is reads: people scrolling, not posting.
+
+She has a vague sense that "real" companies spread their data across many machines, and no idea how. She does know what a bigger server costs. She upgrades to one with twice the cores, which takes an afternoon and can be undone if it doesn't help. The evenings go quiet. It's not clever, and it's the right call: it buys eight months for the price of a bill.
+
+Eight months later it's seven o'clock again, and the next size up costs twice as much for a third more speed. Maya counts the queries: about fifty reads for every write. If most of the work is reading, she reasons, the data doesn't all have to be read from one place. She sets up two **copies** of the database that follow the main one and only answer reads. All writes still go to the main database. Load drops by two thirds. She feels like she's finally doing real engineering.
+
+A week later a support email arrives: *"I posted my send of the Nose and it vanished. Then it came back a minute later. Is my account broken?"* Maya can't reproduce it. She tries for an hour and her posts appear every time. Then she adds logging and sees it: the user's post went to the main database, and the very next page load, a fifth of a second later, read from a copy that hadn't caught up yet. On her laptop, everything happens in one place, so the copies never fall behind.
+
+Nobody told her copies disagree. Now she knows: for a while after every write, the copies hold different versions of the truth. She can't make that go away, but she can decide who notices. For a few seconds after someone posts, she sends that person's reads to the main database. Everyone else can wait for the copies. She writes it down for the team in two lines: *you always see your own posts straight away; other people see them within a second or so.* She doesn't know it has a name. She has just written a consistency model.
+
+Then the home feed gets slow. Every time someone opens the app, the database finds everyone they follow, gathers those people's recent posts, sorts them by time, and returns the top fifty. A climber following five hundred people means a lot of gathering, every single time, for a screen they'll glance at for four seconds.
+
+*Before reading on: the feed is read every time someone opens the app, and only changes when someone posts. Where would you move the work?*
+
+Maya gets there on a walk home. If the feed is read a hundred times for each time it changes, build it when it changes. When someone posts, add the post's ID to a ready-made feed list for each of their followers, kept in fast memory. Opening the app becomes a single lookup. The average user has two hundred followers, so a post costs two hundred small writes, which is nothing. She builds it over two weeks. Feed loads drop from 800 milliseconds to 30. It's a well-reasoned decision, and it's right.
+
+In the spring, the world bouldering champion joins Crux. Within a week she has 1.8 million followers. Her first post triggers 1.8 million writes into the feed system. The job queue backs up behind it. For forty minutes, nobody's feed updates. People see replies to her post before the post itself. Her like counter, one row updated thousands of times a second, locks up the database on its own.
+
+It's a bad night, and Maya didn't do anything wrong. She designed for the average user, and the world sent her the edge case. The temptation the next morning is to rip out the precomputed feeds and go back. But they work for 99.99% of accounts. The problem isn't the design. It's that one kind of account doesn't fit it.
+
+Maya calls Sam, who used to work at a much bigger company, and asks the question that matters: *what's different about the accounts that break it?* There are maybe a hundred of them, each with hundreds of thousands of followers. So Maya treats them differently. Their posts don't get copied into anyone's feed. Instead, when you open the app, it takes your ready-made feed and merges in recent posts from the handful of huge accounts you follow. Reads do slightly more work, but it's bounded: nobody follows a thousand celebrities. For the like counter, Sam's advice is to stop counting exactly. Count in ten separate rows and add them up when the post is shown. Nobody can tell 41,203 likes from 41,210.
+
+The hybrid ships in a week. The champion posts again. Nothing happens, which is the point.
+
+Looking back, Maya didn't invent anything. She bought a bigger machine until that stopped making sense. She made **copies** and decided what to promise while they disagree. She **precomputed** what was read far more than it was written. She **approximated** where exactness cost too much. And she shaped the design around the real distribution of her users instead of the average one. A year from now, when writes outgrow the main database too, she'll **split** the data across machines, and that will be another story. Each step was a reasonable guess that worked until it met something she couldn't have seen from where she stood.
+
+## It really happened
+
+The Crux story is made up. Twitter's isn't. In 2012 Twitter's timelines were read about 300,000 times a second against about 6,000 new tweets, and they built home timelines exactly as Maya did: each tweet copied into every follower's timeline in memory. A tweet from an account with 31 million followers could take up to five minutes to reach all of them. The talk describes the same rethink: keep copying for most accounts, and move work to read time for the biggest ones. Nobody at Twitter knew that answer before they needed it. They got there the way Maya did.
+
+Sources: Raffi Krikorian, ["Timelines at Scale"](https://www.infoq.com/presentations/Twitter-Timeline-Scalability/), QCon San Francisco 2012, and a [written summary](https://highscalability.com/the-architecture-twitter-uses-to-deal-with-150m-active-users/). It's a company describing itself; the numbers are theirs.
+
+Amazon made the opposite choice about copies, on purpose. Their Dynamo store accepts every write to a shopping cart even when the copies can't reach each other, because a cart you can't add to is a lost sale. The cost is in the paper in plain words: when copies are merged, an item you deleted can come back. Then came a surprise nobody designed for. Dynamo was hard to run, and most of Amazon's own engineers chose simpler managed services instead, so it came back years later as DynamoDB, run for them ([the paper](https://www.allthingsdistributed.com/2007/10/amazons_dynamo.html); [Vogels, 2012](https://www.allthingsdistributed.com/2012/01/amazon-dynamodb.html) <!-- verify -->, a launch post that explains the past in a way that sells the product).
 
 ## What survived
 
-The first answer was the obvious one: buy a bigger machine. It works until it doesn't, and it's still the right first answer more often than people admit. Next came **copies**. Put replicas of the data on other machines and spread the reads across them. That holds until someone writes something, reads it back from a replica that hasn't caught up, and sees their own change missing. Copies disagree for a while, and the disagreement becomes a design problem. When writes outgrow one machine, the data gets **split**: each machine owns a slice (sharding). Now a question that touches every slice is a round trip to every machine, and moving a slice is a migration. When reads are still too slow, the work moves earlier: **precompute** the answer at write time so a read is a lookup. That trades write cost and staleness for read speed. And when an exact answer costs too much, **approximate** it. Nobody needs a view count to the last digit.
-
-What survives is precise: once data lives in more than one place, the copies will disagree, and every design has to say what it promises while they do. When the network splits, a system can stay available and accept answers that might be stale, or stay consistent and refuse some requests. It can't do both (the CAP theorem's honest form). Everything else on this page is a choice of where that disagreement goes and who notices it.
-
-## Why it happened
-
-- Cheap commodity machines got cheaper faster than big ones, so many small ones beat one large one on cost long before they beat it on simplicity ([1](01-one-machine-one-program.md)).
-- Users came to expect a feed that is instant and personal. That pulled precomputation out of batch jobs and into the request path ([forces: user expectation](forces.md#user-expectation-ratchets)).
-
-## Where it lives today
-
-Replicated databases with read replicas are standard in every managed database service. The Dynamo paper's design (below) was carried into open-source stores such as Cassandra and Riak. Every CDN is precomputation by geography.
+Once data lives in more than one place, the copies will disagree, and every design has to say what it promises while they do. When the network between copies breaks, a system can keep answering and risk stale answers, or stay correct and refuse some requests; it can't do both. Copies spread reads; splits spread writes; precomputing moves work from read time to write time; approximating trades exactness for cost. Design for the distribution you have, including its tail, not its average.
 
 ## Where it gets misapplied
 
-- **Microservices before the team or the load exists.** Segment split its system into many services, then folded them back into one when the running cost outgrew the benefit ([InfoQ on the talk "To Microservices and Back Again"](https://www.infoq.com/news/2020/04/microservices-back-again/)). Prime Video's monitoring team [reported cutting costs by over 90%](https://www.primevideotech.com/video-streaming/scaling-up-the-prime-video-audio-video-monitoring-service-and-reducing-costs-by-90) by consolidating a distributed pipeline. <!-- verify --> It was widely read as "microservices are dead"; [others pointed out](https://www.catchpoint.com/blog/debunking-misconceptions-amazon-prime-videos-approach-to-microservices-and-serverless) it was one service redesigned for cost. Both are true.
-- **Sharding a database that fits on one machine.** Copying the architecture of a company a thousand times your size buys their problems without their reasons ([You Are Not Google](https://blog.bradfieldcs.com/you-are-not-google-84912cf44afb)). <!-- verify -->
-- **The mirror:** never planning for it. When the one machine is genuinely full, the worst time to learn sharding is during the outage. Know which limit you'll hit first, and roughly when.
-
-## Questions engineers have answered
-
-**How do you build a home timeline for hundreds of millions of people?**
-
-*The decision.* Twitter's timelines were read far more often than tweets were written: about 300,000 timeline reads a second against about 6,000 tweets, by the figures in a 2012 talk. So they did the work at write time. When you tweet, your tweet's ID is inserted into the in-memory timeline of every one of your followers, and reading a timeline becomes a single lookup. With reads fifty times more common than writes, that's the right call.
-
-*What it caused.* The cost of a tweet became proportional to the number of followers. Most accounts have a few hundred. A few have tens of millions, and the talk describes a tweet from an account with 31 million followers taking up to five minutes to reach all of them. The average load was fine. The tail broke it.
-
-*The rethink.* They didn't throw the design away. For most accounts, fan-out at write time stayed. For accounts with huge followings, the talk describes moving work to read time: their tweets are merged in when you load your timeline. The limit that moved was the shape of the follower distribution, not the total load. Ladder: down, a hand-built timeline service at a scale where nothing on sale would do.
-
-Sources: Raffi Krikorian, ["Timelines at Scale"](https://www.infoq.com/presentations/Twitter-Timeline-Scalability/), QCon San Francisco 2012; a [written summary](https://highscalability.com/the-architecture-twitter-uses-to-deal-with-150m-active-users/) at High Scalability. A talk is the company describing itself; the numbers are theirs.
-
-**What should a shopping cart do when the network splits?**
-
-*The decision.* Amazon judged that a cart you can't add to is a lost sale. Their Dynamo store was built to accept every write, even when replicas couldn't reach each other, and to reconcile the versions later. It chose availability over consistency, on purpose and in writing.
-
-*What it caused.* Two of them, and only one was in the design. The expected one: when versions conflict, the application has to merge them, and for a cart the merge keeps everything. An added item is never lost, but a deleted item can come back. The paper says so plainly. The unexpected one: Dynamo was hard to run. By Amazon's own later account, it was used for core services, but most of its engineers chose simpler managed stores instead because they didn't want to operate it.
-
-*The rethink.* The design was kept and the operating was handed over. DynamoDB, launched in 2012, offered Dynamo's scaling as a managed service and added choices Dynamo hadn't offered, such as strongly consistent reads. Ladder: Dynamo moved down for control; DynamoDB moved back up for ease, because the cost that bound turned out to be people's time, not the machines.
-
-Sources: DeCandia et al., ["Dynamo: Amazon's Highly Available Key-value Store"](https://www.allthingsdistributed.com/2007/10/amazons_dynamo.html) (SOSP 2007); Werner Vogels, ["Amazon DynamoDB"](https://www.allthingsdistributed.com/2012/01/amazon-dynamodb.html) (2012). <!-- verify --> The second is a launch post; it explains the past in a way that sells the product.
+- **Microservices before the team or the load exists.** Segment split its system into many services, then folded them back into one when the running cost outgrew the benefit ([InfoQ on "To Microservices and Back Again"](https://www.infoq.com/news/2020/04/microservices-back-again/)). Prime Video's monitoring team [reported cutting costs by over 90%](https://www.primevideotech.com/video-streaming/scaling-up-the-prime-video-audio-video-monitoring-service-and-reducing-costs-by-90) <!-- verify --> by consolidating; [others pointed out](https://www.catchpoint.com/blog/debunking-misconceptions-amazon-prime-videos-approach-to-microservices-and-serverless) it was one service redesigned for cost, not a verdict on microservices.
+- **Sharding a database that fits on one machine.** Copying a company a thousand times your size buys their problems without their reasons ([You Are Not Google](https://blog.bradfieldcs.com/you-are-not-google-84912cf44afb)). <!-- verify --> Maya's bigger server was the right first move.
+- **The mirror:** never planning for it. The worst time to learn sharding is during the outage. Know which limit you'll hit first, and roughly when.
 
 ## Connections
 
 - Learning this is also learning [data](data.md), because every copy is a second version of the truth and someone has to decide which one wins.
-- Learning this is also learning [databases](04-data-outlives-programs.md), because replication and sharding are just indexes and transactions stretched across machines.
-- Learning this is also learning [latency](latency.md) and [cost](cost.md), because fast and cheap are the same fight: precomputing spends money at write time to save time at read time.
-- Learning this is also learning [the web](06-anyone-can-publish.md), because the feed is an interface expectation that rebuilt the backend.
-- Learning this is also learning [math](math.md), because the timeline broke on the tail of a distribution, not its average.
+- Learning this is also learning [databases](04-data-outlives-programs.md), because replication and sharding are indexes and transactions stretched across machines.
+- Learning this is also learning [latency](latency.md) and [cost](cost.md), because precomputing spends money at write time to save time at read time.
+- Learning this is also learning [the web](06-anyone-can-publish.md), because the feed is an interface expectation that rebuilt the backend ([forces](forces.md#user-expectation-ratchets)).
+- Learning this is also learning [math](math.md), because the design broke on the tail of a distribution, not its average.
 
 ## Resources
 
-1. Raffi Krikorian, ["Timelines at Scale"](https://www.infoq.com/presentations/Twitter-Timeline-Scalability/) (start here: 40 minutes, one system, real numbers).
-2. Martin Kleppmann, [*Designing Data-Intensive Applications*](https://dataintensive.net/), chapters 5 to 9: replication, partitioning, transactions, and consistency. The best single book on this page.
+1. Raffi Krikorian, ["Timelines at Scale"](https://www.infoq.com/presentations/Twitter-Timeline-Scalability/) (start here: 40 minutes, Maya's story with real numbers).
+2. Martin Kleppmann, [*Designing Data-Intensive Applications*](https://dataintensive.net/), chapters 5 to 9: replication, partitioning, transactions, consistency.
 3. [The Dynamo paper](https://www.allthingsdistributed.com/2007/10/amazons_dynamo.html) (go deeper: readable, and honest about what it gives up).
-4. Eric Brewer, ["CAP Twelve Years Later: How the 'Rules' Have Changed"](https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed/): the theorem's author on how it's misread. <!-- verify -->
-5. [Jepsen analyses](https://jepsen.io/analyses) (reference: what real databases do when the network splits, as opposed to what they claim). <!-- verify -->
+4. Eric Brewer, ["CAP Twelve Years Later"](https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed/): the theorem's author on how it gets misread. <!-- verify -->
+5. [Jepsen analyses](https://jepsen.io/analyses) (reference: what real databases do when the network breaks, as opposed to what they claim). <!-- verify -->
 
 ## Names you'll hear
 
-- **CAP:** Eric Brewer's conjecture, later proven: when the network splits, a system has to choose between consistency and availability (formally proven in 2002 by Gilbert and Lynch).
-- **Paxos** (Leslie Lamport) and **Raft:** ways for copies to agree. Raft was designed to be easier to understand than Paxos, and [it is](https://raft.github.io/). <!-- verify -->
-- **Lamport clocks:** ordering events without trusting anyone's wall clock.
+- **Read-your-writes:** the promise Maya wrote down without knowing its name.
+- **Fan-out on write / fan-out on read:** building feeds when posts arrive, or when feeds are opened.
+- **CAP** (Eric Brewer): when the network splits, a system chooses between consistency and availability. Proven formally in 2002 by Gilbert and Lynch.
+- **Paxos** (Leslie Lamport) and **Raft:** ways for copies to agree. Raft was designed to be easier to understand, and [it is](https://raft.github.io/). <!-- verify -->
 - **Eventual consistency:** if writes stop, the copies will eventually agree. It promises nothing about when.
 
 ## Go and look
 
-Find something precomputed for the first screen in a system you use, and something loaded lazily beside it. That split is fan-out-on-write in miniature.
+Find something precomputed for the first screen in an app you use, and something loaded lazily beside it. That split is Maya's hybrid in miniature.
 
 ## The model so far
 
