@@ -55,9 +55,9 @@ A codebase built by many people over time is a system in its own right. Its hist
 
 ## Connections
 
-- Learning this is also learning [Merkle DAGs](dsa/merkle-dags.md), because git is a content-addressed graph of commits, where each one is named by the hash of what it contains.
+- Learning this is also learning [Merkle DAGs](dsa/merkle-dags.md), because git is a content-addressed graph of commits, where each one is named by the hash of what it contains. It's the same [hashing](dsa/hashing.md) that hid Marcus's passwords, used for identity instead of secrecy.
 - Learning this is also learning [CI pipelines](tooling/ci.md), because the build server is where Sofia's rules lived, and each one shapes how your team works.
-- Learning this is also learning [code signing](auth/code-signing.md), because review and signed commits are controls on who can change what reaches users.
+- Learning this is also learning [least privilege](auth/least-privilege.md), because required review means no single person can put anything into the product alone.
 - Learning this is also learning [commit messages and design records](writing/commit-messages.md), because they're how the next person learns why.
 - Learning this is also learning [forces](forces.md#incentives-inside-the-org), because systems take the shape of the teams that build them.
 

@@ -61,8 +61,9 @@ Some transformations are learned from data rather than written, and they're only
 - Learning this is also learning [labels and training data](data/labels.md), because training data and context are the whole of what a model knows, and Nadia's mislabelled newsletters taught it the wrong thing.
 - Learning this is also learning [statistical significance](math/statistics.md), because "is this pattern real?" is a statistics question before it's an engineering one.
 - Learning this is also learning [tokens and context windows](ai/tokens.md), because tokens are the new round trip, and you pay for each one.
-- Learning this is also learning [prompt injection](ai/prompt-injection.md), because it's SQL injection at a new boundary, and it isn't solved.
+- Learning this is also learning [prompt injection](ai/prompt-injection.md), because it's SQL injection at a new boundary, and it isn't solved. The rule underneath is page 7's: [input from outside is data](auth/input-validation.md), never instructions.
 - Learning this is also learning [coding agents](tooling/coding-agents.md), because coding agents, Claude Code among them, are now one of the means on the ladder.
+- Learning this is also learning [least privilege](auth/least-privilege.md), because the fix for the $500 credit was the same as for Marcus's database account: give the model only the power it needs.
 
 ## Resources
 

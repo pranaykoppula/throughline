@@ -56,6 +56,7 @@ The client and server split the work. The server owns the truth; the client owns
 - Learning this is also learning [cursor pagination](data/pagination.md), because infinite feeds needed a way to page through data that changes underneath you, and page numbers couldn't do it.
 - Learning this is also learning [JavaScript](runtimes/javascript.md), because it won by shipping in the only browser that mattered, not by design.
 - Learning this is also learning [forces](forces.md#distribution-and-platform-power), because whoever controls the path to users decides what you have to build.
+- Learning this is also learning [consistency](data/consistency.md), because the double booking was two copies of the truth disagreeing, the same problem Maya met with read replicas on [page 8](08-too-many-users-too-much-data.md).
 
 ## Resources
 

@@ -70,6 +70,7 @@ None of this replaced what came before; every era still runs somewhere, and some
 - Learning this is also learning [migrations](data/migrations.md), because moving a running system's data without stopping it is the hardest part of Ines's piece-by-piece approach.
 - Learning this is also learning [pushback](pushback.md), because "what problem do we have today, measured?" is the question that would have saved Ines's first eighteen months.
 - Learning this is also learning [the forces](forces.md#switching-costs-and-lock-in), because lock-in, seen from the inside, is a migration nobody can afford.
+- Learning this is also learning [consistency](data/consistency.md), because running two systems side by side meant two versions of every night's payments, and the nightly comparison was how Ines decided which to trust.
 
 ## Resources
 

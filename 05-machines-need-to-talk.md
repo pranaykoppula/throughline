@@ -59,6 +59,7 @@ Data is rarely where it's needed, so it moves, and moving it is slow, unreliable
 - Learning this is also learning [round trips](latency/round-trips.md), because round trips, not bandwidth, decide how fast most things feel.
 - Learning this is also learning [serialization formats](data/serialization.md), because everything on the wire has to be turned into bytes in a format both sides agree on.
 - Learning this is also learning [deadlock](02-one-machine-many-programs.md), because congestion collapse is deadlock's cousin: every party behaving reasonably, and the whole stuck.
+- Learning this is also learning [queueing](latency/queueing.md), because a router's buffer is a queue, and congestion collapse is what happens when a queue overflows and everyone retries into it.
 
 ## Resources
 

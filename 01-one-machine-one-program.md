@@ -58,6 +58,9 @@ Memory is a hierarchy: a little fast storage near the processor, and ever larger
 - Learning this is also learning [arrays and linked lists](dsa/arrays-and-linked-lists.md), because an array that keeps its data together often beats a linked list that's better on paper, for exactly Joan's reason.
 - Learning this is also learning [cloud](09-buying-computers-is-too-slow.md), because a rented machine is still a machine with the same hierarchy, now with a network at the bottom.
 - Learning this is also learning [storage tiers](cost/storage-tiers.md), because fast storage is expensive storage at every level, and cloud pricing is the memory hierarchy with a price list.
+- Learning this is also learning [access patterns](data/access-patterns.md), because Joan's grid was fast or slow depending only on the order she touched it.
+- Learning this is also learning [profiling](tooling/profiling.md), because finding where the time goes comes before making anything faster, and on Joan's machine it went to the drum.
+- Learning this is also learning [abstraction](03-programs-too-big-for-one-head.md), because the one-level store hid where data lived but not what it cost, and every abstraction leaks the same way.
 
 ## Resources
 

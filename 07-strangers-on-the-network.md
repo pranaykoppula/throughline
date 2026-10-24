@@ -56,6 +56,9 @@ Once strangers can reach a system, every boundary is a question of who is asking
 - Learning this is also learning [AI](12-machines-that-learn-from-data.md), because prompt injection is Marcus's search box again: input from outside being treated as instructions.
 - Learning this is also learning [software supply chain](vendors/supply-chain.md), because every library you install is code from strangers you've decided to trust.
 - Learning this is also learning [the web](06-anyone-can-publish.md), because the client is a stranger's machine, and anything it sends can be forged.
+- Learning this is also learning [hashing](dsa/hashing.md), because the one-way fingerprint that hides Marcus's passwords also finds Elena's parts ([page 3](03-programs-too-big-for-one-head.md)), spreads Maya's data across machines ([page 8](08-too-many-users-too-much-data.md)), and names every git commit ([page 10](10-many-people-one-codebase.md)).
+- Learning this is also learning [input validation](auth/input-validation.md), because Marcus's search box, Hannah's browser ([page 6](06-anyone-can-publish.md)) and Nadia's support assistant ([page 12](12-machines-that-learn-from-data.md)) all needed the same rule: input from outside is data, never instructions.
+- Learning this is also learning [least privilege](auth/least-privilege.md), because Marcus's database account could delete everything and only needed to read products and write orders.
 
 ## Resources
 

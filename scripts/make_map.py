@@ -14,17 +14,17 @@ HUBS = {
 
 PAGES = [
     ("Representations", ["DSA"]),
-    ("One machine,|one program", ["DSA", "Latency", "Cost"]),
+    ("One machine,|one program", ["Data", "DSA", "Latency", "Cost"]),
     ("One machine,|many programs", ["DSA", "Latency"]),
-    ("Programs too big|for one head", ["DSA"]),
+    ("Programs too big|for one head", ["Data", "DSA"]),
     ("Data outlives|programs", ["Data", "DSA", "Trust", "Cost"]),
     ("Machines need|to talk", ["Data", "DSA", "Trust", "Latency"]),
     ("Anyone can|publish", ["Data", "Trust"]),
-    ("Strangers on|the network", ["Trust"]),
-    ("Too many users,|too much data", ["Data", "Latency"]),
+    ("Strangers on|the network", ["DSA", "Trust"]),
+    ("Too many users,|too much data", ["Data", "DSA", "Latency"]),
     ("Buying computers|is too slow", ["Trust", "Cost"]),
     ("Many people,|one codebase", ["DSA", "Trust"]),
-    ("Software that must|not go down", ["Cost"]),
+    ("Software that must|not go down", ["Latency", "Cost"]),
     ("Machines that learn|from data", ["Data", "Trust", "Latency", "Cost"]),
     ("Everything still|exists at once", list(HUBS)),
 ]
