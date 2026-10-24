@@ -61,6 +61,7 @@ Memory is a hierarchy: a little fast storage near the processor, and ever larger
 - Learning this is also learning [access patterns](data/access-patterns.md), because Joan's grid was fast or slow depending only on the order she touched it.
 - Learning this is also learning [profiling](tooling/profiling.md), because finding where the time goes comes before making anything faster, and on Joan's machine it went to the drum.
 - Learning this is also learning [abstraction](03-programs-too-big-for-one-head.md), because the one-level store hid where data lived but not what it cost, and every abstraction leaks the same way.
+- Learning this is also learning [caching](latency/caching.md), because core memory in front of the drum was the first cache, and every cache since is the same trade at a different scale.
 
 ## Resources
 

@@ -64,6 +64,7 @@ Some transformations are learned from data rather than written, and they're only
 - Learning this is also learning [prompt injection](ai/prompt-injection.md), because it's SQL injection at a new boundary, and it isn't solved. The rule underneath is page 7's: [input from outside is data](auth/input-validation.md), never instructions.
 - Learning this is also learning [coding agents](tooling/coding-agents.md), because coding agents, Claude Code among them, are now one of the means on the ladder.
 - Learning this is also learning [least privilege](auth/least-privilege.md), because the fix for the $500 credit was the same as for Marcus's database account: give the model only the power it needs.
+- Learning this is also learning [reading a cloud bill](cost/cloud-bills.md), because the assistant's token bill was a design decision wearing a price tag, like Tariq's data transfer.
 
 ## Resources
 

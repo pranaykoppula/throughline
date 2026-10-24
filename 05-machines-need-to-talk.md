@@ -60,6 +60,8 @@ Data is rarely where it's needed, so it moves, and moving it is slow, unreliable
 - Learning this is also learning [serialization formats](data/serialization.md), because everything on the wire has to be turned into bytes in a format both sides agree on.
 - Learning this is also learning [deadlock](02-one-machine-many-programs.md), because congestion collapse is deadlock's cousin: every party behaving reasonably, and the whole stuck.
 - Learning this is also learning [queueing](latency/queueing.md), because a router's buffer is a queue, and congestion collapse is what happens when a queue overflows and everyone retries into it.
+- Learning this is also learning [caching](latency/caching.md), because Netflix's servers inside internet providers are copies placed near viewers, the cheapest round trip being the one you don't make.
+- Learning this is also learning [latency numbers](latency/latency-numbers.md), because a round trip across a continent costs about a million times a memory read, and Lin's transfer was mostly that.
 
 ## Resources
 

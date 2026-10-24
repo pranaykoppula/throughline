@@ -59,6 +59,7 @@ Machines are rented by the unit, so cost is a live design variable: every archit
 - Learning this is also learning [VM provisioning](cloud/vm-provisioning.md), because starting a machine from a web page hides a lot of work you'll eventually need to understand.
 - Learning this is also learning [profiling](tooling/profiling.md), because Tariq expected compute at the top of the bill and found data transfer: a bill is a profile of where the money goes.
 - Learning this is also learning [abstraction](03-programs-too-big-for-one-head.md), because a virtual machine hides the hardware but not the neighbours sharing it.
+- Learning this is also learning [caching](latency/caching.md), because caching popular lessons near students is what made the data-transfer line shrink.
 
 ## Resources
 
