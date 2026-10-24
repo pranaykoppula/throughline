@@ -49,7 +49,7 @@ Fourteen problems, read in order, numbered 0–13. Each is one page.
 | 12 | Machines that learn from data | Learned transformations; inference as a round trip; trust at a new boundary |
 | 13 | Everything still exists at once | Adoption lag, path dependence, drift; judgment about which limit binds |
 
-Page 0 is a different kind of page from 1–13: it's a preface, not a problem an engineer hits while building. It doesn't get the full page shape (section 7) — just Problem, What survived, Names, Connections. Its job is to foreshadow, in one page, that every representation the wiki hands out from here on (decimal, bits, request/response, consistency models) is a choice with an edge the reader hasn't found yet, the same way naturals gave way to negatives, irrationals, and complex numbers, decimal gave way to binary in machines, and bits now have qubits beside them for some problems. It states this once and moves on; it does not re-teach it on every later page.
+Page 0 is a different kind of page from 1–13: it's a preface, not a problem an engineer hits while building. It doesn't get the full page shape (section 7). It gets Problem, a story told as a brief history through several short anecdotes rather than one person's journey, What survived, Names, Connections, Resources, and The model so far. Its job is to foreshadow, in one page, that every representation the wiki hands out from here on (decimal, bits, request/response, consistency models) is a choice with an edge the reader hasn't found yet, the same way naturals gave way to negatives, irrationals, and complex numbers, decimal gave way to binary in machines, and bits now have qubits beside them for some problems. It states this once and moves on; it does not re-teach it on every later page.
 
 ### 3.2 Reference pages
 
@@ -186,7 +186,7 @@ The aim of the stories is to make great engineers feel human: the reader should 
 The material the first version of each page is written from. Cases and pitfalls each need a primary source verified before landing. "Ladder" is the control-vs-ease direction the case moved. Connections are one-line edges; the "because" is written on the page.
 
 ### 0. Humans need representations before they need machines
-Reduced page shape only (Problem, What survived, Names, Connections) — see section 3.1. No Cases, Pitfalls, or Go and look; this page foreshadows, it doesn't argue a case.
+Reduced page shape (see section 3.1): the story is a brief history in anecdotes (debts and negative numbers, the diagonal, Bombelli's impossible step, ENIAC's decimal and EDVAC's binary, the Vancouver index and the Patriot clock, Gödel and Turing, qubits). No Pitfalls or Go and look; this page foreshadows, it doesn't argue a case.
 - **Names:** Gödel (incompleteness); Turing (the halting problem, the same limit reached again in computation).
 - **Connections:** → every later page, since each one hands out a representation past its edge · → DSA (Turing-completeness, page 3) · → the AI page (page 12, where the ground itself — the training data — is the thing that moves).
 
