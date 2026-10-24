@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" width="1200" height="560" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif">
+<rect width="1200" height="560" fill="#ffffff"/>
+<text x="50" y="52" font-size="22" font-weight="600" fill="#1f2328">The throughline</text>
+<text x="50" y="76" font-size="14" fill="#59636e">Read the stops in order. The dots are the hubs each page comes back to.</text>
+<path d="M 90.0 130 H 1050.0 A 115.0 115.0 0 0 1 1050.0 360 H 90.0" fill="none" stroke="#1f2328" stroke-width="6" stroke-linecap="round"/>
+<circle cx="90.0" cy="130" r="15" fill="#ffffff" stroke="#1f2328" stroke-width="4"/>
+<text x="90.0" y="135" font-size="13" font-weight="700" text-anchor="middle" fill="#1f2328">0</text>
+<text x="90.0" y="170" font-size="13" text-anchor="middle" fill="#1f2328">Representations</text>
+<circle cx="250.0" cy="130" r="15" fill="#ffffff" stroke="#1f2328" stroke-width="4"/>
+<text x="250.0" y="135" font-size="13" font-weight="700" text-anchor="middle" fill="#1f2328">1</text>
+<text x="250.0" y="170" font-size="13" text-anchor="middle" fill="#1f2328">One machine,</text>
+<text x="250.0" y="187" font-size="13" text-anchor="middle" fill="#1f2328">one program</text>
+<circle cx="236.0" cy="208" r="5" fill="#1baa7a"/>
+<circle cx="250.0" cy="208" r="5" fill="#e09a1a"/>
+<circle cx="264.0" cy="208" r="5" fill="#8a5cd6"/>
+<circle cx="410.0" cy="130" r="15" fill="#ffffff" stroke="#1f2328" stroke-width="4"/>
+<text x="410.0" y="135" font-size="13" font-weight="700" text-anchor="middle" fill="#1f2328">2</text>
+<text x="410.0" y="170" font-size="13" text-anchor="middle" fill="#1f2328">One machine,</text>
+<text x="410.0" y="187" font-size="13" text-anchor="middle" fill="#1f2328">many programs</text>
+<circle cx="403.0" cy="208" r="5" fill="#1baa7a"/>
+<circle cx="417.0" cy="208" r="5" fill="#e09a1a"/>
+<circle cx="570.0" cy="130" r="15" fill="#ffffff" stroke="#1f2328" stroke-width="4"/>
+<text x="570.0" y="135" font-size="13" font-weight="700" text-anchor="middle" fill="#1f2328">3</text>
+<text x="570.0" y="170" font-size="13" text-anchor="middle" fill="#1f2328">Programs too big</text>
+<text x="570.0" y="187" font-size="13" text-anchor="middle" fill="#1f2328">for one head</text>
+<circle cx="570.0" cy="208" r="5" fill="#1baa7a"/>
+<circle cx="730.0" cy="130" r="15" fill="#ffffff" stroke="#1f2328" stroke-width="4"/>
+<text x="730.0" y="135" font-size="13" font-weight="700" text-anchor="middle" fill="#1f2328">4</text>
+<text x="730.0" y="170" font-size="13" text-anchor="middle" fill="#1f2328">Data outlives</text>
+<text x="730.0" y="187" font-size="13" text-anchor="middle" fill="#1f2328">programs</text>
+<circle cx="709.0" cy="208" r="5" fill="#2a78d6"/>
+<circle cx="723.0" cy="208" r="5" fill="#1baa7a"/>
+<circle cx="737.0" cy="208" r="5" fill="#d64a4a"/>
+<circle cx="751.0" cy="208" r="5" fill="#8a5cd6"/>
+<circle cx="890.0" cy="130" r="15" fill="#ffffff" stroke="#1f2328" stroke-width="4"/>
+<text x="890.0" y="135" font-size="13" font-weight="700" text-anchor="middle" fill="#1f2328">5</text>
+<text x="890.0" y="170" font-size="13" text-anchor="middle" fill="#1f2328">Machines need</text>
+<text x="890.0" y="187" font-size="13" text-anchor="middle" fill="#1f2328">to talk</text>
+<circle cx="869.0" cy="208" r="5" fill="#2a78d6"/>
+<circle cx="883.0" cy="208" r="5" fill="#1baa7a"/>
+<circle cx="897.0" cy="208" r="5" fill="#d64a4a"/>
+<circle cx="911.0" cy="208" r="5" fill="#e09a1a"/>
+<circle cx="1050.0" cy="130" r="15" fill="#ffffff" stroke="#1f2328" stroke-width="4"/>
+<text x="1050.0" y="135" font-size="13" font-weight="700" text-anchor="middle" fill="#1f2328">6</text>
+<text x="1050.0" y="170" font-size="13" text-anchor="middle" fill="#1f2328">Anyone can</text>
+<text x="1050.0" y="187" font-size="13" text-anchor="middle" fill="#1f2328">publish</text>
+<circle cx="1050.0" cy="208" r="5" fill="#d64a4a"/>
+<circle cx="1050.0" cy="360" r="15" fill="#ffffff" stroke="#1f2328" stroke-width="4"/>
+<text x="1050.0" y="365" font-size="13" font-weight="700" text-anchor="middle" fill="#1f2328">7</text>
+<text x="1050.0" y="400" font-size="13" text-anchor="middle" fill="#1f2328">Strangers on</text>
+<text x="1050.0" y="417" font-size="13" text-anchor="middle" fill="#1f2328">the network</text>
+<circle cx="1050.0" cy="438" r="5" fill="#d64a4a"/>
+<circle cx="890.0" cy="360" r="15" fill="#ffffff" stroke="#1f2328" stroke-width="4"/>
+<text x="890.0" y="365" font-size="13" font-weight="700" text-anchor="middle" fill="#1f2328">8</text>
+<text x="890.0" y="400" font-size="13" text-anchor="middle" fill="#1f2328">Too many users,</text>
+<text x="890.0" y="417" font-size="13" text-anchor="middle" fill="#1f2328">too much data</text>
+<circle cx="876.0" cy="438" r="5" fill="#2a78d6"/>
+<circle cx="890.0" cy="438" r="5" fill="#e09a1a"/>
+<circle cx="904.0" cy="438" r="5" fill="#8a5cd6"/>
+<circle cx="730.0" cy="360" r="15" fill="#ffffff" stroke="#1f2328" stroke-width="4"/>
+<text x="730.0" y="365" font-size="13" font-weight="700" text-anchor="middle" fill="#1f2328">9</text>
+<text x="730.0" y="400" font-size="13" text-anchor="middle" fill="#1f2328">Buying computers</text>
+<text x="730.0" y="417" font-size="13" text-anchor="middle" fill="#1f2328">is too slow</text>
+<circle cx="723.0" cy="438" r="5" fill="#d64a4a"/>
+<circle cx="737.0" cy="438" r="5" fill="#8a5cd6"/>
+<circle cx="570.0" cy="360" r="15" fill="#ffffff" stroke="#1f2328" stroke-width="4"/>
+<text x="570.0" y="365" font-size="13" font-weight="700" text-anchor="middle" fill="#1f2328">10</text>
+<text x="570.0" y="400" font-size="13" text-anchor="middle" fill="#1f2328">Many people,</text>
+<text x="570.0" y="417" font-size="13" text-anchor="middle" fill="#1f2328">one codebase</text>
+<circle cx="563.0" cy="438" r="5" fill="#1baa7a"/>
+<circle cx="577.0" cy="438" r="5" fill="#d64a4a"/>
+<circle cx="410.0" cy="360" r="15" fill="#ffffff" stroke="#1f2328" stroke-width="4"/>
+<text x="410.0" y="365" font-size="13" font-weight="700" text-anchor="middle" fill="#1f2328">11</text>
+<text x="410.0" y="400" font-size="13" text-anchor="middle" fill="#1f2328">Software that must</text>
+<text x="410.0" y="417" font-size="13" text-anchor="middle" fill="#1f2328">not go down</text>
+<circle cx="410.0" cy="438" r="5" fill="#8a5cd6"/>
+<circle cx="250.0" cy="360" r="15" fill="#ffffff" stroke="#1f2328" stroke-width="4"/>
+<text x="250.0" y="365" font-size="13" font-weight="700" text-anchor="middle" fill="#1f2328">12</text>
+<text x="250.0" y="400" font-size="13" text-anchor="middle" fill="#1f2328">Machines that learn</text>
+<text x="250.0" y="417" font-size="13" text-anchor="middle" fill="#1f2328">from data</text>
+<circle cx="229.0" cy="438" r="5" fill="#2a78d6"/>
+<circle cx="243.0" cy="438" r="5" fill="#d64a4a"/>
+<circle cx="257.0" cy="438" r="5" fill="#e09a1a"/>
+<circle cx="271.0" cy="438" r="5" fill="#8a5cd6"/>
+<circle cx="90.0" cy="360" r="15" fill="#ffffff" stroke="#1f2328" stroke-width="4"/>
+<text x="90.0" y="365" font-size="13" font-weight="700" text-anchor="middle" fill="#1f2328">13</text>
+<text x="90.0" y="400" font-size="13" text-anchor="middle" fill="#1f2328">Everything still</text>
+<text x="90.0" y="417" font-size="13" text-anchor="middle" fill="#1f2328">exists at once</text>
+<circle cx="62.0" cy="438" r="5" fill="#2a78d6"/>
+<circle cx="76.0" cy="438" r="5" fill="#1baa7a"/>
+<circle cx="90.0" cy="438" r="5" fill="#d64a4a"/>
+<circle cx="104.0" cy="438" r="5" fill="#e09a1a"/>
+<circle cx="118.0" cy="438" r="5" fill="#8a5cd6"/>
+<circle cx="56" cy="526" r="6" fill="#2a78d6"/>
+<text x="68" y="531" font-size="14" fill="#1f2328">Data</text>
+<circle cx="122" cy="526" r="6" fill="#1baa7a"/>
+<text x="134" y="531" font-size="14" fill="#1f2328">DSA</text>
+<circle cx="179" cy="526" r="6" fill="#d64a4a"/>
+<text x="191" y="531" font-size="14" fill="#1f2328">Trust</text>
+<circle cx="254" cy="526" r="6" fill="#e09a1a"/>
+<text x="266" y="531" font-size="14" fill="#1f2328">Latency</text>
+<circle cx="347" cy="526" r="6" fill="#8a5cd6"/>
+<text x="359" y="531" font-size="14" fill="#1f2328">Cost</text>
+</svg>

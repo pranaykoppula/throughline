@@ -48,31 +48,9 @@ Links to pages that don't exist yet are deliberate. They're the branches nobody 
 
 ## The map
 
-```mermaid
-graph TD
-  P0[0 Representations] --> P1[1 One machine, one program]
-  P1 --> P2[2 Many programs]
-  P2 --> P3[3 Too big for one head]
-  P3 --> P4[4 Data outlives programs]
-  P4 --> P5[5 Machines need to talk]
-  P5 --> P6[6 Anyone can publish]
-  P6 --> P7[7 Strangers on the network]
-  P7 --> P8[8 Too many users]
-  P8 --> P9[9 Buying computers is too slow]
-  P9 --> P10[10 Many people, one codebase]
-  P10 --> P11[11 Must not go down]
-  P11 --> P12[12 Machines that learn]
-  P12 --> P13[13 Everything still exists]
+![The throughline: fourteen stops in order, with the hubs each page comes back to](images/map.svg)
 
-  DSA((DSA)) --- P1 & P3 & P4 & P5 & P10
-  Data((Data)) --- P4 & P8 & P12
-  Trust((Trust)) --- P5 & P6 & P7 & P12
-  Latency((Latency)) --- P1 & P2 & P5 & P8
-  Cost((Cost)) --- P1 & P4 & P8 & P9 & P11 & P12
-  P13 -.-> P0
-```
-
-The circles are the hubs: ideas every few pages come back to.
+The dots are the hubs: ideas every few pages come back to. To redraw the map after changing a page's Connections, edit `scripts/make_map.py` and run `python3 scripts/make_map.py`.
 
 ## Honesty rules
 
