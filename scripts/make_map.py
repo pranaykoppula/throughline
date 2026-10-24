@@ -13,7 +13,7 @@ HUBS = {
 }
 
 PAGES = [
-    ("Representations", []),
+    ("Representations", ["DSA"]),
     ("One machine,|one program", ["DSA", "Latency", "Cost"]),
     ("One machine,|many programs", ["DSA", "Latency"]),
     ("Programs too big|for one head", ["DSA"]),

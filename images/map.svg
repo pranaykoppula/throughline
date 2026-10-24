@@ -6,6 +6,7 @@
 <circle cx="90.0" cy="130" r="15" fill="#ffffff" stroke="#1f2328" stroke-width="4"/>
 <text x="90.0" y="135" font-size="13" font-weight="700" text-anchor="middle" fill="#1f2328">0</text>
 <text x="90.0" y="170" font-size="13" text-anchor="middle" fill="#1f2328">Representations</text>
+<circle cx="90.0" cy="191" r="5" fill="#1baa7a"/>
 <circle cx="250.0" cy="130" r="15" fill="#ffffff" stroke="#1f2328" stroke-width="4"/>
 <text x="250.0" y="135" font-size="13" font-weight="700" text-anchor="middle" fill="#1f2328">1</text>
 <text x="250.0" y="170" font-size="13" text-anchor="middle" fill="#1f2328">One machine,</text>
