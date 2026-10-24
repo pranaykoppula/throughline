@@ -252,6 +252,7 @@ Reduced page shape (see section 3.1): the story is a brief history in anecdotes 
 ### 9. Buying computers is too slow
 - **Cases:** When does owning hardware beat renting? → Dropbox's Magic Pocket (down-justified at exabyte scale) vs Netflix all-in on AWS (up-justified; engineering spent on what AWS doesn't sell). Prime Video 2023 as a pure cost story. Why does AWS charge so much for egress? → data gravity as a priced switching cost; honestly, also profit.
 - **Why it happened:** capex to opex; subscription aligns vendor revenue with retention; the moat (appendix C).
+- **Foundation:** the hypervisor from page 2's connections (IBM CP-67, late 1960s) is what made renting slices of a fleet possible; EC2 launched on Xen in 2006. Containers as the lighter-weight version. Noisy neighbours as page 2's sharing problem, inherited.
 - **Pitfalls:** Kubernetes for a three-person team; serverless for a workload that runs constantly; "cloud is cheaper" without a bill to prove it; the mirror: refusing the cloud and running a data center for a startup.
 - **Names:** SaaS/PaaS/IaaS; capex/opex; "innovation tokens" (McKinley).
 - **Connections:** → hardware · → networking · → cost · → trust (IAM) · → vendors (every vendor is a rung someone else built).
