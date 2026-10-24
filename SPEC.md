@@ -266,7 +266,7 @@ Reduced page shape (see section 3.1): the story is a brief history in anecdotes 
 - **Go and look:** find a practice your team follows that's encoded in a file rather than in memory (a lint config, a CI file, a CONTRIBUTING doc), and one that still only lives in someone's head.
 
 ### 11. Software that must not go down
-- **Cases:** How many nines, and who decides? → Google's error budgets (SRE book). A bad deploy losing $440M in 45 minutes → Knight Capital 2012. A typo taking down a region → the 2017 S3 outage. Postmortems are edited; say so.
+- **Cases:** How many nines, and who decides? → Google's error budgets (SRE book). A bad deploy losing more than $460M in 45 minutes (SEC figure) → Knight Capital 2012. A typo taking down a region → the 2017 S3 outage. Postmortems are edited; say so.
 - **Pitfalls:** Dashboards nobody reads; alerts everyone mutes; three observability vendors; 99.999% for a dashboard nobody opens at night.
 - **Names:** SLO/SLA/SLI; "nines"; blameless postmortem.
 - **Connections:** → operating systems (what fails and how) · → scale (partial failure) · → collaboration (incidents are a team practice) · → cost (reliability is bought).
