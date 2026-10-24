@@ -59,7 +59,7 @@ Page 0 is a different kind of page from 1–13: it's a preface, not a problem an
 
 ### 3.3 The graph
 
-Every page has a **Connections** section: one line per edge, of the form *learning this is also learning X, because Y*. The "because" is the content. Edges may point at pages that don't exist; those dangling links are the frontier and are how the wiki grows. The README carries a Mermaid diagram of the spine plus the denser connections. Expected hubs: data, DSA, trust, latency, cost.
+Every page has a **Connections** section: one line per edge, of the form *learning this is also learning X, because Y*. The "because" is the content. Edges may point at pages that don't exist; those dangling links are the frontier and are how the wiki grows. Each edge points at one specific concept, never a whole subject: *[hash tables](dsa/hash-tables.md)*, not *DSA*. Branch pages live in one folder per family (`dsa/`, `data/`, `latency/`, `cost/`, `math/`, `auth/`, `runtimes/`, `tooling/`, `vendors/`, `writing/`, `cloud/`, `ai/`), one concept per page. The families are the hubs. The README carries a map of the spine showing which families each page connects to (`images/map.svg`, drawn by `scripts/make_map.py`). Expected hubs: data, DSA, trust, latency, cost.
 
 ### 3.4 The lens
 
@@ -331,6 +331,8 @@ The template for any business concept: define it in `forces.md`, teach it where 
 **Control vs ease, as a reading.** Down, justified: Dropbox Magic Pocket, Stack Overflow's SQL, Figma's engine, Twitter to the JVM. Up, justified: Netflix on AWS, self-hosted to managed databases. Down, too early: not-invented-here, optimizing before measuring. Never down: paying the abstraction tax forever because nobody measured it (ORM queries at scale). Wardley's evolution axis says the right rung moves over time.
 
 ## Appendix E. Seed connections (the graph's first edges)
+
+These are families, not pages. On a page, each edge names the specific concept inside the family (section 3.3).
 
 Fourteen starting nodes: networking, auth & identity, latency & performance, languages & runtimes, DSA, databases & storage, data, trust & security, git & collaboration, vendors & tooling, cloud & infrastructure, AI & LLMs, math & statistics, hardware, cost. Spine pages own most of them; the rest (auth, latency, math, vendors, tooling) start as dangling links until someone writes them.
 

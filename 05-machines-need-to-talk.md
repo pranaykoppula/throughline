@@ -53,11 +53,12 @@ Data is rarely where it's needed, so it moves, and moving it is slow, unreliable
 
 ## Connections
 
-- Learning this is also learning [DSA](dsa.md), because TCP is a state machine, routing is shortest paths on a graph, and every buffer is a queue.
-- Learning this is also learning [trust](07-strangers-on-the-network.md), because a network you can't see into is one where you can't tell who's on the other end.
-- Learning this is also learning [latency](latency.md), because round trips, not bandwidth, decide how fast most things feel.
-- Learning this is also learning [data](data.md), because everything on the wire has to be serialized into a format both sides agree on.
-- Learning this is also learning [sharing](02-one-machine-many-programs.md), because congestion collapse is deadlock's cousin: every party behaving reasonably, and the whole stuck.
+- Learning this is also learning [state machines](dsa/state-machines.md), because a TCP connection is one: a fixed set of states and the messages that move between them.
+- Learning this is also learning [shortest paths](dsa/graphs.md), because routing a packet is finding a path through a graph of machines.
+- Learning this is also learning [TLS](auth/tls.md), because a network you can't see into is one where you can't tell who's on the other end without it.
+- Learning this is also learning [round trips](latency/round-trips.md), because round trips, not bandwidth, decide how fast most things feel.
+- Learning this is also learning [serialization formats](data/serialization.md), because everything on the wire has to be turned into bytes in a format both sides agree on.
+- Learning this is also learning [deadlock](02-one-machine-many-programs.md), because congestion collapse is deadlock's cousin: every party behaving reasonably, and the whole stuck.
 
 ## Resources
 

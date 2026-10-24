@@ -37,9 +37,10 @@ Every representation is a choice among others that could have been made, and eve
 ## Connections
 
 - Learning this is also learning every later page, because each one hands you a representation that has an edge somewhere.
-- Learning this is also learning [DSA](03-programs-too-big-for-one-head.md), because a data structure is a representation chosen for what you'll do with it.
-- Learning this is also learning [math](math.md), because most of the edges above were found by mathematicians first and by engineers later, at much greater cost.
-- Learning this is also learning [AI](12-machines-that-learn-from-data.md), because there the representation is learned from data, and the data itself moves.
+- Learning this is also learning [floating point](math/floating-point.md), because the Vancouver index and the Patriot clock are the edge most programmers meet first, usually as `0.1 + 0.2` not equalling `0.3`.
+- Learning this is also learning [number systems](math/number-systems.md), because most of the edges above were found by mathematicians first and by engineers later, at much greater cost.
+- Learning this is also learning [computability](dsa/computability.md), because the halting problem is why no tool can check every program for you, and why Turing-completeness comes up on [page 3](03-programs-too-big-for-one-head.md).
+- Learning this is also learning [machine learning](12-machines-that-learn-from-data.md), because there the representation is learned from data, and the data itself moves.
 
 ## Resources
 

@@ -51,10 +51,10 @@ Once strangers can reach a system, every boundary is a question of who is asking
 
 ## Connections
 
-- Learning this is also learning [auth](auth.md), because identity is data with the strictest trust requirements of all.
+- Learning this is also learning [sessions and tokens](auth/sessions-and-tokens.md), because once a password is checked, something has to prove who you are on every later request, and that something can be stolen too.
 - Learning this is also learning [networking](05-machines-need-to-talk.md), because tokens and passwords travel, and every hop is a place they can leak.
 - Learning this is also learning [AI](12-machines-that-learn-from-data.md), because prompt injection is Marcus's search box again: input from outside being treated as instructions.
-- Learning this is also learning [vendors](vendors.md), because every library and service you use is something you've decided to trust.
+- Learning this is also learning [software supply chain](vendors/supply-chain.md), because every library you install is code from strangers you've decided to trust.
 - Learning this is also learning [the web](06-anyone-can-publish.md), because the client is a stranger's machine, and anything it sends can be forged.
 
 ## Resources

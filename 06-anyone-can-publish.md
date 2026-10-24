@@ -52,9 +52,9 @@ The client and server split the work. The server owns the truth; the client owns
 ## Connections
 
 - Learning this is also learning [networking](05-machines-need-to-talk.md), because HTTP is the contract between client and server, and every click is a round trip.
-- Learning this is also learning [trust](07-strangers-on-the-network.md), because the client is untrusted by definition: anyone can change what their browser sends.
-- Learning this is also learning [scale](08-too-many-users-too-much-data.md), because feeds and pagination are interface expectations that rebuilt backends.
-- Learning this is also learning [languages](03-programs-too-big-for-one-head.md), because JavaScript won by shipping in the only browser that mattered, not by design.
+- Learning this is also learning [input validation](auth/input-validation.md), because the client is untrusted by definition: anyone can change what their browser sends.
+- Learning this is also learning [cursor pagination](data/pagination.md), because infinite feeds needed a way to page through data that changes underneath you, and page numbers couldn't do it.
+- Learning this is also learning [JavaScript](runtimes/javascript.md), because it won by shipping in the only browser that mattered, not by design.
 - Learning this is also learning [forces](forces.md#distribution-and-platform-power), because whoever controls the path to users decides what you have to build.
 
 ## Resources

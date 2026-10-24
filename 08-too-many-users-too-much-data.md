@@ -58,11 +58,11 @@ Once data lives in more than one place, the copies will disagree, and every desi
 
 ## Connections
 
-- Learning this is also learning [data](data.md), because every copy is a second version of the truth and someone has to decide which one wins.
+- Learning this is also learning [replication](data/replication.md), because every copy is a second version of the truth and someone has to decide which one wins.
 - Learning this is also learning [databases](04-data-outlives-programs.md), because replication and sharding are indexes and transactions stretched across machines.
-- Learning this is also learning [latency](latency.md) and [cost](cost.md), because precomputing spends money at write time to save time at read time.
+- Learning this is also learning [caching](latency/caching.md), because precomputing spends money at write time to save time at read time, and every cache is a copy that can go stale.
 - Learning this is also learning [the web](06-anyone-can-publish.md), because the feed is an interface expectation that rebuilt the backend ([forces](forces.md#user-expectation-ratchets)).
-- Learning this is also learning [math](math.md), because the design broke on the tail of a distribution, not its average.
+- Learning this is also learning [distributions and percentiles](math/percentiles.md), because the design broke on the tail of a distribution, not its average.
 
 ## Resources
 

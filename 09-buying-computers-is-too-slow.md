@@ -53,10 +53,10 @@ Machines are rented by the unit, so cost is a live design variable: every archit
 
 - Learning this is also learning [hardware](01-one-machine-one-program.md), because a rented machine still has a memory hierarchy, now with a network at the bottom.
 - Learning this is also learning [networking](05-machines-need-to-talk.md), because data transfer is a line on the bill and the round trip has a price.
-- Learning this is also learning [cost](cost.md), because this is the page where cost becomes something you design.
-- Learning this is also learning [trust](07-strangers-on-the-network.md), because cloud permissions decide who can start, read, or delete anything you rent.
-- Learning this is also learning [vendors](vendors.md), because every managed service is a rung someone else built, and a dependency on their prices.
-- Learning this is also learning [VM provisioning](vm-provisioning.md), because starting a machine from a web page hides a lot of work you'll eventually need to understand.
+- Learning this is also learning [reading a cloud bill](cost/cloud-bills.md), because this is the page where cost becomes something you design, and the bill is where you find out what you designed.
+- Learning this is also learning [cloud IAM](auth/cloud-iam.md), because cloud permissions decide who can start, read, or delete anything you rent.
+- Learning this is also learning [managed services](vendors/managed-services.md), because every managed service is a rung someone else built, and a dependency on their prices.
+- Learning this is also learning [VM provisioning](cloud/vm-provisioning.md), because starting a machine from a web page hides a lot of work you'll eventually need to understand.
 
 ## Resources
 

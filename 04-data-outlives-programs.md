@@ -47,12 +47,13 @@ Data outlives programs, so its shape is the longest-lived decision you make. Cho
 
 ## Connections
 
-- Learning this is also learning [data](data.md), because shape and access pattern decide the store, not fashion.
+- Learning this is also learning [data modelling](data/modelling.md), because shape and access pattern decide the store, not fashion.
 - Learning this is also learning [abstraction](03-programs-too-big-for-one-head.md), because Codd's data independence is Parnas's information hiding applied to data: hide the layout so it can change.
-- Learning this is also learning [DSA](dsa.md), because an index is a B-tree, an LSM tree or a hash table, each chosen for a read and write pattern.
+- Learning this is also learning [B-trees](dsa/b-trees.md), because they're what Walter's index was, and they're still behind most indexes: sorted, shallow, and cheap to read from disk.
+- Learning this is also learning [LSM trees](dsa/lsm-trees.md), because they make the opposite trade, cheaper writes for costlier reads, for stores that write all day.
 - Learning this is also learning [hardware](01-one-machine-one-program.md), because every index exists to avoid reading from the slow floor of the memory hierarchy.
-- Learning this is also learning [trust](07-strangers-on-the-network.md), because who may read which row is the boundary between one customer's data and another's.
-- Learning this is also learning [cost](cost.md), because storage, indexes and the writes they cost all show up on a bill.
+- Learning this is also learning [multi-tenancy](auth/multi-tenancy.md), because who may read which row is the boundary between one customer's data and another's.
+- Learning this is also learning [storage tiers](cost/storage-tiers.md), because storage, indexes and the writes they cost all show up on a bill.
 
 ## Resources
 

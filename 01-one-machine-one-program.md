@@ -54,10 +54,10 @@ Memory is a hierarchy: a little fast storage near the processor, and ever larger
 
 ## Connections
 
-- Learning this is also learning [latency](latency.md), because the memory hierarchy is the whole story of why some things are fast.
-- Learning this is also learning [DSA](03-programs-too-big-for-one-head.md), because a structure that keeps its data together often beats one with a better big-O on paper.
+- Learning this is also learning [latency numbers](latency/latency-numbers.md), because a memory read, a disk read and a network round trip differ by factors of a thousand, and those ratios explain why some things are fast.
+- Learning this is also learning [arrays and linked lists](dsa/arrays-and-linked-lists.md), because an array that keeps its data together often beats a linked list that's better on paper, for exactly Joan's reason.
 - Learning this is also learning [cloud](09-buying-computers-is-too-slow.md), because a rented machine is still a machine with the same hierarchy, now with a network at the bottom.
-- Learning this is also learning [cost](cost.md), because fast storage is expensive storage at every level.
+- Learning this is also learning [storage tiers](cost/storage-tiers.md), because fast storage is expensive storage at every level, and cloud pricing is the memory hierarchy with a price list.
 
 ## Resources
 

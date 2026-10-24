@@ -52,8 +52,8 @@ Everything fails; the questions are how you'll know and what you've promised. De
 - Learning this is also learning [operating systems](02-one-machine-many-programs.md), because processes die and machines get stuck, and something has to notice.
 - Learning this is also learning [scale](08-too-many-users-too-much-data.md), because with many machines, something is always partly broken.
 - Learning this is also learning [collaboration](10-many-people-one-codebase.md), because incidents are handled by teams, and blameless reviews are a team practice.
-- Learning this is also learning [cost](cost.md), because every extra nine costs more than the last.
-- Learning this is also learning [math](math.md), because averages hide the tail, and the tail is where users suffer: measure percentiles.
+- Learning this is also learning [the cost of reliability](cost/reliability.md), because every extra nine costs more than the last.
+- Learning this is also learning [distributions and percentiles](math/percentiles.md), because averages hide the tail, and the tail is where users suffer.
 
 ## Resources
 

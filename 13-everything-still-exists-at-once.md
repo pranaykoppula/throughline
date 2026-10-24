@@ -67,7 +67,7 @@ None of this replaced what came before; every era still runs somewhere, and some
 
 - Learning this is also learning every earlier page, because each one handed you a solution that is still running somewhere next to the ones that followed it.
 - Learning this is also learning [representations](00-representations.md), because the loop closes: every model on these pages has an edge, and time is what finds it.
-- Learning this is also learning [cost](cost.md), because switching costs are why old systems stay and why moats hold.
+- Learning this is also learning [migrations](data/migrations.md), because moving a running system's data without stopping it is the hardest part of Ines's piece-by-piece approach.
 - Learning this is also learning [pushback](pushback.md), because "what problem do we have today, measured?" is the question that would have saved Ines's first eighteen months.
 - Learning this is also learning [the forces](forces.md#switching-costs-and-lock-in), because lock-in, seen from the inside, is a migration nobody can afford.
 

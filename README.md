@@ -50,7 +50,7 @@ Links to pages that don't exist yet are deliberate. They're the branches nobody 
 
 ![The throughline: fourteen stops in order, with the hubs each page comes back to](images/map.svg)
 
-The dots are the hubs: ideas every few pages come back to. To redraw the map after changing a page's Connections, edit `scripts/make_map.py` and run `python3 scripts/make_map.py`.
+The dots are the hubs: families of ideas every few pages come back to. Each family is a folder of short branch pages, one concept each, such as `dsa/hash-tables.md`. To redraw the map after changing a page's Connections, edit `scripts/make_map.py` and run `python3 scripts/make_map.py`.
 
 ## Honesty rules
 

@@ -47,10 +47,11 @@ The operating system turns one machine into many processes and threads and decid
 
 ## Connections
 
-- Learning this is also learning [languages and runtimes](03-programs-too-big-for-one-head.md), because event loops, threads and processes are choices a runtime makes for you.
-- Learning this is also learning [latency](latency.md), because most latency is waiting, not computing.
+- Learning this is also learning [event loops and threads](runtimes/event-loops-and-threads.md), because the concurrency model is a choice your language's runtime makes for you, and it decides what blocks.
+- Learning this is also learning [queueing](latency/queueing.md), because most latency is time spent waiting in a queue, and queues get long suddenly as a machine nears full.
 - Learning this is also learning [reliability](11-software-that-must-not-go-down.md), because something has to notice when a process dies or gets stuck, and decide what to do.
-- Learning this is also learning [DSA](03-programs-too-big-for-one-head.md), because a scheduler is a queue and a deadlock is a cycle in a graph.
+- Learning this is also learning [queues](dsa/queues.md), because a scheduler is a queue with rules about who goes next.
+- Learning this is also learning [graphs](dsa/graphs.md), because a deadlock is a cycle in a graph of who waits for whom, and finding cycles is a standard graph algorithm.
 - Learning this is also learning [cloud](09-buying-computers-is-too-slow.md), because a hypervisor is the same trick one floor down: dividing one machine among whole operating systems instead of programs. IBM was doing it by the late 1960s, and it's what the hyperscalers rent out by the hour, noisy neighbours included.
 
 ## Resources

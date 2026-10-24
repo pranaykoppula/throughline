@@ -51,9 +51,10 @@ Abstraction is the core skill: layers (languages, libraries, modules, types) tha
 
 ## Connections
 
-- Learning this is also learning [DSA](dsa.md), because the standard library is a shelf of free, well-tested algorithms, and choosing among them is choosing an access pattern.
+- Learning this is also learning [hash tables](dsa/hash-tables.md), because Elena's fix was choosing the structure built for her access pattern: find one item by its key.
 - Learning this is also learning [hardware](01-one-machine-one-program.md), because "compiled", "interpreted" and "garbage collected" are all prices paid at the layer underneath.
-- Learning this is also learning [tooling](tooling.md), because package managers, build systems and type checkers are abstractions for managing other abstractions.
+- Learning this is also learning [build systems and package managers](tooling/build-systems.md), because they're abstractions for managing other abstractions, and they break in the same ways.
+- Learning this is also learning [type systems](runtimes/type-systems.md), because a type is a boundary the compiler enforces, so people don't have to remember it.
 - Learning this is also learning [collaboration](10-many-people-one-codebase.md), because a module boundary is also a boundary between people, and types are documentation for the next person.
 - Learning this is also learning [representations](00-representations.md), because every abstraction is a representation, and it has an edge where the layer underneath shows through.
 

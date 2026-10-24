@@ -69,7 +69,7 @@ A moat is whatever keeps a company's position hard to attack after competitors h
 
 Where it shows up on the spine: why cloud egress costs what it does ([9](09-buying-computers-is-too-slow.md)); why Google open-sourced Kubernetes ([10](10-many-people-one-codebase.md)); whether a foundation-model company has one at all, which is still argued ([12](12-machines-that-learn-from-data.md)); and the moat seen from the customer's side, as a migration tax ([13](13-everything-still-exists-at-once.md)).
 
-Connections: learning moats is also learning [trust](trust.md), because reliability and accuracy become a brand · [data](data.md), because history is the stickiest data · [cost](cost.md), because lock-in is priced on purpose · [collaboration](10-many-people-one-codebase.md), because open source, standards and APIs are moat strategy whether anyone says so or not.
+Connections: learning moats is also learning [strangers on the network](07-strangers-on-the-network.md), because reliability and accuracy become a brand · [data gravity](data/data-gravity.md), because history is the stickiest data · [reading a cloud bill](cost/cloud-bills.md), because lock-in is priced on purpose · [collaboration](10-many-people-one-codebase.md), because open source, standards and APIs are moat strategy whether anyone says so or not.
 
 - Hamilton Helmer, *7 Powers* (2016): the taxonomy above, in depth.
 - Ben Thompson, ["Aggregation Theory"](https://stratechery.com/2015/aggregation-theory/). <!-- verify -->
