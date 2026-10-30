@@ -1,110 +1,296 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" width="1200" height="560" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif">
+<style>
+  .stop { cursor: pointer; text-decoration: none; }
+  .stop circle.node { transition: transform 0.15s ease, fill 0.15s ease, stroke-width 0.15s ease; transform-box: fill-box; transform-origin: center; }
+  .stop:hover circle.node { fill: #f6f8fa; stroke-width: 5px; transform: scale(1.12); }
+  .stop:hover text.label { text-decoration: underline; fill: #0969da; }
+  .hub-dot { cursor: pointer; }
+  .hub-dot circle { transition: transform 0.15s ease, stroke 0.15s ease; transform-box: fill-box; transform-origin: center; }
+  .hub-dot:hover circle { transform: scale(1.45); stroke: #1f2328; stroke-width: 1.5px; }
+  .legend-item { cursor: pointer; text-decoration: none; }
+  .legend-item:hover text { text-decoration: underline; fill: #0969da; }
+  .legend-item:hover circle { transform: scale(1.25); transform-box: fill-box; transform-origin: center; }
+</style>
 <rect width="1200" height="560" fill="#ffffff"/>
 <text x="50" y="52" font-size="22" font-weight="600" fill="#1f2328">The throughline</text>
-<text x="50" y="76" font-size="14" fill="#59636e">Read the stops in order. The dots are the hubs each page comes back to.</text>
+<text x="50" y="76" font-size="14" fill="#59636e">Read the stops in order. Click any stop or hub dot to open its page.</text>
 <path d="M 90.0 130 H 1050.0 A 115.0 115.0 0 0 1 1050.0 360 H 90.0" fill="none" stroke="#1f2328" stroke-width="6" stroke-linecap="round"/>
-<circle cx="90.0" cy="130" r="15" fill="#ffffff" stroke="#1f2328" stroke-width="4"/>
-<text x="90.0" y="135" font-size="13" font-weight="700" text-anchor="middle" fill="#1f2328">0</text>
-<text x="90.0" y="170" font-size="13" text-anchor="middle" fill="#1f2328">Representations</text>
-<circle cx="90.0" cy="191" r="5" fill="#1baa7a"/>
-<circle cx="250.0" cy="130" r="15" fill="#ffffff" stroke="#1f2328" stroke-width="4"/>
-<text x="250.0" y="135" font-size="13" font-weight="700" text-anchor="middle" fill="#1f2328">1</text>
-<text x="250.0" y="170" font-size="13" text-anchor="middle" fill="#1f2328">One machine,</text>
-<text x="250.0" y="187" font-size="13" text-anchor="middle" fill="#1f2328">one program</text>
-<circle cx="229.0" cy="208" r="5" fill="#2a78d6"/>
-<circle cx="243.0" cy="208" r="5" fill="#1baa7a"/>
-<circle cx="257.0" cy="208" r="5" fill="#e09a1a"/>
-<circle cx="271.0" cy="208" r="5" fill="#8a5cd6"/>
-<circle cx="410.0" cy="130" r="15" fill="#ffffff" stroke="#1f2328" stroke-width="4"/>
-<text x="410.0" y="135" font-size="13" font-weight="700" text-anchor="middle" fill="#1f2328">2</text>
-<text x="410.0" y="170" font-size="13" text-anchor="middle" fill="#1f2328">One machine,</text>
-<text x="410.0" y="187" font-size="13" text-anchor="middle" fill="#1f2328">many programs</text>
-<circle cx="403.0" cy="208" r="5" fill="#1baa7a"/>
-<circle cx="417.0" cy="208" r="5" fill="#e09a1a"/>
-<circle cx="570.0" cy="130" r="15" fill="#ffffff" stroke="#1f2328" stroke-width="4"/>
-<text x="570.0" y="135" font-size="13" font-weight="700" text-anchor="middle" fill="#1f2328">3</text>
-<text x="570.0" y="170" font-size="13" text-anchor="middle" fill="#1f2328">Programs too big</text>
-<text x="570.0" y="187" font-size="13" text-anchor="middle" fill="#1f2328">for one head</text>
-<circle cx="563.0" cy="208" r="5" fill="#2a78d6"/>
-<circle cx="577.0" cy="208" r="5" fill="#1baa7a"/>
-<circle cx="730.0" cy="130" r="15" fill="#ffffff" stroke="#1f2328" stroke-width="4"/>
-<text x="730.0" y="135" font-size="13" font-weight="700" text-anchor="middle" fill="#1f2328">4</text>
-<text x="730.0" y="170" font-size="13" text-anchor="middle" fill="#1f2328">Data outlives</text>
-<text x="730.0" y="187" font-size="13" text-anchor="middle" fill="#1f2328">programs</text>
-<circle cx="709.0" cy="208" r="5" fill="#2a78d6"/>
-<circle cx="723.0" cy="208" r="5" fill="#1baa7a"/>
-<circle cx="737.0" cy="208" r="5" fill="#d64a4a"/>
-<circle cx="751.0" cy="208" r="5" fill="#8a5cd6"/>
-<circle cx="890.0" cy="130" r="15" fill="#ffffff" stroke="#1f2328" stroke-width="4"/>
-<text x="890.0" y="135" font-size="13" font-weight="700" text-anchor="middle" fill="#1f2328">5</text>
-<text x="890.0" y="170" font-size="13" text-anchor="middle" fill="#1f2328">Machines need</text>
-<text x="890.0" y="187" font-size="13" text-anchor="middle" fill="#1f2328">to talk</text>
-<circle cx="869.0" cy="208" r="5" fill="#2a78d6"/>
-<circle cx="883.0" cy="208" r="5" fill="#1baa7a"/>
-<circle cx="897.0" cy="208" r="5" fill="#d64a4a"/>
-<circle cx="911.0" cy="208" r="5" fill="#e09a1a"/>
-<circle cx="1050.0" cy="130" r="15" fill="#ffffff" stroke="#1f2328" stroke-width="4"/>
-<text x="1050.0" y="135" font-size="13" font-weight="700" text-anchor="middle" fill="#1f2328">6</text>
-<text x="1050.0" y="170" font-size="13" text-anchor="middle" fill="#1f2328">Anyone can</text>
-<text x="1050.0" y="187" font-size="13" text-anchor="middle" fill="#1f2328">publish</text>
-<circle cx="1043.0" cy="208" r="5" fill="#2a78d6"/>
-<circle cx="1057.0" cy="208" r="5" fill="#d64a4a"/>
-<circle cx="1050.0" cy="360" r="15" fill="#ffffff" stroke="#1f2328" stroke-width="4"/>
-<text x="1050.0" y="365" font-size="13" font-weight="700" text-anchor="middle" fill="#1f2328">7</text>
-<text x="1050.0" y="400" font-size="13" text-anchor="middle" fill="#1f2328">Strangers on</text>
-<text x="1050.0" y="417" font-size="13" text-anchor="middle" fill="#1f2328">the network</text>
-<circle cx="1043.0" cy="438" r="5" fill="#1baa7a"/>
-<circle cx="1057.0" cy="438" r="5" fill="#d64a4a"/>
-<circle cx="890.0" cy="360" r="15" fill="#ffffff" stroke="#1f2328" stroke-width="4"/>
-<text x="890.0" y="365" font-size="13" font-weight="700" text-anchor="middle" fill="#1f2328">8</text>
-<text x="890.0" y="400" font-size="13" text-anchor="middle" fill="#1f2328">Too many users,</text>
-<text x="890.0" y="417" font-size="13" text-anchor="middle" fill="#1f2328">too much data</text>
-<circle cx="876.0" cy="438" r="5" fill="#2a78d6"/>
-<circle cx="890.0" cy="438" r="5" fill="#1baa7a"/>
-<circle cx="904.0" cy="438" r="5" fill="#e09a1a"/>
-<circle cx="730.0" cy="360" r="15" fill="#ffffff" stroke="#1f2328" stroke-width="4"/>
-<text x="730.0" y="365" font-size="13" font-weight="700" text-anchor="middle" fill="#1f2328">9</text>
-<text x="730.0" y="400" font-size="13" text-anchor="middle" fill="#1f2328">Buying computers</text>
-<text x="730.0" y="417" font-size="13" text-anchor="middle" fill="#1f2328">is too slow</text>
-<circle cx="723.0" cy="438" r="5" fill="#d64a4a"/>
-<circle cx="737.0" cy="438" r="5" fill="#8a5cd6"/>
-<circle cx="570.0" cy="360" r="15" fill="#ffffff" stroke="#1f2328" stroke-width="4"/>
-<text x="570.0" y="365" font-size="13" font-weight="700" text-anchor="middle" fill="#1f2328">10</text>
-<text x="570.0" y="400" font-size="13" text-anchor="middle" fill="#1f2328">Many people,</text>
-<text x="570.0" y="417" font-size="13" text-anchor="middle" fill="#1f2328">one codebase</text>
-<circle cx="563.0" cy="438" r="5" fill="#1baa7a"/>
-<circle cx="577.0" cy="438" r="5" fill="#d64a4a"/>
-<circle cx="410.0" cy="360" r="15" fill="#ffffff" stroke="#1f2328" stroke-width="4"/>
-<text x="410.0" y="365" font-size="13" font-weight="700" text-anchor="middle" fill="#1f2328">11</text>
-<text x="410.0" y="400" font-size="13" text-anchor="middle" fill="#1f2328">Software that must</text>
-<text x="410.0" y="417" font-size="13" text-anchor="middle" fill="#1f2328">not go down</text>
-<circle cx="403.0" cy="438" r="5" fill="#e09a1a"/>
-<circle cx="417.0" cy="438" r="5" fill="#8a5cd6"/>
-<circle cx="250.0" cy="360" r="15" fill="#ffffff" stroke="#1f2328" stroke-width="4"/>
-<text x="250.0" y="365" font-size="13" font-weight="700" text-anchor="middle" fill="#1f2328">12</text>
-<text x="250.0" y="400" font-size="13" text-anchor="middle" fill="#1f2328">Machines that learn</text>
-<text x="250.0" y="417" font-size="13" text-anchor="middle" fill="#1f2328">from data</text>
-<circle cx="229.0" cy="438" r="5" fill="#2a78d6"/>
-<circle cx="243.0" cy="438" r="5" fill="#d64a4a"/>
-<circle cx="257.0" cy="438" r="5" fill="#e09a1a"/>
-<circle cx="271.0" cy="438" r="5" fill="#8a5cd6"/>
-<circle cx="90.0" cy="360" r="15" fill="#ffffff" stroke="#1f2328" stroke-width="4"/>
-<text x="90.0" y="365" font-size="13" font-weight="700" text-anchor="middle" fill="#1f2328">13</text>
-<text x="90.0" y="400" font-size="13" text-anchor="middle" fill="#1f2328">Everything still</text>
-<text x="90.0" y="417" font-size="13" text-anchor="middle" fill="#1f2328">exists at once</text>
-<circle cx="62.0" cy="438" r="5" fill="#2a78d6"/>
-<circle cx="76.0" cy="438" r="5" fill="#1baa7a"/>
-<circle cx="90.0" cy="438" r="5" fill="#d64a4a"/>
-<circle cx="104.0" cy="438" r="5" fill="#e09a1a"/>
-<circle cx="118.0" cy="438" r="5" fill="#8a5cd6"/>
-<circle cx="56" cy="526" r="6" fill="#2a78d6"/>
-<text x="68" y="531" font-size="14" fill="#1f2328">Data</text>
-<circle cx="122" cy="526" r="6" fill="#1baa7a"/>
-<text x="134" y="531" font-size="14" fill="#1f2328">DSA</text>
-<circle cx="179" cy="526" r="6" fill="#d64a4a"/>
-<text x="191" y="531" font-size="14" fill="#1f2328">Trust</text>
-<circle cx="254" cy="526" r="6" fill="#e09a1a"/>
-<text x="266" y="531" font-size="14" fill="#1f2328">Latency</text>
-<circle cx="347" cy="526" r="6" fill="#8a5cd6"/>
-<text x="359" y="531" font-size="14" fill="#1f2328">Cost</text>
+<a class="stop" href="../00-representations.md" target="_top">
+  <title>0. Humans need representations before they need machines — Every representation is a choice among others that could have been made, and every one has an edge where it stops being true. This wiki hands out representations the way every textbook does, cleanly, as if they had no edges: bits, request and response, tables, consistency models. Each one stops being true somewhere. The pages don't stop to point that out every time. Finding the edge is your job.</title>
+  <circle class="node" cx="90.0" cy="130" r="15" fill="#ffffff" stroke="#1f2328" stroke-width="4"/>
+  <text x="90.0" y="135" font-size="13" font-weight="700" text-anchor="middle" fill="#1f2328">0</text>
+  <text class="label" x="90.0" y="170" font-size="13" text-anchor="middle" fill="#1f2328">Representations</text>
+</a>
+<a class="hub-dot" href="../dsa/computability.md" target="_top">
+  <title>DSA: computability (dsa/computability.md)</title>
+  <circle cx="90.0" cy="191" r="5" fill="#1baa7a"/>
+</a>
+<a class="stop" href="../01-one-machine-one-program.md" target="_top">
+  <title>1. One machine, one program — Memory is a hierarchy: a little fast storage near the processor, and ever larger, slower, cheaper storage further away. Abstractions like virtual memory and caches move data between the layers for you, but they don't hide the cost. They reward locality: touching data that's near data you just touched. The cost of an operation is set by where the data is.</title>
+  <circle class="node" cx="250.0" cy="130" r="15" fill="#ffffff" stroke="#1f2328" stroke-width="4"/>
+  <text x="250.0" y="135" font-size="13" font-weight="700" text-anchor="middle" fill="#1f2328">1</text>
+  <text class="label" x="250.0" y="170" font-size="13" text-anchor="middle" fill="#1f2328">One machine,</text>
+  <text class="label" x="250.0" y="187" font-size="13" text-anchor="middle" fill="#1f2328">one program</text>
+</a>
+<a class="hub-dot" href="../data/access-patterns.md" target="_top">
+  <title>Data: access patterns (data/access-patterns.md)</title>
+  <circle cx="229.0" cy="208" r="5" fill="#2a78d6"/>
+</a>
+<a class="hub-dot" href="../dsa/arrays-and-linked-lists.md" target="_top">
+  <title>DSA: arrays and linked lists (dsa/arrays-and-linked-lists.md)</title>
+  <circle cx="243.0" cy="208" r="5" fill="#1baa7a"/>
+</a>
+<a class="hub-dot" href="../latency/latency-numbers.md" target="_top">
+  <title>Latency: latency numbers, caching (latency/latency-numbers.md)</title>
+  <circle cx="257.0" cy="208" r="5" fill="#e09a1a"/>
+</a>
+<a class="hub-dot" href="../cost/storage-tiers.md" target="_top">
+  <title>Cost: storage tiers (cost/storage-tiers.md)</title>
+  <circle cx="271.0" cy="208" r="5" fill="#8a5cd6"/>
+</a>
+<a class="stop" href="../02-one-machine-many-programs.md" target="_top">
+  <title>2. One machine, many programs — The operating system turns one machine into many processes and threads and decides who runs. It takes the processor back on a timer so nobody can keep it by accident, and it hands out devices and files so programs don't fight over them. Sharing creates waiting, and waiting, not computing, is where most time goes. Sharing also creates new failures that no single program causes, like deadlock, and they're fixed by rules about the order things are taken, not by better programs.</title>
+  <circle class="node" cx="410.0" cy="130" r="15" fill="#ffffff" stroke="#1f2328" stroke-width="4"/>
+  <text x="410.0" y="135" font-size="13" font-weight="700" text-anchor="middle" fill="#1f2328">2</text>
+  <text class="label" x="410.0" y="170" font-size="13" text-anchor="middle" fill="#1f2328">One machine,</text>
+  <text class="label" x="410.0" y="187" font-size="13" text-anchor="middle" fill="#1f2328">many programs</text>
+</a>
+<a class="hub-dot" href="../dsa/queues.md" target="_top">
+  <title>DSA: queues, graphs (dsa/queues.md)</title>
+  <circle cx="403.0" cy="208" r="5" fill="#1baa7a"/>
+</a>
+<a class="hub-dot" href="../latency/queueing.md" target="_top">
+  <title>Latency: queueing (latency/queueing.md)</title>
+  <circle cx="417.0" cy="208" r="5" fill="#e09a1a"/>
+</a>
+<a class="stop" href="../03-programs-too-big-for-one-head.md" target="_top">
+  <title>3. Programs too big for one head — Abstraction is the core skill: layers (languages, libraries, modules, types) that let you use something without knowing how it works. Each layer trades control for ease. The best boundaries hide a decision that might change, not a step in a process. Building is mostly assembling existing abstractions. Optimizing is mostly replacing one of them with something made for the case at hand, once measurement shows its cost dominates. Data structures and algorithms are the reusable shapes inside those layers, chosen by the access pattern they serve.</title>
+  <circle class="node" cx="570.0" cy="130" r="15" fill="#ffffff" stroke="#1f2328" stroke-width="4"/>
+  <text x="570.0" y="135" font-size="13" font-weight="700" text-anchor="middle" fill="#1f2328">3</text>
+  <text class="label" x="570.0" y="170" font-size="13" text-anchor="middle" fill="#1f2328">Programs too big</text>
+  <text class="label" x="570.0" y="187" font-size="13" text-anchor="middle" fill="#1f2328">for one head</text>
+</a>
+<a class="hub-dot" href="../data/access-patterns.md" target="_top">
+  <title>Data: access patterns (data/access-patterns.md)</title>
+  <circle cx="563.0" cy="208" r="5" fill="#2a78d6"/>
+</a>
+<a class="hub-dot" href="../dsa/hash-tables.md" target="_top">
+  <title>DSA: hash tables (dsa/hash-tables.md)</title>
+  <circle cx="577.0" cy="208" r="5" fill="#1baa7a"/>
+</a>
+<a class="stop" href="../04-data-outlives-programs.md" target="_top">
+  <title>4. Data outlives programs — Data outlives programs, so its shape is the longest-lived decision you make. Choose a store by how the data will be read and written, and expect new questions. Keep the logical shape (what the facts are) separate from the physical shape (how they're laid out), so the second can change without breaking programs. Indexes trade write cost for read speed. Transactions define what the store promises when things fail halfway.</title>
+  <circle class="node" cx="730.0" cy="130" r="15" fill="#ffffff" stroke="#1f2328" stroke-width="4"/>
+  <text x="730.0" y="135" font-size="13" font-weight="700" text-anchor="middle" fill="#1f2328">4</text>
+  <text class="label" x="730.0" y="170" font-size="13" text-anchor="middle" fill="#1f2328">Data outlives</text>
+  <text class="label" x="730.0" y="187" font-size="13" text-anchor="middle" fill="#1f2328">programs</text>
+</a>
+<a class="hub-dot" href="../data/access-patterns.md" target="_top">
+  <title>Data: access patterns, consistency (data/access-patterns.md)</title>
+  <circle cx="709.0" cy="208" r="5" fill="#2a78d6"/>
+</a>
+<a class="hub-dot" href="../dsa/b-trees.md" target="_top">
+  <title>DSA: B-trees, LSM trees (dsa/b-trees.md)</title>
+  <circle cx="723.0" cy="208" r="5" fill="#1baa7a"/>
+</a>
+<a class="hub-dot" href="../auth/multi-tenancy.md" target="_top">
+  <title>Trust: multi-tenancy (auth/multi-tenancy.md)</title>
+  <circle cx="737.0" cy="208" r="5" fill="#d64a4a"/>
+</a>
+<a class="hub-dot" href="../cost/storage-tiers.md" target="_top">
+  <title>Cost: storage tiers (cost/storage-tiers.md)</title>
+  <circle cx="751.0" cy="208" r="5" fill="#8a5cd6"/>
+</a>
+<a class="stop" href="../05-machines-need-to-talk.md" target="_top">
+  <title>5. Machines need to talk — Data is rarely where it's needed, so it moves, and moving it is slow, unreliable, and paid for in round trips. Protocols are contracts between parties that can't see each other. Anything that crosses a network can be lost, delayed, or duplicated, and &quot;it didn't arrive&quot; looks the same as &quot;the reply didn't arrive&quot;. So senders retry, receivers make repeats harmless, and retries back off. Once data moves cheaply, copies are free, and value shifts to services, relationships, and trust.</title>
+  <circle class="node" cx="890.0" cy="130" r="15" fill="#ffffff" stroke="#1f2328" stroke-width="4"/>
+  <text x="890.0" y="135" font-size="13" font-weight="700" text-anchor="middle" fill="#1f2328">5</text>
+  <text class="label" x="890.0" y="170" font-size="13" text-anchor="middle" fill="#1f2328">Machines need</text>
+  <text class="label" x="890.0" y="187" font-size="13" text-anchor="middle" fill="#1f2328">to talk</text>
+</a>
+<a class="hub-dot" href="../data/serialization.md" target="_top">
+  <title>Data: serialization formats (data/serialization.md)</title>
+  <circle cx="869.0" cy="208" r="5" fill="#2a78d6"/>
+</a>
+<a class="hub-dot" href="../dsa/state-machines.md" target="_top">
+  <title>DSA: state machines, shortest paths (dsa/state-machines.md)</title>
+  <circle cx="883.0" cy="208" r="5" fill="#1baa7a"/>
+</a>
+<a class="hub-dot" href="../auth/tls.md" target="_top">
+  <title>Trust: TLS (auth/tls.md)</title>
+  <circle cx="897.0" cy="208" r="5" fill="#d64a4a"/>
+</a>
+<a class="hub-dot" href="../latency/round-trips.md" target="_top">
+  <title>Latency: round trips, queueing, caching, latency numbers (latency/round-trips.md)</title>
+  <circle cx="911.0" cy="208" r="5" fill="#e09a1a"/>
+</a>
+<a class="stop" href="../06-anyone-can-publish.md" target="_top">
+  <title>6. Anyone can publish — The client and server split the work. The server owns the truth; the client owns presentation and a copy of the state. Most bugs users see are two sources of truth disagreeing. A client can assume an action will succeed, to feel fast, but it has to be ready to be told it didn't. The browser won because shipping one server beats shipping a million installs; native shells survive where platforms control distribution. And what users come to expect on screen keeps reshaping the backend: Ajax turned servers into APIs, and later expectations brought mobile query languages, live collaboration, and streaming.</title>
+  <circle class="node" cx="1050.0" cy="130" r="15" fill="#ffffff" stroke="#1f2328" stroke-width="4"/>
+  <text x="1050.0" y="135" font-size="13" font-weight="700" text-anchor="middle" fill="#1f2328">6</text>
+  <text class="label" x="1050.0" y="170" font-size="13" text-anchor="middle" fill="#1f2328">Anyone can</text>
+  <text class="label" x="1050.0" y="187" font-size="13" text-anchor="middle" fill="#1f2328">publish</text>
+</a>
+<a class="hub-dot" href="../data/pagination.md" target="_top">
+  <title>Data: cursor pagination, consistency (data/pagination.md)</title>
+  <circle cx="1043.0" cy="208" r="5" fill="#2a78d6"/>
+</a>
+<a class="hub-dot" href="../auth/input-validation.md" target="_top">
+  <title>Trust: input validation (auth/input-validation.md)</title>
+  <circle cx="1057.0" cy="208" r="5" fill="#d64a4a"/>
+</a>
+<a class="stop" href="../07-strangers-on-the-network.md" target="_top">
+  <title>7. Strangers on the network — Once strangers can reach a system, every boundary is a question of who is asking and what they may do. Trust nothing that crossed a boundary: treat input as data, never as instructions. Give every party, person or program, the least it needs. Store secrets so that a leak reveals as little as possible, and assume the leak will happen. Harms from data fall on people other than those who collect it, so the law steps in where incentives don't.</title>
+  <circle class="node" cx="1050.0" cy="360" r="15" fill="#ffffff" stroke="#1f2328" stroke-width="4"/>
+  <text x="1050.0" y="365" font-size="13" font-weight="700" text-anchor="middle" fill="#1f2328">7</text>
+  <text class="label" x="1050.0" y="400" font-size="13" text-anchor="middle" fill="#1f2328">Strangers on</text>
+  <text class="label" x="1050.0" y="417" font-size="13" text-anchor="middle" fill="#1f2328">the network</text>
+</a>
+<a class="hub-dot" href="../dsa/hashing.md" target="_top">
+  <title>DSA: hashing (dsa/hashing.md)</title>
+  <circle cx="1043.0" cy="438" r="5" fill="#1baa7a"/>
+</a>
+<a class="hub-dot" href="../auth/sessions-and-tokens.md" target="_top">
+  <title>Trust: sessions and tokens, input validation, least privilege, TLS, password storage (auth/sessions-and-tokens.md)</title>
+  <circle cx="1057.0" cy="438" r="5" fill="#d64a4a"/>
+</a>
+<a class="stop" href="../08-too-many-users-too-much-data.md" target="_top">
+  <title>8. Too many users, too much data — Once data lives in more than one place, the copies will disagree, and every design has to say what it promises while they do. When the network between copies breaks, a system can keep answering and risk stale answers, or stay correct and refuse some requests; it can't do both. Copies spread reads; splits spread writes; precomputing moves work from read time to write time; approximating trades exactness for cost. Design for the distribution you have, including its tail, not its average.</title>
+  <circle class="node" cx="890.0" cy="360" r="15" fill="#ffffff" stroke="#1f2328" stroke-width="4"/>
+  <text x="890.0" y="365" font-size="13" font-weight="700" text-anchor="middle" fill="#1f2328">8</text>
+  <text class="label" x="890.0" y="400" font-size="13" text-anchor="middle" fill="#1f2328">Too many users,</text>
+  <text class="label" x="890.0" y="417" font-size="13" text-anchor="middle" fill="#1f2328">too much data</text>
+</a>
+<a class="hub-dot" href="../data/consistency.md" target="_top">
+  <title>Data: consistency, access patterns (data/consistency.md)</title>
+  <circle cx="876.0" cy="438" r="5" fill="#2a78d6"/>
+</a>
+<a class="hub-dot" href="../dsa/hashing.md" target="_top">
+  <title>DSA: hashing (dsa/hashing.md)</title>
+  <circle cx="890.0" cy="438" r="5" fill="#1baa7a"/>
+</a>
+<a class="hub-dot" href="../latency/caching.md" target="_top">
+  <title>Latency: caching, queueing (latency/caching.md)</title>
+  <circle cx="904.0" cy="438" r="5" fill="#e09a1a"/>
+</a>
+<a class="stop" href="../09-buying-computers-is-too-slow.md" target="_top">
+  <title>9. Buying computers is too slow — Machines are rented by the unit, so cost is a live design variable: every architecture is also a bill, every hour. Paying as you go instead of up front changes who can start a company and how fast. Sharing physical machines means sharing their performance too. And the advantages hardest to compete with, switching costs, network effects, scale, are mostly built or eroded by engineering decisions, including the vendor's and your own (forces: the moat).</title>
+  <circle class="node" cx="730.0" cy="360" r="15" fill="#ffffff" stroke="#1f2328" stroke-width="4"/>
+  <text x="730.0" y="365" font-size="13" font-weight="700" text-anchor="middle" fill="#1f2328">9</text>
+  <text class="label" x="730.0" y="400" font-size="13" text-anchor="middle" fill="#1f2328">Buying computers</text>
+  <text class="label" x="730.0" y="417" font-size="13" text-anchor="middle" fill="#1f2328">is too slow</text>
+</a>
+<a class="hub-dot" href="../auth/least-privilege.md" target="_top">
+  <title>Trust: least privilege (auth/least-privilege.md)</title>
+  <circle cx="723.0" cy="438" r="5" fill="#d64a4a"/>
+</a>
+<a class="hub-dot" href="../cost/cloud-bills.md" target="_top">
+  <title>Cost: reading a cloud bill (cost/cloud-bills.md)</title>
+  <circle cx="737.0" cy="438" r="5" fill="#8a5cd6"/>
+</a>
+<a class="stop" href="../10-many-people-one-codebase.md" target="_top">
+  <title>10. Many people, one codebase — A codebase built by many people over time is a system in its own right. Its history is data, its branches and reviews are protocols, and its rules about who can change what are trust boundaries. Integrate often, in small pieces; drift is what makes merging hard. Practices live in tools: a rule enforced by the build lasts, and a rule kept on goodwill doesn't. Choosing a tool is choosing a practice.</title>
+  <circle class="node" cx="570.0" cy="360" r="15" fill="#ffffff" stroke="#1f2328" stroke-width="4"/>
+  <text x="570.0" y="365" font-size="13" font-weight="700" text-anchor="middle" fill="#1f2328">10</text>
+  <text class="label" x="570.0" y="400" font-size="13" text-anchor="middle" fill="#1f2328">Many people,</text>
+  <text class="label" x="570.0" y="417" font-size="13" text-anchor="middle" fill="#1f2328">one codebase</text>
+</a>
+<a class="hub-dot" href="../dsa/merkle-dags.md" target="_top">
+  <title>DSA: Merkle DAGs (dsa/merkle-dags.md)</title>
+  <circle cx="563.0" cy="438" r="5" fill="#1baa7a"/>
+</a>
+<a class="hub-dot" href="../auth/least-privilege.md" target="_top">
+  <title>Trust: least privilege (auth/least-privilege.md)</title>
+  <circle cx="577.0" cy="438" r="5" fill="#d64a4a"/>
+</a>
+<a class="stop" href="../11-software-that-must-not-go-down.md" target="_top">
+  <title>11. Software that must not go down — Everything fails; the questions are how you'll know and what you've promised. Define &quot;working&quot; from the user's side, as a target below 100%, and treat the gap as a budget you can spend. Alert only on what threatens the promise, or the alerts will be ignored. Record enough about each request to answer questions you haven't asked yet. After a failure, fix the system that let a person's mistake become an outage.</title>
+  <circle class="node" cx="410.0" cy="360" r="15" fill="#ffffff" stroke="#1f2328" stroke-width="4"/>
+  <text x="410.0" y="365" font-size="13" font-weight="700" text-anchor="middle" fill="#1f2328">11</text>
+  <text class="label" x="410.0" y="400" font-size="13" text-anchor="middle" fill="#1f2328">Software that must</text>
+  <text class="label" x="410.0" y="417" font-size="13" text-anchor="middle" fill="#1f2328">not go down</text>
+</a>
+<a class="hub-dot" href="../latency/queueing.md" target="_top">
+  <title>Latency: queueing (latency/queueing.md)</title>
+  <circle cx="403.0" cy="438" r="5" fill="#e09a1a"/>
+</a>
+<a class="hub-dot" href="../cost/reliability.md" target="_top">
+  <title>Cost: the cost of reliability (cost/reliability.md)</title>
+  <circle cx="417.0" cy="438" r="5" fill="#8a5cd6"/>
+</a>
+<a class="stop" href="../12-machines-that-learn-from-data.md" target="_top">
+  <title>12. Machines that learn from data — Some transformations are learned from data rather than written, and they're only as good as the data and the context they're given. The world moves, so a learned model drifts unless it's fed. Inference is a new kind of round trip, paid in tokens and uncertain in its output. It reintroduces every trust problem at a new boundary: a model can't reliably tell instructions from data, so give it the least power it needs and check what it does.</title>
+  <circle class="node" cx="250.0" cy="360" r="15" fill="#ffffff" stroke="#1f2328" stroke-width="4"/>
+  <text x="250.0" y="365" font-size="13" font-weight="700" text-anchor="middle" fill="#1f2328">12</text>
+  <text class="label" x="250.0" y="400" font-size="13" text-anchor="middle" fill="#1f2328">Machines that learn</text>
+  <text class="label" x="250.0" y="417" font-size="13" text-anchor="middle" fill="#1f2328">from data</text>
+</a>
+<a class="hub-dot" href="../data/labels.md" target="_top">
+  <title>Data: labels and training data (data/labels.md)</title>
+  <circle cx="229.0" cy="438" r="5" fill="#2a78d6"/>
+</a>
+<a class="hub-dot" href="../auth/least-privilege.md" target="_top">
+  <title>Trust: least privilege (auth/least-privilege.md)</title>
+  <circle cx="243.0" cy="438" r="5" fill="#d64a4a"/>
+</a>
+<a class="hub-dot" href="../ai/tokens.md" target="_top">
+  <title>Latency: tokens and context windows (ai/tokens.md)</title>
+  <circle cx="257.0" cy="438" r="5" fill="#e09a1a"/>
+</a>
+<a class="hub-dot" href="../cost/cloud-bills.md" target="_top">
+  <title>Cost: reading a cloud bill (cost/cloud-bills.md)</title>
+  <circle cx="271.0" cy="438" r="5" fill="#8a5cd6"/>
+</a>
+<a class="stop" href="../13-everything-still-exists-at-once.md" target="_top">
+  <title>13. Everything still exists at once — None of this replaced what came before; every era still runs somewhere, and some of it is there because it was first or lucky, not because it was right. Adoption is slow because switching costs are paid now by the adopter, and the benefits arrive later, mostly to someone else. Everything drifts: dependencies, data, prices, requirements, and the reasons behind them. Replace old systems a piece at a time, with both running, rather than all at once. Engineering judgment is mostly knowing which limit binds now and which will lift next.</title>
+  <circle class="node" cx="90.0" cy="360" r="15" fill="#ffffff" stroke="#1f2328" stroke-width="4"/>
+  <text x="90.0" y="365" font-size="13" font-weight="700" text-anchor="middle" fill="#1f2328">13</text>
+  <text class="label" x="90.0" y="400" font-size="13" text-anchor="middle" fill="#1f2328">Everything still</text>
+  <text class="label" x="90.0" y="417" font-size="13" text-anchor="middle" fill="#1f2328">exists at once</text>
+</a>
+<a class="hub-dot" href="../data/migrations.md" target="_top">
+  <title>Data: migrations, consistency (data/migrations.md)</title>
+  <circle cx="62.0" cy="438" r="5" fill="#2a78d6"/>
+</a>
+<a class="hub-dot" href="../dsa/hashing.md" target="_top">
+  <title>DSA: DSA (dsa/hashing.md)</title>
+  <circle cx="76.0" cy="438" r="5" fill="#1baa7a"/>
+</a>
+<a class="hub-dot" href="../auth/least-privilege.md" target="_top">
+  <title>Trust: Trust (auth/least-privilege.md)</title>
+  <circle cx="90.0" cy="438" r="5" fill="#d64a4a"/>
+</a>
+<a class="hub-dot" href="../latency/round-trips.md" target="_top">
+  <title>Latency: Latency (latency/round-trips.md)</title>
+  <circle cx="104.0" cy="438" r="5" fill="#e09a1a"/>
+</a>
+<a class="hub-dot" href="../cost/cloud-bills.md" target="_top">
+  <title>Cost: Cost (cost/cloud-bills.md)</title>
+  <circle cx="118.0" cy="438" r="5" fill="#8a5cd6"/>
+</a>
+<a class="legend-item" href="../data/access-patterns.md" target="_top">
+  <title>Data hub (10 concept pages in data/)</title>
+  <circle cx="56" cy="526" r="6" fill="#2a78d6"/>
+  <text x="68" y="531" font-size="14" fill="#1f2328">Data</text>
+</a>
+<a class="legend-item" href="../dsa/hashing.md" target="_top">
+  <title>DSA hub (10 concept pages in dsa/)</title>
+  <circle cx="122" cy="526" r="6" fill="#1baa7a"/>
+  <text x="134" y="531" font-size="14" fill="#1f2328">DSA</text>
+</a>
+<a class="legend-item" href="../auth/least-privilege.md" target="_top">
+  <title>Trust hub (8 concept pages in auth/)</title>
+  <circle cx="179" cy="526" r="6" fill="#d64a4a"/>
+  <text x="191" y="531" font-size="14" fill="#1f2328">Trust</text>
+</a>
+<a class="legend-item" href="../latency/round-trips.md" target="_top">
+  <title>Latency hub (4 concept pages in latency/)</title>
+  <circle cx="254" cy="526" r="6" fill="#e09a1a"/>
+  <text x="266" y="531" font-size="14" fill="#1f2328">Latency</text>
+</a>
+<a class="legend-item" href="../cost/cloud-bills.md" target="_top">
+  <title>Cost hub (3 concept pages in cost/)</title>
+  <circle cx="347" cy="526" r="6" fill="#8a5cd6"/>
+  <text x="359" y="531" font-size="14" fill="#1f2328">Cost</text>
+</a>
 </svg>
