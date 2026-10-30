@@ -254,7 +254,7 @@ function showTip(n, sx, sy) {
   tip.style.top = Math.min(sy + 16, innerHeight - h - 8) + "px";
 }
 
-function open(n) {
+function openPage(n) {
   if (!n.exists) return;
   const onPages = location.hostname.endsWith("github.io");
   const url = onPages ? n.id.replace(/\.md$/, ".html") : (DATA.base || "") + n.id;
@@ -290,7 +290,7 @@ canvas.addEventListener("pointermove", (e) => {
 });
 
 canvas.addEventListener("pointerup", () => {
-  if (pointer && pointer.node && !pointer.moved) open(pointer.node);
+  if (pointer && pointer.node && !pointer.moved) openPage(pointer.node);
   pointer = null; dragged = null;
   canvas.classList.remove("dragging");
 });
