@@ -59,7 +59,7 @@ Page 0 is a different kind of page from 1–13: it's a preface, not a problem an
 
 ### 3.3 The graph
 
-Every page has a **Connections** section: one line per edge, of the form *learning this is also learning X, because Y*. The "because" is the content. Edges may point at pages that don't exist; those dangling links are the frontier and are how the wiki grows. Each edge points at one specific concept, never a whole subject: *[hash tables](dsa/hash-tables.md)*, not *DSA*. Branch pages live in one folder per family (`dsa/`, `data/`, `latency/`, `cost/`, `math/`, `auth/`, `runtimes/`, `tooling/`, `vendors/`, `writing/`, `cloud/`, `ai/`), one concept per page. The families are the hubs. The README carries a map of the spine showing which families each page connects to (`images/map.svg`, drawn by `scripts/make_map.py`). Expected hubs: data, DSA, trust, latency, cost.
+Every page has a **Connections** section: one line per edge, of the form *learning this is also learning X, because Y*. The "because" is the content. Edges may point at pages that don't exist; those dangling links are the frontier and are how the wiki grows. Each edge points at one specific concept, never a whole subject: *[hash tables](dsa/hash-tables.md)*, not *DSA*. Branch pages live in one folder per family (`dsa/`, `data/`, `latency/`, `cost/`, `math/`, `auth/`, `runtimes/`, `tooling/`, `vendors/`, `writing/`, `cloud/`, `ai/`), one concept per page. The families are the hubs. The README carries a map of the spine showing which families each page connects to (`images/map.svg`, drawn by `scripts/make_map.py`), and `graph.html` shows every page and link as a graph (drawn by `scripts/make_graph.py`). Expected hubs: data, DSA, trust, latency, cost.
 
 ### 3.4 The lens
 

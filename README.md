@@ -48,11 +48,11 @@ Links to pages that don't exist yet are deliberate. They're the branches nobody 
 
 ## The map
 
-[![The throughline: fourteen stops in order, with the hubs each page comes back to](images/map.svg)](map.html)
+![The throughline: fourteen stops in order, with the hubs each page comes back to](images/map.svg)
 
-Open the **[interactive map](map.html)** (or view [`images/map.svg`](images/map.svg) directly in a browser) to click any stop or hub dot, filter by hub, and inspect every page's incoming and outgoing connections.
+The dots are the hubs: families of ideas every few pages come back to. Each family is a folder of short branch pages, one concept each, such as `dsa/hash-tables.md`. To redraw the map after changing a page's Connections, edit `scripts/make_map.py` and run `python3 scripts/make_map.py`.
 
-The dots are the hubs: families of ideas every few pages come back to. Each family is a folder of short branch pages, one concept each, such as [`dsa/hash-tables.md`](dsa/hash-tables.md). To redraw `images/map.svg` and `map.html` after changing a page's Connections, edit `scripts/make_map.py` and run `python3 scripts/make_map.py`.
+For the whole web rather than the trunk, open [`graph.html`](graph.html) in a browser (download it, or open it from your clone; GitHub shows HTML files as source). Every page is a node and every link is an edge, as in Obsidian's graph view: hover a page to see what it connects to, and click it to open it. It's drawn from the pages' links, so after adding a page or a link, run `python3 scripts/make_graph.py`.
 
 ## Honesty rules
 
