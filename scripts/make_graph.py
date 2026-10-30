@@ -3,6 +3,7 @@
 Run from the repo root: python3 scripts/make_graph.py
 Nothing to edit by hand: the graph is read from the pages' links. Rerun after adding a page or a link.
 Links to pages that don't exist yet are drawn as hollow nodes: the frontier.
+On GitHub Pages, clicking a node opens the site's page; elsewhere, it opens the page on GitHub.
 """
 
 import glob

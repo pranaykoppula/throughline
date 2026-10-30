@@ -256,7 +256,9 @@ function showTip(n, sx, sy) {
 
 function open(n) {
   if (!n.exists) return;
-  window.open((DATA.base || "") + n.id, "_blank", "noopener");
+  const onPages = location.hostname.endsWith("github.io");
+  const url = onPages ? n.id.replace(/\.md$/, ".html") : (DATA.base || "") + n.id;
+  window.open(url, "_blank", "noopener");
 }
 
 let pointer = null;

@@ -179,7 +179,7 @@ The aim of the stories is to make great engineers feel human: the reader should 
 - Links: relative Markdown links. A link to a page that doesn't exist is deliberate and marks the frontier; don't "fix" it by removing it.
 - Every page carries `Last reviewed: YYYY-MM-DD`. The wiki drifts too.
 - The README holds: purpose in three sentences, the lens, the reading order, the Mermaid map, and the honesty rules.
-- The repo is the wiki. It renders on GitHub and in editor previews; Obsidian shows the graph from the links. No site generator unless someone wants one.
+- The repo is the wiki. It renders on GitHub, in editor previews, and as a site on GitHub Pages, which builds the Markdown as it stands (`_config.yml` holds the only settings); Obsidian and `graph.html` show the graph from the links. Nothing else generates pages.
 - Progress is personal and local. A `progress.md` at the root is gitignored; each person keeps their own checklist of pages read and links followed in their clone. The repo tracks no one's progress.
 - Anyone may edit. Changes to the model are reviewed by at least one other person, because the model is the thing everyone carries.
 
