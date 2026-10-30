@@ -52,6 +52,8 @@ Links to pages that don't exist yet are deliberate. They're the branches nobody 
 
 The dots are the hubs: families of ideas every few pages come back to. Each family is a folder of short branch pages, one concept each, such as `dsa/hash-tables.md`. To redraw the map after changing a page's Connections, edit `scripts/make_map.py` and run `python3 scripts/make_map.py`.
 
+For the whole web rather than the trunk, open [the graph](https://pranaykoppula.github.io/throughline/graph.html), or `graph.html` from your clone. Every page is a node and every link is an edge, as in Obsidian's graph view: hover a page to see what it connects to, and click it to open it. It's drawn from the pages' links, so after adding a page or a link, run `python3 scripts/make_graph.py`.
+
 ## Honesty rules
 
 - If a winner won by luck or timing, say so. Don't invent a rationale afterwards.

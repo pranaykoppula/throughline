@@ -59,7 +59,7 @@ Page 0 is a different kind of page from 1–13: it's a preface, not a problem an
 
 ### 3.3 The graph
 
-Every page has a **Connections** section: one line per edge, of the form *learning this is also learning X, because Y*. The "because" is the content. Edges may point at pages that don't exist; those dangling links are the frontier and are how the wiki grows. Each edge points at one specific concept, never a whole subject: *[hash tables](dsa/hash-tables.md)*, not *DSA*. Branch pages live in one folder per family (`dsa/`, `data/`, `latency/`, `cost/`, `math/`, `auth/`, `runtimes/`, `tooling/`, `vendors/`, `writing/`, `cloud/`, `ai/`), one concept per page. The families are the hubs. The README carries a map of the spine showing which families each page connects to (`images/map.svg`, drawn by `scripts/make_map.py`). Expected hubs: data, DSA, trust, latency, cost.
+Every page has a **Connections** section: one line per edge, of the form *learning this is also learning X, because Y*. The "because" is the content. Edges may point at pages that don't exist; those dangling links are the frontier and are how the wiki grows. Each edge points at one specific concept, never a whole subject: *[hash tables](dsa/hash-tables.md)*, not *DSA*. Branch pages live in one folder per family (`dsa/`, `data/`, `latency/`, `cost/`, `math/`, `auth/`, `runtimes/`, `tooling/`, `vendors/`, `writing/`, `cloud/`, `ai/`), one concept per page. The families are the hubs. The README carries a map of the spine showing which families each page connects to (`images/map.svg`, drawn by `scripts/make_map.py`), and `graph.html` shows every page and link as a graph (drawn by `scripts/make_graph.py`). Expected hubs: data, DSA, trust, latency, cost.
 
 ### 3.4 The lens
 
@@ -179,7 +179,7 @@ The aim of the stories is to make great engineers feel human: the reader should 
 - Links: relative Markdown links. A link to a page that doesn't exist is deliberate and marks the frontier; don't "fix" it by removing it.
 - Every page carries `Last reviewed: YYYY-MM-DD`. The wiki drifts too.
 - The README holds: purpose in three sentences, the lens, the reading order, the Mermaid map, and the honesty rules.
-- The repo is the wiki. It renders on GitHub and in editor previews; Obsidian shows the graph from the links. No site generator unless someone wants one.
+- The repo is the wiki. It renders on GitHub, in editor previews, and as a site on GitHub Pages, which builds the Markdown as it stands (`_config.yml` holds the only settings); Obsidian and `graph.html` show the graph from the links. Nothing else generates pages.
 - Progress is personal and local. A `progress.md` at the root is gitignored; each person keeps their own checklist of pages read and links followed in their clone. The repo tracks no one's progress.
 - Anyone may edit. Changes to the model are reviewed by at least one other person, because the model is the thing everyone carries.
 

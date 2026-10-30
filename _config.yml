@@ -1,0 +1,5 @@
+title: Throughline
+description: Computing's recurring problems, told as stories in the order they appeared.
+theme: jekyll-theme-primer
+exclude:
+  - scripts
