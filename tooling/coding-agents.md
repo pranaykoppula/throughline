@@ -59,6 +59,7 @@ A coding agent is a language model given tools to read files, write changes and 
 - Learning this is also learning [CI pipelines](ci.md), because the checks an agent works towards are only as good as the tests behind them.
 - Learning this is also learning [tokens and context windows](../ai/tokens.md), because what the agent reads, and what it leaves out, decides what it understands.
 - Learning this is also learning [statistical significance](../math/statistics.md), because judging whether a tool helps needs measurement, not impressions.
+- Learning this is also learning [language as compression](../info/language.md), because a task given to an agent in a sentence is decompressed by a reader that shares none of your context.
 
 ## Resources
 

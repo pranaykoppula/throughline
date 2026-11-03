@@ -55,6 +55,7 @@ Everything fails; the questions are how you'll know and what you've promised. De
 - Learning this is also learning [the cost of reliability](cost/reliability.md), because every extra nine costs more than the last.
 - Learning this is also learning [distributions and percentiles](math/percentiles.md), because averages hide the tail, and the tail is where users suffer.
 - Learning this is also learning [queueing](latency/queueing.md), because the checkout timed out waiting on a slow payment provider, and waiting, not failing, is how most outages start.
+- Learning this is also learning [sampling and observation](info/observation.md), because green squares measured what the monitors were built to see, and silence from a monitor is not the same as health.
 
 ## Resources
 

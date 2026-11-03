@@ -57,6 +57,7 @@ Cloud identity and access management controls which identities, people, services
 - Learning this is also learning [reading a cloud bill](../cost/cloud-bills.md), because a leaked key shows up first as a bill.
 - Learning this is also learning [software supply chain](../vendors/supply-chain.md), because build pipelines hold some of the most powerful credentials you have.
 - Learning this is also learning [coding agents](../tooling/coding-agents.md), because an agent should run with credentials scoped to its task.
+- Learning this is also learning [key management](../crypto/key-management.md), because an access key is a key like any other: it should live in one place, last a short time, and be easy to replace.
 
 ## Resources
 
