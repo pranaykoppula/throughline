@@ -41,7 +41,7 @@ Concept page (SPEC 7.1): Problem · The story · **Where it shows up** (table: p
 
 ## Facts and sources
 
-- Verify every real case before it lands. This environment can't fetch most sites; use web search. A link not confirmed reachable gets `<!-- verify -->` after it (about 136 now). Facts confirmed only from memory are said so in the commit message.
+- Verify every real case before it lands. This environment can't fetch most sites; use web search. A link not confirmed reachable gets `<!-- verify -->` after it (about 137 now). Facts confirmed only from memory are said so in the commit message.
 - Prefer primary sources; flag legends (Wald, Vail's type cases) and disputed accounts (Storm-0558's crash-dump theory) on the page.
 
 ## After any edit
