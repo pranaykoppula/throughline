@@ -56,13 +56,13 @@ Commit `graph.html` with the change. A model sentence lives in `the-model.md`, S
 
 ## Git workflow
 
-- Start each piece of work on a new branch from `origin/main`, named for what it does, in lowercase kebab-case: `add-time-and-clocks`, `fix-graph-click`, `verify-links`. Don't reuse `claude/project-overview-6pngmr`; that was the first session's branch, and the original of that name was renamed to `main` on GitHub.
-- The owner merges by squash through a PR. Open a PR only when asked.
+- Pushing straight to `main` is allowed (the owner's permission, 2026-11-03). Use it for small, self-contained changes; run the checks first, since CI runs on push too.
+- For a larger batch the owner may want to review, start a branch from `origin/main`, named for what it does in lowercase kebab-case (`add-time-and-clocks`, `fix-graph-click`, `verify-links`), and open a PR when asked. The owner merges by squash. Don't reuse `claude/project-overview-6pngmr`; that was the first session's branch, and the original of that name was renamed to `main` on GitHub.
 - Commit messages end with the attribution lines the session provides.
 
 ## Status (2026-11-03)
 
-- Done: all 14 spine pages; 68 concept pages across 15 families, including `info/` (information, compression, language, observation, error-correction, information-gain, secrecy) and `crypto/` (symmetric-encryption, public-key, key-management, randomness), merged in PR #4; and `signals/` (sampling, perception, feedback, state-estimation) plus `dsa/power-and-predictability.md` (the automata ladder), on `add-signals-and-control`.
+- Done: all 14 spine pages; 68 concept pages across 15 families, including `info/` (information, compression, language, observation, error-correction, information-gain, secrecy) and `crypto/` (symmetric-encryption, public-key, key-management, randomness), merged in PR #4; and `signals/` (sampling, perception, feedback, state-estimation) plus `dsa/power-and-predictability.md` (the automata ladder), merged in PR #6.
 - Scope rule from the owner: a new page must carry a mental model that recurs outside its own field. Everything else is a row in an existing table, a line in "elsewhere too", or a link in Resources; depth lives in external sources. Input devices, displays, sound, robotics planning and safety were folded in that way, not given pages.
 - Open: the link-verification pass (needs Firecrawl or wider network access); gaps the owner listed: time and clocks, testing, observability, memory management and compilers, search; graphics later (it builds on `signals/sampling.md` and `signals/perception.md`). The spec's later tracks: business acumen, AI engineering, mathematical intuition.
 - The owner reviews each spine page before the next; concept pages go in batches.
