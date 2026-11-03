@@ -31,6 +31,7 @@ Looking back, Kofi thought he'd built a system that answered the question "is th
 | [12, Machines that learn from data](../12-machines-that-learn-from-data.md) | Spam that users reported | Spam nobody bothered to report, and newsletters reported for the wrong reason. |
 | [Distributions and percentiles](../math/percentiles.md) | Overall averages | The small group whose experience was completely different. |
 | [Statistical significance](../math/statistics.md) | Two days of a button test | Every other day of the week, and the noise that would have shown up given time. |
+| [Sampling and aliasing](../signals/sampling.md) | Henrik's bearings, two hundred times a second | A fast, dangerous vibration, which the samples drew as a slow, harmless one. |
 
 It shows up elsewhere too: logs that record errors but not slow successes, analytics that only see users who didn't block tracking, surveys answered only by those who chose to answer, and crash reports that never arrive from devices that crashed too hard to send them.
 
@@ -60,6 +61,8 @@ Observation is always sampling: of time (how often you look), of space (where th
 - Learning this is also learning [distributions and percentiles](../math/percentiles.md), because averages and slices are only as good as the sample beneath them.
 - Learning this is also learning [labels and training data](../data/labels.md), because a model learns only from what someone chose to record.
 - Learning this is also learning [statistical significance](../math/statistics.md), because a biased sample produces confident answers to the wrong question.
+- Learning this is also learning [sampling and aliasing](../signals/sampling.md), because sampling too slowly doesn't just leave gaps; it can draw a pattern that isn't there.
+- Learning this is also learning [state estimation](../signals/state-estimation.md), because when a sensor goes quiet, the honest response is to grow less certain, not to keep its last reading.
 
 ## Resources
 

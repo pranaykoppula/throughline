@@ -9,7 +9,7 @@ The owner wants engineers to *feel* how real problems were met: a person who doe
 ## Layout
 
 - `00`–`13-*.md`: the spine, fourteen problems in historical order. Page 0 is a brief history in several anecdotes; pages 1–13 follow one fictional person each.
-- Concept pages in family folders, one concept per page: `dsa/ data/ latency/ cost/ math/ auth/ runtimes/ tooling/ vendors/ writing/ cloud/ ai/ info/ crypto/`. The five map hubs are Data, DSA, Trust (`auth/`), Latency, Cost.
+- Concept pages in family folders, one concept per page: `dsa/ data/ latency/ cost/ math/ auth/ runtimes/ tooling/ vendors/ writing/ cloud/ ai/ info/ crypto/ signals/`. The five map hubs are Data, DSA, Trust (`auth/`), Latency, Cost.
 - `the-model.md` (the cumulative model), `forces.md`, `pushback.md`, `README.md`, `SPEC.md`.
 - `graph.html` (every page and link), `images/map.svg` (the spine as a transit line), both generated.
 - `scripts/check_model.py`, `scripts/make_graph.py` (+ `graph_template.html`), `scripts/make_map.py` (hub dots are a hand-edited list in it).
@@ -41,7 +41,7 @@ Concept page (SPEC 7.1): Problem · The story · **Where it shows up** (table: p
 
 ## Facts and sources
 
-- Verify every real case before it lands. This environment can't fetch most sites; use web search. A link not confirmed reachable gets `<!-- verify -->` after it (about 124 now). Facts confirmed only from memory are said so in the commit message.
+- Verify every real case before it lands. This environment can't fetch most sites; use web search. A link not confirmed reachable gets `<!-- verify -->` after it (about 137 now). Facts confirmed only from memory are said so in the commit message.
 - Prefer primary sources; flag legends (Wald, Vail's type cases) and disputed accounts (Storm-0558's crash-dump theory) on the page.
 
 ## After any edit
@@ -62,6 +62,7 @@ Commit `graph.html` with the change. A model sentence lives in `the-model.md`, S
 
 ## Status (2026-11-03)
 
-- Done: all 14 spine pages; 63 concept pages across 14 families, including `info/` (information, compression, language, observation, error-correction, information-gain, secrecy) and `crypto/` (symmetric-encryption, public-key, key-management, randomness), merged in PR #4.
-- Open: the link-verification pass (needs Firecrawl or wider network access); gaps the owner listed: time and clocks, testing, observability, memory management and compilers, search; graphics later. The spec's later tracks: business acumen, AI engineering, mathematical intuition.
+- Done: all 14 spine pages; 68 concept pages across 15 families, including `info/` (information, compression, language, observation, error-correction, information-gain, secrecy) and `crypto/` (symmetric-encryption, public-key, key-management, randomness), merged in PR #4; and `signals/` (sampling, perception, feedback, state-estimation) plus `dsa/power-and-predictability.md` (the automata ladder), on `add-signals-and-control`.
+- Scope rule from the owner: a new page must carry a mental model that recurs outside its own field. Everything else is a row in an existing table, a line in "elsewhere too", or a link in Resources; depth lives in external sources. Input devices, displays, sound, robotics planning and safety were folded in that way, not given pages.
+- Open: the link-verification pass (needs Firecrawl or wider network access); gaps the owner listed: time and clocks, testing, observability, memory management and compilers, search; graphics later (it builds on `signals/sampling.md` and `signals/perception.md`). The spec's later tracks: business acumen, AI engineering, mathematical intuition.
 - The owner reviews each spine page before the next; concept pages go in batches.

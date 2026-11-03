@@ -62,6 +62,7 @@ Natural language transmits meaning efficiently by leaving most of it implicit, r
 - Learning this is also learning [data modelling](../data/modelling.md), because modelling a domain starts with agreeing what its words mean.
 - Learning this is also learning [tokens and context windows](../ai/tokens.md), because a prompt is compressed language decoded by a reader who knows only what's in the window.
 - Learning this is also learning [commit messages and design records](../writing/commit-messages.md), because writing for a future reader is writing for someone outside your context.
+- Learning this is also learning [power and predictability](../dsa/power-and-predictability.md), because the ladder of formal languages began as Chomsky's theory of grammar for human ones.
 
 ## Resources
 
