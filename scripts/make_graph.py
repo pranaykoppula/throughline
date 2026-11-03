@@ -30,6 +30,7 @@ FAMILIES = {
     "writing": ("Writing", "#8b949e"),
     "info": ("Information", "#e86fe0"),
     "crypto": ("Cryptography", "#f0883e"),
+    "signals": ("Signals and control", "#ffa198"),
 }
 
 REFERENCE = ["the-model.md", "forces.md", "pushback.md"]

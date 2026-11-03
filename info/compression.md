@@ -62,6 +62,7 @@ Compression represents data in fewer bits. Lossless compression removes statisti
 - Learning this is also learning [storage tiers](../cost/storage-tiers.md), because the motive for compressing is almost always cost.
 - Learning this is also learning [round trips](../latency/round-trips.md), because smaller payloads cross the network faster.
 - Learning this is also learning [tokens and context windows](../ai/tokens.md), because summarising a long conversation for a model is lossy compression with a model of what matters.
+- Learning this is also learning [designed for human senses](../signals/perception.md), because JPEG and MP3 work by modelling human eyes and ears, and image numbers are already shaped by that model.
 
 ## Resources
 

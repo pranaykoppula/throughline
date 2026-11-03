@@ -30,6 +30,7 @@ Looking back, Viktor thought knowing what was impossible had been the most pract
 | [Graphs](graphs.md) | The shortest route through every city | No known fast exact answer; good approximations are used instead. |
 | [Prompt injection](../ai/prompt-injection.md) | Reliably telling instructions from data in text | Limit what a fooled model can do. |
 | [Input validation](../auth/input-validation.md) | Spotting every malicious input | Allow-lists, separate channels, and least privilege, instead of trying to recognise all bad input. |
+| [Power and predictability](power-and-predictability.md) | How long a rule or a configuration will run | Choose a less powerful language, so the question can be answered. |
 
 It shows up elsewhere too: type checkers that reject some correct programs to never accept a wrong one, static analysers with false alarms, timeouts on everything, and the impossibility of proving a large program bug-free by testing.
 
@@ -57,6 +58,7 @@ Computability theory studies which problems can be solved by any algorithm at al
 - Learning this is also learning [prompt injection](../ai/prompt-injection.md), because reliably separating instructions from data in text has no known solution.
 - Learning this is also learning [input validation](../auth/input-validation.md), because recognising all bad input is hopeless; defining good input isn't.
 - Learning this is also learning [floating point](../math/floating-point.md), because representations having edges is the same theme, one level down.
+- Learning this is also learning [power and predictability](power-and-predictability.md), because Turing's limits apply only at the top of a ladder, and choosing a lower rung is how engineers stay out of their reach.
 
 ## Resources
 

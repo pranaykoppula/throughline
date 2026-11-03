@@ -57,6 +57,7 @@ A queue forms whenever work arrives faster than it's served, even for a moment. 
 - Learning this is also learning [distributions and percentiles](../math/percentiles.md), because queues punish the tail, and the average hides it.
 - Learning this is also learning [the cost of reliability](../cost/reliability.md), because slack is capacity you pay for and hope not to need.
 - Learning this is also learning [consistency](../data/consistency.md), because asking the one owner of some data means queueing for it.
+- Learning this is also learning [feedback and control](../signals/feedback.md), because retrying is a correction based on old news, and backoff weakens it so the queue can recover.
 
 ## Resources
 

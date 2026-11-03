@@ -33,7 +33,7 @@ Looking back, Omar thought each model came with a different danger. Threads shar
 | [6, Anyone can publish](../06-anyone-can-publish.md) | JavaScript in the browser, a single event loop | A long script freezes the page. |
 | [Queueing](../latency/queueing.md) | Threads waiting for a lock | A queue at the slowest point, invisible until it's long. |
 
-It shows up elsewhere too: user interfaces that freeze while saving, databases handling concurrent transactions, and every server framework's choice of how to handle requests.
+It shows up elsewhere too: user interfaces that freeze while saving, databases handling concurrent transactions, every server framework's choice of how to handle requests, and hardware interrupts, which let a device tell the processor something has happened instead of being asked again and again.
 
 What these share is that doing several things at once always means sharing something, memory or time, and every bug here comes from that sharing.
 

@@ -29,6 +29,7 @@ Looking back, Chloe thought the flags had let everyone describe their own part o
 | [5, Machines need to talk](../05-machines-need-to-talk.md) | A TCP connection: listening, connecting, established, closing | Both machines always agree on what the next message should be, though they can't see each other. |
 | [Consistency](../data/consistency.md) | Copies of a database applying the same changes | If every copy starts in the same state and applies the same moves in the same order, they end in the same state. |
 | [6, Anyone can publish](../06-anyone-can-publish.md) | A booking: free, held, booked | The server refused a move from booked to booked, which ended Hannah's double bookings. |
+| [Power and predictability](power-and-predictability.md) | Selim's spam rules, matched by a finite automaton | A fixed set of states meant every rule finished in time proportional to the email, whatever the rule. |
 
 It shows up elsewhere too: parsers reading text one character at a time, traffic lights, user interfaces with modes, workflow and approval systems, and game characters.
 
@@ -56,6 +57,7 @@ A state machine is a model of something that is always in exactly one of a fixed
 - Learning this is also learning [serialization formats](../data/serialization.md), because parsing a format is usually a state machine reading one piece at a time.
 - Learning this is also learning [input validation](../auth/input-validation.md), because refusing moves that aren't on the diagram is validating what a request is allowed to do.
 - Learning this is also learning [migrations](../data/migrations.md), because moving data into a new design often starts with untangling which states the old data was really in.
+- Learning this is also learning [power and predictability](power-and-predictability.md), because a state machine is the bottom rung of the ladder of languages, and its limits are what make it checkable.
 
 ## Resources
 

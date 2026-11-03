@@ -56,6 +56,7 @@ A token is the unit of text a language model processes, often a word or part of 
 - Learning this is also learning [reading a cloud bill](../cost/cloud-bills.md), because tokens are the line on the bill.
 - Learning this is also learning [caching](../latency/caching.md), because reusing a repeated prefix is caching for models.
 - Learning this is also learning [access patterns](../data/access-patterns.md), because retrieval is choosing what to read based on the question asked.
+- Learning this is also learning [power and predictability](../dsa/power-and-predictability.md), because forcing a model to produce valid JSON works by running a grammar alongside it and allowing only the tokens it accepts.
 
 ## Resources
 
