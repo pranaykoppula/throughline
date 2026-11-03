@@ -28,6 +28,7 @@ FAMILIES = {
     "cloud": ("Cloud", "#5ac8b8"),
     "ai": ("AI", "#a371f7"),
     "writing": ("Writing", "#8b949e"),
+    "info": ("Information", "#e86fe0"),
 }
 
 REFERENCE = ["the-model.md", "forces.md", "pushback.md"]
