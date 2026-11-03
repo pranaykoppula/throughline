@@ -60,6 +60,7 @@ Profiling is measuring where a program, or a system, or a bill, actually spends 
 - Learning this is also learning [reading a cloud bill](../cost/cloud-bills.md), because a bill is a profile of where the money goes.
 - Learning this is also learning [distributions and percentiles](../math/percentiles.md), because a profile of averages can hide the slow cases users actually feel.
 - Learning this is also learning [queueing](../latency/queueing.md), because many profiles show time spent waiting, not working, and the fix is different.
+- Learning this is also learning [information gain](../info/information-gain.md), because a profile is the question that rules out the most, and a hunch is the one that rules out the least.
 
 ## Resources
 
