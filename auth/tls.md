@@ -59,6 +59,7 @@ TLS (Transport Layer Security, the successor to SSL) creates an encrypted, authe
 - Learning this is also learning [code signing](code-signing.md), because certificates and signatures use the same public-key idea to prove who made something.
 - Learning this is also learning [input validation](input-validation.md), because knowing who sent something and knowing it's safe are separate questions.
 - Learning this is also learning [hashing](../dsa/hashing.md), because TLS uses cryptographic hashes to detect tampering.
+- Learning this is also learning [communication with adversaries](../info/secrecy.md), because TLS is the answer to an adversary on the path who wants to read, change, or impersonate.
 
 ## Resources
 

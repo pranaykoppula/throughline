@@ -64,6 +64,7 @@ Information, in Shannon's sense, is the reduction of uncertainty: a message is i
 - Learning this is also learning [hashing](../dsa/hashing.md), because a fixed-size fingerprint necessarily throws information away.
 - Learning this is also learning [statistical significance](../math/statistics.md), because how surprising an observation is, given what you expected, is both a measure of information and the heart of a statistical test.
 - Learning this is also learning [round trips](../latency/round-trips.md), because a reply confirming a message is redundancy bought with time.
+- Learning this is also learning [communication with adversaries](secrecy.md), because the same structure that let Thomas's code survive noise lets an enemy read it, once someone on the line is trying to.
 
 ## Resources
 
