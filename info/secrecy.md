@@ -62,6 +62,7 @@ Communication with adversaries is communication over a channel where someone del
 - Learning this is also learning [code signing](../auth/code-signing.md), because it answers integrity and authenticity, without confidentiality.
 - Learning this is also learning [password storage](../auth/password-storage.md), because storing secrets assumes the adversary will one day read the database.
 - Learning this is also learning [error detection and correction](error-correction.md), because a checksum stops noise and an adversary can simply recompute it; integrity against an adversary needs a key.
+- Learning this is also learning [symmetric encryption](../crypto/symmetric-encryption.md), because Lionel's daily key list is its ancestor, and frequency analysis still works on encryption that lets identical messages look identical.
 
 ## Resources
 
