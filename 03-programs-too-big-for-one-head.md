@@ -59,6 +59,7 @@ Abstraction is the core skill: layers (languages, libraries, modules, types) tha
 - Learning this is also learning [representations](00-representations.md), because every abstraction is a representation, and it has an edge where the layer underneath shows through.
 - Learning this is also learning [access patterns](data/access-patterns.md), because the catalogue was asked one question over and over, and the right structure followed from that question.
 - Learning this is also learning [profiling](tooling/profiling.md), because Elena was sure the sort was slow, and measurement said it was four percent.
+- Learning this is also learning [meaning as use](info/meaning-as-use.md), because an abstraction's real interface is everything its users can observe, not only what it documents.
 
 ## Resources
 

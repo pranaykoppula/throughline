@@ -63,6 +63,7 @@ Observation is always sampling: of time (how often you look), of space (where th
 - Learning this is also learning [statistical significance](../math/statistics.md), because a biased sample produces confident answers to the wrong question.
 - Learning this is also learning [sampling and aliasing](../signals/sampling.md), because sampling too slowly doesn't just leave gaps; it can draw a pattern that isn't there.
 - Learning this is also learning [state estimation](../signals/state-estimation.md), because when a sensor goes quiet, the honest response is to grow less certain, not to keep its last reading.
+- Learning this is also learning [measures and targets](measures-and-targets.md), because once a dashboard's colour becomes the goal, people learn exactly what it can't see.
 
 ## Resources
 

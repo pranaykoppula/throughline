@@ -63,6 +63,7 @@ A token is the unit of text a language model processes, often a word or part of 
 1. Your model provider's documentation on tokens, context windows and pricing (start here).
 2. Liu et al., ["Lost in the Middle: How Language Models Use Long Contexts"](https://arxiv.org/abs/2307.03172) (2023) (go deeper).
 3. Simon Willison's blog, which tracks model prices and context sizes as they change (reference). <!-- verify -->
+4. Emily Bender and Alexander Koller, "Climbing towards NLU: On Meaning, Form, and Understanding in the Age of Data" (2020) (the argument that form alone can't teach meaning; read it with Melanie Mitchell's *Artificial Intelligence: A Guide for Thinking Humans*, 2019).
 
 ## Names you'll hear
 

@@ -41,7 +41,7 @@ Concept page (SPEC 7.1): Problem · The story · **Where it shows up** (table: p
 
 ## Facts and sources
 
-- Verify every real case before it lands. This environment can't fetch most sites; use web search. A link not confirmed reachable gets `<!-- verify -->` after it (about 137 now). Facts confirmed only from memory are said so in the commit message.
+- Verify every real case before it lands. This environment can't fetch most sites; use web search. A link not confirmed reachable gets `<!-- verify -->` after it (about 144 now). Facts confirmed only from memory are said so in the commit message.
 - Prefer primary sources; flag legends (Wald, Vail's type cases) and disputed accounts (Storm-0558's crash-dump theory) on the page.
 
 ## After any edit
@@ -60,9 +60,11 @@ Commit `graph.html` with the change. A model sentence lives in `the-model.md`, S
 - For a larger batch the owner may want to review, start a branch from `origin/main`, named for what it does in lowercase kebab-case (`add-time-and-clocks`, `fix-graph-click`, `verify-links`), and open a PR when asked. The owner merges by squash. Don't reuse `claude/project-overview-6pngmr`; that was the first session's branch, and the original of that name was renamed to `main` on GitHub.
 - Commit messages end with the attribution lines the session provides.
 
-## Status (2026-11-03)
+## Status (2026-11-04)
 
-- Done: all 14 spine pages; 68 concept pages across 15 families, including `info/` (information, compression, language, observation, error-correction, information-gain, secrecy) and `crypto/` (symmetric-encryption, public-key, key-management, randomness), merged in PR #4; and `signals/` (sampling, perception, feedback, state-estimation) plus `dsa/power-and-predictability.md` (the automata ladder), merged in PR #6.
+- Done: all 14 spine pages; 71 concept pages across 15 families, including `info/` (information, compression, language, observation, error-correction, information-gain, secrecy; and, from the meaning-making angle, measures-and-targets, encodings, meaning-as-use) and `crypto/` (symmetric-encryption, public-key, key-management, randomness), merged in PR #4; and `signals/` (sampling, perception, feedback, state-estimation) plus `dsa/power-and-predictability.md` (the automata ladder), merged in PR #6.
 - Scope rule from the owner: a new page must carry a mental model that recurs outside its own field. Everything else is a row in an existing table, a line in "elsewhere too", or a link in Resources; depth lives in external sources. Input devices, displays, sound, robotics planning and safety were folded in that way, not given pages.
+- The owner's interest: tech as the meeting of meaning-making (semiotics, linguistics, hermeneutics) and mathematics. Stories here are fiction, so don't present patterns across them as findings about the world. Reading-list items (Naur, Weaver, Winograd and Flores, Lakatos, Bender and Koller) are in the relevant Resources sections.
+- Candidates for later pages: embeddings (with the search gap), names and identity (check whether a row in `data/modelling.md` is enough).
 - Open: the link-verification pass (needs Firecrawl or wider network access); gaps the owner listed: time and clocks, testing, observability, memory management and compilers, search; graphics later (it builds on `signals/sampling.md` and `signals/perception.md`). The spec's later tracks: business acumen, AI engineering, mathematical intuition.
 - The owner reviews each spine page before the next; concept pages go in batches.

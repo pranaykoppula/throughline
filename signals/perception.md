@@ -60,6 +60,7 @@ Formats for images, video and sound encode values according to human perception,
 - Learning this is also learning [sampling](sampling.md), because the sample rate and bit depth of every output format were chosen from human limits.
 - Learning this is also learning [floating-point](../math/floating-point.md), because both spend a limited supply of values unevenly, where the differences matter most.
 - Learning this is also learning [labels and training data](../data/labels.md), because a model of human perception can be trained or calibrated on too narrow a group, and inherit its blind spots.
+- Learning this is also learning [encodings](../info/encodings.md), because a colour profile is an encoding, and throwing it away is decoding with the wrong codebook.
 
 ## Resources
 
