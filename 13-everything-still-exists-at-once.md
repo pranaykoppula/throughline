@@ -2,6 +2,8 @@
 
 Last reviewed: 2026-10-24
 
+**Builds on** [0, Humans need representations before they need machines](00-representations.md), where every representation has an edge, and on every page between: each earlier solution is still running somewhere, beside the ones that came after it, while the world around them keeps moving.
+
 ## Problem
 
 Every earlier page told the story of something new replacing something old. In practice nothing got replaced cleanly. Old systems kept running alongside new ones, everything around them kept changing, and the hardest engineering became keeping systems true to their purpose while the world moved under them.

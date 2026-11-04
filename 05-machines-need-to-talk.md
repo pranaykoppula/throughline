@@ -2,6 +2,8 @@
 
 Last reviewed: 2026-10-24
 
+**Builds on** [4, Data outlives programs](04-data-outlives-programs.md), where data became the long-lived thing worth keeping, and [2, One machine, many programs](02-one-machine-many-programs.md), where waiting turned out to be where the time goes. Moving data between machines is waiting on the slowest and least reliable device yet.
+
 ## Problem
 
 Data was rarely on the machine that needed it. Moving it between machines meant crossing a link that was slow, shared, and unreliable, where a message could be lost, delayed, or delivered twice, and neither side could see what the other had received.

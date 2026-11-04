@@ -18,7 +18,7 @@ The owner wants engineers to *feel* how real problems were met: a person who doe
 
 ## Page shapes
 
-Spine page (SPEC section 7): Problem · The story · It really happened · What survived · Where it gets misapplied (with the mirror) · Connections · Resources · Names you'll hear · Go and look · The model so far (sentences 0..N, only N in bold).
+Spine page (SPEC section 7): Builds on (one unheaded paragraph under the title naming the one or two earlier spine pages it climbs from, and why) · Problem · The story · It really happened · What survived · Where it gets misapplied (with the mirror) · Connections · Resources · Names you'll hear · Go and look · The model so far (sentences 0..N, only N in bold).
 
 Concept page (SPEC 7.1): Problem · The story · **Where it shows up** (table: page | the thing | what it taught, then "elsewhere too", then what the rows share) · It really happened · What it is · Where it gets misapplied · Connections · Resources · Names you'll hear · Go and look. No model section. `dsa/hashing.md` is the sample.
 

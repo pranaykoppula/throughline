@@ -2,6 +2,8 @@
 
 Last reviewed: 2026-10-24
 
+**Builds on** [4, Data outlives programs](04-data-outlives-programs.md), where data is kept for decades, and [7, Strangers on the network](07-strangers-on-the-network.md), where everything crossing a boundary has to be distrusted. The data becomes what the model learns from, and the model becomes a new boundary where every trust problem returns.
+
 ## Problem
 
 Some tasks were too fuzzy to write rules for: telling spam from mail, a cat from a dog, a good answer from a bad one. People could do them easily and couldn't explain how. The only way forward was to have the machine learn the rules from examples, which meant the machine was only as good as the examples, and nobody could fully read what it had learned.

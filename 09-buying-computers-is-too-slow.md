@@ -2,6 +2,8 @@
 
 Last reviewed: 2026-10-24
 
+**Builds on** [8, Too many users, too much data](08-too-many-users-too-much-data.md), where one machine stopped being enough. Needing many machines, and quickly, made buying them the bottleneck, and renting them made cost part of the design.
+
 ## Problem
 
 To run software you needed computers, and computers had to be bought, shipped, racked and paid for before anyone knew whether the software would be used. That was slow and expensive, and it decided who could start a company at all.

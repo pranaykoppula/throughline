@@ -2,6 +2,8 @@
 
 Last reviewed: 2026-10-24
 
+**Builds on** [3, Programs too big for one head](03-programs-too-big-for-one-head.md), where modules let one person work on part of a program without holding all of it, and [5, Machines need to talk](05-machines-need-to-talk.md), where protocols let parties who can't see each other stay in step. Many people changing one codebase need both: parts they can own, and protocols such as branches and reviews.
+
 ## Problem
 
 Once dozens of people changed the same code, their changes collided, overwrote each other, and broke things nobody had touched. A codebase needed rules for who changes what and when, and the rules only held if something enforced them.

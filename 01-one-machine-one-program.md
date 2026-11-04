@@ -2,6 +2,8 @@
 
 Last reviewed: 2026-10-24
 
+**Builds on** [0, Humans need representations before they need machines](00-representations.md), where everything a computer works on is a representation someone wrote down. Once a program and its data are written down as bits, they have to be put somewhere, and where they sit sets the cost of everything.
+
 ## Problem
 
 A program needs its data close to the processor to run fast, but fast memory is small and expensive. Most of the data has to live somewhere bigger, slower, and further away, and something has to decide what's close at any moment.

@@ -2,6 +2,8 @@
 
 Last reviewed: 2026-10-24
 
+**Builds on** [3, Programs too big for one head](03-programs-too-big-for-one-head.md), where layers let programs be rewritten freely, and [1, One machine, one program](01-one-machine-one-program.md), where storage is big, slow and far away. Data is the part a rewrite can't hide, and the shape it's stored in sets the cost of every question asked of it later.
+
 ## Problem
 
 Programs get rewritten; the data they keep stays for decades. Data stored in the shape one program needed made every later program, and every new question, pay for that first program's choices.

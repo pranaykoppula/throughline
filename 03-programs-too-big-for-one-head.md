@@ -2,6 +2,8 @@
 
 Last reviewed: 2026-10-24
 
+**Builds on** [2, One machine, many programs](02-one-machine-many-programs.md), where the operating system gave each program its own space and hid the machine underneath. Abstraction is the same move made for people: hide the parts you don't need to hold in your head.
+
 ## Problem
 
 Once programs grew past what one person could hold in their head, every change risked breaking something nobody remembered was connected. Programs couldn't get bigger unless people found a way to work on one part without having to understand all the others.

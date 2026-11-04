@@ -2,6 +2,8 @@
 
 Last reviewed: 2026-10-24
 
+**Builds on** [8, Too many users, too much data](08-too-many-users-too-much-data.md), where with many machines something is always partly broken, and [10, Many people, one codebase](10-many-people-one-codebase.md), where many people change a system all the time. Failure becomes constant, and knowing about it before users do becomes the job.
+
 ## Problem
 
 Once people depended on software every hour of every day, it couldn't just be fixed when someone noticed it was broken. Teams needed to know it was failing before users told them, and to agree on what "working" meant, because perfect wasn't on offer.

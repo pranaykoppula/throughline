@@ -2,6 +2,8 @@
 
 Last reviewed: 2026-10-24
 
+**Builds on** nothing: this is the starting point, and every later page builds on it.
+
 ## Problem
 
 Nobody works on the world directly. We write it down first, as numbers, symbols, rules, and work on what we wrote. Every way of writing it down works for the problems its inventors had, and quietly fails on some problem they didn't.
