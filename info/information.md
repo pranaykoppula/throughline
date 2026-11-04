@@ -65,12 +65,14 @@ Information, in Shannon's sense, is the reduction of uncertainty: a message is i
 - Learning this is also learning [statistical significance](../math/statistics.md), because how surprising an observation is, given what you expected, is both a measure of information and the heart of a statistical test.
 - Learning this is also learning [round trips](../latency/round-trips.md), because a reply confirming a message is redundancy bought with time.
 - Learning this is also learning [communication with adversaries](secrecy.md), because the same structure that let Thomas's code survive noise lets an enemy read it, once someone on the line is trying to.
+- Learning this is also learning [encodings](encodings.md), because a character encoding is a codebook every computer must share, and text means nothing to one that doesn't.
 
 ## Resources
 
 1. James Gleick, *The Information* (2011) (start here: telegraph codes, Morse, Shannon and much more, as a story).
 2. Claude Shannon, "A Mathematical Theory of Communication" (1948) (go deeper: the first sections are readable, and the rest is where the field began).
 3. Steven Bellovin, ["Compression, Correction, Confidentiality, and Comprehension: A Modern Look at Commercial Telegraph Codes"](https://www.cs.columbia.edu/~smb/papers/codebooks.pdf) (reference: the codebooks, their rules and their motives). <!-- verify -->
+4. Claude Shannon and Warren Weaver, *The Mathematical Theory of Communication* (1949) (read Weaver's introduction: the technical problem, the problem of meaning, and the problem of effect).
 
 ## Names you'll hear
 

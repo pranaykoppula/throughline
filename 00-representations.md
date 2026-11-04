@@ -42,6 +42,7 @@ Every representation is a choice among others that could have been made, and eve
 - Learning this is also learning [computability](dsa/computability.md), because the halting problem is why no tool can check every program for you, and why Turing-completeness comes up on [page 3](03-programs-too-big-for-one-head.md).
 - Learning this is also learning [machine learning](12-machines-that-learn-from-data.md), because there the representation is learned from data, and the data itself moves.
 - Learning this is also learning [information](info/information.md), because a representation is a codebook: it carries meaning only to those who share it, and a perfectly copied message can still be decoded against the wrong one.
+- Learning this is also learning [encodings](info/encodings.md), because every representation is a convention, and in a computer the convention is rarely stored with the bytes.
 
 ## Resources
 
@@ -49,6 +50,7 @@ Every representation is a choice among others that could have been made, and eve
 2. Paul Nahin, *An Imaginary Tale: The Story of √−1* (go deeper: the impossible step, in full).
 3. David Goldberg, ["What Every Computer Scientist Should Know About Floating-Point Arithmetic"](https://docs.oracle.com/cd/E19957-01/816-2464/ncg_goldberg.html) (1991; reference, and heavy going).
 4. US General Accounting Office, ["Patriot Missile Defense: Software Problem Led to System Failure at Dhahran, Saudi Arabia"](https://www.gao.gov/products/imtec-92-26) (1992): the primary source, and short.
+5. Imre Lakatos, *Proofs and Refutations* (1976) (mathematicians redrawing a definition each time a counterexample shows its edge: this page's idea, inside mathematics).
 
 ## The model so far
 

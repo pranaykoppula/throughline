@@ -31,6 +31,7 @@ Looking back, Noor thought the build had only ever been worth what people believ
 | [Coding agents](coding-agents.md) | The checks an agent works towards | Only as good as the tests: an agent can make a weak test pass without fixing anything. |
 | [The cost of reliability](../cost/reliability.md) | Small, easily undone deploys | Prevent more outages than most redundancy. |
 | [Code signing](../auth/code-signing.md) | The build system as part of the supply chain | What it produces gets signed and trusted, so it's a target. |
+| [Measures and targets](../info/measures-and-targets.md) | Ottilie's coverage gate | A good measure that stopped meaning anything once merges depended on it. |
 
 It shows up elsewhere too: deployment pipelines, security scanning, automated formatting, and dependency updates proposed by bots.
 
@@ -58,6 +59,7 @@ Continuous integration means merging changes into a shared line often, with an a
 - Learning this is also learning [build systems and package managers](build-systems.md), because a fast pipeline depends on rebuilding only what changed.
 - Learning this is also learning [code signing](../auth/code-signing.md), because the pipeline's output is what gets signed and shipped.
 - Learning this is also learning [coding agents](coding-agents.md), because agents optimise for the pipeline's checks, so the checks had better be right.
+- Learning this is also learning [measures and targets](../info/measures-and-targets.md), because a gate in the pipeline turns a measure into a target, and targets drift.
 
 ## Resources
 

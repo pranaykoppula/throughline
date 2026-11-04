@@ -59,6 +59,7 @@ Everything fails; the questions are how you'll know and what you've promised. De
 - Learning this is also learning [distributions and percentiles](math/percentiles.md), because averages hide the tail, and the tail is where users suffer.
 - Learning this is also learning [queueing](latency/queueing.md), because the checkout timed out waiting on a slow payment provider, and waiting, not failing, is how most outages start.
 - Learning this is also learning [sampling and observation](info/observation.md), because green squares measured what the monitors were built to see, and silence from a monitor is not the same as health.
+- Learning this is also learning [measures and targets](info/measures-and-targets.md), because "working" has to be defined from the customer's side before anyone is judged by it, or the number and the service drift apart.
 
 ## Resources
 
@@ -66,6 +67,7 @@ Everything fails; the questions are how you'll know and what you've promised. De
 2. Charity Majors, Liz Fong-Jones and George Miranda, *Observability Engineering* (go deeper: Rosa's Brazil problem, as a discipline).
 3. [AWS, S3 post-incident summary, 2017](https://aws.amazon.com/message/41926/): a short, real postmortem.
 4. John Allspaw, ["Blameless PostMortems and a Just Culture"](https://www.etsy.com/codeascraft/blameless-postmortems) (2012; reference: why blaming people hides the system). <!-- verify -->
+5. Terry Winograd and Fernando Flores, *Understanding Computers and Cognition* (1986) (on breakdown: a tool you rely on only becomes visible when it fails).
 
 ## Names you'll hear
 

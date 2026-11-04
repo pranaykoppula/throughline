@@ -57,6 +57,7 @@ Labels are the target answers a supervised model learns from. Their quality is l
 - Learning this is also learning [data modelling](modelling.md), because what you decide to record, and how, limits what can be learned from it.
 - Learning this is also learning [tokens and context windows](../ai/tokens.md), because for language models, the context you provide is a kind of label for the task.
 - Learning this is also learning [consistency](consistency.md), because a trained model is a copy of the world as it was when the labels were made.
+- Learning this is also learning [measures and targets](../info/measures-and-targets.md), because raters paid by the item optimise for speed, and the labels drift from the judgement they stand for.
 
 ## Resources
 
