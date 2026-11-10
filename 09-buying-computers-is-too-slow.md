@@ -1,6 +1,6 @@
 # 9. Buying computers is too slow
 
-Last reviewed: 2026-10-24
+Last reviewed: 2026-11-10
 
 ## Problem
 
@@ -32,7 +32,7 @@ Looking back, Tariq thought the cloud had changed less about technology than abo
 
 ## It really happened
 
-Tariq is fictional; the shift wasn't. Dividing one physical machine into many virtual ones began with IBM's CP-67 in 1967, so that one expensive mainframe could serve many users each with their own operating system ([page 2](02-one-machine-many-programs.md)). Amazon turned on the first EC2 beta instance in August 2006, six months after launching S3 storage ([TechCrunch](https://techcrunch.com/2021/08/28/how-amazon-ec2-grew-from-a-notion-into-a-foundational-element-of-cloud-computing/)). Its early machines ran on the open-source Xen hypervisor. Renting the hypervisor's slices by the hour is the business the hyperscalers were built on.
+Tariq is fictional; the shift wasn't. Dividing one physical machine into many virtual ones began with IBM's CP-67 in 1967, so that one expensive mainframe could serve many users each with their own operating system ([page 2](02-one-machine-many-programs.md)). Amazon announced EC2 as a limited beta on 25 August 2006, after launching S3 on 14 March that year. The original beta was built on Xen, offering virtual CPUs by the hour ([AWS EC2 beta announcement](https://aws.amazon.com/blogs/aws/amazon_ec2_beta/); [Amazon S3 launch](https://press.aboutamazon.com/2006/3/amazon-web-services-launches)). Renting compute by the hour is the business the hyperscalers were built on.
 
 Two companies made opposite choices, and both were right for them. Netflix spent seven years moving everything to AWS after a database failure in 2008 stopped it shipping DVDs for three days, finishing in January 2016 ([Netflix](https://about.netflix.com/en/news/completing-the-netflix-cloud-migration)). It spent its engineering on what Amazon didn't sell, and kept its own delivery network ([page 5](05-machines-need-to-talk.md)). Ladder: up. Dropbox went the other way. It moved most of its users' files off a third-party provider onto its own storage system and reported saving about $75 million over two years in its 2018 filing to go public ([GeekWire](https://www.geekwire.com/2018/dropbox-saved-almost-75-million-two-years-building-tech-infrastructure/); [S-1](https://www.sec.gov/Archives/edgar/data/0001467623/000119312518055809/d451946ds1.htm)). Ladder: down, at exabyte scale, where storage was the product. More recently 37signals left the cloud and reported its bill falling from about $3.2 million a year to well under half that; its founder said plainly that others' results would vary ([DatacenterDynamics](https://www.datacenterdynamics.com/en/news/37signals-claims-it-saved-almost-2m-last-year-from-cloud-repatriation/)). Each company was describing its own decision, and each had a reason to make it look good.
 
@@ -64,8 +64,8 @@ Machines are rented by the unit, so cost is a live design variable: every archit
 
 ## Resources
 
-1. Dan McKinley, ["Choose Boring Technology"](https://mcfunley.com/choose-boring-technology) (start here: on spending your limited capacity for new things carefully). <!-- verify -->
-2. Armbrust et al., ["Above the Clouds: A Berkeley View of Cloud Computing"](https://www2.eecs.berkeley.edu/Pubs/TechRpts/2009/EECS-2009-28.pdf) (2009; the economic case, made early). <!-- verify -->
+1. Dan McKinley, ["Choose Boring Technology"](https://mcfunley.com/choose-boring-technology) (start here: on spending your limited capacity for new things carefully).
+2. Armbrust et al., ["Above the Clouds: A Berkeley View of Cloud Computing"](https://www2.eecs.berkeley.edu/Pubs/TechRpts/2009/EECS-2009-28.pdf) (2009; the economic case, made early).
 3. Wang and Casado, ["The Cost of Cloud, a Trillion Dollar Paradox"](https://a16z.com/the-cost-of-cloud-a-trillion-dollar-paradox/) (2021), with Corey Quinn's [rebuttal](https://www.lastweekinaws.com/blog/the-trillion-dollar-paradoxical-arguments-of-a16z) (go deeper: read both).
 4. Your cloud provider's own pricing pages (reference: the truth is in the per-unit prices, especially for data transfer).
 

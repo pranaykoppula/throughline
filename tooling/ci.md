@@ -38,7 +38,7 @@ What these share is that the pipeline is where a team's rules actually live, and
 
 ## It really happened
 
-Noor is fictional; flakiness at scale is well measured. In 2016 Google reported that about 1.5% of all its test runs gave a flaky result, and that almost 16% of its tests showed some flakiness, a test passing and failing on identical code ([Google Testing Blog, "Flaky Tests at Google and How We Mitigate Them"](https://testing.googleblog.com/2016/05/)). Martin Fowler's article on continuous integration describes the practices Noor went back to: build every change, keep the build fast, and fix a broken build immediately ([Fowler](https://martinfowler.com/articles/continuousIntegration.html) <!-- verify -->).
+Noor is fictional; flakiness at scale is well measured. In 2016 Google reported that about 1.5% of all its test runs gave a flaky result, and that almost 16% of its tests showed some flakiness, a test passing and failing on identical code ([Google Testing Blog, "Flaky Tests at Google and How We Mitigate Them"](https://testing.googleblog.com/2016/05/)). Martin Fowler's article on continuous integration describes the practices Noor went back to: build every change, keep the build fast, and fix a broken build immediately ([Fowler](https://martinfowler.com/articles/continuousIntegration.html)).
 
 ## What it is
 
@@ -61,9 +61,9 @@ Continuous integration means merging changes into a shared line often, with an a
 
 ## Resources
 
-1. Martin Fowler, ["Continuous Integration"](https://martinfowler.com/articles/continuousIntegration.html) (start here). <!-- verify -->
+1. Martin Fowler, ["Continuous Integration"](https://martinfowler.com/articles/continuousIntegration.html) (start here).
 2. John Micco, "Flaky Tests at Google and How We Mitigate Them" ([Google Testing Blog, 2016](https://testing.googleblog.com/2016/05/)) (go deeper).
-3. Titus Winters, Tom Manshreck and Hyrum Wright, [*Software Engineering at Google*](https://abseil.io/resources/swe-book), the chapters on testing and continuous integration (reference). <!-- verify -->
+3. Titus Winters, Tom Manshreck and Hyrum Wright, [*Software Engineering at Google*](https://abseil.io/resources/swe-book), the chapters on testing and continuous integration (reference).
 
 ## Names you'll hear
 

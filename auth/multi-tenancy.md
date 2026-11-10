@@ -1,6 +1,6 @@
 # Multi-tenancy
 
-Last reviewed: 2026-10-24
+Last reviewed: 2026-11-10
 
 A concept page: many customers sharing one system, and the boundary that must keep each one's data their own.
 
@@ -59,7 +59,7 @@ Multi-tenancy is serving many customers, or tenants, from one shared deployment.
 ## Resources
 
 1. Your database's documentation on row-level security or equivalent (start here).
-2. [OWASP's guidance on access control](https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html) (go deeper). <!-- verify -->
+2. [OWASP Authorization Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html) (go deeper).
 3. Cloud providers' guides to SaaS tenant isolation (reference).
 
 ## Names you'll hear

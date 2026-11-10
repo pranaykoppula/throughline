@@ -1,6 +1,6 @@
 # Prompt injection
 
-Last reviewed: 2026-10-24
+Last reviewed: 2026-11-10
 
 A concept page: when a language model treats text it was given to read as instructions to follow.
 
@@ -62,8 +62,8 @@ Prompt injection is getting a language model to follow instructions hidden in co
 ## Resources
 
 1. Simon Willison, ["The lethal trifecta for AI agents"](https://simonwillison.net/2025/Jun/16/the-lethal-trifecta/) (start here: short and clear).
-2. Simon Willison's writing on [prompt injection](https://simonwillison.net/tags/prompt-injection/) (go deeper: a running record since 2022). <!-- verify -->
-3. [OWASP Top 10 for Large Language Model Applications](https://owasp.org/www-project-top-10-for-large-language-model-applications/) (reference). <!-- verify -->
+2. Simon Willison's writing on [prompt injection](https://simonwillison.net/tags/prompt-injection/) (go deeper: a running record since 2022).
+3. [OWASP Top 10 for LLM Applications:2025](https://genai.owasp.org/llm-top-10/) (reference: prompt injection is LLM01).
 
 ## Names you'll hear
 

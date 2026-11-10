@@ -1,6 +1,6 @@
 # Code signing
 
-Last reviewed: 2026-10-24
+Last reviewed: 2026-11-10
 
 A concept page: proving who made a piece of software, and that nobody changed it on the way, and what that proof doesn't cover.
 
@@ -60,9 +60,9 @@ Code signing attaches a digital signature, made with a private key, to software 
 
 ## Resources
 
-1. [Sigstore](https://www.sigstore.dev/) documentation (start here: modern signing for open-source software, and why it exists). <!-- verify -->
+1. [Sigstore](https://www.sigstore.dev/) documentation (start here: modern signing for open-source software, and why it exists).
 2. Coverage of the SolarWinds build compromise, such as [The Register's](https://www.theregister.com/2021/01/12/solarwinds_tech_analysis_crowdstrike/) (go deeper: how a signed update went wrong).
-3. [Reproducible Builds](https://reproducible-builds.org/) (reference: making it possible to check that a binary matches its source). <!-- verify -->
+3. [Reproducible Builds](https://reproducible-builds.org/) (reference: making it possible to check that a binary matches its source).
 
 ## Names you'll hear
 

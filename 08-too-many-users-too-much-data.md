@@ -1,6 +1,6 @@
 # 8. Too many users, too much data
 
-Last reviewed: 2026-10-24
+Last reviewed: 2026-11-10
 
 Links marked with an HTML `verify` comment haven't been checked against the live page yet.
 
@@ -44,7 +44,7 @@ The Crux story is made up. Twitter's isn't. In 2012 Twitter's timelines were rea
 
 Sources: Raffi Krikorian, ["Timelines at Scale"](https://www.infoq.com/presentations/Twitter-Timeline-Scalability/), QCon San Francisco 2012, and a [written summary](https://highscalability.com/the-architecture-twitter-uses-to-deal-with-150m-active-users/). It's a company describing itself; the numbers are theirs.
 
-Amazon made the opposite choice about copies, on purpose. Their Dynamo store accepts every write to a shopping cart even when the copies can't reach each other, because a cart you can't add to is a lost sale. The cost is in the paper in plain words: when copies are merged, an item you deleted can come back. Then came a surprise nobody designed for. Dynamo was hard to run, and most of Amazon's own engineers chose simpler managed services instead, so it came back years later as DynamoDB, run for them ([the paper](https://www.allthingsdistributed.com/2007/10/amazons_dynamo.html); [Vogels, 2012](https://www.allthingsdistributed.com/2012/01/amazon-dynamodb.html) <!-- verify -->, a launch post that explains the past in a way that sells the product).
+Amazon made the opposite choice about copies, on purpose. Their Dynamo store accepts every write to a shopping cart even when the copies can't reach each other, because a cart you can't add to is a lost sale. The cost is in the paper in plain words: when copies are merged, an item you deleted can come back. Then came a surprise nobody designed for. Dynamo was hard to run, and most of Amazon's own engineers chose simpler managed services instead, so it came back years later as DynamoDB, run for them ([the paper](https://www.allthingsdistributed.com/2007/10/amazons_dynamo.html); [Vogels, 2012](https://www.allthingsdistributed.com/2012/01/amazon-dynamodb.html), a launch post that explains the past in a way that sells the product).
 
 ## What survived
 
@@ -52,8 +52,8 @@ Once data lives in more than one place, the copies will disagree, and every desi
 
 ## Where it gets misapplied
 
-- **Microservices before the team or the load exists.** Segment split its system into many services, then folded them back into one when the running cost outgrew the benefit ([InfoQ on "To Microservices and Back Again"](https://www.infoq.com/news/2020/04/microservices-back-again/)). Prime Video's monitoring team [reported cutting costs by over 90%](https://www.primevideotech.com/video-streaming/scaling-up-the-prime-video-audio-video-monitoring-service-and-reducing-costs-by-90) <!-- verify --> by consolidating; [others pointed out](https://www.catchpoint.com/blog/debunking-misconceptions-amazon-prime-videos-approach-to-microservices-and-serverless) it was one service redesigned for cost, not a verdict on microservices.
-- **Sharding a database that fits on one machine.** Copying a company a thousand times your size buys their problems without their reasons ([You Are Not Google](https://blog.bradfieldcs.com/you-are-not-google-84912cf44afb)). <!-- verify --> Maya's bigger server was the right first move.
+- **Microservices before the team or the load exists.** Segment split its system into many services, then folded them back into one when the running cost outgrew the benefit ([InfoQ on "To Microservices and Back Again"](https://www.infoq.com/news/2020/04/microservices-back-again/)). Prime Video's monitoring team [reported cutting costs by over 90%](https://web.archive.org/web/20240805183535/https://www.primevideotech.com/video-streaming/scaling-up-the-prime-video-audio-video-monitoring-service-and-reducing-costs-by-90) by consolidating; [Adrian Cockcroft noted](https://adrianco.medium.com/so-many-bad-takes-what-is-there-to-learn-from-the-prime-video-microservices-to-monolith-story-4bd0970423d4) that this was one service refactored within the broader system, not a verdict on microservices.
+- **Sharding a database that fits on one machine.** Copying a company a thousand times your size buys their problems without their reasons ([You Are Not Google](https://web.archive.org/web/20170607174202/https://blog.bradfieldcs.com/you-are-not-google-84912cf44afb)). Maya's bigger server was the right first move.
 - **The mirror:** never planning for it. The worst time to learn sharding is during the outage. Know which limit you'll hit first, and roughly when.
 
 ## Connections
@@ -72,15 +72,15 @@ Once data lives in more than one place, the copies will disagree, and every desi
 1. Raffi Krikorian, ["Timelines at Scale"](https://www.infoq.com/presentations/Twitter-Timeline-Scalability/) (start here: 40 minutes, Maya's story with real numbers).
 2. Martin Kleppmann, [*Designing Data-Intensive Applications*](https://dataintensive.net/), chapters 5 to 9: replication, partitioning, transactions, consistency.
 3. [The Dynamo paper](https://www.allthingsdistributed.com/2007/10/amazons_dynamo.html) (go deeper: readable, and honest about what it gives up).
-4. Eric Brewer, ["CAP Twelve Years Later"](https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed/): the theorem's author on how it gets misread. <!-- verify -->
-5. [Jepsen analyses](https://jepsen.io/analyses) (reference: what real databases do when the network breaks, as opposed to what they claim). <!-- verify -->
+4. Eric Brewer, ["CAP Twelve Years Later"](https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed/): the theorem's author on how it gets misread.
+5. [Jepsen analyses](https://jepsen.io/analyses) (reference: what real databases do when the network breaks, as opposed to what they claim).
 
 ## Names you'll hear
 
 - **Read-your-writes:** the promise Maya wrote down without knowing its name.
 - **Fan-out on write / fan-out on read:** building feeds when posts arrive, or when feeds are opened.
 - **CAP** (Eric Brewer): when the network splits, a system chooses between consistency and availability. Proven formally in 2002 by Gilbert and Lynch.
-- **Paxos** (Leslie Lamport) and **Raft:** ways for copies to agree. Raft was designed to be easier to understand, and [it is](https://raft.github.io/). <!-- verify -->
+- **Paxos** (Leslie Lamport) and **Raft:** ways for copies to agree. Raft was designed to be easier to understand, and [it is](https://raft.github.io/).
 - **Eventual consistency:** if writes stop, the copies will eventually agree. It promises nothing about when.
 
 ## Go and look

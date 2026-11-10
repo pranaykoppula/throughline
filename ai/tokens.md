@@ -1,6 +1,6 @@
 # Tokens and context windows
 
-Last reviewed: 2026-10-24
+Last reviewed: 2026-11-10
 
 A concept page: the unit a language model reads, writes and bills in, and the limited space it reads from.
 
@@ -61,7 +61,7 @@ A token is the unit of text a language model processes, often a word or part of 
 
 1. Your model provider's documentation on tokens, context windows and pricing (start here).
 2. Liu et al., ["Lost in the Middle: How Language Models Use Long Contexts"](https://arxiv.org/abs/2307.03172) (2023) (go deeper).
-3. Simon Willison's blog, which tracks model prices and context sizes as they change (reference). <!-- verify -->
+3. Simon Willison, [LLM Pricing Calculator](https://www.llm-prices.com/) (reference: current per-token prices and context-size tiers).
 
 ## Names you'll hear
 

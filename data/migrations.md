@@ -1,6 +1,6 @@
 # Migrations
 
-Last reviewed: 2026-10-24
+Last reviewed: 2026-11-10
 
 A concept page: changing the shape or home of data that a running system depends on, without stopping it.
 
@@ -39,7 +39,7 @@ The pages share one pattern at different sizes: let the old and new shapes coexi
 
 ## It really happened
 
-Bilal is fictional; his six steps are standard practice. Stripe described the same pattern in 2017, using it to move hundreds of millions of subscription records: write to both old and new, move reads to the new, move writes to the new, then remove the old ([Stripe, "Online migrations at scale"](https://stripe.com/blog/online-migrations) <!-- verify -->). GitHub built gh-ost in 2016 because existing tools for changing large MySQL tables online were slowing its busiest tables to a near halt; it copies a table in the background and switches over at the end ([GitHub](https://github.blog/2016-08-01-gh-ost-github-s-online-migration-tool-for-mysql/)). The big-bang alternative is on [page 13](../13-everything-still-exists-at-once.md): TSB's 2018 weekend migration.
+Bilal is fictional; his six steps are standard practice. Stripe described the same pattern in 2017 for migrating subscription records: write to both old and new, move reads to the new, move writes to the new, then remove the old ([Stripe, "Online migrations at scale"](https://stripe.com/blog/online-migrations)). GitHub built gh-ost in 2016 because existing tools for changing large MySQL tables online were slowing its busiest tables to a near halt; it copies a table in the background and switches over at the end ([GitHub](https://github.blog/2016-08-01-gh-ost-github-s-online-migration-tool-for-mysql/)). The big-bang alternative is on [page 13](../13-everything-still-exists-at-once.md): TSB's 2018 weekend migration.
 
 ## What it is
 
@@ -62,8 +62,8 @@ A migration changes data's shape or location while systems depend on it. Done sa
 
 ## Resources
 
-1. Stripe, ["Online migrations at scale"](https://stripe.com/blog/online-migrations) (2017) (start here: the four steps with a real example). <!-- verify -->
-2. Martin Fowler, ["Strangler Fig Application"](https://martinfowler.com/bliki/StranglerFigApplication.html) (go deeper: the same idea for whole systems). <!-- verify -->
+1. Stripe, ["Online migrations at scale"](https://stripe.com/blog/online-migrations) (2017) (start here: the four steps with a real example).
+2. Martin Fowler, ["Strangler Fig Application"](https://martinfowler.com/bliki/StranglerFigApplication.html) (go deeper: the same idea for whole systems).
 3. Your database's documentation on online schema changes (reference: what locks, and for how long).
 
 ## Names you'll hear

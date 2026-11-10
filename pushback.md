@@ -1,6 +1,6 @@
 # Pushback
 
-Last reviewed: 2026-10-24
+Last reviewed: 2026-11-10
 
 Every solution on the spine gets adopted by people who don't have its problem. This page is for that moment, whether the proposal is someone else's or your own. The questions are also the ones to ask a colleague or Claude Code when you're out of your depth.
 
@@ -42,12 +42,12 @@ The right rung moves over time. What had to be built ten years ago is a product 
 
 ## Resources
 
-- Dan McKinley, ["Choose Boring Technology"](https://mcfunley.com/choose-boring-technology) (start here). <!-- verify -->
-- Oz Nova, ["You Are Not Google"](https://blog.bradfieldcs.com/you-are-not-google-84912cf44afb). <!-- verify -->
-- Jeff Bezos, [2015 letter to shareholders](https://www.sec.gov/Archives/edgar/data/1018724/000119312516530910/d168744dex991.htm): one-way and two-way doors. <!-- verify -->
-- Fred Brooks, ["No Silver Bullet"](https://www.cs.unc.edu/techreports/86-020.pdf) (1986). <!-- verify -->
-- Joel Spolsky, ["Things You Should Never Do, Part I"](https://www.joelonsoftware.com/2000/04/06/things-you-should-never-do-part-i/): on rewrites. <!-- verify -->
+- Dan McKinley, ["Choose Boring Technology"](https://mcfunley.com/choose-boring-technology) (start here).
+- Oz Nova, ["You Are Not Google"](https://web.archive.org/web/20170607174202/https://blog.bradfieldcs.com/you-are-not-google-84912cf44afb).
+- Jeff Bezos, [2015 letter to shareholders](https://www.sec.gov/Archives/edgar/data/1018724/000119312516530910/d168744dex991.htm): one-way and two-way doors.
+- Fred Brooks, ["No Silver Bullet"](https://www.cs.unc.edu/techreports/86-020.pdf) (1986).
+- Joel Spolsky, ["Things You Should Never Do, Part I"](https://www.joelonsoftware.com/2000/04/06/things-you-should-never-do-part-i/): on rewrites.
 - Clayton Christensen, *The Innovator's Dilemma* (1997), for the mirror failure: refusing the new thing until it's too late.
-- The Gartner [hype cycle](https://www.gartner.com/en/research/methodologies/gartner-hype-cycle). It's a marketing artifact, but the shape is real. <!-- verify -->
+- Gartner's [Hype Cycle methodology](https://www.gartner.com/en/research/methodologies/gartner-hype-cycle), a framework for discussing a technology's maturity and adoption.
 
 Cases of the misuse itself, such as Segment's microservices and Prime Video's consolidation, are on [page 8](08-too-many-users-too-much-data.md).

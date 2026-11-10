@@ -1,6 +1,6 @@
 # Queues
 
-Last reviewed: 2026-10-24
+Last reviewed: 2026-11-10
 
 A concept page: the data structure behind waiting in line, and the rules for who goes next.
 
@@ -60,7 +60,7 @@ A queue is a data structure where items are added at one end and removed from th
 
 ## Resources
 
-1. Remzi and Andrea Arpaci-Dusseau, [*Operating Systems: Three Easy Pieces*](https://pages.cs.wisc.edu/~remzi/OSTEP/), the scheduling chapters, including the multilevel feedback queue (start here: free). <!-- verify -->
+1. Remzi and Andrea Arpaci-Dusseau, [*Operating Systems: Three Easy Pieces*](https://pages.cs.wisc.edu/~remzi/OSTEP/), the scheduling chapters, including the multilevel feedback queue (start here: free).
 2. Thomas Cormen et al., *Introduction to Algorithms*, the chapters on heaps and priority queues (go deeper).
 3. Your message broker's documentation on priorities, limits and dead-letter queues (reference).
 

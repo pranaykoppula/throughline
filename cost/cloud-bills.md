@@ -1,6 +1,6 @@
 # Reading a cloud bill
 
-Last reviewed: 2026-10-24
+Last reviewed: 2026-11-10
 
 A concept page: the bill as a record of design decisions, and how to read it.
 
@@ -60,8 +60,8 @@ A cloud bill lists usage by unit, multiplied by price: machine hours, gigabytes 
 ## Resources
 
 1. Your cloud provider's pricing pages and cost explorer (start here: the truth is in the per-unit prices).
-2. Corey Quinn's writing on cloud costs at [Last Week in AWS](https://www.lastweekinaws.com/) (go deeper: funny, sharp, and he sells cost consulting, so read with that in mind). <!-- verify -->
-3. [FinOps Foundation](https://www.finops.org/) (reference: shared practices for cloud cost management). <!-- verify -->
+2. Corey Quinn's writing on cloud costs at [Last Week in AWS](https://www.lastweekinaws/) (go deeper: funny, sharp, and he sells cost consulting, so read with that in mind).
+3. [FinOps Foundation](https://www.finops.org/) (reference: shared practices for cloud cost management).
 
 ## Names you'll hear
 

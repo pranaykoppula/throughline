@@ -1,6 +1,6 @@
 # State machines
 
-Last reviewed: 2026-10-24
+Last reviewed: 2026-11-10
 
 A concept page: naming every state something can be in, and every allowed way to move between them.
 
@@ -60,7 +60,7 @@ A state machine is a model of something that is always in exactly one of a fixed
 ## Resources
 
 1. Any introduction to finite state machines; the [Wikipedia article](https://en.wikipedia.org/wiki/Finite-state_machine) is a reasonable start.
-2. [RFC 793](https://www.rfc-editor.org/rfc/rfc793) (1981), TCP's original specification, for its state diagram (go deeper). <!-- verify -->
+2. [RFC 9293](https://www.rfc-editor.org/rfc/rfc9293#section-3.3.2) (2022), the current TCP specification, for its connection-state diagram; it obsoletes RFC 793 (go deeper).
 3. Fred Schneider, ["Implementing Fault-Tolerant Services Using the State Machine Approach"](https://pdos.csail.mit.edu/archive/6.824-2007/papers/schneider-rsm.pdf) (1990) (reference).
 
 ## Names you'll hear

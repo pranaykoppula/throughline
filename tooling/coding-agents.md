@@ -1,6 +1,6 @@
 # Coding agents
 
-Last reviewed: 2026-10-24
+Last reviewed: 2026-11-10
 
 A concept page: language models that read code, run commands and make changes, and how to work with one well.
 
@@ -62,7 +62,7 @@ A coding agent is a language model given tools to read files, write changes and 
 
 ## Resources
 
-1. Your agent's documentation on permissions, sandboxing and project instructions (start here). For Claude Code, see [its documentation](https://code.claude.com/docs). <!-- verify -->
+1. For Claude Code, official documentation on [permissions](https://code.claude.com/docs/en/permissions), [sandboxing](https://code.claude.com/docs/en/sandboxing), and [project instructions](https://code.claude.com/docs/en/memory).
 2. Simon Willison, ["The lethal trifecta for AI agents"](https://simonwillison.net/2025/Jun/16/the-lethal-trifecta/) (go deeper: the security side).
 3. METR's 2025 study of AI tools and experienced developers (reference: one careful measurement, with its limits stated).
 

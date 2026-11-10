@@ -1,6 +1,6 @@
 # Access patterns
 
-Last reviewed: 2026-10-24
+Last reviewed: 2026-11-10
 
 A concept page: how data is read and written decides how it should be stored.
 
@@ -63,7 +63,7 @@ An access pattern is how data is actually used: how often it's read compared wit
 ## Resources
 
 1. Martin Kleppmann, [*Designing Data-Intensive Applications*](https://dataintensive.net/), chapter 3, on how stores lay data out (start here).
-2. Markus Winand, [*Use The Index, Luke*](https://use-the-index-luke.com/) (go deeper: indexes as access patterns made explicit). <!-- verify -->
+2. Markus Winand, [*Use The Index, Luke*](https://use-the-index-luke.com/) (go deeper: indexes as access patterns made explicit).
 3. Alex DeBrie, *The DynamoDB Book* (reference: designing a store entirely around known access patterns, and what it costs when they change).
 
 ## Names you'll hear

@@ -1,6 +1,6 @@
 # Distributions and percentiles
 
-Last reviewed: 2026-10-24
+Last reviewed: 2026-11-10
 
 A concept page: why the average hides the cases people actually feel.
 
@@ -63,7 +63,7 @@ A distribution is the full spread of values something takes. A percentile is a p
 
 1. Dean and Barroso, "The Tail at Scale" (*CACM*, 2013), or [Adrian Colyer's summary](https://blog.acolyer.org/2015/01/15/the-tail-at-scale/) (start here).
 2. Gil Tene, "How NOT to Measure Latency" (talk) (go deeper: the common mistakes, including averaging percentiles).
-3. Google, [*Site Reliability Engineering*](https://sre.google/sre-book/table-of-contents/), the chapter on service level objectives (reference). <!-- verify -->
+3. Google, [*Site Reliability Engineering*](https://sre.google/sre-book/service-level-objectives/), chapter 4, "Service Level Objectives" (reference: percentiles and long-tail latency).
 
 ## Names you'll hear
 

@@ -1,6 +1,6 @@
 # Round trips
 
-Last reviewed: 2026-10-24
+Last reviewed: 2026-11-10
 
 A concept page: why the number of times you wait for a reply matters more than how much you send.
 
@@ -37,7 +37,7 @@ The pages share one fix in different forms: fewer, larger exchanges instead of m
 
 ## It really happened
 
-Ayesha is fictional; her compromise is close to how GraphQL began. Facebook built it in 2012 for its mobile news feed, so that one request could ask for exactly the nested data a screen needed, and released it publicly in 2015 ([Facebook Engineering](https://engineering.fb.com/2015/09/14/core-infra/graphql-a-data-query-language/) <!-- verify -->). HTTP/2, standardised in 2015, let a browser send many requests over one connection at once instead of waiting on each. Every new secure connection still costs extra round trips before the first byte of data, which is why newer protocols work to cut those handshakes down.
+Ayesha is fictional; her compromise is close to how GraphQL began. Facebook built it in 2012 for its mobile news feed, so that one request could ask for exactly the nested data a screen needed, and released it publicly in 2015 ([Facebook Engineering](https://engineering.fb.com/2015/09/14/core-infra/graphql-a-data-query-language/)). HTTP/2, standardised in 2015, let a browser send many requests over one connection at once instead of waiting on each. Every new secure connection still costs extra round trips before the first byte of data, which is why newer protocols work to cut those handshakes down.
 
 ## What it is
 
@@ -60,8 +60,8 @@ A round trip is a message going out and its reply coming back. Its cost is mostl
 
 ## Resources
 
-1. Ilya Grigorik, [*High Performance Browser Networking*](https://hpbn.co/), the early chapters on latency and TCP (start here: free). <!-- verify -->
-2. Facebook Engineering, ["GraphQL: A data query language"](https://engineering.fb.com/2015/09/14/core-infra/graphql-a-data-query-language/) (2015) (go deeper: mobile round trips producing a new API style). <!-- verify -->
+1. Ilya Grigorik, [*High Performance Browser Networking*](https://hpbn.co/), the early chapters on latency and TCP (start here: free).
+2. Facebook Engineering, ["GraphQL: A data query language"](https://engineering.fb.com/2015/09/14/core-infra/graphql-a-data-query-language/) (2015) (go deeper: mobile round trips producing a new API style).
 3. Jacobson and Karels, ["Congestion Avoidance and Control"](https://people.eecs.berkeley.edu/~sylvia/cs268/papers/congavoid.pdf) (1988) (reference: what happens to round trips under load).
 
 ## Names you'll hear

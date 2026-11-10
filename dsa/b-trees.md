@@ -1,6 +1,6 @@
 # B-trees
 
-Last reviewed: 2026-10-24
+Last reviewed: 2026-11-10
 
 A concept page: the structure behind most database indexes, shaped by the cost of reading from disk.
 
@@ -62,7 +62,7 @@ A B-tree is a balanced search tree whose nodes each hold many keys, sized to mat
 
 ## Resources
 
-1. Markus Winand, [*Use The Index, Luke*](https://use-the-index-luke.com/) (start here: B-tree indexes from the point of view of someone writing queries). <!-- verify -->
+1. Markus Winand, [*Use The Index, Luke*](https://use-the-index-luke.com/) (start here: B-tree indexes from the point of view of someone writing queries).
 2. Douglas Comer, ["The Ubiquitous B-Tree"](https://users.cs.utah.edu/~pandey/courses/cs6530/fall24/papers/trees/p121-comer.pdf) (1979) (go deeper: short and clear).
 3. Martin Kleppmann, [*Designing Data-Intensive Applications*](https://dataintensive.net/), chapter 3 (reference: B-trees against LSM trees).
 

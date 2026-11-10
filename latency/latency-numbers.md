@@ -1,6 +1,6 @@
 # Latency numbers
 
-Last reviewed: 2026-10-24
+Last reviewed: 2026-11-10
 
 A concept page: the rough cost of everything, and why the ratios matter more than the numbers.
 
@@ -37,7 +37,7 @@ What the pages share is one picture repeated at every scale: a little fast stora
 
 ## It really happened
 
-Daniel is fictional; his table is real and widely copied. Peter Norvig published a version in his essay "Teach Yourself Programming in Ten Years", and Jeff Dean of Google popularised another in talks around 2009; it circulates as "Latency numbers every programmer should know" ([one copy](https://gist.github.com/jboner/2841832) <!-- verify -->). The numbers have changed with hardware, as disks became solid-state and networks got faster, but light in fibre still covers only about two hundred kilometres per millisecond. Grace Hopper used to hand audiences pieces of wire about thirty centimetres long, the distance light travels in a nanosecond, to show why distance limits computers.
+Daniel is fictional. A GitHub gist titled "Latency numbers every programmer should know" labels its table as approximate figures from around 2012, credits Jeff Dean, and says it was originally by Peter Norvig ([gist](https://gist.github.com/jboner/2841832)). The numbers have changed with hardware, as disks became solid-state and networks got faster, but light in fibre still covers only about two hundred kilometres per millisecond. Grace Hopper used to hand audiences pieces of wire about thirty centimetres long, the distance light travels in a nanosecond, to show why distance limits computers.
 
 ## What it is
 
@@ -60,9 +60,8 @@ Latency numbers are rough, order-of-magnitude costs for common operations: readi
 
 ## Resources
 
-1. ["Latency numbers every programmer should know"](https://gist.github.com/jboner/2841832) (start here: one screen). <!-- verify -->
-2. Ilya Grigorik, [*High Performance Browser Networking*](https://hpbn.co/), the chapters on latency (go deeper). <!-- verify -->
-3. Peter Norvig, ["Teach Yourself Programming in Ten Years"](https://norvig.com/21-days.html), for his version of the table and the advice around it. <!-- verify -->
+1. ["Latency numbers every programmer should know"](https://gist.github.com/jboner/2841832) (reference: a community-maintained comparison of mostly circa-2012 figures, not current benchmarks).
+2. Ilya Grigorik, [*High Performance Browser Networking*](https://hpbn.co/), the chapters on latency (go deeper).
 
 ## Names you'll hear
 

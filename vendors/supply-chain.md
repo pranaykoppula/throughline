@@ -1,6 +1,6 @@
 # Software supply chain
 
-Last reviewed: 2026-10-24
+Last reviewed: 2026-11-10
 
 A concept page: the code you didn't write, written by people you've never met, running with all the power of the code you did.
 
@@ -60,7 +60,7 @@ The software supply chain is everything that goes into running your code: depend
 
 ## Resources
 
-1. [OpenSSF](https://openssf.org/) guides on securing dependencies (start here). <!-- verify -->
+1. OpenSSF, ["Concise Guide for Evaluating Open Source Software"](https://best.openssf.org/Concise-Guide-for-Evaluating-Open-Source-Software) (start here: evaluating dependencies before adopting them).
 2. Elastic Security Labs, ["500ms to midnight: XZ A.K.A. liblzma backdoor"](https://www.elastic.co/security-labs/500ms-to-midnight) (go deeper: the anatomy of a patient attack).
 3. Russ Cox, "Our Software Dependency Problem" (2019) (reference: how to think about what you depend on).
 

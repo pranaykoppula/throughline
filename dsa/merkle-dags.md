@@ -1,6 +1,6 @@
 # Merkle DAGs
 
-Last reviewed: 2026-10-24
+Last reviewed: 2026-11-10
 
 A concept page: naming data by the hash of its contents, and building trees of those names, so one short value can vouch for everything beneath it.
 
@@ -62,7 +62,7 @@ A Merkle tree is a tree in which each leaf is labelled with the hash of a block 
 
 ## Resources
 
-1. Scott Chacon and Ben Straub, [*Pro Git*](https://git-scm.com/book/en/v2), chapter 10, "Git Internals" (start here: the structure, by poking at it). <!-- verify -->
+1. Scott Chacon and Ben Straub, [*Pro Git*](https://git-scm.com/book/en/v2), chapter 10, "Git Internals" (start here: the structure, by poking at it).
 2. DeCandia et al., [the Dynamo paper](https://www.allthingsdistributed.com/2007/10/amazons_dynamo.html), on anti-entropy with Merkle trees (go deeper).
 3. Ralph Merkle, "A Digital Signature Based on a Conventional Encryption Function" (1987, from 1979 work) (reference).
 

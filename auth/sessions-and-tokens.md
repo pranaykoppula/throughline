@@ -1,6 +1,6 @@
 # Sessions and tokens
 
-Last reviewed: 2026-10-24
+Last reviewed: 2026-11-10
 
 A concept page: how a system remembers who you are between requests, and why that memory is worth stealing.
 
@@ -62,9 +62,9 @@ A session is the server's memory that a client has authenticated; a token is wha
 
 ## Resources
 
-1. [OWASP Session Management Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html) (start here: the practical rules). <!-- verify -->
+1. [OWASP Session Management Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html) (start here: the practical rules).
 2. Eric Butler, ["Firesheep"](https://codebutler.com/2010/10/24/firesheep/) (2010) (go deeper: a short post that changed the web).
-3. RFC 7519, JSON Web Token (reference). <!-- verify -->
+3. IETF, [RFC 7519: JSON Web Token (JWT)](https://www.rfc-editor.org/rfc/rfc7519) (2015) (reference).
 
 ## Names you'll hear
 

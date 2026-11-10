@@ -1,6 +1,6 @@
 # 13. Everything still exists at once
 
-Last reviewed: 2026-10-24
+Last reviewed: 2026-11-10
 
 ## Problem
 
@@ -30,7 +30,7 @@ Looking back, Ines thought the lesson of those years was that none of it had eve
 
 ## It really happened
 
-Ines is fictional; her bank is a composite of many. In 2017 Reuters reported that COBOL still underpinned 43% of banking systems and 95% of ATM transactions, as reported in secondhand coverage ([The New Stack](https://thenewstack.io/cobol-everywhere-will-maintain/)). The big-bang switchover she avoided happened to the UK bank TSB in April 2018. It moved its customers to a new platform in one weekend, and up to two million of them couldn't use their accounts properly for weeks. An independent report found the platform hadn't been ready and hadn't been properly tested, and the costs ran to hundreds of millions of pounds ([Computer Weekly](https://www.computerweekly.com/news/252473750/Major-report-on-TSB-IT-disaster-expected-soon); [DatacenterDynamics](https://www.datacenterdynamics.com/en/news/major-tsb-banking-outage-be-blamed-failure-test-data-center-ahead-it-migration/)). TSB disputed parts of the report. Ines's piece-by-piece approach has a name, the strangler fig, from Martin Fowler ([Fowler](https://martinfowler.com/bliki/StranglerFigApplication.html) <!-- verify -->).
+Ines is fictional; her bank is a composite of many. In 2017 Reuters reported that COBOL still underpinned 43% of banking systems and 95% of ATM transactions, as reported in secondhand coverage ([The New Stack](https://thenewstack.io/cobol-everywhere-will-maintain/)). The big-bang switchover she avoided happened to the UK bank TSB in April 2018. Its migration to a new banking platform was followed by extensive service disruption. TSB's summary of Slaughter and May's independent review says that planning, supplier oversight and testing could have been handled differently; it also reports that inconsistent data-centre configuration was not caught before migration. TSB said it disagreed with parts of the review ([TSB's release](https://www.tsb.co.uk/news-releases/slaughter-and-may.html)). Ines's piece-by-piece approach has a name, the strangler fig, from Martin Fowler ([Fowler](https://martinfowler.com/bliki/StranglerFigApplication.html)).
 
 Adoption is slow because the people who pay for switching are rarely the people who benefit. IPv6, the successor to the Internet's addressing scheme, was standardised in the late 1990s. Native IPv6 access to Google first passed 50% in March 2026 ([Internet Society Pulse](https://pulse.internetsociety.org/en/blog/18-years-later-ipv6-reaches-majority/)). Python 3 was released in December 2008, and Python 2 wasn't retired until January 2020. The year 2000 problem was a sensible decision made when memory was expensive ([page 1](01-one-machine-one-program.md)), paid for decades later by different people.
 
@@ -75,9 +75,9 @@ None of this replaced what came before; every era still runs somewhere, and some
 
 ## Resources
 
-1. Martin Fowler, ["Strangler Fig Application"](https://martinfowler.com/bliki/StranglerFigApplication.html) (start here: Ines's proposal, in a page). <!-- verify -->
-2. Titus Winters, Tom Manshreck and Hyrum Wright, [*Software Engineering at Google*](https://abseil.io/resources/swe-book), the chapters on Hyrum's law and deprecation (go deeper: free online). <!-- verify -->
-3. Ward Cunningham, ["The WyCash Portfolio Management System"](https://c2.com/doc/oopsla92.html) (1992): where "technical debt" comes from, and it meant something narrower than it does now. <!-- verify -->
+1. Martin Fowler, ["Strangler Fig Application"](https://martinfowler.com/bliki/StranglerFigApplication.html) (start here: Ines's proposal, in a page).
+2. Titus Winters, Tom Manshreck and Hyrum Wright, [*Software Engineering at Google*](https://abseil.io/resources/swe-book), the chapters on Hyrum's law and deprecation (go deeper: free online).
+3. Ward Cunningham, ["The WyCash Portfolio Management System"](https://c2.com/doc/oopsla92.html) (1992): where "technical debt" comes from, and it meant something narrower than it does now.
 4. Simon Wardley's writing on evolution, genesis to custom to product to commodity (reference: the ladder itself drifting over time).
 
 ## Names you'll hear

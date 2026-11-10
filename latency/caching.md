@@ -1,6 +1,6 @@
 # Caching
 
-Last reviewed: 2026-10-24
+Last reviewed: 2026-11-10
 
 A concept page: keeping a copy of something close, because the original is slow to reach.
 
@@ -65,7 +65,7 @@ A cache is a copy of data kept closer to where it's needed than the original, be
 
 1. Martin Kleppmann, [*Designing Data-Intensive Applications*](https://dataintensive.net/), on derived data and caches (start here).
 2. Nishtala et al., "Scaling Memcache at Facebook" (NSDI 2013) (go deeper: caching at very large scale, including stampedes and staleness).
-3. Ilya Grigorik, [*High Performance Browser Networking*](https://hpbn.co/), on HTTP caching (reference). <!-- verify -->
+3. Ilya Grigorik, [*High Performance Browser Networking*](https://hpbn.co/), on HTTP caching (reference).
 
 ## Names you'll hear
 

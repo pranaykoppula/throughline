@@ -1,6 +1,6 @@
 # 12. Machines that learn from data
 
-Last reviewed: 2026-10-24
+Last reviewed: 2026-11-10
 
 ## Problem
 
@@ -34,9 +34,9 @@ Looking back, Nadia thought the two halves of her career were the same lesson. S
 
 ## It really happened
 
-Nadia is fictional; both halves of her story happened to many people. Paul Graham's ["A Plan for Spam"](https://paulgraham.com/spam.html) <!-- verify --> was published in August 2002, and statistical filters spread across mail software within a year. Spammers responded with images and padding text, and filters responded with continuous retraining.
+Nadia is fictional; both halves of her story happened to many people. Paul Graham's ["A Plan for Spam"](https://paulgraham.com/spam.html) was published in August 2002 and proposed Bayesian content-based filtering that could adapt to each user's mail.
 
-In 2012 a neural network called AlexNet won the ImageNet image-recognition contest with a top-5 error rate of 15.3%, against 26.2% for the runner-up. It was trained in about six days on two consumer graphics cards built for video games ([AlexNet](https://en.wikipedia.org/wiki/AlexNet)). Honestly, part of the story is luck: the hardware that made deep learning practical had been built and paid for by the games market. Five years later, the transformer architecture ("Attention Is All You Need", 2017) made it practical to train on far more text. The large language model story has four parts, and an honest account keeps all of them. There's luck (gaming hardware), a real cause (it keeps getting better with scale), a distribution event (ChatGPT put it in a chat box anyone could use, in November 2022), and a market dynamic (every company afraid of missing out). Simon Willison named Nadia's second problem *prompt injection* in 2022, and it is still not solved in general.
+In 2012 a neural network called AlexNet won the ImageNet image-recognition contest with a top-5 error rate of 15.3%, against 26.2% for the runner-up. It was trained in about six days on two consumer graphics cards built for video games ([Krizhevsky, Sutskever and Hinton, 2012](https://proceedings.neurips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks)). Honestly, part of the story is luck: the hardware that made deep learning practical had been built and paid for by the games market. Five years later, the transformer architecture (["Attention Is All You Need", 2017](https://arxiv.org/abs/1706.03762)) made it practical to train on far more text. The large language model story has four parts, and an honest account keeps all of them. There's luck (gaming hardware), a real cause (it keeps getting better with scale), a distribution event (ChatGPT put it in a chat box anyone could use, in November 2022), and a market dynamic (every company afraid of missing out). Simon Willison named Nadia's second problem *prompt injection* in 2022, and it is still not solved in general.
 
 A reminder that accuracy isn't everything: Netflix paid a million dollars in 2009 for a recommendation algorithm that beat its own by 10%. It put two of the winning techniques into production and not the full blend of hundreds of models, because, as it later explained, the extra accuracy didn't justify the engineering ([coverage of Netflix's 2012 explanation](https://www.techdirt.com/2012/04/13/why-netflix-never-implemented-algorithm-that-won-netflix-1-million-challenge/)). Ladder: up. Most teams use a model someone else trained, through an API.
 
@@ -68,10 +68,10 @@ Some transformations are learned from data rather than written, and they're only
 
 ## Resources
 
-1. 3Blue1Brown, ["Neural networks"](https://www.3blue1brown.com/topics/neural-networks) (start here: visual, and honest about the maths). <!-- verify -->
-2. Paul Graham, ["A Plan for Spam"](https://paulgraham.com/spam.html) (2002; short, and the whole idea of learning from data in one essay). <!-- verify -->
+1. 3Blue1Brown, ["Neural networks"](https://www.3blue1brown.com/topics/neural-networks) (start here: visual, and honest about the maths).
+2. Paul Graham, ["A Plan for Spam"](https://paulgraham.com/spam.html) (2002; short, and the whole idea of learning from data in one essay).
 3. Sculley et al., "Hidden Technical Debt in Machine Learning Systems" (NeurIPS 2015; go deeper: Nadia's 2004, generalised).
-4. Simon Willison's writing on [prompt injection](https://simonwillison.net/tags/prompt-injection/) (reference: the clearest running account of the problem). <!-- verify -->
+4. Simon Willison's writing on [prompt injection](https://simonwillison.net/tags/prompt-injection/) (reference: the clearest running account of the problem).
 
 ## Names you'll hear
 

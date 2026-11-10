@@ -1,6 +1,6 @@
 # 6. Anyone can publish
 
-Last reviewed: 2026-10-24
+Last reviewed: 2026-11-10
 
 ## Problem
 
@@ -36,7 +36,7 @@ Looking back, Hannah thought that every hard problem she'd had since 1999 had co
 
 Hannah is fictional; the web's path wasn't. Tim Berners-Lee proposed the web in 1989, and the Mosaic browser made it popular from 1993. The browser feature Hannah found came from Microsoft's Exchange team, who built it around 1999 for the web version of Outlook. The client side of Gmail later followed roughly the same design ([Alex Hopmann, "The story of XMLHTTP"](https://www.alexhopmann.com/page/the-story-of-xmlhttp)). Microsoft built it first; Google made it famous. In February 2005 Jesse James Garrett gave the pattern a name, Ajax, using Google Maps and Google Suggest as examples ([Garrett, "Ajax: A New Approach to Web Applications"](https://designftw.csail.mit.edu/lectures/apis/ajax_adaptive_path.pdf)).
 
-The two-sources-of-truth problem got harder as screens got more ambitious. Figma lets many people edit one design at once in a browser. Its engineers chose the same answer Hannah reached: changes go to a server, which broadcasts them, and when two people change the same property of the same object, the server picks one ([Figma, "Multiplayer editing in Figma", 2017](https://www.figma.com/blog/multiplayer-editing-in-figma/); [the 2019 follow-up](https://www.figma.com/blog/how-figmas-multiplayer-technology-works/) <!-- verify -->). They wrote that they considered more sophisticated merging techniques and chose the simplest design that worked. Ladder: down, a hand-built engine where nothing on sale could do it.
+The two-sources-of-truth problem got harder as screens got more ambitious. Figma lets many people edit one design at once in a browser. Its engineers chose the same answer Hannah reached: changes go to a server, which broadcasts them, and when two people change the same property of the same object, the server picks one ([Figma, "Multiplayer editing in Figma", 2017](https://www.figma.com/blog/multiplayer-editing-in-figma/); [the 2019 follow-up](https://www.figma.com/blog/how-figmas-multiplayer-technology-works/)). They wrote that they considered more sophisticated merging techniques and chose the simplest design that worked. Ladder: down, a hand-built engine where nothing on sale could do it.
 
 ## What survived
 
@@ -62,10 +62,10 @@ The client and server split the work. The server owns the truth; the client owns
 
 ## Resources
 
-1. [MDN Web Docs, "How the web works"](https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Web_standards/How_the_web_works) (start here). <!-- verify -->
+1. [MDN Web Docs, "How the web works"](https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Web_standards/How_the_web_works) (start here).
 2. Jesse James Garrett, ["Ajax: A New Approach to Web Applications"](https://designftw.csail.mit.edu/lectures/apis/ajax_adaptive_path.pdf) (2005): short, and the moment it got a name.
 3. Evan Wallace, ["Multiplayer editing in Figma"](https://www.figma.com/blog/multiplayer-editing-in-figma/) (go deeper: two sources of truth, at their hardest).
-4. Ink & Switch, ["Local-first software"](https://www.inkandswitch.com/local-first/) (the argument for putting more truth on the client, and what it costs). <!-- verify -->
+4. Ink & Switch, ["Local-first software"](https://www.inkandswitch.com/essay/local-first/) (the argument for putting more truth on the client, and what it costs).
 
 ## Names you'll hear
 
