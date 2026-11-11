@@ -1,6 +1,6 @@
 # TLS
 
-Last reviewed: 2026-10-24
+Last reviewed: 2026-11-10
 
 A concept page: how two machines that have never met agree on a secret, and prove who they are, over a network anyone can read.
 
@@ -64,8 +64,8 @@ TLS (Transport Layer Security, the successor to SSL) creates an encrypted, authe
 
 ## Resources
 
-1. Julia Evans, ["How HTTPS works"](https://wizardzines.com/comics/how-https-works/) or similar short illustrated explanations (start here). <!-- verify -->
-2. Ilya Grigorik, [*High Performance Browser Networking*](https://hpbn.co/), the TLS chapter (go deeper: what the handshake costs). <!-- verify -->
+1. Julia Evans, ["HTTPS" comic](https://wizardzines.com/comics/https/) (start here: an illustrated tour of encryption and key exchange).
+2. Ilya Grigorik, [*High Performance Browser Networking*](https://hpbn.co/), the TLS chapter (go deeper: what the handshake costs).
 3. Goldberg and Wagner, ["Randomness and the Netscape Browser"](https://people.eecs.berkeley.edu/~daw/papers/ddj-netscape.html) (1996) (reference: short, and a lesson in where secrets come from).
 
 ## Names you'll hear

@@ -1,6 +1,6 @@
 # JavaScript
 
-Last reviewed: 2026-10-24
+Last reviewed: 2026-11-10
 
 A concept page: a language designed in a hurry for small scripts, which became the most widely deployed programming language in the world, quirks included.
 
@@ -59,9 +59,9 @@ JavaScript is a dynamically typed language with first-class functions, built aro
 
 ## Resources
 
-1. [MDN's JavaScript guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide) (start here). <!-- verify -->
+1. [MDN's JavaScript Guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide) (start here).
 2. Allen Wirfs-Brock and Brendan Eich, "JavaScript: The First 20 Years" (2020) (go deeper: the history, from the people who made it).
-3. The [TypeScript handbook](https://www.typescriptlang.org/docs/handbook/intro.html) (reference). <!-- verify -->
+3. The [TypeScript Handbook](https://www.typescriptlang.org/docs/handbook/intro.html) (reference).
 
 ## Names you'll hear
 

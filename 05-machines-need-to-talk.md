@@ -1,6 +1,6 @@
 # 5. Machines need to talk
 
-Last reviewed: 2026-10-24
+Last reviewed: 2026-11-10
 
 **Builds on** [4, Data outlives programs](04-data-outlives-programs.md), where data became the long-lived thing worth keeping, and [2, One machine, many programs](02-one-machine-many-programs.md), where waiting turned out to be where the time goes. Moving data between machines is waiting on the slowest and least reliable device yet.
 
@@ -69,10 +69,10 @@ Data is rarely where it's needed, so it moves, and moving it is slow, unreliable
 
 ## Resources
 
-1. Julia Evans, ["Networking! ACK!"](https://wizardzines.com/zines/networking/) (start here: short, illustrated, and exactly this page). <!-- verify -->
+1. Julia Evans, ["Networking! ACK!"](https://wizardzines.com/zines/networking/) (start here: short, illustrated, and exactly this page).
 2. Jacobson and Karels, ["Congestion Avoidance and Control"](https://people.eecs.berkeley.edu/~sylvia/cs268/papers/congavoid.pdf) (1988; go deeper: the first page is the whole story).
 3. Amazon Builders' Library, ["Timeouts, retries, and backoff with jitter"](https://aws.amazon.com/builders-library/timeouts-retries-and-backoff-with-jitter/) (the same lesson, for services).
-4. Ilya Grigorik, [*High Performance Browser Networking*](https://hpbn.co/) (reference: free, and the clearest book on what round trips cost). <!-- verify -->
+4. Ilya Grigorik, [*High Performance Browser Networking*](https://hpbn.co/) (reference: free, and the clearest book on what round trips cost).
 
 ## Names you'll hear
 

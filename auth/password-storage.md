@@ -1,6 +1,6 @@
 # Password storage
 
-Last reviewed: 2026-10-24
+Last reviewed: 2026-11-10
 
 A concept page: storing something you can check but never read, and keeping it that way as attackers get faster.
 
@@ -60,7 +60,7 @@ Passwords should be stored using a dedicated password-hashing function, such as 
 
 ## Resources
 
-1. [OWASP Password Storage Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html) (start here: current recommendations). <!-- verify -->
+1. [OWASP Password Storage Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html) (start here: current recommendations).
 2. Dropbox, ["How Dropbox securely stores your passwords"](https://dropbox.tech/security/how-dropbox-securely-stores-your-passwords) (2016) (go deeper: layering, explained).
 3. Morris and Thompson, ["Password Security: A Case History"](https://www.profsandhu.com/cs6393_s20/p594-morris.pdf) (1979) (reference: salt and slowness, forty-five years ago).
 

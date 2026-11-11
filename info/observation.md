@@ -64,6 +64,7 @@ Observation is always sampling: of time (how often you look), of space (where th
 - Learning this is also learning [sampling and aliasing](../signals/sampling.md), because sampling too slowly doesn't just leave gaps; it can draw a pattern that isn't there.
 - Learning this is also learning [state estimation](../signals/state-estimation.md), because when a sensor goes quiet, the honest response is to grow less certain, not to keep its last reading.
 - Learning this is also learning [measures and targets](measures-and-targets.md), because once a dashboard's colour becomes the goal, people learn exactly what it can't see.
+- Learning this is also learning [Bloom filters](../dsa/bloom-filters.md), because a filter that fills up starts skipping things silently, and only a measurement will show it.
 
 ## Resources
 

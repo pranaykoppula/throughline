@@ -1,6 +1,6 @@
 # 4. Data outlives programs
 
-Last reviewed: 2026-10-24
+Last reviewed: 2026-11-10
 
 **Builds on** [3, Programs too big for one head](03-programs-too-big-for-one-head.md), where layers let programs be rewritten freely, and [1, One machine, one program](01-one-machine-one-program.md), where storage is big, slow and far away. Data is the part a rewrite can't hide, and the shape it's stored in sets the cost of every question asked of it later.
 
@@ -32,7 +32,7 @@ Looking back, Walter thought his whole career had been about outliving programs.
 
 ## It really happened
 
-Walter is fictional; his tree wasn't. In the 1960s and 70s the leading databases were hierarchical and network systems such as IBM's IMS. Programs moved through them record by record, which Charles Bachman called "the programmer as navigator" in his 1973 Turing Award lecture. Ted Codd's 1970 paper, "A Relational Model of Data for Large Shared Data Banks", argued that programs should be independent of how data is stored. IBM was slow to sell relational databases, and historians usually point to the revenue from IMS ([CACM, "Happy Birthday, RDBMS!"](https://cacm.acm.org/magazines/2010/5/87252-happy-birthday-rdbms/fulltext) <!-- verify -->). Berkeley's Ingres and the small company that became Oracle got relational systems out ahead of IBM's own products. Transactions came earlier than relational databases did; IMS supported them in the early 1970s. The name ACID was coined in 1983 by Theo Härder and Andreas Reuter, building on Jim Gray's work.
+Walter is fictional; his tree wasn't. In the 1960s and 70s the leading databases were hierarchical and network systems such as IBM's IMS. Programs moved through them record by record, which Charles Bachman called "the programmer as navigator" in his 1973 Turing Award lecture. Ted Codd's 1970 paper, "A Relational Model of Data for Large Shared Data Banks", argued that programs should be independent of how data is stored. IBM's System R project began in the mid-1970s, but Ingres and Oracle got relational systems to market before IBM's own products; DB2 later competed with IMS and IDMS on mainframes ([CACM, "Happy Birthday, RDBMS!"](https://cacm.acm.org/magazines/2010/5/87252-happy-birthday-rdbms/fulltext)). Transactions came earlier than relational databases did; IMS supported them in the early 1970s. The name ACID was coined in 1983 by Theo Härder and Andreas Reuter, building on Jim Gray's work.
 
 Thirty years later the tree came back. Document databases store each record as one nested document, which is a tree. Around 2010, Diaspora, an open-source social network, stored its data in MongoDB. It later moved to MySQL when it needed questions that cut across documents, the same way Walter's hospital question cut across customers ([Sarah Mei's talk on the move, 2011](https://www.slideshare.net/sarahmei/taking-diaspora-from-mongodb-to-mysql-rubyconf-2011)). Her later essay, "Why You Should Never Use MongoDB", drew a strong reply arguing that the real problem was how the data was modelled, not the database ([Oren Eini](https://ayende.net/blog/164483/re-why-you-should-never-use-mongodb)). Both are partly right. Eini builds a document database, RavenDB; read his reply with that in mind. Ladder: up. Codd moved the *how* out of programs and into the database.
 
@@ -60,7 +60,7 @@ Data outlives programs, so its shape is the longest-lived decision you make. Cho
 
 ## Resources
 
-1. Markus Winand, [*Use The Index, Luke*](https://use-the-index-luke.com/) (start here: free, and about the one thing that matters most in practice). <!-- verify -->
+1. Markus Winand, [*Use The Index, Luke*](https://use-the-index-luke.com/) (start here: free, and about the one thing that matters most in practice).
 2. Martin Kleppmann, [*Designing Data-Intensive Applications*](https://dataintensive.net/), chapters 2 and 3: data models, and how stores actually lay data out (go deeper).
 3. E. F. Codd, "A Relational Model of Data for Large Shared Data Banks", *CACM*, 1970 (the original; the first section is readable and is the whole argument).
 4. Charles Bachman, "The Programmer as Navigator", Turing Award lecture, 1973 (the world Codd was arguing against, from its best defender).

@@ -1,6 +1,6 @@
 # 7. Strangers on the network
 
-Last reviewed: 2026-10-24
+Last reviewed: 2026-11-10
 
 **Builds on** [6, Anyone can publish](06-anyone-can-publish.md), where anyone could publish to anyone, and [5, Machines need to talk](05-machines-need-to-talk.md), where protocols were designed for parties who trusted each other. Once anyone can reach a system, every one of those agreements has to assume someone on the other end means harm.
 
@@ -66,9 +66,9 @@ Once strangers can reach a system, every boundary is a question of who is asking
 
 ## Resources
 
-1. [OWASP Top Ten](https://owasp.org/www-project-top-ten/) (start here: the common ways web applications get broken, kept up to date). <!-- verify -->
-2. [OWASP Password Storage Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html) (what to actually do with passwords today). <!-- verify -->
-3. Ross Anderson, [*Security Engineering*](https://www.cl.cam.ac.uk/~rja14/book.html) (go deeper: free online, and about thinking like an attacker). <!-- verify -->
+1. [OWASP Top 10:2025](https://owasp.org/Top10/2025/) (start here: an awareness document on common web-application security risks).
+2. [OWASP Password Storage Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html) (what to actually do with passwords today).
+3. Ross Anderson, [*Security Engineering*](https://www.cl.cam.ac.uk/~rja14/book.html) (go deeper: free online, and about thinking like an attacker).
 4. Morris and Thompson, ["Password Security: A Case History"](https://www.profsandhu.com/cs6393_s20/p594-morris.pdf) (1979; four pages, and still right).
 
 ## Names you'll hear

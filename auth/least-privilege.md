@@ -1,6 +1,6 @@
 # Least privilege
 
-Last reviewed: 2026-10-24
+Last reviewed: 2026-11-10
 
 A concept page: give every person and program only the power it needs.
 
@@ -63,7 +63,7 @@ Least privilege means every person, program, and machine gets exactly the access
 ## Resources
 
 1. Saltzer and Schroeder, "The Protection of Information in Computer Systems" (1975) (start here: the design principles section is short and still right).
-2. Ross Anderson, [*Security Engineering*](https://www.cl.cam.ac.uk/~rja14/book.html), the chapters on access control (go deeper). <!-- verify -->
+2. Ross Anderson, [*Security Engineering*](https://www.cl.cam.ac.uk/~rja14/book.html), the chapters on access control (go deeper).
 3. Your cloud provider's guide to least-privilege permissions (reference).
 
 ## Names you'll hear

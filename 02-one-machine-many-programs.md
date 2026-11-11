@@ -1,6 +1,6 @@
 # 2. One machine, many programs
 
-Last reviewed: 2026-10-24
+Last reviewed: 2026-11-10
 
 **Builds on** [1, One machine, one program](01-one-machine-one-program.md), where memory near the processor is fast and everything further away is slow. Waiting on the slow parts left the machine idle, and sharing it was how that idle time got used.
 
@@ -34,7 +34,7 @@ Looking back, Ruth thought the lesson of those years wasn't really about tape dr
 
 Ruth is fictional; her years weren't. Multiprogramming spread through the 1960s for exactly the reason she timed: processors were expensive and kept waiting on slow devices. MIT's Compatible Time-Sharing System was demonstrated in 1961 and described in 1962, giving interactive users slices of a single machine (Corbató, Daggett and Daley, "An Experimental Time-Sharing System"; [overview](https://history.computer.org/pioneers/corbato.html)). The "Dutch mathematician" was Edsger Dijkstra, who called deadlock the "deadly embrace" and worked out ways to avoid it in the mid-1960s. A 1971 survey by Coffman, Elphick and Shoshani laid out the conditions it needs, including the circular wait that Ruth's numbering rule breaks ("System Deadlocks", *Computing Surveys*).
 
-The same story ran again thirty-five years later. In 1999 Dan Kegel wrote ["The C10K problem"](http://www.kegel.com/c10k.html) <!-- verify -->: web servers that gave each connection its own thread were falling over well before ten thousand users, because most of those threads were just waiting on the network and each one still cost memory and switching. The answer was Ruth's, one level up: a single loop that waits on all the connections at once and works on whichever is ready. It became nginx and Node.js. And it brought back her graduate student's bug. In an event loop, one request that computes for a long time without waiting holds up everyone ([Node.js, "Don't Block the Event Loop"](https://nodejs.org/en/guides/dont-block-the-event-loop)). Ladder: up, an operating system abstraction (non-blocking I/O) in place of hand-managed thread pools.
+The same story ran again thirty-five years later. In 1999 Dan Kegel posed [the C10K problem](https://www.kegel.com/c10k.html): how to make a server handle ten thousand concurrent clients. His survey contrasts one-thread-per-client designs, with their per-thread memory costs, against nonblocking I/O and readiness notification. Ruth's insight reappeared one level up: a single loop could wait on many connections and work on whichever was ready. The pattern appears in event-driven servers and runtimes such as nginx and Node.js. And it brought back her graduate student's bug. In an event loop, one request that computes for a long time without waiting holds up everyone ([Node.js, "Don't Block the Event Loop"](https://nodejs.org/en/guides/dont-block-the-event-loop)). Ladder: up, an operating system abstraction (non-blocking I/O) in place of hand-managed thread pools.
 
 ## What survived
 
@@ -58,8 +58,8 @@ The operating system turns one machine into many processes and threads and decid
 
 ## Resources
 
-1. Remzi and Andrea Arpaci-Dusseau, [*Operating Systems: Three Easy Pieces*](https://pages.cs.wisc.edu/~remzi/OSTEP/) (start here: free, and the concurrency part covers this page). <!-- verify -->
-2. Dan Kegel, ["The C10K problem"](http://www.kegel.com/c10k.html) (go deeper: dated now, but it shows the thinking). <!-- verify -->
+1. Remzi and Andrea Arpaci-Dusseau, [*Operating Systems: Three Easy Pieces*](https://pages.cs.wisc.edu/~remzi/OSTEP/) (start here: free, and the concurrency part covers this page).
+2. Dan Kegel, ["The C10K problem"](http://www.kegel.com/c10k.html) (go deeper: dated now, but it shows the thinking).
 3. Node.js, ["Don't Block the Event Loop (or the Worker Pool)"](https://nodejs.org/en/guides/dont-block-the-event-loop) (the event loop's one rule, explained).
 4. Coffman, Elphick and Shoshani, "System Deadlocks", *ACM Computing Surveys* 3(2), 1971 (reference).
 

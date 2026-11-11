@@ -1,6 +1,6 @@
 # Pagination
 
-Last reviewed: 2026-10-24
+Last reviewed: 2026-11-10
 
 A concept page: showing a long, changing list a piece at a time without skipping, repeating, or slowing down.
 
@@ -37,7 +37,7 @@ What these share is that a position in a changing list is best described by the 
 
 ## It really happened
 
-Hamza is fictional; his change is how most large APIs now page. Many public APIs, including those of large social networks and messaging platforms, return a cursor, an opaque token marking where the last page ended, instead of page numbers. Markus Winand's *Use The Index, Luke* explains the database side, and campaigns against deep offset queries under the slogan "no offset" ([Winand](https://use-the-index-luke.com/no-offset) <!-- verify -->).
+Hamza is fictional; his change is a common API design. Stripe's list endpoints, for example, use an object's ID as a cursor in `starting_after` or `ending_before` to fetch the next or previous page ([Stripe API pagination](https://docs.stripe.com/api/pagination)). Markus Winand's "Paging Through Results" compares offset and seek pagination, and explains why scanning larger offsets gets slower ([Use The Index, Luke](https://use-the-index-luke.com/sql/partial-results/fetch-next-page)).
 
 ## What it is
 
@@ -60,9 +60,9 @@ Pagination returns a large result in pieces. Offset pagination, skipping N and t
 
 ## Resources
 
-1. Markus Winand, ["We need tool support for keyset pagination"](https://use-the-index-luke.com/no-offset) (start here). <!-- verify -->
+1. Markus Winand, ["Paging Through Results"](https://use-the-index-luke.com/sql/partial-results/fetch-next-page) (start here: offset versus seek pagination).
 2. Your database's documentation on indexes and range queries (go deeper).
-3. The pagination section of a large public API's documentation (reference: how cursors are exposed in practice).
+3. [Stripe API pagination](https://docs.stripe.com/api/pagination) (reference: cursor behaviour in a public API).
 
 ## Names you'll hear
 

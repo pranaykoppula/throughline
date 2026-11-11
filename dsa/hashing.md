@@ -1,6 +1,6 @@
 # Hashing
 
-Last reviewed: 2026-10-24
+Last reviewed: 2026-11-10
 
 A concept page. It's shorter than a spine page, and its main job is the section called **Where it shows up**: the same idea doing different jobs in different stories.
 
@@ -43,7 +43,7 @@ Dorothy is fictional. In January 1953 Hans Peter Luhn, at IBM, wrote an internal
 
 Dorothy's lesson that real keys aren't evenly spread came back as an attack. In 2011 Alexander Klink and Julian Wälde showed that web frameworks in PHP, Python, Java and Ruby put submitted form fields into hash tables using hash functions anyone could predict. An attacker could send one request full of keys that all landed in the same slot and keep a server busy for minutes. Languages responded by mixing a random secret into their hash functions at startup ([LWN](https://lwn.net/Articles/474912/); [Python's record](https://python-security.readthedocs.io/vuln/hash-dos.html)). Once strangers can choose your keys, a predictable hash is a weakness ([page 7](../07-strangers-on-the-network.md)).
 
-Hashes meant to be hard to fool can still break. In 2017 researchers at Google and CWI Amsterdam produced two different PDF files with the same SHA-1 hash, the function git had used to name commits since 2005 ([SHAttered](https://shattered.io/) <!-- verify -->). git has been adding support for a stronger hash since. Identity is only as strong as the hash behind it.
+Hashes meant to be hard to fool can still break. In 2017 researchers at Google and CWI Amsterdam published the first full SHA-1 collision: two distinct PDF files with the same digest ([IACR paper](https://eprint.iacr.org/2017/190)). Git had used SHA-1 to name its content-addressed objects, and later documented a transition to SHA-256 for object names ([Git's hash-function transition](https://git-scm.com/docs/hash-function-transition)). Identity is only as strong as the hash behind it.
 
 ## What it is
 
@@ -65,13 +65,14 @@ A hash function turns any input into a fixed-size value. The same input always g
 - Learning this is also learning [password storage](../auth/password-storage.md), because secrecy needs the slow, salted kind.
 - Learning this is also learning [input validation](../auth/input-validation.md), because hash flooding is strangers choosing your keys.
 - Learning this is also learning [power and predictability](power-and-predictability.md), because a backtracking regular expression is attacked the same way: by choosing the input that triggers the worst case.
+- Learning this is also learning [Bloom filters](bloom-filters.md), because several hashes of one key, packed into a shared array of bits, can rule a key out without storing it.
 
 ## Resources
 
 1. Thomas Cormen et al., *Introduction to Algorithms*, the chapter on hash tables (start here, for the lookup job).
 2. Donald Knuth, *The Art of Computer Programming*, volume 3, section 6.4 (go deeper; the history at the end of the section is where Luhn's memo is recorded).
 3. Karger et al., ["Consistent Hashing and Random Trees"](https://courses.e-ce.uth.gr/CE623/STOC_1997_Consistent_hashing.pdf) (1997; the placement job, done so machines can come and go).
-4. [SHAttered](https://shattered.io/) (reference: what it took to break SHA-1, and what that means for systems named by it). <!-- verify -->
+4. Stevens et al., ["The first collision for full SHA-1"](https://eprint.iacr.org/2017/190) (reference: the collision and its implications).
 
 ## Names you'll hear
 

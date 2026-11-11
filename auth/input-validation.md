@@ -1,6 +1,6 @@
 # Input validation
 
-Last reviewed: 2026-10-24
+Last reviewed: 2026-11-10
 
 A concept page: why input from outside must be treated as data, never as instructions.
 
@@ -36,7 +36,7 @@ The pages show the order of preference. First, separate the channels, so input c
 
 ## It really happened
 
-Frank is fictional; the tones were real. Long-distance trunks in North America used a 2600 Hz tone for in-band signalling, and "blue boxes" that reproduced it let people route calls for free. Telephone companies eventually moved to common-channel signalling, carrying control messages on a separate network callers couldn't reach, which made the trick impossible ([Blue box](https://en.wikipedia.org/wiki/Blue_box)). Forty years later, the same mistake had a new name. SQL injection, where text typed into a web form is run as a database command, has been near the top of the OWASP list of web risks for most of its history. In 2022 Simon Willison named the version that affects language models *prompt injection*, because no reliable way yet exists to separate a model's instructions from its input ([page 12](../12-machines-that-learn-from-data.md)).
+Frank is fictional; the tones were real. Long-distance trunks in North America used a 2600 Hz tone for in-band signalling, and "blue boxes" that reproduced it let people route calls for free. Telephone companies eventually moved to common-channel signalling, carrying control messages on a separate network callers couldn't reach, which made the trick impossible ([Blue box](https://en.wikipedia.org/wiki/Blue_box)). Forty years later, the same mistake had a new name. SQL injection, where text typed into a web form is run as a database command, is included under A05:2025 Injection in the current OWASP Top 10. In 2022 Simon Willison named the version that affects language models *prompt injection*, because no reliable way yet exists to separate a model's instructions from its input ([page 12](../12-machines-that-learn-from-data.md)).
 
 ## What it is
 
@@ -61,9 +61,9 @@ Input validation is the rule that anything crossing a trust boundary is data unt
 
 ## Resources
 
-1. [OWASP Top Ten](https://owasp.org/www-project-top-ten/) (start here: injection has been on it since the beginning). <!-- verify -->
-2. [OWASP SQL Injection Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html) (the practical rules). <!-- verify -->
-3. Simon Willison's writing on [prompt injection](https://simonwillison.net/tags/prompt-injection/) (go deeper: the unsolved version). <!-- verify -->
+1. [OWASP Top 10:2025, A05 Injection](https://top10.owasp.org/2025/A05_2025-Injection/) (start here: current awareness guidance on injection risks).
+2. [OWASP SQL Injection Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html) (the practical rules).
+3. Simon Willison's writing on [prompt injection](https://simonwillison.net/tags/prompt-injection/) (go deeper: a running account since 2022).
 4. Phil Lapsley, *Exploding the Phone* (2013) (reference: the full history of the telephone tones).
 
 ## Names you'll hear

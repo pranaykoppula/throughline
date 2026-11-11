@@ -1,6 +1,6 @@
 # Profiling
 
-Last reviewed: 2026-10-24
+Last reviewed: 2026-11-10
 
 A concept page: measuring where time, or money, actually goes before changing anything.
 
@@ -64,7 +64,7 @@ Profiling is measuring where a program, or a system, or a bill, actually spends 
 
 ## Resources
 
-1. Brendan Gregg, ["Flame Graphs"](https://www.brendangregg.com/flamegraphs.html) (start here: the most useful picture of where time goes). <!-- verify -->
+1. Brendan Gregg, ["Flame Graphs"](https://www.brendangregg.com/flamegraphs.html) (start here: the most useful picture of where time goes).
 2. Graham, Kessler and McKusick, ["gprof: A Call Graph Execution Profiler"](https://www.cs.umd.edu/class/fall2019/cmsc714/readings/Graham-gprof.pdf) (1982; short, and the ideas are still in use).
 3. Brendan Gregg, *Systems Performance* (reference).
 

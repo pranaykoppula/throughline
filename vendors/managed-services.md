@@ -1,6 +1,6 @@
 # Managed services
 
-Last reviewed: 2026-10-24
+Last reviewed: 2026-11-10
 
 A concept page: renting a database, a queue or a search engine already running, and what you hand over with it.
 
@@ -58,7 +58,7 @@ A managed service is infrastructure, such as a database, queue, cache, search, l
 
 ## Resources
 
-1. Dan McKinley, ["Choose Boring Technology"](https://mcfunley.com/choose-boring-technology) (start here: on spending your limited capacity for new things). <!-- verify -->
+1. Dan McKinley, ["Choose Boring Technology"](https://mcfunley.com/choose-boring-technology) (start here: on spending your limited capacity for new things).
 2. Your provider's service-level agreements and deprecation policies (go deeper: what they actually promise).
 3. Public post-incident reports from cloud providers (reference).
 

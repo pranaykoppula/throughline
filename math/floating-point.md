@@ -1,6 +1,6 @@
 # Floating point
 
-Last reviewed: 2026-10-24
+Last reviewed: 2026-11-10
 
 A concept page: how computers approximate real numbers in binary, and where the approximation shows.
 
@@ -61,7 +61,7 @@ Floating-point numbers store a sign, a fixed number of significant binary digits
 
 ## Resources
 
-1. [floating-point-gui.de](https://floating-point-gui.de/) (start here: "What every programmer should know about floating-point arithmetic", short). <!-- verify -->
+1. [The Floating-Point Guide](https://floating-point-gui.de/) (start here: a concise introduction to common floating-point surprises).
 2. David Goldberg, ["What Every Computer Scientist Should Know About Floating-Point Arithmetic"](https://docs.oracle.com/cd/E19957-01/816-2464/ncg_goldberg.html) (1991) (go deeper).
 3. Your language's decimal type documentation (reference: what to use for money).
 

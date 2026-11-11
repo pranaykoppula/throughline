@@ -1,6 +1,6 @@
 # 3. Programs too big for one head
 
-Last reviewed: 2026-10-24
+Last reviewed: 2026-11-10
 
 **Builds on** [2, One machine, many programs](02-one-machine-many-programs.md), where the operating system gave each program its own space and hid the machine underneath. Abstraction is the same move made for people: hide the parts you don't need to hold in your head.
 
@@ -38,7 +38,7 @@ Elena is fictional; the arguments she had were real. The FORTRAN team at IBM in 
 
 Elena's sort-versus-lookup lesson has a famous line attached, usually quoted by half. Donald Knuth, 1974: "We should forget about small efficiencies, say about 97% of the time: premature optimization is the root of all evil. Yet we should not pass up our opportunities in that critical 3%." The second sentence is the part people cut.
 
-Forty years later the same question, "is the language the bottleneck?", got answered both ways. Facebook built HipHop to turn its PHP into C++ and reported roughly halving web server CPU use (2010). Twitter replaced the Ruby front end of search with a Java server and reported search latency falling to about a third ([Twitter, 2011](https://blog.twitter.com/2011/twitter-search-now-3x-faster)) <!-- verify -->. Both measured first, both at a scale most teams never reach, and both posts are companies describing themselves. Twitter's own account says part of the problem was how Ruby processes were run, one request at a time each, not only the language ([page 2](02-one-machine-many-programs.md)). Ladder: both moved down, after measurement.
+Forty years later the same question, "is the language the bottleneck?", got answered both ways. Facebook built HipHop to turn its PHP into C++ and reported roughly halving web server CPU use (2010). Twitter replaced the Ruby front end of search with a Java server and reported search latency falling to about a third ([Twitter, 2011](https://web.archive.org/web/20151001053636/https://blog.twitter.com/2011/twitter-search-now-3x-faster)). Both measured first, both at a scale most teams never reach, and both posts are companies describing themselves. Twitter's own account says part of the problem was how Ruby processes were run, one request at a time each, not only the language ([page 2](02-one-machine-many-programs.md)). Ladder: both moved down, after measurement.
 
 ## What survived
 
@@ -46,7 +46,7 @@ Abstraction is the core skill: layers (languages, libraries, modules, types) tha
 
 ## Where it gets misapplied
 
-- **Rewriting a working system in the new thing.** Throwing away code throws away every bug fix in it (Joel Spolsky, ["Things You Should Never Do, Part I"](https://www.joelonsoftware.com/2000/04/06/things-you-should-never-do-part-i/)). <!-- verify -->
+- **Rewriting a working system in the new thing.** Throwing away code throws away every bug fix in it (Joel Spolsky, ["Things You Should Never Do, Part I"](https://www.joelonsoftware.com/2000/04/06/things-you-should-never-do-part-i/)).
 - **Framework churn and not-invented-here.** Swapping abstractions because they're new, or building your own because the existing one isn't yours. Both skip the measuring.
 - **Optimizing the part you're sure about.** Elena's sort. Without measurement, intuition about where the time goes is usually wrong.
 - **The mirror:** never replacing an abstraction at all, and paying its cost forever because nobody measured it. A query library generating thousands of queries per page is the usual example.

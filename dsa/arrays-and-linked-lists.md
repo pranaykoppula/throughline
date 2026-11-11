@@ -1,6 +1,6 @@
 # Arrays and linked lists
 
-Last reviewed: 2026-10-24
+Last reviewed: 2026-11-10
 
 A concept page: the two simplest ways to keep a sequence, and why the one that's worse on paper is often faster in practice.
 
@@ -60,7 +60,7 @@ An array stores elements contiguously, so any element can be reached by position
 
 1. Randal Bryant and David O'Hallaron, *Computer Systems: A Programmer's Perspective*, chapter 6, on locality (start here).
 2. Mike Acton, "Data-Oriented Design and C++" (CppCon 2014, talk) (go deeper).
-3. Ulrich Drepper, ["What Every Programmer Should Know About Memory"](https://people.freebsd.org/~lstewart/articles/cpumemory.pdf) (2007) (reference). <!-- verify -->
+3. Ulrich Drepper, ["What Every Programmer Should Know About Memory"](https://people.freebsd.org/~lstewart/articles/cpumemory.pdf) (2007) (reference).
 
 ## Names you'll hear
 

@@ -1,6 +1,6 @@
 # 11. Software that must not go down
 
-Last reviewed: 2026-10-24
+Last reviewed: 2026-11-10
 
 **Builds on** [8, Too many users, too much data](08-too-many-users-too-much-data.md), where with many machines something is always partly broken, and [10, Many people, one codebase](10-many-people-one-codebase.md), where many people change a system all the time. Failure becomes constant, and knowing about it before users do becomes the job.
 
@@ -34,7 +34,7 @@ Looking back, Rosa thought her years on call came down to a few plain ideas. Eve
 
 ## It really happened
 
-Rosa is fictional; her lessons were learned the hard way at much larger companies. Google's site reliability engineers wrote down the error budget: agree on a target below 100%, and treat the gap as a budget that both developers and operators can spend ([*Site Reliability Engineering*, "Embracing Risk"](https://sre.google/sre-book/embracing-risk/) <!-- verify -->). Google's 2010 paper on Dapper described tracing requests across many services, the idea behind recording each request's whole journey.
+Rosa is fictional; her lessons were learned the hard way at much larger companies. Google's site reliability engineers wrote down the error budget: agree on a target below 100%, and treat the gap as a budget that both developers and operators can spend ([*Site Reliability Engineering*, "Embracing Risk"](https://sre.google/sre-book/embracing-risk/)). Google's 2010 paper on [Dapper](https://research.google/pubs/dapper-a-large-scale-distributed-systems-tracing-infrastructure/) described tracing requests across many services, the idea behind recording each request's whole journey.
 
 On 1 August 2012, Knight Capital deployed new trading code incorrectly. Old code that should have been dead was triggered by a reused setting. In the first 45 minutes of trading its systems sent more than four million orders, and the firm lost more than $460 million. The SEC's findings add a detail Rosa would recognise: before the market opened, an internal system had sent 97 automated emails flagging the error, and nobody acted on them ([SEC, 2013](https://www.sec.gov/news/press-release/2013-222)). In February 2017, an engineer running a routine command to remove a few servers from Amazon S3 typed one input wrong and removed far more. Large parts of the internet that depended on S3 failed for hours. Amazon's fix was to change the tool so it couldn't remove capacity that quickly, not to blame the engineer ([AWS post-incident summary](https://aws.amazon.com/message/41926/)). Both accounts are official and both are edited. The SEC was writing an enforcement order, and Amazon was writing to reassure customers. Read them for what happened, and be careful about why.
 
@@ -65,10 +65,10 @@ Everything fails; the questions are how you'll know and what you've promised. De
 
 ## Resources
 
-1. Google, [*Site Reliability Engineering*](https://sre.google/sre-book/table-of-contents/), chapters 3 to 6 (start here: free online; risk, targets, toil and monitoring). <!-- verify -->
+1. Google, [*Site Reliability Engineering*](https://sre.google/sre-book/table-of-contents/), chapters 3 to 6 (start here: free online; risk, targets, toil and monitoring).
 2. Charity Majors, Liz Fong-Jones and George Miranda, *Observability Engineering* (go deeper: Rosa's Brazil problem, as a discipline).
 3. [AWS, S3 post-incident summary, 2017](https://aws.amazon.com/message/41926/): a short, real postmortem.
-4. John Allspaw, ["Blameless PostMortems and a Just Culture"](https://www.etsy.com/codeascraft/blameless-postmortems) (2012; reference: why blaming people hides the system). <!-- verify -->
+4. John Allspaw, ["Blameless PostMortems and a Just Culture"](https://www.etsy.com/codeascraft/blameless-postmortems) (2012; reference: why blaming people hides the system).
 5. Terry Winograd and Fernando Flores, *Understanding Computers and Cognition* (1986) (on breakdown: a tool you rely on only becomes visible when it fails).
 
 ## Names you'll hear

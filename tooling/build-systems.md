@@ -1,6 +1,6 @@
 # Build systems and package managers
 
-Last reviewed: 2026-10-24
+Last reviewed: 2026-11-10
 
 A concept page: the machinery that turns source code and other people's packages into a working program, and decides what needs rebuilding.
 
@@ -62,7 +62,7 @@ A build system turns sources into outputs through a graph of steps, rebuilding o
 ## Resources
 
 1. Andrey Mokhov, Neil Mitchell and Simon Peyton Jones, "Build Systems à la Carte" (2018) (start here: a clear comparison of how build systems decide what to rebuild).
-2. The [Bazel](https://bazel.build/) documentation on hermetic builds (go deeper). <!-- verify -->
+2. The [Bazel documentation on hermeticity](https://bazel.build/basics/hermeticity) (go deeper).
 3. Your package manager's documentation on lockfiles (reference).
 
 ## Names you'll hear

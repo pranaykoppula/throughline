@@ -1,6 +1,6 @@
 # The cost of reliability
 
-Last reviewed: 2026-10-24
+Last reviewed: 2026-11-10
 
 A concept page: every extra nine costs more than the last, and complexity bought for reliability can cost reliability.
 
@@ -39,7 +39,7 @@ What these share is diminishing returns: the first nine is cheap, the fourth is 
 
 ## It really happened
 
-Camille is fictional; her finding is well known. Google's site reliability engineers wrote that improving reliability has sharply diminishing returns, with each increment costing far more than the last, which is why they set targets below 100% and treat the gap as a budget ([*Site Reliability Engineering*, "Embracing Risk"](https://sre.google/sre-book/embracing-risk/) <!-- verify -->). Large cloud outages regularly show the other side. When a major region has a bad day, many services that assumed a single region go down with it, and the companies decide afterwards, with numbers, whether a second region is worth its cost.
+Camille is fictional; her finding is well known. Google's site reliability engineers wrote that improving reliability has sharply diminishing returns, with each increment costing far more than the last, which is why they set targets below 100% and treat the gap as a budget ([*Site Reliability Engineering*, "Embracing Risk"](https://sre.google/sre-book/embracing-risk/)). Large cloud outages regularly show the other side. When a major region has a bad day, many services that assumed a single region go down with it, and the companies decide afterwards, with numbers, whether a second region is worth its cost.
 
 ## What it is
 
@@ -62,7 +62,7 @@ Reliability is bought with redundancy, spare capacity, careful process and peopl
 
 ## Resources
 
-1. Google, [*Site Reliability Engineering*](https://sre.google/sre-book/table-of-contents/), chapter 3, "Embracing Risk" (start here). <!-- verify -->
+1. Google, [*Site Reliability Engineering*](https://sre.google/sre-book/table-of-contents/), chapter 3, "Embracing Risk" (start here).
 2. Google, *The Site Reliability Workbook*, on implementing targets (go deeper).
 3. Public post-incident reports from cloud providers (reference: what actually takes things down).
 

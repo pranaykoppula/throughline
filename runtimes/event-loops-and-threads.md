@@ -1,6 +1,6 @@
 # Event loops and threads
 
-Last reviewed: 2026-10-24
+Last reviewed: 2026-11-10
 
 A concept page: the ways a program does several things at once, and the bugs each way invites.
 
@@ -62,7 +62,7 @@ Threads are separate lines of execution sharing one program's memory; they suit 
 
 ## Resources
 
-1. Remzi and Andrea Arpaci-Dusseau, [*Operating Systems: Three Easy Pieces*](https://pages.cs.wisc.edu/~remzi/OSTEP/), the concurrency part (start here: free). <!-- verify -->
+1. Remzi and Andrea Arpaci-Dusseau, [*Operating Systems: Three Easy Pieces*](https://pages.cs.wisc.edu/~remzi/OSTEP/), the concurrency part (start here: free).
 2. Node.js, ["Don't Block the Event Loop (or the Worker Pool)"](https://nodejs.org/en/guides/dont-block-the-event-loop) (go deeper: the event loop's one rule).
 3. Leveson and Turner, "An Investigation of the Therac-25 Accidents" (*IEEE Computer*, 1993) (reference: why concurrency bugs matter).
 

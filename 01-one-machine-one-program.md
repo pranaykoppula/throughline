@@ -1,6 +1,6 @@
 # 1. One machine, one program
 
-Last reviewed: 2026-10-24
+Last reviewed: 2026-11-10
 
 **Builds on** [0, Humans need representations before they need machines](00-representations.md), where everything a computer works on is a representation someone wrote down. Once a program and its data are written down as bits, they have to be put somewhere, and where they sit sets the cost of everything.
 
@@ -67,9 +67,9 @@ Memory is a hierarchy: a little fast storage near the processor, and ever larger
 
 ## Resources
 
-1. ["Latency numbers every programmer should know"](https://gist.github.com/jboner/2841832), after Jeff Dean (start here: one screen, and it reframes everything). <!-- verify -->
+1. ["Latency numbers every programmer should know"](https://gist.github.com/jboner/2841832), after Jeff Dean (start here: one screen, and it reframes everything).
 2. Randal Bryant and David O'Hallaron, *Computer Systems: A Programmer's Perspective*, chapter 6, the memory hierarchy (go deeper).
-3. Ulrich Drepper, ["What Every Programmer Should Know About Memory"](https://people.freebsd.org/~lstewart/articles/cpumemory.pdf) (2007; reference, and long). <!-- verify -->
+3. Ulrich Drepper, ["What Every Programmer Should Know About Memory"](https://people.freebsd.org/~lstewart/articles/cpumemory.pdf) (2007; reference, and long).
 4. Peter Denning, ["Thrashing: Its Causes and Prevention"](https://cs.uwaterloo.ca/~brecht/courses/epfl/Possible-Readings/vm-and-gc/thrashing-denning-afips-1968.pdf) (1968): the original diagnosis.
 
 ## Names you'll hear

@@ -1,6 +1,6 @@
 # 10. Many people, one codebase
 
-Last reviewed: 2026-10-24
+Last reviewed: 2026-11-10
 
 **Builds on** [3, Programs too big for one head](03-programs-too-big-for-one-head.md), where modules let one person work on part of a program without holding all of it, and [5, Machines need to talk](05-machines-need-to-talk.md), where protocols let parties who can't see each other stay in step. Many people changing one codebase need both: parts they can own, and protocols such as branches and reviews.
 
@@ -38,9 +38,9 @@ Looking back, Sofia noticed something she hadn't expected. Every change of tool 
 
 ## It really happened
 
-Sofia is fictional; her tools follow the real ones. Version control began with lock-based systems in the 1970s and 80s. CVS, from 1990, popularised editing in parallel and merging, and Subversion followed in 2000. The Linux kernel, with thousands of contributors, used a proprietary system called BitKeeper from 2002. When its free licence was withdrawn in April 2005, Linus Torvalds made the first commit of git on 7 April, and it was usable for the kernel within about ten days. Torvalds has said the ideas had been forming for months before that ([GitHub, "Git turns 20"](https://github.blog/open-source/git/git-turns-20-a-qa-with-linus-torvalds/); [Pro Git](https://git-scm.com/book/en/v2/Getting-Started-A-Short-History-of-Git)). Integrating continuously instead of on merge day was written up by Martin Fowler as [continuous integration](https://martinfowler.com/articles/continuousIntegration.html) <!-- verify -->.
+Sofia is fictional; her tools follow the real ones. Version control began with lock-based systems in the 1970s and 80s. CVS, from 1990, popularised editing in parallel and merging, and Subversion followed in 2000. The Linux kernel, with thousands of contributors, used a proprietary system called BitKeeper from 2002. When its free licence was withdrawn in April 2005, Linus Torvalds made the first commit of git on 7 April, and it was usable for the kernel within about ten days. Torvalds has said the ideas had been forming for months before that ([GitHub, "Git turns 20"](https://github.blog/open-source/git/git-turns-20-a-qa-with-linus-torvalds/); [Pro Git](https://git-scm.com/book/en/v2/Getting-Started-A-Short-History-of-Git)). Integrating continuously instead of on merge day was written up by Martin Fowler as [continuous integration](https://martinfowler.com/articles/continuousIntegration.html).
 
-Organisations have their own versions of Sofia's lesson. Around 2002, by the account of a former Amazon engineer, Jeff Bezos told every team to expose its data and functionality only through service interfaces, with no other way for teams to reach each other's systems. The memo itself has never been published. What's known comes from Steve Yegge's 2011 post, written for Google colleagues and made public by accident ([copy](https://courses.cs.washington.edu/courses/cse452/22wi/papers/yegge-platform-rant.html)). It was a rule about how people worked, enforced through how the systems were built. The reverse also happens: the "Spotify model" of squads and tribes was copied by many companies from a 2012 description, and a former Spotify engineer later wrote that Spotify itself never fully worked that way ([Jeremiah Lee, "Failed #SquadGoals"](https://www.jeremiahlee.com/posts/failed-squad-goals/) <!-- verify -->).
+Organisations have their own versions of Sofia's lesson. Around 2002, by the account of a former Amazon engineer, Jeff Bezos told every team to expose its data and functionality only through service interfaces, with no other way for teams to reach each other's systems. The memo itself has never been published. What's known comes from Steve Yegge's 2011 post, written for Google colleagues and made public by accident ([copy](https://courses.cs.washington.edu/courses/cse452/22wi/papers/yegge-platform-rant.html)). It was a rule about how people worked, enforced through how the systems were built. The reverse also happens: the "Spotify model" of squads and tribes was copied by many companies from a 2012 description, and a former Spotify engineer later wrote that Spotify itself never fully worked that way ([Jeremiah Lee, "Failed #SquadGoals"](https://www.jeremiahlee.com/posts/failed-squad-goals/)).
 
 And sometimes giving code away is strategy. Google released Kubernetes as open source in 2014. One reading, Joel Spolsky's "commoditize your complement", is that it made the layer where Amazon was strongest cheap and interchangeable ([forces: marginal cost](forces.md#marginal-cost)). Google's stated reasons were different. Both can be true.
 
@@ -65,10 +65,10 @@ A codebase built by many people over time is a system in its own right. Its hist
 
 ## Resources
 
-1. Scott Chacon and Ben Straub, [*Pro Git*](https://git-scm.com/book/en/v2) (start here: free, and chapter 1 is the history). <!-- verify -->
-2. Martin Fowler, ["Continuous Integration"](https://martinfowler.com/articles/continuousIntegration.html) (go deeper: Sofia's rethink, written up properly). <!-- verify -->
-3. Titus Winters, Tom Manshreck and Hyrum Wright, [*Software Engineering at Google*](https://abseil.io/resources/swe-book) (reference: free online; review, testing and deprecation at very large scale). <!-- verify -->
-4. Melvin Conway, ["How Do Committees Invent?"](http://www.melconway.com/Home/Committees_Paper.html) (1968): the origin of Conway's law. <!-- verify -->
+1. Scott Chacon and Ben Straub, [*Pro Git*](https://git-scm.com/book/en/v2) (start here: free, and chapter 1 is the history).
+2. Martin Fowler, ["Continuous Integration"](https://martinfowler.com/articles/continuousIntegration.html) (go deeper: Sofia's rethink, written up properly).
+3. Titus Winters, Tom Manshreck and Hyrum Wright, [*Software Engineering at Google*](https://abseil.io/resources/swe-book) (reference: free online; review, testing and deprecation at very large scale).
+4. Melvin Conway, ["How Do Committees Invent?"](http://www.melconway.com/Home/Committees_Paper.html) (1968): the origin of Conway's law.
 
 ## Names you'll hear
 
