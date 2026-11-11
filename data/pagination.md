@@ -35,6 +35,8 @@ It shows up elsewhere too: search results, API endpoints listing records, admin 
 
 What these share is that a position in a changing list is best described by the item you reached, not by a count from the start.
 
+Motif: [every representation has an edge](../motifs.md#every-representation-has-an-edge).
+
 ## It really happened
 
 Hamza is fictional; his change is a common API design. Stripe's list endpoints, for example, use an object's ID as a cursor in `starting_after` or `ending_before` to fetch the next or previous page ([Stripe API pagination](https://docs.stripe.com/api/pagination)). Markus Winand's "Paging Through Results" compares offset and seek pagination, and explains why scanning larger offsets gets slower ([Use The Index, Luke](https://use-the-index-luke.com/sql/partial-results/fetch-next-page)).

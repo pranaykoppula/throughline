@@ -37,6 +37,8 @@ It shows up elsewhere too: user interfaces that freeze while saving, databases h
 
 What these share is that doing several things at once always means sharing something, memory or time, and every bug here comes from that sharing.
 
+Motif: [waiting is where the time goes](../motifs.md#waiting-is-where-the-time-goes).
+
 ## It really happened
 
 Omar is fictional; his bug is the classic race condition, and its worst real example is grim. Between 1985 and 1987 the Therac-25 radiation therapy machine gave several patients massive overdoses, some fatal. Investigators Nancy Leveson and Clark Turner found that one cause was a race condition: if an operator edited the treatment settings quickly enough, the software's separate tasks fell out of step and the machine fired at full power without its safety shield in place (Leveson and Turner, "An Investigation of the Therac-25 Accidents", *IEEE Computer*, 1993). Earlier models had hardware interlocks that caught such errors; this one relied on software alone. On the event-loop side, Node.js's own guide is built around Omar's second rule ([Node.js, "Don't Block the Event Loop"](https://nodejs.org/en/guides/dont-block-the-event-loop)).

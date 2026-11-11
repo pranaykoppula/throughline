@@ -2,7 +2,7 @@
 
 Last reviewed: 2026-11-10
 
-A concept page: the data structure behind waiting in line, and the rules for who goes next.
+A concept page: the data structure behind waiting in line, and the rules for **deciding** who goes next.
 
 ## Problem
 
@@ -34,6 +34,8 @@ Looking back, Yusuf thought "fair" had been the wrong word for what he'd built. 
 It shows up elsewhere too: message brokers between services, print queues, breadth-first search in graphs, and the "please hold" line at a call centre.
 
 What these share is two separate decisions: the order of the line, and what happens when it's full. First in, first out is a fine default, but most real systems need priorities, limits, and a guarantee that nothing waits forever.
+
+Motif: [waiting is where the time goes](../motifs.md#waiting-is-where-the-time-goes).
 
 ## It really happened
 

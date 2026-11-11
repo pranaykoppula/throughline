@@ -6,7 +6,7 @@ Last reviewed: 2026-11-10
 
 ## Problem
 
-Data was rarely on the machine that needed it. Moving it between machines meant crossing a link that was slow, shared, and unreliable, where a message could be lost, delayed, or delivered twice, and neither side could see what the other had received.
+Data was rarely on the machine that needed it. **Moving** it between machines meant crossing a link that was slow, shared, and unreliable, where a message could be lost, delayed, or delivered twice, and neither side could see what the other had received.
 
 ## The story
 
@@ -45,6 +45,8 @@ The round trip is still the unit of cost, and the most direct answer to it is mo
 ## What survived
 
 Data is rarely where it's needed, so it moves, and moving it is slow, unreliable, and paid for in round trips. Protocols are contracts between parties that can't see each other. Anything that crosses a network can be lost, delayed, or duplicated, and "it didn't arrive" looks the same as "the reply didn't arrive". So senders retry, receivers make repeats harmless, and retries back off. Once data moves cheaply, copies are free, and value shifts to services, relationships, and trust.
+
+Motif: [every correction acts on old news](motifs.md#every-correction-acts-on-old-news).
 
 ## Where it gets misapplied
 

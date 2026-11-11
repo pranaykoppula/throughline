@@ -2,7 +2,7 @@
 
 Last reviewed: 2026-11-04
 
-A concept page in the information family: bytes mean nothing on their own. Text, numbers, colours and dates only mean something under a convention, and the convention is usually not stored with the bytes.
+A concept page in the information family: how anything is **represented** as bytes, and why bytes mean nothing on their own. Text, numbers, colours and dates only mean something under a convention, and the convention is usually not stored with the bytes.
 
 ## Problem
 
@@ -37,6 +37,8 @@ Looking back, Kasia thought every file was a message in a language whose name wa
 It shows up elsewhere too: dates written as 03/04/2025, which mean March or April depending on the country; prices without a currency; time stamps without a time zone; the order of bytes in a number, which differs between processors; file extensions that don't match the contents; emoji that look different on every phone; Swedish sorting, where "ä" comes after "z"; Turkish, where the capital of "i" is "İ"; and web addresses using lookalike letters from other alphabets.
 
 What these share is that meaning lives in the convention, not the data. A sequence of bytes, a number or a pixel is a sign, and it means one thing or another depending on which agreement you read it with. Systems that work either carry that agreement with the data or settle it at the boundary, once, on purpose.
+
+Motifs: [every representation has an edge](../motifs.md#every-representation-has-an-edge), [enforce it once, at the boundary](../motifs.md#enforce-it-once-at-the-boundary).
 
 ## It really happened
 

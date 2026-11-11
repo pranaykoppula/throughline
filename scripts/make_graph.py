@@ -33,7 +33,7 @@ FAMILIES = {
     "signals": ("Signals and control", "#ffa198"),
 }
 
-REFERENCE = ["the-model.md", "forces.md", "pushback.md"]
+REFERENCE = ["the-model.md", "forces.md", "pushback.md", "motifs.md"]
 LINK = re.compile(r"\[[^\]]*\]\(([^)\s]+)\)")
 
 

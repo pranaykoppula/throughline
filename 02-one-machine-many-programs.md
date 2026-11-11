@@ -6,7 +6,7 @@ Last reviewed: 2026-11-10
 
 ## Problem
 
-A computer was too expensive to sit idle, and running one program at a time left it idle most of the time. Letting several programs share it meant something had to decide who ran, who waited, and who got which device, and sharing brought new ways for everything to stop.
+A computer was too expensive to sit idle, and running one program at a time left it idle most of the time. Letting several programs share it meant something had to **decide** who ran, who waited, and who got which device, and sharing brought new ways for everything to stop.
 
 ## The story
 
@@ -39,6 +39,8 @@ The same story ran again thirty-five years later. In 1999 Dan Kegel posed [the C
 ## What survived
 
 The operating system turns one machine into many processes and threads and decides who runs. It takes the processor back on a timer so nobody can keep it by accident, and it hands out devices and files so programs don't fight over them. Sharing creates waiting, and waiting, not computing, is where most time goes. Sharing also creates new failures that no single program causes, like deadlock, and they're fixed by rules about the order things are taken, not by better programs.
+
+Motif: [waiting is where the time goes](motifs.md#waiting-is-where-the-time-goes).
 
 ## Where it gets misapplied
 

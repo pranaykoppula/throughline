@@ -35,6 +35,8 @@ It shows up elsewhere too: names, addresses, currencies, time zones and anything
 
 What these share is that a data model is a claim about the world, and the world keeps testing it.
 
+Motif: [every representation has an edge](../motifs.md#every-representation-has-an-edge).
+
 ## It really happened
 
 Yasmin is fictional. Peter Chen's entity–relationship model (1976) gave the field a way to draw things and their relationships before building tables. Codd's normal forms, from the early 1970s, gave rules for storing each fact once so copies can't disagree ([page 4](../04-data-outlives-programs.md)). Patrick McKenzie's 2010 essay "Falsehoods Programmers Believe About Names" listed dozens of assumptions, such as that people have exactly one name, or a first and last name, or that names don't change, each of which a real person breaks. It started a long series of similar lists, about addresses, time and more.

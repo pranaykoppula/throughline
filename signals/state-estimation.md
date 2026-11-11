@@ -37,6 +37,8 @@ It shows up elsewhere too: the blue dot on a phone's map, with its circle of unc
 
 What these share is a belief about something you can't see directly: a best guess, plus how sure you are, updated as evidence arrives. Each source is trusted in proportion to how reliable it is, and missing evidence makes you less sure, not more.
 
+Motif: [every correction acts on old news](../motifs.md#every-correction-acts-on-old-news).
+
 ## It really happened
 
 Dorota is fictional; the method she reinvented is the Kalman filter. Rudolf Kálmán published it in 1960. That same year Stanley Schmidt, at NASA's Ames Research Center, heard Kálmán describe it and saw that it could solve the problem his group was working on: navigating a spacecraft to the Moon with noisy measurements and a small onboard computer. Schmidt's team extended it to the curved paths of real spaceflight, and a version of it flew in the Apollo guidance computer. It became a standard tool in navigation, from aircraft to air traffic control to the phone in your pocket (McGee and Schmidt tell the story in NASA Technical Memorandum 86847, 1985).

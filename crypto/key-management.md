@@ -37,6 +37,8 @@ It shows up elsewhere too: API keys for third-party services, SSH keys on old la
 
 What these share is a set of questions that matter more than the choice of cipher. Where does the key live, and who or what can use it? How long does it last? How is it replaced, and has anyone practised that? What does it protect, and is that the only thing it protects? And what happens on the day it leaks?
 
+Motif: [the least power, for the shortest time](../motifs.md#the-least-power-for-the-shortest-time).
+
 ## It really happened
 
 Bram is fictional. In 2023 a group Microsoft calls Storm-0558 used a Microsoft consumer-account signing key, created in 2016, to forge tokens and read the email of about two dozen organisations, including US government agencies. A flaw in token validation meant tokens signed with a consumer key were accepted by enterprise email systems. The US Cyber Safety Review Board's 2024 report called the intrusion preventable and described a cascade of security failures. Microsoft still had not determined how the key was stolen. Its earlier theory, that the key had leaked through a crash dump, was later revised ([Help Net Security](https://www.helpnetsecurity.com/2024/04/03/microsoft-storm-0558-key/)). Both the board and Microsoft pointed to the same lessons as Bram's: automate rotation, retire old keys, and keep keys out of places they can be copied from.

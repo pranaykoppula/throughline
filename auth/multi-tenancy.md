@@ -33,6 +33,8 @@ It shows up elsewhere too: shared caches keyed without the tenant, search indexe
 
 What these share is that the cheapest way to serve many customers is to share everything, and every shared thing needs a boundary enforced in one place rather than remembered in many.
 
+Motif: [enforce it once, at the boundary](../motifs.md#enforce-it-once-at-the-boundary).
+
 ## It really happened
 
 Chidi is fictional; the database feature he used is real. PostgreSQL added row-level security in version 9.5 (2016), letting a table enforce which rows each session can see. Cloud providers face the same problem at a much larger scale. In 2021 security researchers at Wiz reported a flaw in Microsoft Azure's Cosmos DB that could have let one customer obtain the keys to other customers' databases. Microsoft fixed it and notified affected customers. Isolation between tenants is the promise a shared service most needs to keep.

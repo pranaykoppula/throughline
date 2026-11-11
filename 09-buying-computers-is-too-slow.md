@@ -44,6 +44,8 @@ Why does data leaving the cloud cost so much? A competitor argues it's priced fa
 
 Machines are rented by the unit, so cost is a live design variable: every architecture is also a bill, every hour. Paying as you go instead of up front changes who can start a company and how fast. Sharing physical machines means sharing their performance too. And the advantages hardest to compete with, switching costs, network effects, scale, are mostly built or eroded by engineering decisions, including the vendor's and your own ([forces: the moat](forces.md#composite-the-moat)).
 
+Motifs: [where the data is sets the cost](motifs.md#where-the-data-is-sets-the-cost), [layers hide things, until they leak](motifs.md#layers-hide-things-until-they-leak).
+
 ## Where it gets misapplied
 
 - **Kubernetes for a three-person team.** A platform built for running thousands of services, adopted to run three. The operating cost is paid in people.

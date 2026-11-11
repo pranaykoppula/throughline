@@ -37,6 +37,8 @@ It shows up elsewhere too: nearly every relational database's indexes, most file
 
 What these share is one design principle: shape the structure for the cost of the medium it lives on.
 
+Motif: [where the data is sets the cost](../motifs.md#where-the-data-is-sets-the-cost).
+
 ## It really happened
 
 Leonard is fictional; his employer's real equivalent was Boeing. Rudolf Bayer and Edward McCreight, at Boeing Scientific Research Laboratories, described B-trees in a 1970 report, published in 1972 as "Organization and Maintenance of Large Ordered Indexes" (*Acta Informatica*). Within a decade Douglas Comer could title a survey "The Ubiquitous B-Tree" (*ACM Computing Surveys*, 1979), noting it had become the standard way to organise files ([Comer](https://users.cs.utah.edu/~pandey/courses/cs6530/fall24/papers/trees/p121-comer.pdf)). Nobody is quite sure what the B stands for; Boeing, balanced and Bayer have all been suggested.

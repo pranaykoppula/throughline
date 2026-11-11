@@ -33,6 +33,8 @@ It shows up elsewhere too: server-side code with Node.js, desktop apps built on 
 
 What these share is path dependence: the first language in the browser became the language of the web, and everything after it had to work around its first week.
 
+Motif: [the old keeps running](../motifs.md#the-old-keeps-running).
+
 ## It really happened
 
 Zara is fictional. Brendan Eich designed JavaScript at Netscape in May 1995, in about ten days, under pressure to ship it in the next browser release. The language was standardised as ECMAScript in 1997, and its early decisions, such as type conversion with `==` and a single number type, were kept because changing them would have broken existing pages. Later versions added stricter options alongside the old behaviour rather than replacing it. Microsoft released TypeScript in 2012, and Node.js, in 2009, took the browser's event loop to the server.

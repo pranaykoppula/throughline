@@ -37,6 +37,8 @@ It shows up elsewhere too: counters, timestamps, IDs, file sizes, and memory add
 
 What these share is that a fixed number of digits is a promise about the largest thing you'll ever need to count, and someone eventually checks.
 
+Motif: [every representation has an edge](../motifs.md#every-representation-has-an-edge).
+
 ## It really happened
 
 Priyanka is fictional; her deadline is common. In December 2014 YouTube said that the view count of "Gangnam Style" had passed the largest value a 32-bit signed integer can hold, and that it had already moved the counter to 64 bits. In 2015 the US aviation regulator required operators of the Boeing 787 to restart its electrical power system periodically, after it was found that a software counter could overflow after about 248 days of continuous power and shut down the generators. Many Unix systems store time as a 32-bit count of seconds since 1970, which overflows in January 2038, and is being migrated, slowly, to 64 bits.

@@ -63,9 +63,15 @@ Every page has a **Connections** section: one line per edge, of the form *learni
 
 ### 3.4 The lens
 
-Four questions, stated once on the README and implied everywhere: what do we have (data, and its dimensions: shape, size, location, velocity, trust, cost to obtain); what can we do with it (store, move, transform, find, decide, show, protect); how, and within what limits (the ladder of means; limits that are physical/economic and limits that are policy/legal); and why (the value chain from data to business outcome, and the fact that the why moves). The chain also runs backwards: what users come to expect at the interface pulls new practice into the backend, from AJAX making backends into API servers, to mobile producing GraphQL, to live collaboration producing CRDTs, to chat producing streaming APIs.
+Four questions, stated once on the README and implied everywhere: what do we have (data, and its dimensions: shape, size, location, velocity, trust, cost to obtain); what can we do with it (represent, store, move, transform, find, decide, show, protect); how, and within what limits (the ladder of means; limits that are physical/economic and limits that are policy/legal); and why (the value chain from data to business outcome, and the fact that the why moves). The chain also runs backwards: what users come to expect at the interface pulls new practice into the backend, from AJAX making backends into API servers, to mobile producing GraphQL, to live collaboration producing CRDTs, to chat producing streaming APIs.
 
 The four questions are also the prompt to use when out of your depth, with a colleague or with Claude Code: *I have this data, I want this verb, what are the means, and which limit will bind?*
+
+The eight verbs are named only where they earn their place: in bold, once, in a spine page's Problem or a concept page's opening line, when the verb is what the page is about. Pages whose problem is about people, scale or money leave them unsaid.
+
+### 3.5 Motifs
+
+`motifs.md` names about a dozen shapes that recur across stories (*copies disagree*, *costs move; they don't disappear*, *the sign drifts from the thing* and others), each with one or two sentences and every page where it appears. A page that shows a motif clearly ends its Where it shows up section, or a spine page its What survived, with one line: `Motif: [name](motifs.md#anchor).` At most two per page, and only where the shape is the point. The names stay fixed so that meeting one again is recognition, the way "Ladder:" works. Motifs are patterns across this wiki's mostly fictional stories, not findings about the world, and the page says so.
 
 ## 4. The model
 

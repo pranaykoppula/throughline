@@ -33,6 +33,8 @@ It shows up elsewhere too: in standard library advice to prefer dynamic arrays b
 
 What these share is page 1's lesson at the smallest scale: the cost of an operation is set by where the data is, and data kept together is cheap to walk.
 
+Motif: [where the data is sets the cost](../motifs.md#where-the-data-is-sets-the-cost).
+
 ## It really happened
 
 Marta is fictional; her rewrite is standard practice in game programming, where it's called data-oriented design. Mike Acton's 2014 CppCon talk, "Data-Oriented Design and C++", argued that the layout of data in memory, not the elegance of the code, decides performance on modern hardware, and became widely cited. Standard libraries in most languages default to dynamic arrays for sequences for the same reason, and linked lists are kept for the cases they truly suit.

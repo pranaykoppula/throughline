@@ -34,6 +34,8 @@ It shows up elsewhere too: databases such as Cassandra and RocksDB, which keep a
 
 What these share is a cheap test with a lopsided error. When it says "no", you can act on it at once. When it says "yes", you've only learned that the expensive question is worth asking. Systems go wrong when the "yes" is allowed to stand in for the answer, or when nobody watches how often it's wrong as the collection grows.
 
+Motif: [a cheap check before an expensive one](../motifs.md#a-cheap-check-before-an-expensive-one).
+
 ## It really happened
 
 Joaquín is fictional; the structure and its uses are real. Burton Bloom described it in 1970 as a way to save memory when an occasional wrong "yes" was tolerable, at a time when memory was scarce and checks were done against slow storage ([Bloom, *Communications of the ACM*](https://dl.acm.org/doi/10.1145/362686.362692) <!-- verify -->). Google's Bigtable paper (2006) described keeping Bloom filters for its sorted files so that most reads for missing data never touched the disk ([Chang et al.](https://research.google/pubs/bigtable-a-distributed-storage-system-for-structured-data/)), and later storage engines did the same.

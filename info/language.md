@@ -38,6 +38,8 @@ It shows up elsewhere too: in prompts to language models, which fill every gap w
 
 What these share is that words are lossy, context-dependent compression. They work beautifully between people who share a context, and fail quietly between people who don't. The fixes are the same across all of them: concrete examples, stated assumptions, a fixed vocabulary for things that matter, and saying it back.
 
+Motif: [every representation has an edge](../motifs.md#every-representation-has-an-edge).
+
 ## It really happened
 
 Daniela is fictional. Her company's problem is the oldest in software, and aviation has paid the most for it. On 27 March 1977, at Tenerife, two Boeing 747s collided on a fog-bound runway and 583 people died, the deadliest accident in aviation history. Among its causes was ambiguous language on the radio: the KLM crew's "we are now at takeoff" could mean "waiting at the takeoff position" or "taking off now", and the tower's reply, "OK… stand by for takeoff", was partly blocked by another transmission. Afterwards, aviation tightened its standard phrases so that critical words carry only one meaning; "takeoff" is now generally used only when giving or acknowledging a takeoff clearance ([one account](https://aerocorner.com/blog/tenerife-1977/)). Pilots also read back critical instructions word for word, which is Thomas's telegraph repetition from [information](information.md), applied to speech.

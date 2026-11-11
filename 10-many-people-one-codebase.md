@@ -48,6 +48,8 @@ And sometimes giving code away is strategy. Google released Kubernetes as open s
 
 A codebase built by many people over time is a system in its own right. Its history is data, its branches and reviews are protocols, and its rules about who can change what are trust boundaries. Integrate often, in small pieces; drift is what makes merging hard. Practices live in tools: a rule enforced by the build lasts, and a rule kept on goodwill doesn't. Choosing a tool is choosing a practice.
 
+Motif: [enforce it once, at the boundary](motifs.md#enforce-it-once-at-the-boundary).
+
 ## Where it gets misapplied
 
 - **Cargo-culting big-company process.** Squads, tribes, quarterly planning ceremonies, adopted from a blog post by a team of twelve. Often the company described didn't work that way either.

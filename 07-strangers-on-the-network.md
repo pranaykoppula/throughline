@@ -6,7 +6,7 @@ Last reviewed: 2026-11-10
 
 ## Problem
 
-Early networks connected people who knew each other, so systems trusted whoever was on the other end. Once anyone in the world could reach a system, some of them would try to break it, and every part of it had to be built for someone who means harm.
+Early networks connected people who knew each other, so systems trusted whoever was on the other end. Once anyone in the world could reach a system, some of them would try to break it, and every part of it had to **protect** itself against someone who means harm.
 
 ## The story
 
@@ -43,6 +43,8 @@ Trust also extends to the code you didn't write. In 2014 Heartbleed, a bug in Op
 ## What survived
 
 Once strangers can reach a system, every boundary is a question of who is asking and what they may do. Trust nothing that crossed a boundary: treat input as data, never as instructions. Give every party, person or program, the least it needs. Store secrets so that a leak reveals as little as possible, and assume the leak will happen. Harms from data fall on people other than those who collect it, so the law steps in where incentives don't.
+
+Motifs: [enforce it once, at the boundary](motifs.md#enforce-it-once-at-the-boundary), [the least power, for the shortest time](motifs.md#the-least-power-for-the-shortest-time).
 
 ## Where it gets misapplied
 

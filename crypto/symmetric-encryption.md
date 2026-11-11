@@ -2,7 +2,7 @@
 
 Last reviewed: 2026-11-03
 
-A concept page, and the first of the cryptography family: one shared key that locks and unlocks, the fastest way to keep data from someone who can see it, and the easiest to use in a way that quietly gives the secret away.
+A concept page, and the first of the cryptography family: one shared key that locks and unlocks, the fastest way to **protect** data from someone who can see it, and the easiest to use in a way that quietly gives the secret away.
 
 ## Problem
 

@@ -40,6 +40,8 @@ It shows up elsewhere too: autoscalers that add servers after a peak has passed 
 
 What these share is the loop and its two dials: how strongly it corrects, and how old its information is. Strong correction with old information swings. Weak correction never arrives. Most improvements come from making the information fresher, then correcting as firmly as that allows.
 
+Motif: [every correction acts on old news](../motifs.md#every-correction-acts-on-old-news).
+
 ## It really happened
 
 Astrid is fictional; the loop is very old. From 1788 James Watt fitted steam engines with a centrifugal governor, spinning weights that closed the steam valve as the engine sped up. Some engines with governors *hunted*, speeding up and slowing down in a rhythm nobody could explain, until James Clerk Maxwell analysed governors mathematically in 1868, in a paper often called the start of control theory. In 1922 Nicolas Minorsky, working on automatic steering for the US Navy, published the first analysis of the three-part controller Astrid used, partly by watching how experienced helmsmen corrected a ship's course. In 1942 John Ziegler and Nathaniel Nichols published rules for tuning such controllers that are still taught.

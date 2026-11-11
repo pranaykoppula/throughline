@@ -36,6 +36,8 @@ It shows up elsewhere too: response times on every dashboard, file sizes, how ma
 
 The pages show two different tails. One is a long tail of *values*, where a few accounts or requests are far larger or slower than the rest, as with Maya. The other is a small *group* whose experience is very different from everyone else's, as with Rosa's Brazilian customers. Both disappear inside an average. Both are found by looking at the whole distribution, sliced in more than one way.
 
+Motif: [the sign drifts from the thing](../motifs.md#the-sign-drifts-from-the-thing).
+
 ## It really happened
 
 Leo is fictional; his arithmetic is the subject of a famous paper. Jeffrey Dean and Luiz André Barroso of Google wrote in 2013 that if a server is slow one time in a hundred and a request needs answers from a hundred such servers, about 63% of requests will be slow. Their remedies included sending a second copy of a slow request, as Leo did ([summary of "The Tail at Scale"](https://blog.acolyer.org/2015/01/15/the-tail-at-scale/)). Amazon's Dynamo paper (2007) set its performance targets at the 99.9th percentile rather than the average, for the same reason ([page 8](../08-too-many-users-too-much-data.md)).

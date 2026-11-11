@@ -35,6 +35,8 @@ It shows up elsewhere too: database queries made in a loop (the "N+1" problem), 
 
 The pages share one fix in different forms: fewer, larger exchanges instead of many small ones, and doing in parallel whatever doesn't depend on a previous answer.
 
+Motifs: [where the data is sets the cost](../motifs.md#where-the-data-is-sets-the-cost), [waiting is where the time goes](../motifs.md#waiting-is-where-the-time-goes).
+
 ## It really happened
 
 Ayesha is fictional; her compromise is close to how GraphQL began. Facebook built it in 2012 for its mobile news feed, so that one request could ask for exactly the nested data a screen needed, and released it publicly in 2015 ([Facebook Engineering](https://engineering.fb.com/2015/09/14/core-infra/graphql-a-data-query-language/)). HTTP/2, standardised in 2015, let a browser send many requests over one connection at once instead of waiting on each. Every new secure connection still costs extra round trips before the first byte of data, which is why newer protocols work to cut those handshakes down.

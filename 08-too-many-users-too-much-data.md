@@ -52,6 +52,8 @@ Amazon made the opposite choice about copies, on purpose. Their Dynamo store acc
 
 Once data lives in more than one place, the copies will disagree, and every design has to say what it promises while they do. When the network between copies breaks, a system can keep answering and risk stale answers, or stay correct and refuse some requests; it can't do both. Copies spread reads; splits spread writes; precomputing moves work from read time to write time; approximating trades exactness for cost. Design for the distribution you have, including its tail, not its average.
 
+Motif: [copies disagree](motifs.md#copies-disagree).
+
 ## Where it gets misapplied
 
 - **Microservices before the team or the load exists.** Segment split its system into many services, then folded them back into one when the running cost outgrew the benefit ([InfoQ on "To Microservices and Back Again"](https://www.infoq.com/news/2020/04/microservices-back-again/)). Prime Video's monitoring team [reported cutting costs by over 90%](https://web.archive.org/web/20240805183535/https://www.primevideotech.com/video-streaming/scaling-up-the-prime-video-audio-video-monitoring-service-and-reducing-costs-by-90) by consolidating; [Adrian Cockcroft noted](https://adrianco.medium.com/so-many-bad-takes-what-is-there-to-learn-from-the-prime-video-microservices-to-monolith-story-4bd0970423d4) that this was one service refactored within the broader system, not a verdict on microservices.

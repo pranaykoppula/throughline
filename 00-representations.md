@@ -6,7 +6,7 @@ Last reviewed: 2026-10-24
 
 ## Problem
 
-Nobody works on the world directly. We write it down first, as numbers, symbols, rules, and work on what we wrote. Every way of writing it down works for the problems its inventors had, and quietly fails on some problem they didn't.
+Nobody works on the world directly. We write it down first, **representing** it as numbers, symbols and rules, and work on what we wrote. Every way of writing it down works for the problems its inventors had, and quietly fails on some problem they didn't.
 
 ## The story
 
@@ -29,6 +29,8 @@ Every time, the pattern was the same. A way of writing things down worked well, 
 ## What survived
 
 Every representation is a choice among others that could have been made, and every one has an edge where it stops being true. This wiki hands out representations the way every textbook does, cleanly, as if they had no edges: bits, request and response, tables, consistency models. Each one stops being true somewhere. The pages don't stop to point that out every time. Finding the edge is your job.
+
+Motif: [every representation has an edge](motifs.md#every-representation-has-an-edge).
 
 ## Names you'll hear
 

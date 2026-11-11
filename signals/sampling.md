@@ -2,7 +2,7 @@
 
 Last reviewed: 2026-11-03
 
-A concept page in the signals and control family: how a continuous world becomes numbers in a machine, and why sampling too slowly doesn't just miss things. It invents things that aren't there.
+A concept page in the signals and control family: how a continuous world is **represented** as numbers in a machine, and why sampling too slowly doesn't just miss things. It invents things that aren't there.
 
 ## Problem
 
@@ -37,6 +37,8 @@ Looking back, Henrik thought sampling too slowly hadn't quietly lost information
 It shows up elsewhere too: wagon wheels that seem to turn backwards in films, shimmering patterns when you photograph a screen, jagged edges on diagonal lines in computer graphics, a keyboard reading a switch that bounces, a touchscreen sampling a moving finger, and monitoring systems that record a metric every minute and never see the spike that lasted ten seconds.
 
 What these share is the boundary between a continuous world and a machine that stores numbers. Every digital record made two choices there, how often to look and how finely to measure, and those choices decide not only what's missing but what false patterns might appear.
+
+Motif: [every representation has an edge](../motifs.md#every-representation-has-an-edge).
 
 ## It really happened
 

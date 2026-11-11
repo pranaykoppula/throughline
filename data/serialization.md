@@ -2,7 +2,7 @@
 
 Last reviewed: 2026-10-24
 
-A concept page: turning data into bytes that another program, written by someone else, can turn back into the same data.
+A concept page: **representing** data as bytes that another program, written by someone else, can turn back into the same data.
 
 ## Problem
 
@@ -35,6 +35,8 @@ Looking back, Jonas thought the built-in format had felt free because its cost w
 It shows up elsewhere too: file formats that outlive the programs that wrote them, configuration files, database storage formats, and APIs between companies.
 
 What these share is that a format is an agreement between parties who change at different times. The good ones say how they're allowed to change.
+
+Motif: [costs move; they don't disappear](../motifs.md#costs-move-they-dont-disappear).
 
 ## It really happened
 

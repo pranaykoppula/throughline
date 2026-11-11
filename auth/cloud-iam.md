@@ -35,6 +35,8 @@ It shows up elsewhere too: API keys for third-party services, deploy credentials
 
 What these share is that a credential's power is the size of the damage when it leaks, and that short-lived, narrow credentials make leaks small.
 
+Motif: [the least power, for the shortest time](../motifs.md#the-least-power-for-the-shortest-time).
+
 ## It really happened
 
 Leila is fictional; her Saturday morning is common enough to have been studied. Researchers at North Carolina State University scanned public GitHub over several months and found secrets, including cloud keys, leaking from over a hundred thousand repositories, many of them still valid ("How Bad Can It Git? Characterizing Secret Leakage in Public GitHub Repositories", NDSS 2019). Cloud providers and code hosts now scan public code for their own key formats and revoke or warn automatically. The larger cloud failure on this theme, the 2019 Capital One breach, came from a role with far more access than its job needed ([least privilege](least-privilege.md)).

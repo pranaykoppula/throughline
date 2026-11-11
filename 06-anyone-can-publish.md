@@ -6,7 +6,7 @@ Last reviewed: 2026-11-10
 
 ## Problem
 
-Software used to be shipped to every user's machine, and every copy aged on its own. Putting it on one server and letting a browser fetch it fixed that. But it split the program in two, a client and a server, and two halves can disagree about what's true.
+Software used to be shipped to every user's machine, and every copy aged on its own. Putting it on one server and letting a browser fetch it fixed that. But it split the program in two, a client that **shows** things and a server that keeps them, and two halves can disagree about what's true.
 
 ## The story
 
@@ -43,6 +43,8 @@ The two-sources-of-truth problem got harder as screens got more ambitious. Figma
 ## What survived
 
 The client and server split the work. The server owns the truth; the client owns presentation and a copy of the state. Most bugs users see are two sources of truth disagreeing. A client can assume an action will succeed, to feel fast, but it has to be ready to be told it didn't. The browser won because shipping one server beats shipping a million installs; native shells survive where platforms control distribution. And what users come to expect on screen keeps reshaping the backend: Ajax turned servers into APIs, and later expectations brought mobile query languages, live collaboration, and streaming.
+
+Motif: [copies disagree](motifs.md#copies-disagree).
 
 ## Where it gets misapplied
 

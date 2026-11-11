@@ -37,6 +37,8 @@ It shows up elsewhere too: sales targets, hospital waiting-time targets, lines o
 
 What these share is a gap between a sign and what it stands for. A measure is useful because it usually moves with something you can't observe directly. Attach a reward to it and people, or optimisers, will find the paths where it moves alone. The defences are the same everywhere: measure what you actually want when you can, pair measures that pull against each other, keep a number as a question, not a verdict, and keep looking at the thing itself.
 
+Motif: [the sign drifts from the thing](../motifs.md#the-sign-drifts-from-the-thing).
+
 ## It really happened
 
 Ottilie is fictional; the pattern has several names. The economist Charles Goodhart observed in 1975 that a statistical regularity tends to collapse once it's used as a target for policy. The anthropologist Marilyn Strathern gave it its best-known form in 1997, writing about university audits: when a measure becomes a target, it ceases to be a good measure. The social scientist Donald Campbell had made a similar observation about social indicators around the same time, and it's sometimes called Campbell's law.

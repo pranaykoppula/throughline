@@ -35,6 +35,8 @@ It shows up elsewhere too: graphics, physics simulations, machine learning, wher
 
 What these share is page 0's lesson in its most common form: a representation that's excellent for one job and quietly wrong for another.
 
+Motif: [every representation has an edge](../motifs.md#every-representation-has-an-edge).
+
 ## It really happened
 
 Oskar is fictional; the standard he relied on is IEEE 754, first published in 1985, largely the work of William Kahan, who won the Turing Award for it. It made floating point behave the same way on every machine, which was a great achievement. Its edges still surprise people. In 2007 Microsoft Excel 2007 displayed the result of `850*77.1` as 100,000 instead of 65,535; the calculation was right, but a bug in converting the floating-point result to text for display showed the wrong number, and Microsoft issued a fix. Banks and accounting systems have long used decimal or integer representations for money for exactly Oskar's reasons.

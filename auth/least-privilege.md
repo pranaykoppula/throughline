@@ -37,6 +37,8 @@ It shows up elsewhere too: phone apps asking for your contacts, API keys that ca
 
 What the pages share is that the extra power was always granted for a good reason: convenience, speed, fewer requests. And it was always discovered on a bad day. The fix is the same each time: decide what each party needs, grant only that, and make asking for more quick enough that people don't work around it.
 
+Motif: [the least power, for the shortest time](../motifs.md#the-least-power-for-the-shortest-time).
+
 ## It really happened
 
 Grace is fictional; ILOVEYOU was real. It spread worldwide in May 2000 and overwrote files on the computers and shared drives it could reach. The principle is older. Jerome Saltzer and Michael Schroeder listed "least privilege" among their design principles for protecting information in 1975: every program and every user should operate using the least set of privileges necessary to do the job ("The Protection of Information in Computer Systems", *Proceedings of the IEEE*). In 2019, an attacker who broke into a web application firewall at Capital One used the permissions of the role it ran under, which could read storage buckets full of customer data it had no reason to touch ([one analysis](https://www.rackspace.com/en-au/blog/capital-one-data-breach-two-security-controls-you-should-review)). The firewall needed to inspect traffic; it didn't need to read customer records.

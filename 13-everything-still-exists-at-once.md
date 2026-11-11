@@ -58,6 +58,8 @@ Named so they can be noticed. Other pages mention whichever kind applies to them
 
 None of this replaced what came before; every era still runs somewhere, and some of it is there because it was first or lucky, not because it was right. Adoption is slow because switching costs are paid now by the adopter, and the benefits arrive later, mostly to someone else. Everything drifts: dependencies, data, prices, requirements, and the reasons behind them. Replace old systems a piece at a time, with both running, rather than all at once. Engineering judgment is mostly knowing which limit binds now and which will lift next.
 
+Motifs: [the old keeps running](motifs.md#the-old-keeps-running), [costs move; they don't disappear](motifs.md#costs-move-they-dont-disappear).
+
 ## Where it gets misapplied
 
 - **The hype cycle.** Excitement, disappointment, then quiet usefulness, or nothing. Gartner's famous chart of it is a marketing artifact, but the shape is real.

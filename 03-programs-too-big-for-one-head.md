@@ -44,6 +44,8 @@ Forty years later the same question, "is the language the bottleneck?", got answ
 
 Abstraction is the core skill: layers (languages, libraries, modules, types) that let you use something without knowing how it works. Each layer trades control for ease. The best boundaries hide a decision that might change, not a step in a process. Building is mostly assembling existing abstractions. Optimizing is mostly replacing one of them with something made for the case at hand, once measurement shows its cost dominates. Data structures and algorithms are the reusable shapes inside those layers, chosen by the access pattern they serve.
 
+Motif: [layers hide things, until they leak](motifs.md#layers-hide-things-until-they-leak).
+
 ## Where it gets misapplied
 
 - **Rewriting a working system in the new thing.** Throwing away code throws away every bug fix in it (Joel Spolsky, ["Things You Should Never Do, Part I"](https://www.joelonsoftware.com/2000/04/06/things-you-should-never-do-part-i/)).

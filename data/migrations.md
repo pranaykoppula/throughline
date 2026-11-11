@@ -37,6 +37,8 @@ It shows up elsewhere too: database upgrades, splitting a service in two, changi
 
 The pages share one pattern at different sizes: let the old and new shapes coexist, move a little at a time, compare, switch, and only then remove the old. Big-bang migrations fail for the same reason Sofia's merge day did on page 10: too much change, discovered all at once.
 
+Motif: [the old keeps running](../motifs.md#the-old-keeps-running).
+
 ## It really happened
 
 Bilal is fictional; his six steps are standard practice. Stripe described the same pattern in 2017 for migrating subscription records: write to both old and new, move reads to the new, move writes to the new, then remove the old ([Stripe, "Online migrations at scale"](https://stripe.com/blog/online-migrations)). GitHub built gh-ost in 2016 because existing tools for changing large MySQL tables online were slowing its busiest tables to a near halt; it copies a table in the background and switches over at the end ([GitHub](https://github.blog/2016-08-01-gh-ost-github-s-online-migration-tool-for-mysql/)). The big-bang alternative is on [page 13](../13-everything-still-exists-at-once.md): TSB's 2018 weekend migration.

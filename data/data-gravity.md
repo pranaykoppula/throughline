@@ -33,6 +33,8 @@ It shows up elsewhere too: analytics teams moving their tools into the data ware
 
 What these share is that data's weight grows with its size, and compounds as other things come to depend on where it is. It's useful to keep compute close to data, and wise to know what it would cost to leave.
 
+Motifs: [where the data is sets the cost](../motifs.md#where-the-data-is-sets-the-cost), [costs move; they don't disappear](../motifs.md#costs-move-they-dont-disappear).
+
 ## It really happened
 
 Imogen is fictional; the term is real. Dave McCrory coined "data gravity" in a 2010 blog post, describing how large datasets attract applications and services the way mass attracts mass. Data transfer pricing became a regulatory issue. In January 2024 Google Cloud said it would waive data transfer fees for customers moving all their data off its platform, with conditions ([CNBC](https://www.cnbc.com/2024/01/11/google-vows-not-to-charge-data-transfer-fees-when-cloud-customers-exit.html)). Under the EU's Data Act, providers may charge only their direct costs for switching until 12 January 2027, and nothing for switching after that. Ordinary data transfer during use can still be charged ([one summary](https://www.lw.com/en/insights/eu-data-act-significant-new-switching-requirements-due-to-take-effect-for-data-processing-services)). Regulators had noticed the same thing Tariq and Imogen did.

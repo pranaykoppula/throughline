@@ -33,6 +33,8 @@ It shows up elsewhere too: hosted login and payments, email delivery, analytics,
 
 What these share is the control-versus-ease ladder: a managed service is a step up towards ease. It's usually the right step, and it's best taken knowing what's being handed over.
 
+Motif: [layers hide things, until they leak](../motifs.md#layers-hide-things-until-they-leak).
+
 ## It really happened
 
 Tamsin is fictional; her December day happens to real companies. On 7 December 2021 a problem in AWS's largest region, us-east-1, caused hours of disruption for many companies whose services depended on it. Providers also retire products: Google, for example, shut down its Cloud IoT Core service in 2023, giving customers about a year to move. Netflix's move to AWS on [page 9](../09-buying-computers-is-too-slow.md) is the other side: a company choosing managed infrastructure deliberately, and spending its own engineering on what the provider didn't sell.
