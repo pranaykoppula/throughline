@@ -55,6 +55,7 @@ JavaScript is a dynamically typed language with first-class functions, built aro
 - Learning this is also learning [floating point](../math/floating-point.md), because every JavaScript number is one.
 - Learning this is also learning [build systems and package managers](../tooling/build-systems.md), because modern JavaScript is rarely shipped as written; it's bundled, compiled and minified.
 - Learning this is also learning [software supply chain](../vendors/supply-chain.md), because its package ecosystem is one of the largest and most fragile.
+- Learning this is also learning [meaning as use](../info/meaning-as-use.md), because the web came to depend on JavaScript's quirks, and what everyone relies on can't be changed.
 
 ## Resources
 

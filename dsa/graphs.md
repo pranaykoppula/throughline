@@ -30,7 +30,7 @@ Looking back, Ruth thought she'd made the classic mistake of storing every answe
 | [State machines](state-machines.md) | States and the allowed moves between them | Can this state be reached from that one? |
 | [Queues](queues.md) | Any graph, explored level by level | Breadth-first search keeps a queue of places to visit next. |
 
-It shows up elsewhere too: social networks, dependency trees in package managers, build systems deciding what to rebuild, recommendation systems, and maps.
+It shows up elsewhere too: social networks, dependency trees in package managers, build systems deciding what to rebuild, recommendation systems, maps, and robots planning a route (the A* search algorithm was invented in 1968 for SRI's Shakey robot).
 
 The pages share a small set of questions that turn up in very different clothes: paths, cycles, reachability and ordering. Spotting that a problem is a graph question usually means a well-known algorithm already solves it.
 

@@ -37,7 +37,7 @@ The pages use four different answers. You can have **one owner** decide, as Tom,
 
 ## It really happened
 
-Tom is fictional. The deeper problem, that machines can't agree on the order of events without communicating, was set out by Leslie Lamport in 1978 ("Time, Clocks, and the Ordering of Events in a Distributed System"). Amazon's Dynamo paper chose merging on purpose, because a shopping cart you can't add to loses sales ([page 8](../08-too-many-users-too-much-data.md)). Werner Vogels, Amazon's CTO, later explained the trade for a general audience in "Eventually Consistent" (*ACM Queue*, 2008). Kyle Kingsbury's [Jepsen](https://jepsen.io/analyses) project publishes analyses of database behavior under faults; its tests can find errors but cannot prove correctness.
+Tom is fictional. The deeper problem, that machines can't agree on the order of events without communicating, was set out by Leslie Lamport in 1978 ("Time, Clocks, and the Ordering of Events in a Distributed System"). Amazon's Dynamo paper chose merging on purpose, because a shopping cart you can't add to loses sales ([page 8](../08-too-many-users-too-much-data.md)). Werner Vogels, Amazon's CTO, later explained the trade for a general audience in "Eventually Consistent" (*ACM Queue*, 2008). Kyle Kingsbury's [Jepsen](https://jepsen.io/analyses) project publishes analyses of database behaviour under faults; its tests can find errors but cannot prove correctness.
 
 ## What it is
 
@@ -63,7 +63,7 @@ Consistency is what a system promises about how copies of data relate to each ot
 1. Werner Vogels, "Eventually Consistent" (*ACM Queue*, 2008) (start here: short, and written by someone who had to choose).
 2. Martin Kleppmann, [*Designing Data-Intensive Applications*](https://dataintensive.net/), chapters 5 and 9 (go deeper).
 3. Leslie Lamport, "Time, Clocks, and the Ordering of Events in a Distributed System" (1978).
-4. [Jepsen analyses](https://jepsen.io/analyses) (reference: database behavior under faults).
+4. [Jepsen analyses](https://jepsen.io/analyses) (reference: database behaviour under faults).
 
 ## Names you'll hear
 

@@ -3,3 +3,4 @@ description: Computing's recurring problems, told as stories in the order they a
 theme: jekyll-theme-primer
 exclude:
   - scripts
+  - CLAUDE.md

@@ -62,7 +62,7 @@ Pagination returns a large result in pieces. Offset pagination, skipping N and t
 
 1. Markus Winand, ["Paging Through Results"](https://use-the-index-luke.com/sql/partial-results/fetch-next-page) (start here: offset versus seek pagination).
 2. Your database's documentation on indexes and range queries (go deeper).
-3. [Stripe API pagination](https://docs.stripe.com/api/pagination) (reference: cursor behavior in a public API).
+3. [Stripe API pagination](https://docs.stripe.com/api/pagination) (reference: cursor behaviour in a public API).
 
 ## Names you'll hear
 

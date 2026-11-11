@@ -1,0 +1,35 @@
+name: Checks
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  check-model:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Every copy of the model matches the-model.md
+        run: python3 scripts/check_model.py
+
+  check-generated:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Regenerate the graph and the map
+        run: |
+          python3 scripts/make_graph.py
+          python3 scripts/make_map.py
+      - name: graph.html and images/map.svg are up to date
+        run: |
+          if ! git diff --quiet -- graph.html images/map.svg; then
+            echo "::error::graph.html or images/map.svg is out of date. Run python3 scripts/make_graph.py and python3 scripts/make_map.py, then commit the result."
+            git diff --stat -- graph.html images/map.svg
+            exit 1
+          fi

@@ -58,6 +58,7 @@ Serialization turns in-memory data into bytes; deserialization turns them back. 
 - Learning this is also learning [state machines](../dsa/state-machines.md), because parsers are state machines.
 - Learning this is also learning [round trips](../latency/round-trips.md), because a compact format makes each exchange cheaper.
 - Learning this is also learning [type systems](../runtimes/type-systems.md), because a schema is a type that crosses a boundary between programs.
+- Learning this is also learning [encodings](../info/encodings.md), because a unit, a time zone or a character set is a convention, and the bytes don't carry it unless you make them.
 
 ## Resources
 

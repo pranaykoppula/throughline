@@ -59,12 +59,15 @@ A coding agent is a language model given tools to read files, write changes and 
 - Learning this is also learning [CI pipelines](ci.md), because the checks an agent works towards are only as good as the tests behind them.
 - Learning this is also learning [tokens and context windows](../ai/tokens.md), because what the agent reads, and what it leaves out, decides what it understands.
 - Learning this is also learning [statistical significance](../math/statistics.md), because judging whether a tool helps needs measurement, not impressions.
+- Learning this is also learning [language as compression](../info/language.md), because a task given to an agent in a sentence is decompressed by a reader that shares none of your context.
+- Learning this is also learning [measures and targets](../info/measures-and-targets.md), because a check handed to an optimiser stops measuring the goal behind it.
 
 ## Resources
 
 1. For Claude Code, official documentation on [permissions](https://code.claude.com/docs/en/permissions), [sandboxing](https://code.claude.com/docs/en/sandboxing), and [project instructions](https://code.claude.com/docs/en/memory).
 2. Simon Willison, ["The lethal trifecta for AI agents"](https://simonwillison.net/2025/Jun/16/the-lethal-trifecta/) (go deeper: the security side).
 3. METR's 2025 study of AI tools and experienced developers (reference: one careful measurement, with its limits stated).
+4. Peter Naur, "Programming as Theory Building" (1985) (why an agent, or a new hire, has the code but not the theory behind it).
 
 ## Names you'll hear
 

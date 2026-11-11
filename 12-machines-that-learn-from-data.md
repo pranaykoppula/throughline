@@ -2,6 +2,8 @@
 
 Last reviewed: 2026-11-10
 
+**Builds on** [4, Data outlives programs](04-data-outlives-programs.md), where data is kept for decades, and [7, Strangers on the network](07-strangers-on-the-network.md), where everything crossing a boundary has to be distrusted. The data becomes what the model learns from, and the model becomes a new boundary where every trust problem returns.
+
 ## Problem
 
 Some tasks were too fuzzy to write rules for: telling spam from mail, a cat from a dog, a good answer from a bad one. People could do them easily and couldn't explain how. The only way forward was to have the machine learn the rules from examples, which meant the machine was only as good as the examples, and nobody could fully read what it had learned.
@@ -34,7 +36,7 @@ Looking back, Nadia thought the two halves of her career were the same lesson. S
 
 ## It really happened
 
-Nadia is fictional; both halves of her story happened to many people. Paul Graham's ["A Plan for Spam"](https://paulgraham.com/spam.html) was published in August 2002 and proposed Bayesian content-based filtering that could adapt to each user's mail.
+Nadia is fictional; both halves of her story happened to many people. Paul Graham's ["A Plan for Spam"](https://paulgraham.com/spam.html) was published in August 2002 and proposed Bayesian content-based filtering that could adapt to each user's mail. Spammers adapted too. They moved their messages into images, which text filters couldn't read, and padded them with random words; by one vendor's count, a quarter of spam was image-based in 2006, up from under 5% the year before ([CSO, reporting IronPort's figures](https://www.csoonline.com/article/518998/data-protection-image-spam-on-the-rise-says-ironport.html)). Filters had to keep retraining.
 
 In 2012 a neural network called AlexNet won the ImageNet image-recognition contest with a top-5 error rate of 15.3%, against 26.2% for the runner-up. It was trained in about six days on two consumer graphics cards built for video games ([Krizhevsky, Sutskever and Hinton, 2012](https://proceedings.neurips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks)). Honestly, part of the story is luck: the hardware that made deep learning practical had been built and paid for by the games market. Five years later, the transformer architecture (["Attention Is All You Need", 2017](https://arxiv.org/abs/1706.03762)) made it practical to train on far more text. The large language model story has four parts, and an honest account keeps all of them. There's luck (gaming hardware), a real cause (it keeps getting better with scale), a distribution event (ChatGPT put it in a chat box anyone could use, in November 2022), and a market dynamic (every company afraid of missing out). Simon Willison named Nadia's second problem *prompt injection* in 2022, and it is still not solved in general.
 
@@ -65,6 +67,7 @@ Some transformations are learned from data rather than written, and they're only
 - Learning this is also learning [coding agents](tooling/coding-agents.md), because coding agents, Claude Code among them, are now one of the means on the ladder.
 - Learning this is also learning [least privilege](auth/least-privilege.md), because the fix for the $500 credit was the same as for Marcus's database account: give the model only the power it needs.
 - Learning this is also learning [reading a cloud bill](cost/cloud-bills.md), because the assistant's token bill was a design decision wearing a price tag, like Tariq's data transfer.
+- Learning this is also learning [feedback and control](signals/feedback.md), because gradient descent is a correction loop, and a learning rate that's too large overshoots the same way a drone does.
 
 ## Resources
 

@@ -59,6 +59,7 @@ A session is the server's memory that a client has authenticated; a token is wha
 - Learning this is also learning [least privilege](least-privilege.md), because a token should carry no more power than its job needs.
 - Learning this is also learning [input validation](input-validation.md), because a token is input from the client, and the server must check it every time.
 - Learning this is also learning [cloud IAM](cloud-iam.md), because cloud credentials are tokens for machines, with the same rules.
+- Learning this is also learning [randomness](../crypto/randomness.md), because a session ID is only unguessable if it comes from a cryptographic random source, not the language's ordinary one.
 
 ## Resources
 

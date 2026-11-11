@@ -2,6 +2,8 @@
 
 Last reviewed: 2026-11-10
 
+**Builds on** [4, Data outlives programs](04-data-outlives-programs.md), where data became the long-lived thing worth keeping, and [2, One machine, many programs](02-one-machine-many-programs.md), where waiting turned out to be where the time goes. Moving data between machines is waiting on the slowest and least reliable device yet.
+
 ## Problem
 
 Data was rarely on the machine that needed it. Moving it between machines meant crossing a link that was slow, shared, and unreliable, where a message could be lost, delayed, or delivered twice, and neither side could see what the other had received.
@@ -62,6 +64,8 @@ Data is rarely where it's needed, so it moves, and moving it is slow, unreliable
 - Learning this is also learning [queueing](latency/queueing.md), because a router's buffer is a queue, and congestion collapse is what happens when a queue overflows and everyone retries into it.
 - Learning this is also learning [caching](latency/caching.md), because Netflix's servers inside internet providers are copies placed near viewers, the cheapest round trip being the one you don't make.
 - Learning this is also learning [latency numbers](latency/latency-numbers.md), because a round trip across a continent costs about a million times a memory read, and Lin's transfer was mostly that.
+- Learning this is also learning [information](info/information.md), because Lin's block numbers and confirmations were redundancy added on purpose, so that loss and duplication could be noticed.
+- Learning this is also learning [feedback and control](signals/feedback.md), because Jacobson's fix made packet loss a signal to slow down, turning the whole internet into a feedback loop.
 
 ## Resources
 

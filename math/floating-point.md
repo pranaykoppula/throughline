@@ -57,6 +57,7 @@ Floating-point numbers store a sign, a fixed number of significant binary digits
 - Learning this is also learning [statistical significance](statistics.md), because numerical error is one more source of noise in results.
 - Learning this is also learning [data modelling](../data/modelling.md), because choosing the type of each field, including money, is a modelling decision.
 - Learning this is also learning [computability](../dsa/computability.md), because representations having edges is the theme of page 0.
+- Learning this is also learning [sampling and aliasing](../signals/sampling.md), because quantising a measurement is rounding it to a fixed set of values, with the same edges.
 
 ## Resources
 

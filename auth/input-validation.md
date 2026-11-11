@@ -56,6 +56,8 @@ Input validation is the rule that anything crossing a trust boundary is data unt
 - Learning this is also learning [serialization formats](../data/serialization.md), because parsing input safely starts with a format that can't smuggle code.
 - Learning this is also learning [hashing](../dsa/hashing.md), because hash flooding was strangers choosing inputs designed to hurt.
 - Learning this is also learning [TLS](tls.md), because knowing who sent the input is a different question from knowing it's safe, and both matter.
+- Learning this is also learning [power and predictability](../dsa/power-and-predictability.md), because a validation pattern whose running time strangers control can take a service down by itself.
+- Learning this is also learning [encodings](../info/encodings.md), because input should be decoded and normalised before it's checked, and lookalike characters make two different strings look the same.
 
 ## Resources
 

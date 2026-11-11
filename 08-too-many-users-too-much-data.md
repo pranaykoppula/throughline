@@ -2,6 +2,8 @@
 
 Last reviewed: 2026-11-10
 
+**Builds on** [4, Data outlives programs](04-data-outlives-programs.md), where a store's promises are defined by its transactions, and [5, Machines need to talk](05-machines-need-to-talk.md), where anything crossing a network can be lost, delayed or duplicated. Splitting and copying data across machines means keeping a store's promises over a network that breaks them.
+
 Links marked with an HTML `verify` comment haven't been checked against the live page yet.
 
 ## Problem

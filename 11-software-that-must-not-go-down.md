@@ -2,6 +2,8 @@
 
 Last reviewed: 2026-11-10
 
+**Builds on** [8, Too many users, too much data](08-too-many-users-too-much-data.md), where with many machines something is always partly broken, and [10, Many people, one codebase](10-many-people-one-codebase.md), where many people change a system all the time. Failure becomes constant, and knowing about it before users do becomes the job.
+
 ## Problem
 
 Once people depended on software every hour of every day, it couldn't just be fixed when someone noticed it was broken. Teams needed to know it was failing before users told them, and to agree on what "working" meant, because perfect wasn't on offer.
@@ -32,9 +34,11 @@ Looking back, Rosa thought her years on call came down to a few plain ideas. Eve
 
 ## It really happened
 
-Rosa is fictional; her lessons were learned the hard way at much larger companies. Google's site reliability engineers wrote down the error budget: agree on a target below 100%, and treat the gap as a budget that both developers and operators can spend ([*Site Reliability Engineering*, "Embracing Risk"](https://sre.google/sre-book/embracing-risk/)). Google's 2010 paper on Dapper described tracing requests across many services, the idea behind recording each request's whole journey.
+Rosa is fictional; her lessons were learned the hard way at much larger companies. Google's site reliability engineers wrote down the error budget: agree on a target below 100%, and treat the gap as a budget that both developers and operators can spend ([*Site Reliability Engineering*, "Embracing Risk"](https://sre.google/sre-book/embracing-risk/)). Google's 2010 paper on [Dapper](https://research.google/pubs/dapper-a-large-scale-distributed-systems-tracing-infrastructure/) described tracing requests across many services, the idea behind recording each request's whole journey.
 
 On 1 August 2012, Knight Capital deployed new trading code incorrectly. Old code that should have been dead was triggered by a reused setting. In the first 45 minutes of trading its systems sent more than four million orders, and the firm lost more than $460 million. The SEC's findings add a detail Rosa would recognise: before the market opened, an internal system had sent 97 automated emails flagging the error, and nobody acted on them ([SEC, 2013](https://www.sec.gov/news/press-release/2013-222)). In February 2017, an engineer running a routine command to remove a few servers from Amazon S3 typed one input wrong and removed far more. Large parts of the internet that depended on S3 failed for hours. Amazon's fix was to change the tool so it couldn't remove capacity that quickly, not to blame the engineer ([AWS post-incident summary](https://aws.amazon.com/message/41926/)). Both accounts are official and both are edited. The SEC was writing an enforcement order, and Amazon was writing to reassure customers. Read them for what happened, and be careful about why.
+
+Some failures cost more than money. Between June 1985 and January 1987, the Therac-25, a radiation therapy machine, gave at least six patients massive overdoses, and several of them died. Its predecessor had independent hardware interlocks that physically prevented a dangerous beam. For the Therac-25, its maker relied on the computer to check itself and dropped many of those interlocks. When the software had a bug, nothing independent of the software was left to stop it. Nancy Leveson and Clark Turner's investigation, published in 1993, is still the standard account ([Leveson and Turner, "An Investigation of the Therac-25 Accidents"](https://www.se.rit.edu/~swen-342/resources/Leveson,%20Turner%20-%20An%20Investigation%20of%20the%20Therac-25%20Accidents%20-%20IEEE%20Computer%20v26n7%20-%201993-07.pdf) <!-- verify -->). The fixes added protection that didn't depend on the computer. It's Rosa's lesson at its most serious: a check that relies on the thing it checks can't catch that thing failing.
 
 ## What survived
 
@@ -45,6 +49,7 @@ Everything fails; the questions are how you'll know and what you've promised. De
 - **Dashboards nobody reads.** A wall of charts that measures the machines and not the customer.
 - **Alerts everyone mutes.** Rosa's three hundred. An alert that's usually wrong is worse than no alert, because it teaches people to ignore the pager.
 - **Three monitoring vendors.** Each bought to fix the last one's gap, none of them set up to answer the question you have today.
+- **Protection that depends on the thing it protects.** Health checks that run on the server they check, and the Therac-25's software checking itself.
 - **The mirror:** five nines for an internal report nobody opens at night. Reliability is bought with money and speed. Spend it where users notice.
 
 ## Connections
@@ -55,6 +60,8 @@ Everything fails; the questions are how you'll know and what you've promised. De
 - Learning this is also learning [the cost of reliability](cost/reliability.md), because every extra nine costs more than the last.
 - Learning this is also learning [distributions and percentiles](math/percentiles.md), because averages hide the tail, and the tail is where users suffer.
 - Learning this is also learning [queueing](latency/queueing.md), because the checkout timed out waiting on a slow payment provider, and waiting, not failing, is how most outages start.
+- Learning this is also learning [sampling and observation](info/observation.md), because green squares measured what the monitors were built to see, and silence from a monitor is not the same as health.
+- Learning this is also learning [measures and targets](info/measures-and-targets.md), because "working" has to be defined from the customer's side before anyone is judged by it, or the number and the service drift apart.
 
 ## Resources
 
@@ -62,7 +69,7 @@ Everything fails; the questions are how you'll know and what you've promised. De
 2. Charity Majors, Liz Fong-Jones and George Miranda, *Observability Engineering* (go deeper: Rosa's Brazil problem, as a discipline).
 3. [AWS, S3 post-incident summary, 2017](https://aws.amazon.com/message/41926/): a short, real postmortem.
 4. John Allspaw, ["Blameless PostMortems and a Just Culture"](https://www.etsy.com/codeascraft/blameless-postmortems) (2012; reference: why blaming people hides the system).
-5. Sigelman et al., ["Dapper, a Large-Scale Distributed Systems Tracing Infrastructure"](https://research.google/pubs/dapper-a-large-scale-distributed-systems-tracing-infrastructure/) (2010): Google's production tracing system and its use in understanding system behavior.
+5. Terry Winograd and Fernando Flores, *Understanding Computers and Cognition* (1986) (on breakdown: a tool you rely on only becomes visible when it fails).
 
 ## Names you'll hear
 

@@ -59,7 +59,7 @@ Page 0 is a different kind of page from 1–13: it's a preface, not a problem an
 
 ### 3.3 The graph
 
-Every page has a **Connections** section: one line per edge, of the form *learning this is also learning X, because Y*. The "because" is the content. Edges may point at pages that don't exist; those dangling links are the frontier and are how the wiki grows. Each edge points at one specific concept, never a whole subject: *[hash tables](dsa/hash-tables.md)*, not *DSA*. Branch pages live in one folder per family (`dsa/`, `data/`, `latency/`, `cost/`, `math/`, `auth/`, `runtimes/`, `tooling/`, `vendors/`, `writing/`, `cloud/`, `ai/`), one concept per page. The families are the hubs. The README carries a map of the spine showing which families each page connects to (`images/map.svg`, drawn by `scripts/make_map.py`), and `graph.html` shows every page and link as a graph (drawn by `scripts/make_graph.py`). Expected hubs: data, DSA, trust, latency, cost.
+Every page has a **Connections** section: one line per edge, of the form *learning this is also learning X, because Y*. The "because" is the content. Edges may point at pages that don't exist; those dangling links are the frontier and are how the wiki grows. Each edge points at one specific concept, never a whole subject: *[hash tables](dsa/hash-tables.md)*, not *DSA*. Branch pages live in one folder per family (`dsa/`, `data/`, `latency/`, `cost/`, `math/`, `auth/`, `runtimes/`, `tooling/`, `vendors/`, `writing/`, `cloud/`, `ai/`, `info/`, `crypto/`, `signals/`), one concept per page. The families are the hubs. The README carries a map of the spine showing which families each page connects to (`images/map.svg`, drawn by `scripts/make_map.py`), and `graph.html` shows every page and link as a graph (drawn by `scripts/make_graph.py`). Expected hubs: data, DSA, trust, latency, cost.
 
 ### 3.4 The lens
 
@@ -129,6 +129,7 @@ Sections in order. Lengths are limits, not targets; omit what a topic doesn't ha
 
 | Section | Length | Notes |
 | --- | --- | --- |
+| **Builds on** | 1–2 sentences | Unheaded, under the title: the one or two earlier spine pages this one climbs from, what each earned, and why this problem needs it. Page 0 builds on nothing |
 | **Problem** | 2–3 sentences | The limit that was hit |
 | **The story** | As long as it needs | Third person limited, past tense, told in retrospect: we stay inside one person's head and know only what they knew then, though the telling may look back from later. Someone faces the problem without knowing the answer, or with only a vague idea. They make reasonable calls, at least one well-considered decision causes a new problem, and they go back to the drawing board until they reach a solution with staying power. Show the confusion, the guesses, and the people they ask. May be fiction, labelled as such; may be real. One or two "before reading on" pauses, set apart in italics, that ask the reader what they would have tried |
 | **It really happened** | 1–2 short cases | When the story is fiction, the real case it mirrors, with primary sources, so the reader sees that their reasoning matched what real engineers did. Say which way the case moved on control vs ease |

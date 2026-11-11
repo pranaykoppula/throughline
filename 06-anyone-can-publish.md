@@ -2,6 +2,8 @@
 
 Last reviewed: 2026-11-10
 
+**Builds on** [5, Machines need to talk](05-machines-need-to-talk.md), where protocols let machines that can't see each other agree, and [4, Data outlives programs](04-data-outlives-programs.md), where data outlives programs. A browser fetching software from a server is a protocol in action, and it leaves the server owning the data and the client holding a copy.
+
 ## Problem
 
 Software used to be shipped to every user's machine, and every copy aged on its own. Putting it on one server and letting a browser fetch it fixed that. But it split the program in two, a client and a server, and two halves can disagree about what's true.

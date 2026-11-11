@@ -2,6 +2,8 @@
 
 Last reviewed: 2026-11-10
 
+**Builds on** [1, One machine, one program](01-one-machine-one-program.md), where memory near the processor is fast and everything further away is slow. Waiting on the slow parts left the machine idle, and sharing it was how that idle time got used.
+
 ## Problem
 
 A computer was too expensive to sit idle, and running one program at a time left it idle most of the time. Letting several programs share it meant something had to decide who ran, who waited, and who got which device, and sharing brought new ways for everything to stop.

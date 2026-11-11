@@ -57,6 +57,7 @@ A build system turns sources into outputs through a graph of steps, rebuilding o
 - Learning this is also learning [CI pipelines](ci.md), because a correct, fast build is what CI runs on every change.
 - Learning this is also learning [software supply chain](../vendors/supply-chain.md), because the package manager decides what strangers' code gets in.
 - Learning this is also learning [caching](../latency/caching.md), because a shared build cache is a cache, with the same staleness questions.
+- Learning this is also learning [power and predictability](../dsa/power-and-predictability.md), because a build can only know what depends on what if its build files are too limited to hide anything.
 
 ## Resources
 

@@ -2,6 +2,8 @@
 
 Last reviewed: 2026-11-10
 
+**Builds on** [0, Humans need representations before they need machines](00-representations.md), where every representation has an edge, and on every page between: each earlier solution is still running somewhere, beside the ones that came after it, while the world around them keeps moving.
+
 ## Problem
 
 Every earlier page told the story of something new replacing something old. In practice nothing got replaced cleanly. Old systems kept running alongside new ones, everything around them kept changing, and the hardest engineering became keeping systems true to their purpose while the world moved under them.
@@ -30,7 +32,7 @@ Looking back, Ines thought the lesson of those years was that none of it had eve
 
 ## It really happened
 
-Ines is fictional; her bank is a composite of many. In 2017 Reuters reported that COBOL still underpinned 43% of banking systems and 95% of ATM transactions, as reported in secondhand coverage ([The New Stack](https://thenewstack.io/cobol-everywhere-will-maintain/)). The big-bang switchover she avoided happened to the UK bank TSB in April 2018. Its migration to a new banking platform was followed by extensive service disruption. TSB's summary of Slaughter and May's independent review says that planning, supplier oversight and testing could have been handled differently; it also reports that inconsistent data-centre configuration was not caught before migration. TSB said it disagreed with parts of the review ([TSB's release](https://www.tsb.co.uk/news-releases/slaughter-and-may.html)). Ines's piece-by-piece approach has a name, the strangler fig, from Martin Fowler ([Fowler](https://martinfowler.com/bliki/StranglerFigApplication.html)).
+Ines is fictional; her bank is a composite of many. In 2017 Reuters reported that COBOL still underpinned 43% of banking systems and 95% of ATM transactions, as reported in secondhand coverage ([The New Stack](https://thenewstack.io/cobol-everywhere-will-maintain/)). The big-bang switchover she avoided happened to the UK bank TSB in April 2018. Its migration to a new banking platform was followed by extensive service disruption. TSB's summary of Slaughter and May's independent review says that planning, supplier oversight and testing could have been handled differently; it also reports that inconsistent data-centre configuration was not caught before migration. TSB said it disagreed with parts of the review ([TSB's release](https://www.tsb.co.uk/news-releases/slaughter-and-may.html)). The disruption reached a large share of its 5.2 million customers, and the bank didn't return to normal service until December 2018. In 2022 the UK's two financial regulators fined it £48.65 million, on top of £32.7 million it had already paid customers in compensation ([FCA](https://www.fca.org.uk/news/press-releases/tsb-fined-4865m-operational-resilience-failings)). Ines's piece-by-piece approach has a name, the strangler fig, from Martin Fowler ([Fowler](https://martinfowler.com/bliki/StranglerFigApplication.html)).
 
 Adoption is slow because the people who pay for switching are rarely the people who benefit. IPv6, the successor to the Internet's addressing scheme, was standardised in the late 1990s. Native IPv6 access to Google first passed 50% in March 2026 ([Internet Society Pulse](https://pulse.internetsociety.org/en/blog/18-years-later-ipv6-reaches-majority/)). Python 3 was released in December 2008, and Python 2 wasn't retired until January 2020. The year 2000 problem was a sensible decision made when memory was expensive ([page 1](01-one-machine-one-program.md)), paid for decades later by different people.
 
@@ -72,6 +74,7 @@ None of this replaced what came before; every era still runs somewhere, and some
 - Learning this is also learning [the forces](forces.md#switching-costs-and-lock-in), because lock-in, seen from the inside, is a migration nobody can afford.
 - Learning this is also learning [consistency](data/consistency.md), because running two systems side by side meant two versions of every night's payments, and the nightly comparison was how Ines decided which to trust.
 - Learning this is also learning [software supply chain](vendors/supply-chain.md), because the library upgrade that changed how rounding worked was code from strangers, changing under Ines without her touching anything.
+- Learning this is also learning [meaning as use](info/meaning-as-use.md), because each mismatch Ines's comparison found was a rule the old system had come to mean through use, written down nowhere.
 
 ## Resources
 

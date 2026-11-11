@@ -64,6 +64,8 @@ A hash function turns any input into a fixed-size value. The same input always g
 - Learning this is also learning [caching](../latency/caching.md), because a cache is a hash table that's allowed to forget.
 - Learning this is also learning [password storage](../auth/password-storage.md), because secrecy needs the slow, salted kind.
 - Learning this is also learning [input validation](../auth/input-validation.md), because hash flooding is strangers choosing your keys.
+- Learning this is also learning [power and predictability](power-and-predictability.md), because a backtracking regular expression is attacked the same way: by choosing the input that triggers the worst case.
+- Learning this is also learning [Bloom filters](bloom-filters.md), because several hashes of one key, packed into a shared array of bits, can rule a key out without storing it.
 
 ## Resources
 

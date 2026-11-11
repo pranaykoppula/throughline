@@ -2,6 +2,8 @@
 
 Last reviewed: 2026-11-10
 
+**Builds on** [6, Anyone can publish](06-anyone-can-publish.md), where anyone could publish to anyone, and [5, Machines need to talk](05-machines-need-to-talk.md), where protocols were designed for parties who trusted each other. Once anyone can reach a system, every one of those agreements has to assume someone on the other end means harm.
+
 ## Problem
 
 Early networks connected people who knew each other, so systems trusted whoever was on the other end. Once anyone in the world could reach a system, some of them would try to break it, and every part of it had to be built for someone who means harm.

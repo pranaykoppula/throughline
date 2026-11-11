@@ -58,7 +58,7 @@ Once one product does something, users expect it everywhere. Pages that update w
 
 ## Incentives inside the org
 
-You build what you're measured on, and systems take the shape of the teams that build them (Conway's law). A reorg is an architecture change. A metric becomes a target and stops measuring anything. Most "technical" decisions that look strange from outside make sense once you know who was rewarded for what. Spine: [10](10-many-people-one-codebase.md), [11](11-software-that-must-not-go-down.md).
+You build what you're measured on, and systems take the shape of the teams that build them (Conway's law). A reorg is an architecture change. A metric becomes a target and stops measuring anything ([measures and targets](info/measures-and-targets.md)). Most "technical" decisions that look strange from outside make sense once you know who was rewarded for what. Spine: [10](10-many-people-one-codebase.md), [11](11-software-that-must-not-go-down.md).
 
 - Melvin Conway, ["How Do Committees Invent?"](http://www.melconway.com/Home/Committees_Paper.html) (1968): the original, and short.
 - Martin Fowler, ["Conway's Law"](https://martinfowler.com/bliki/ConwaysLaw.html): what the idea became, including teams designed on purpose to get an architecture.

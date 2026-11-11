@@ -56,12 +56,14 @@ A token is the unit of text a language model processes, often a word or part of 
 - Learning this is also learning [reading a cloud bill](../cost/cloud-bills.md), because tokens are the line on the bill.
 - Learning this is also learning [caching](../latency/caching.md), because reusing a repeated prefix is caching for models.
 - Learning this is also learning [access patterns](../data/access-patterns.md), because retrieval is choosing what to read based on the question asked.
+- Learning this is also learning [power and predictability](../dsa/power-and-predictability.md), because forcing a model to produce valid JSON works by running a grammar alongside it and allowing only the tokens it accepts.
 
 ## Resources
 
 1. Your model provider's documentation on tokens, context windows and pricing (start here).
 2. Liu et al., ["Lost in the Middle: How Language Models Use Long Contexts"](https://arxiv.org/abs/2307.03172) (2023) (go deeper).
 3. Simon Willison, [LLM Pricing Calculator](https://www.llm-prices.com/) (reference: current per-token prices and context-size tiers).
+4. Emily Bender and Alexander Koller, "Climbing towards NLU: On Meaning, Form, and Understanding in the Age of Data" (2020) (the argument that form alone can't teach meaning; read it with Melanie Mitchell's *Artificial Intelligence: A Guide for Thinking Humans*, 2019).
 
 ## Names you'll hear
 

@@ -63,6 +63,7 @@ Commit messages, pull request descriptions and decision records are the written 
 1. Chris Beams, ["How to Write a Git Commit Message"](https://cbea.ms/git-commit/) (start here).
 2. Michael Nygard, ["Documenting Architecture Decisions"](https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions) (2011) (go deeper).
 3. The Linux kernel's ["Submitting patches"](https://www.kernel.org/doc/html/latest/process/submitting-patches.html) guide, on describing changes (reference).
+4. Peter Naur, "Programming as Theory Building" (1985) (an essay arguing that a program is the theory in its programmers' heads, and the code only a partial record of it; reprinted in Naur's *Computing: A Human Activity*, 1992).
 
 ## Names you'll hear
 
