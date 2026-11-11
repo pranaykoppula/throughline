@@ -11,7 +11,7 @@ Most of the stories are a well-considered decision that later caused a problem, 
 Four questions, implied on every page:
 
 1. **What do we have?** Data, and its dimensions: shape, size, location, velocity, trust, cost to obtain.
-2. **What can we do with it?** Store, move, transform, find, decide, show, protect.
+2. **What can we do with it?** Represent, represent, store, move, transform, find, decide, show, protect.
 3. **How, and within what limits?** The ladder of means, from hand-built to rented. Some limits are physical or economic; some are policy or law.
 4. **Why?** The chain from data to someone's outcome. The why moves, and it also runs backwards: what users come to expect at the screen pulls new practice into the backend.
 
@@ -43,6 +43,7 @@ Alongside the trunk:
 - [The model](the-model.md): the finished mental model. If you're experienced, find the sentence you doubt and go to its page.
 - [Forces](forces.md): the non-technical limits (money, law, distribution) that moved the field as much as hardware did.
 - [Pushback](pushback.md): questions for when a solution arrives before its problem.
+- [Motifs](motifs.md): the shapes that keep recurring across these stories, such as *copies disagree* and *the sign drifts from the thing*, with every page where each appears.
 
 Links to pages that don't exist yet are deliberate. They're the branches nobody has written, and they're how this grows.
 

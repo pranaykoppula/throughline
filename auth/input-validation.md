@@ -34,6 +34,8 @@ It shows up elsewhere too: scripts injected into web pages, shell commands built
 
 The pages show the order of preference. First, separate the channels, so input can't be read as instructions at all, as with parameterised queries and the telephone company's separate signalling network. Where you can't separate them, check input against what's allowed instead of trying to spot what's forbidden. And where you can't reliably check either, as with language models today, limit what any instruction can do.
 
+Motif: [enforce it once, at the boundary](../motifs.md#enforce-it-once-at-the-boundary).
+
 ## It really happened
 
 Frank is fictional; the tones were real. Long-distance trunks in North America used a 2600 Hz tone for in-band signalling, and "blue boxes" that reproduced it let people route calls for free. Telephone companies eventually moved to common-channel signalling, carrying control messages on a separate network callers couldn't reach, which made the trick impossible ([Blue box](https://en.wikipedia.org/wiki/Blue_box)). Forty years later, the same mistake had a new name. SQL injection, where text typed into a web form is run as a database command, is included under A05:2025 Injection in the current OWASP Top 10. In 2022 Simon Willison named the version that affects language models *prompt injection*, because no reliable way yet exists to separate a model's instructions from its input ([page 12](../12-machines-that-learn-from-data.md)).

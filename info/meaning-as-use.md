@@ -38,6 +38,8 @@ It shows up elsewhere too: spreadsheets that keep historical bugs for compatibil
 
 What these share is that meaning is made by use. The designer's description is one party's view of an interface; the users' habits are the other, and once there are enough of them, theirs wins. Changing a widely used interface is less like editing a document and more like changing a language that people already speak.
 
+Motifs: [the sign drifts from the thing](../motifs.md#the-sign-drifts-from-the-thing), [the old keeps running](../motifs.md#the-old-keeps-running).
+
 ## It really happened
 
 Rui is fictional; the law has a name. Hyrum Wright, an engineer at Google, put it like this: with a sufficient number of users of an API, it does not matter what you promise in the contract; all observable behaviours of your system will be depended on by somebody. The idea is old in philosophy. In *Philosophical Investigations* (1953), Ludwig Wittgenstein argued that for a large class of cases, the meaning of a word is its use in the language, not a definition held somewhere.

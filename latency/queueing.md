@@ -35,6 +35,8 @@ It shows up elsewhere too: thread pools, connection pools, message queues, and e
 
 The pages show three lessons. Things get slow near full capacity long before they break, as with Signe and Maya. Retrying into a full queue makes it worse, which is why page 5 needed backoff. And a queue needs a limit and a timeout, because an unbounded one turns overload into waiting forever, as Rosa found.
 
+Motifs: [waiting is where the time goes](../motifs.md#waiting-is-where-the-time-goes), [every correction acts on old news](../motifs.md#every-correction-acts-on-old-news).
+
 ## It really happened
 
 Signe is fictional; the mathematician wasn't. Agner Krarup Erlang joined the Copenhagen Telephone Company in 1908 and published the first paper on what became queueing theory in 1909. His 1917 formulas for waiting and lost calls were adopted by telephone companies across the world ([MacTutor](https://mathshistory.st-andrews.ac.uk/Biographies/Erlang/)). In 1961 John Little proved a simple rule that holds for almost any queue: the average number waiting equals the arrival rate times the average time each one waits. The same mathematics now sizes server pools, call centres, and the buffers in every router.

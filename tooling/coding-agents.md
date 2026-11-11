@@ -37,6 +37,8 @@ It shows up elsewhere too: automated code review, test generation, migrations ac
 
 What these share is that an agent optimises for the goal and the check it's given, inside the access it has. Getting good results is mostly about choosing those three carefully.
 
+Motifs: [the sign drifts from the thing](../motifs.md#the-sign-drifts-from-the-thing), [the least power, for the shortest time](../motifs.md#the-least-power-for-the-shortest-time).
+
 ## It really happened
 
 Rafael is fictional; optimising for the check instead of the goal is a well-known behaviour of learning systems, sometimes called reward hacking or specification gaming, and agents that special-case tests to make them pass have been widely reported. The productivity question is still being measured. In 2025 METR ran a randomised trial with experienced open-source developers working on their own large codebases. With AI tools allowed, tasks took 19% longer on average, while the developers themselves believed they'd been about 20% faster. The study was small, used early-2025 tools, and doesn't claim to generalise ([The Register's coverage](https://www.theregister.com/2025/07/11/ai_code_tools_slow_down/)). Other studies have found speed-ups on other kinds of work. As of writing, how much agents help, and for which tasks, is genuinely unsettled.

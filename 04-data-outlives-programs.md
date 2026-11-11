@@ -6,7 +6,7 @@ Last reviewed: 2026-11-10
 
 ## Problem
 
-Programs get rewritten; the data they keep stays for decades. Data stored in the shape one program needed made every later program, and every new question, pay for that first program's choices.
+Programs get rewritten; the data they **store** stays for decades. Data stored in the shape one program needed made every later program, and every new question, pay for that first program's choices.
 
 ## The story
 
@@ -39,6 +39,8 @@ Thirty years later the tree came back. Document databases store each record as o
 ## What survived
 
 Data outlives programs, so its shape is the longest-lived decision you make. Choose a store by how the data will be read and written, and expect new questions. Keep the logical shape (what the facts are) separate from the physical shape (how they're laid out), so the second can change without breaking programs. Indexes trade write cost for read speed. Transactions define what the store promises when things fail halfway.
+
+Motif: [costs move; they don't disappear](motifs.md#costs-move-they-dont-disappear).
 
 ## Where it gets misapplied
 

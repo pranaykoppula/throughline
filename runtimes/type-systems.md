@@ -35,6 +35,8 @@ It shows up elsewhere too: API definitions, database schemas, configuration vali
 
 What these share is page 3's lesson: a type is a boundary enforced by a machine, so people don't have to remember it.
 
+Motif: [enforce it once, at the boundary](../motifs.md#enforce-it-once-at-the-boundary).
+
 ## It really happened
 
 Ikaika is fictional. Dropbox, whose desktop client and backend were largely Python, gradually added the mypy type checker across about four million lines of code and wrote about the experience in 2019 ("Our journey to type checking 4 million lines of Python"). Microsoft released TypeScript in 2012 as a typed layer over JavaScript that compiles to plain JavaScript, so it could be adopted a file at a time. Both bet on *gradual* typing: types added where they help most, without a rewrite.

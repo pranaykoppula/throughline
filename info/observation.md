@@ -37,6 +37,8 @@ It shows up elsewhere too: logs that record errors but not slow successes, analy
 
 What these share is a gap between the world and the record of it. The record is shaped by when it looked, what it was built to see, and who or what survived to be counted. Missing data is its own signal, and the most important question about any dataset is what it couldn't have contained.
 
+Motif: [the sign drifts from the thing](../motifs.md#the-sign-drifts-from-the-thing).
+
 ## It really happened
 
 Kofi is fictional. The most consequential missing data in engineering history may be a chart. The night before the space shuttle Challenger's launch in January 1986, engineers and managers discussed whether cold weather could harm the rubber O-rings sealing the booster joints. The chart they discussed plotted O-ring problems against temperature for the flights that had had problems, and on those flights alone no clear trend appeared. The flights with no O-ring problems, almost all launched in warm weather, were left out. The presidential commission's report later showed both charts, and concluded that a careful analysis of the whole flight history would have revealed the correlation with low temperature ([Rogers Commission report](https://www.nasa.gov/history/rogersrep/v1p146.htm)). Challenger launched at a temperature colder than any previous flight.

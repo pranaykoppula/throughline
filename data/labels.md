@@ -35,6 +35,8 @@ It shows up elsewhere too: medical imaging datasets, recommendation systems trai
 
 What these share is that every learned model inherits the judgement of whoever produced its examples. Checking that judgement is part of building the model.
 
+Motif: [the sign drifts from the thing](../motifs.md#the-sign-drifts-from-the-thing).
+
 ## It really happened
 
 Grace is fictional; label errors are well measured. In 2021 Curtis Northcutt and colleagues estimated that the test sets of ten widely used machine-learning benchmarks contained an average of about 3.4% wrongly labelled examples, enough to change which models appeared best ("Pervasive Label Errors in Test Sets Destabilize Machine Learning Benchmarks", 2021). The [Netflix Prize](../12-machines-that-learn-from-data.md) showed the related point that accuracy on a fixed dataset isn't everything.

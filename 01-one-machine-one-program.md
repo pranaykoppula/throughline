@@ -6,7 +6,7 @@ Last reviewed: 2026-11-10
 
 ## Problem
 
-A program needs its data close to the processor to run fast, but fast memory is small and expensive. Most of the data has to live somewhere bigger, slower, and further away, and something has to decide what's close at any moment.
+A program needs its data close to the processor to run fast, but fast memory is small and expensive. Most of the data has to be **stored** somewhere bigger, slower, and further away, and something has to decide what's close at any moment.
 
 ## The story
 
@@ -47,6 +47,8 @@ Her loop-order bug still happens today, one floor up. Walk a large grid in the w
 ## What survived
 
 Memory is a hierarchy: a little fast storage near the processor, and ever larger, slower, cheaper storage further away. Abstractions like virtual memory and caches move data between the layers for you, but they don't hide the cost. They reward *locality*: touching data that's near data you just touched. The cost of an operation is set by where the data is.
+
+Motif: [where the data is sets the cost](motifs.md#where-the-data-is-sets-the-cost).
 
 ## Where it gets misapplied
 

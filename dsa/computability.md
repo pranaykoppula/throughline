@@ -36,6 +36,8 @@ It shows up elsewhere too: type checkers that reject some correct programs to ne
 
 What these share is a choice forced by mathematics: for hard questions about programs, a tool can be sound, complete, or fast, and must give up at least one.
 
+Motif: [a cheap check before an expensive one](../motifs.md#a-cheap-check-before-an-expensive-one).
+
 ## It really happened
 
 Viktor is fictional; the results he learned are real. Alan Turing proved the halting problem undecidable in 1936. Henry Rice proved in 1953 that every non-trivial property of what programs compute is undecidable. Fred Cohen, who coined the term "computer virus", showed in the 1980s that no algorithm can detect all possible viruses. Antivirus products work anyway, combining signatures, heuristics and sandboxing, and accept false alarms and misses as the price. Many problems that are decidable are still believed to have no fast solution; whether they do, the P versus NP question, is one of the great open problems in mathematics.

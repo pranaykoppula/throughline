@@ -37,6 +37,8 @@ It shows up elsewhere too: performance benchmarks, alert thresholds, fraud detec
 
 What these share is one discipline: decide in advance what you're measuring and how much data you need, know the size of the noise, and be suspicious of results you were hoping for.
 
+Motif: [the sign drifts from the thing](../motifs.md#the-sign-drifts-from-the-thing).
+
 ## It really happened
 
 Lucas is fictional; his mistakes are the standard ones. Ronny Kohavi, who ran large experimentation programmes at Microsoft, Amazon and Airbnb, has written that most ideas tested don't improve the metrics they aim at, and that surprising results usually turn out to be errors. That's why his teams treat results that look too good with extra suspicion. They are sometimes real. At Bing, a small change to how ad headlines were displayed set off an alarm because revenue was suspiciously high, and repeated testing showed it really did lift revenue by about 12% ([Kohavi and Thomke, "The Surprising Power of Online Experiments", *HBR*, 2017](https://web-docs.stern.nyu.edu/executive/The%20Surprising%20Power%20of%20Online%20Experiments.pdf)). The difference between Lucas's button and Bing's headline was replication.

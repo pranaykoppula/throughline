@@ -37,6 +37,8 @@ It shows up elsewhere too: deployment pipelines, security scanning, automated fo
 
 What these share is that the pipeline is where a team's rules actually live, and it only works while red means stop.
 
+Motifs: [enforce it once, at the boundary](../motifs.md#enforce-it-once-at-the-boundary), [the sign drifts from the thing](../motifs.md#the-sign-drifts-from-the-thing).
+
 ## It really happened
 
 Noor is fictional; flakiness at scale is well measured. In 2016 Google reported that about 1.5% of all its test runs gave a flaky result, and that almost 16% of its tests showed some flakiness, a test passing and failing on identical code ([Google Testing Blog, "Flaky Tests at Google and How We Mitigate Them"](https://testing.googleblog.com/2016/05/)). Martin Fowler's article on continuous integration describes the practices Noor went back to: build every change, keep the build fast, and fix a broken build immediately ([Fowler](https://martinfowler.com/articles/continuousIntegration.html)).

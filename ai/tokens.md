@@ -34,6 +34,8 @@ It shows up elsewhere too: chat history that grows until it has to be summarised
 
 What these share is that the context window is a small, expensive, fast tier, like core memory on page 1. What you put in it, and in what order, decides both the cost and the quality.
 
+Motif: [where the data is sets the cost](../motifs.md#where-the-data-is-sets-the-cost).
+
 ## It really happened
 
 Tomás is fictional; the middle problem was measured. Nelson Liu and colleagues found in 2023 that language models used information best when it was at the beginning or end of a long input, and noticeably worse when it was in the middle, even in models built for long inputs ([Liu et al., "Lost in the Middle"](https://arxiv.org/abs/2307.03172)). The standard response, finding the relevant pieces first and sending only those, is usually called retrieval-augmented generation. Providers have since added ways to reuse a repeated prefix between requests at a lower price, because so many applications send the same long instructions every time.

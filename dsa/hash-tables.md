@@ -2,7 +2,7 @@
 
 Last reviewed: 2026-10-24
 
-A concept page: finding things by key in constant time, and what it costs to keep it that way.
+A concept page: **finding** things by key in constant time, and what it costs to keep it that way.
 
 ## Problem
 

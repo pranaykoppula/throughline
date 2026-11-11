@@ -36,6 +36,8 @@ It shows up elsewhere too: database clusters, distributed file systems, multi-re
 
 What these share is the same pair of decisions: how far behind a copy may be, synchronous or asynchronous, and how to make sure only one copy accepts writes at a time.
 
+Motif: [copies disagree](../motifs.md#copies-disagree).
+
 ## It really happened
 
 Kwame is fictional; his twenty minutes with two main databases has a name, split brain, and it happens to large companies too. On 21 October 2018 a 43-second network break between GitHub's East Coast data centre and its network hub led its automated failover tool to move database writes to the West Coast. Some writes had reached the East Coast databases and not been replicated. Untangling the two sides, while keeping user data intact, meant degraded service for just over 24 hours ([GitHub's post-incident analysis](https://github.blog/2018-10-30-oct21-post-incident-analysis/)). GitHub chose data integrity over a fast recovery, and said so plainly.

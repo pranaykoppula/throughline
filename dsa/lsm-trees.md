@@ -37,6 +37,8 @@ It shows up elsewhere too: most time-series databases, many key-value stores, se
 
 What these share is the same choice of when to pay for a write: now, in a scattered update, or later, in bulk.
 
+Motifs: [costs move; they don't disappear](../motifs.md#costs-move-they-dont-disappear), [a cheap check before an expensive one](../motifs.md#a-cheap-check-before-an-expensive-one).
+
 ## It really happened
 
 Neha is fictional; the structure is from a 1996 paper by Patrick O'Neil and colleagues, "The Log-Structured Merge-Tree" (*Acta Informatica*). Google's Bigtable paper (2006) described the same pattern at scale: writes into an in-memory table, flushed into sorted immutable files and merged in the background. Google later released LevelDB, and Facebook built RocksDB on it; both are widely used storage engines. The small per-file filters Neha added are Bloom filters, described by Burton Bloom in 1970.

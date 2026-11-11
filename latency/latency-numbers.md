@@ -35,6 +35,8 @@ It shows up elsewhere too: in every choice between calling a service and computi
 
 What the pages share is one picture repeated at every scale: a little fast storage close by, a lot of slow storage far away, and the cost of anything set by which one you have to reach.
 
+Motif: [where the data is sets the cost](../motifs.md#where-the-data-is-sets-the-cost).
+
 ## It really happened
 
 Daniel is fictional. A GitHub gist titled "Latency numbers every programmer should know" labels its table as approximate figures from around 2012, credits Jeff Dean, and says it was originally by Peter Norvig ([gist](https://gist.github.com/jboner/2841832)). The numbers have changed with hardware, as disks became solid-state and networks got faster, but light in fibre still covers only about two hundred kilometres per millisecond. Grace Hopper used to hand audiences pieces of wire about thirty centimetres long, the distance light travels in a nanosecond, to show why distance limits computers.

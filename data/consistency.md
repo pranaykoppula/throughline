@@ -35,6 +35,8 @@ It shows up elsewhere too: every cache ([caching](../latency/caching.md)), every
 
 The pages use four different answers. You can have **one owner** decide, as Tom, Hannah and every primary database do. You can promise **read-your-writes**, as Maya does: you see your own changes, and others catch up. You can **merge** later, as Amazon's shopping cart does, accepting that a deleted item may come back. Or you can **compare and reconcile**, as Ines does, trusting nothing until the copies agree. None of them is free.
 
+Motif: [copies disagree](../motifs.md#copies-disagree).
+
 ## It really happened
 
 Tom is fictional. The deeper problem, that machines can't agree on the order of events without communicating, was set out by Leslie Lamport in 1978 ("Time, Clocks, and the Ordering of Events in a Distributed System"). Amazon's Dynamo paper chose merging on purpose, because a shopping cart you can't add to loses sales ([page 8](../08-too-many-users-too-much-data.md)). Werner Vogels, Amazon's CTO, later explained the trade for a general audience in "Eventually Consistent" (*ACM Queue*, 2008). Kyle Kingsbury's [Jepsen](https://jepsen.io/analyses) project publishes analyses of database behaviour under faults; its tests can find errors but cannot prove correctness.

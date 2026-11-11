@@ -2,7 +2,7 @@
 
 Last reviewed: 2026-11-03
 
-A concept page in the signals and control family: the numbers a computer uses for images and sound aren't physical measurements. They're shaped around what people can see and hear, and doing arithmetic on them as if they were physics gives wrong answers.
+A concept page in the signals and control family: the numbers a computer uses to **show** images and play sound aren't physical measurements. They're shaped around what people can see and hear, and doing arithmetic on them as if they were physics gives wrong answers.
 
 ## Problem
 
@@ -36,6 +36,8 @@ Looking back, Zainab thought every number in an image had already been shaped by
 It shows up elsewhere too: screens with red, green and blue sub-pixels because people have three kinds of colour receptor, film and video at 24 to 60 pictures a second because that's enough to see motion, decibels measured on a scale that follows how loudness is perceived, contrast rules for accessible text, and the "night mode" that shifts screens away from blue.
 
 What these share is a hidden model of a person. Every format meant for eyes or ears decided what people would and wouldn't notice. That makes it compact and convincing, and it means its numbers mean something only relative to that model. Calculate with them as physics and the model breaks; ask whose eyes the model was built for and you sometimes find it was only some people's.
+
+Motif: [every representation has an edge](../motifs.md#every-representation-has-an-edge).
 
 ## It really happened
 

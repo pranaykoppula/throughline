@@ -44,6 +44,8 @@ Some failures cost more than money. Between June 1985 and January 1987, the Ther
 
 Everything fails; the questions are how you'll know and what you've promised. Define "working" from the user's side, as a target below 100%, and treat the gap as a budget you can spend. Alert only on what threatens the promise, or the alerts will be ignored. Record enough about each request to answer questions you haven't asked yet. After a failure, fix the system that let a person's mistake become an outage.
 
+Motifs: [the sign drifts from the thing](motifs.md#the-sign-drifts-from-the-thing), [enforce it once, at the boundary](motifs.md#enforce-it-once-at-the-boundary).
+
 ## Where it gets misapplied
 
 - **Dashboards nobody reads.** A wall of charts that measures the machines and not the customer.

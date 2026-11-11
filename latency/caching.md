@@ -2,7 +2,7 @@
 
 Last reviewed: 2026-11-10
 
-A concept page: keeping a copy of something close, because the original is slow to reach.
+A concept page: **storing** a copy of something close, because the original is slow to reach.
 
 ## Problem
 
@@ -37,6 +37,8 @@ Looking back, Ruth thought she'd learned that a cache isn't just a speed-up. Onc
 It shows up elsewhere too: DNS answers, compiled code, browser caches for images and scripts, and the answers to expensive database queries.
 
 What the pages share is a copy placed nearer to where it's used, in exchange for a question about staleness. Every row in the table is the memory hierarchy from page 1 at a different scale: processor and memory, browser and server, city and data centre.
+
+Motifs: [copies disagree](../motifs.md#copies-disagree), [a cheap check before an expensive one](../motifs.md#a-cheap-check-before-an-expensive-one).
 
 ## It really happened
 

@@ -6,7 +6,7 @@ Last reviewed: 2026-11-10
 
 ## Problem
 
-Some tasks were too fuzzy to write rules for: telling spam from mail, a cat from a dog, a good answer from a bad one. People could do them easily and couldn't explain how. The only way forward was to have the machine learn the rules from examples, which meant the machine was only as good as the examples, and nobody could fully read what it had learned.
+Some **transformations** were too fuzzy to write rules for: telling spam from mail, a cat from a dog, a good answer from a bad one. People could do them easily and couldn't explain how. The only way forward was to have the machine learn the rules from examples, which meant the machine was only as good as the examples, and nobody could fully read what it had learned.
 
 ## The story
 
@@ -45,6 +45,8 @@ A reminder that accuracy isn't everything: Netflix paid a million dollars in 200
 ## What survived
 
 Some transformations are learned from data rather than written, and they're only as good as the data and the context they're given. The world moves, so a learned model drifts unless it's fed. Inference is a new kind of round trip, paid in tokens and uncertain in its output. It reintroduces every trust problem at a new boundary: a model can't reliably tell instructions from data, so give it the least power it needs and check what it does.
+
+Motifs: [every correction acts on old news](motifs.md#every-correction-acts-on-old-news), [the least power, for the shortest time](motifs.md#the-least-power-for-the-shortest-time).
 
 ## Where it gets misapplied
 

@@ -37,6 +37,8 @@ It shows up elsewhere too: API keys, "remember me" cookies, password reset links
 
 What these share is that anything that grants access while it exists is a password in all but name: keep it secret, keep it short-lived, keep it narrow, and keep a way to revoke it.
 
+Motif: [the least power, for the shortest time](../motifs.md#the-least-power-for-the-shortest-time).
+
 ## It really happened
 
 Ana Lucía is fictional; Firesheep was real. Eric Butler released it in October 2010 to show that many large sites, including Facebook and Twitter, encrypted only the login and sent session cookies unencrypted afterwards ([Butler's announcement](https://codebutler.com/2010/10/24/firesheep/)). Within a few years, encrypting every page became the norm for major sites. Signed tokens that carry their own claims, such as JSON Web Tokens (standardised in 2015), let servers check a token without looking it up. That makes them harder to revoke early, which is why they're usually kept short-lived.

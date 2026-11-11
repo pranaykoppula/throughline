@@ -36,6 +36,8 @@ It shows up elsewhere too: parsing HTML with regular expressions, configuration 
 
 What these share is the ladder. A language with a fixed amount of memory can always be checked and always finishes quickly. Add a stack and it can handle nesting, and still always finishes. Add unlimited memory and it can do anything, and you can no longer know in general what it will do. Each rung is worth climbing only if you need what's on it.
 
+Motif: [the least power, for the shortest time](../motifs.md#the-least-power-for-the-shortest-time).
+
 ## It really happened
 
 Selim is fictional; both kinds of engine are real. Stephen Kleene described regular languages in the early 1950s. In 1968 Ken Thompson published a way of compiling a regular expression into a machine that reads text once, in time proportional to its length. Many later libraries, following Perl, used backtracking instead, to support features such as backreferences, and gave up that guarantee. Russ Cox's 2007 article explaining the difference became widely read, and Google's RE2 library (2010) was built to give the guarantee back.
