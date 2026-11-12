@@ -32,6 +32,10 @@ Hannah's first thought was to make the copies in the browsers stay in sync with 
 
 In 2009 the clinics started asking for an iPhone app, because that was where patients looked for things now. Hannah built one that was mostly her website inside a thin native shell. It wasn't because native code was better. It was because the App Store was the only way onto the phone, and Apple decided who got in. One server still beat a million installs. But the companies that owned the path to the user could still make you install something.
 
+![A server and two receptionists' browsers. Both browsers show ten o'clock as free, from copies loaded that morning. Both book it. Before: the server saves both bookings. After: the server checks the slot is still free and refuses the second, which is told the slot was just taken.](images/figures/06-anyone-can-publish.svg)
+
+*Hannah's double booking, and the server that ended it.*
+
 Looking back, Hannah thought that every hard problem she'd had since 1999 had come from the same split. The server owns the truth; the client owns what's on the screen and a copy of the state. The copy makes things fast, and it can be wrong. Almost every bug that users could see had been two sources of truth disagreeing.
 
 ## It really happened

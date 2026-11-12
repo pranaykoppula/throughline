@@ -12,7 +12,7 @@ The owner wants engineers to *feel* how real problems were met: a person who doe
 - Concept pages in family folders, one concept per page: `dsa/ data/ latency/ cost/ math/ auth/ runtimes/ tooling/ vendors/ writing/ cloud/ ai/ info/ crypto/ signals/`. The five map hubs are Data, DSA, Trust (`auth/`), Latency, Cost.
 - `the-model.md` (the cumulative model), `forces.md`, `pushback.md`, `motifs.md` (recurring shapes, with every page each appears on), `README.md`, `SPEC.md`.
 - `graph.html` (every page and link), `images/map.svg` (the spine as a transit line), both generated.
-- `scripts/check_model.py`, `scripts/make_graph.py` (+ `graph_template.html`), `scripts/make_map.py` (hub dots are a hand-edited list in it).
+- `scripts/check_model.py`, `scripts/make_graph.py` (+ `graph_template.html`), `scripts/make_map.py` (hub dots are a hand-edited list in it), `scripts/make_figures.py` (every figure, as SVG).
 - `.github/workflows/checks.yml` runs the model check and fails if `graph.html` or `images/map.svg` differ from what the scripts produce.
 - `_config.yml` publishes the site with GitHub Pages (Jekyll, `jekyll-theme-primer`).
 
@@ -37,6 +37,12 @@ Concept page (SPEC 7.1): Problem · The story · **Where it shows up** (table: p
 - Eight verbs (represent, store, move, transform, find, decide, show, protect), bolded once in a spine page's Problem or a concept page's opening line, only where the verb is what the page is about.
 - `motifs.md` holds twelve named shapes with every page where each appears. A page that shows one clearly ends Where it shows up (or a spine page's What survived) with `Motif: [name](motifs.md#anchor).` At most two, only where the shape is the point. Keep the names fixed; add a page to the motif's list and the line to the page in the same change. New motifs need more than a couple of pages behind them.
 
+## Figures
+
+- Every figure is ours, drawn by `scripts/make_figures.py` into `images/figures/`. No photographs, archival images or AI-generated images, ever. Only where it shows the problem or the solution better than prose.
+- Spine pages: one figure, in the story just before "Looking back" (after the rethink, so it doesn't spoil the pause), with alt text and an italic caption. Concept pages next, folder by folder in the order SPEC lists the families.
+- Use the story's numbers; label anything else illustrative. Check light and dark by rendering with Playwright before committing.
+
 ## Connections
 
 - One line each: "Learning this is also learning [specific concept](path), because …". Point at one concept, never a whole subject (`dsa/hash-tables.md`, not "DSA").
@@ -54,6 +60,7 @@ Concept page (SPEC 7.1): Problem · The story · **Where it shows up** (table: p
 ```
 python3 scripts/make_graph.py
 python3 scripts/make_map.py      # only changes if make_map.py's hub list changed
+python3 scripts/make_figures.py  # images/figures/
 python3 scripts/check_model.py
 ```
 

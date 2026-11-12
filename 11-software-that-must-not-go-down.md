@@ -30,6 +30,10 @@ Two years later a problem arrived that none of her charts could see. A small num
 
 So the team changed what they recorded. Instead of adding to a few counters, every request now wrote down everything about itself: country, device, card type, which services it passed through, and how long each step took. They couldn't build a chart for every combination, but they could ask any question afterwards. The next odd problem, slow checkouts for one venue's tickets only, took twenty minutes to find instead of three days.
 
+![Left: a grid of servers, all green, at twelve minutes past ten. Right: the share of checkouts that succeeded, falling sharply from ten past ten while every server stays up.](images/figures/11-software-that-must-not-go-down.svg)
+
+*Rosa's first on-sale: two answers to two different questions.*
+
 Looking back, Rosa thought her years on call came down to a few plain ideas. Everything fails, so the questions are how you'll know and what you've promised. Decide what "working" means, from the customer's side, before you measure anything. Only wake people for what threatens that promise. And record enough to answer questions you haven't thought of yet, because the next failure will be one you didn't predict.
 
 ## It really happened

@@ -20,6 +20,10 @@ Nobody works on the world directly. We write it down first, **representing** it 
 
 **Where binary ran out.** The translation has an edge. You can't write one third exactly in decimal: 0.333… goes on forever. In the same way, you can't write one tenth exactly in binary. In 1982 the Vancouver Stock Exchange launched an index at 1000. It was recalculated after every trade, and each time the result was cut off at three decimal places instead of rounded. The losses were tiny each time, and there were thousands of trades a day. Twenty-two months later the index stood at about 520, when the correct value was about 1098. In 1991, a Patriot missile battery at Dhahran had been running for more than 100 hours. It counted time in tenths of a second in binary, and a tenth can't be stored exactly, so its clock drifted further from the truth the longer it ran. It failed to intercept an incoming Scud missile, which hit a barracks and killed 28 American soldiers. A software fix was already on its way. It arrived the next day.
 
+![Two lines over 22 months from an index value of 1000. With each recalculation rounded, the index ends near 1098. With each recalculation cut off at three decimal places, the same trades end near 520.](images/figures/00-representations.svg)
+
+*The Vancouver index's edge: the same trades, rounded or cut off.*
+
 **The edge of logic itself.** In the early 1900s, David Hilbert hoped mathematics could be put on a complete foundation: a set of rules from which every true statement could be proved. In 1931 Kurt Gödel showed that this can't be done. Any consistent system of rules powerful enough to do arithmetic contains true statements it can't prove. Five years later Alan Turing hit a related wall from the side of computation: no program can decide, for every program, whether it will ever finish. Even the most careful representation humans had ever built had an edge.
 
 **Still happening.** Qubits are the newest representation. They don't replace bits, but for a narrow class of problems they can hold something bits can't. Their edge is being explored right now.

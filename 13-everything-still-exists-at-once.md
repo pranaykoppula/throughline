@@ -28,6 +28,10 @@ Something else happened along the way that Ines hadn't expected. Everything drif
 
 Years later, a junior engineer asked her why the rewrite had gone wrong when the reasons for it had been so good. Ines thought about it for a while. The reasons were real, she said. But the problem they'd set out to solve was "the system is old", and that wasn't actually a problem. The real problems were "we can't hire people to change it" and "it's expensive to run". Those could be solved a piece at a time, without betting the bank on one weekend. The most common mistake she'd seen in her career was adopting a solution to a problem you don't have. The second most common was refusing to change anything at all.
 
+![A thin routing layer sends each kind of payment to the old system or the new one. Standing orders move first; each night both systems process them and the results are compared, and only after a month of exact matches does the switch happen. Other kinds follow over years; settlement stays.](images/figures/13-everything-still-exists-at-once.svg)
+
+*Ines's proposal: route each kind of payment, compare both systems, move one kind at a time.*
+
 Looking back, Ines thought the lesson of those years was that none of it had ever been replaced. Every era of computing she'd read about was still running somewhere in the bank: overnight batch jobs from the 1970s, a tree-shaped database nobody had dared migrate, a website, a mobile app, and now a language model drafting customer letters. Some of it was there because it was the best tool. Some of it was there because it came first, or because someone in 1979 had chosen it and nobody since had had a good enough reason to pay for changing it. Engineering judgment, she decided, was mostly knowing which limit was binding now and which would lift next.
 
 ## It really happened

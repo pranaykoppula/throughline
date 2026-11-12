@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 360" width="760" height="360" role="img" aria-labelledby="t d">
+<title id="t">Dividing by step, or by decision</title>
+<desc id="d">Top: five modules, one per step of the flowchart, and every one knows the part-number format, so a change to the format changes all five. Bottom: one catalogue module hides the format, and the others only ask it to find, check or print a part, so a change touches one module.</desc>
+
+<style>
+  .bg { fill: #ffffff; }
+  .t { fill: #1f2328; } .tm { fill: #59636e; }
+  .f-ink { fill: #1f2328; } .s-ink { stroke: #1f2328; }
+  .f-line { fill: #d0d7de; } .s-line { stroke: #d0d7de; }
+  .f-faint { fill: #f6f8fa; } .s-faint { stroke: #f6f8fa; }
+  .f-accent { fill: #2a78d6; } .s-accent { stroke: #2a78d6; }
+  .f-warn { fill: #d64a4a; } .s-warn { stroke: #d64a4a; }
+  .f-ok { fill: #1baa7a; } .s-ok { stroke: #1baa7a; }
+  .f-amber { fill: #e09a1a; } .s-amber { stroke: #e09a1a; }
+  .f-soft-accent { fill: #ddeaf9; } .f-soft-warn { fill: #f8dede; } .f-soft-ok { fill: #d8f1e8; } .f-soft-amber { fill: #faecd2; }
+  @media (prefers-color-scheme: dark) {
+    .bg { fill: #0d1117; }
+    .t { fill: #e6edf3; } .tm { fill: #9198a1; }
+    .f-ink { fill: #e6edf3; } .s-ink { stroke: #e6edf3; }
+    .f-line { fill: #3d444d; } .s-line { stroke: #3d444d; }
+    .f-faint { fill: #161b22; } .s-faint { stroke: #161b22; }
+    .f-accent { fill: #4c9aff; } .s-accent { stroke: #4c9aff; }
+    .f-warn { fill: #ff7b72; } .s-warn { stroke: #ff7b72; }
+    .f-ok { fill: #3fb950; } .s-ok { stroke: #3fb950; }
+    .f-amber { fill: #e3b341; } .s-amber { stroke: #e3b341; }
+    .f-soft-accent { fill: #102a4a; } .f-soft-warn { fill: #4a1c1c; } .f-soft-ok { fill: #0f3a2a; } .f-soft-amber { fill: #3d2e0e; }
+  }
+  @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+  text { font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; }
+</style>
+<defs><marker id="arrow-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" class="f-ink"/></marker><marker id="arrow-accent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" class="f-accent"/></marker><marker id="arrow-warn" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" class="f-warn"/></marker><marker id="arrow-ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" class="f-ok"/></marker><marker id="arrow-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" class="f-amber"/></marker><marker id="arrow-line" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" class="f-line"/></marker></defs>
+<rect width="760" height="360" class="bg"/>
+<text x="30" y="30" class="t" font-size="15" text-anchor="start" font-weight="600">Divided by step</text>
+<text x="30" y="49" class="tm" font-size="12.5" text-anchor="start" font-weight="normal">Every module knows what a part number looks like</text>
+<rect x="30" y="58" width="130" height="52" rx="6" class="f-soft-warn" />
+<rect x="30" y="58" width="130" height="52" rx="6" class="s-line" fill="none" stroke-width="1"/>
+<text x="95" y="82" class="t" font-size="13" text-anchor="middle" font-weight="600">read orders</text>
+<text x="95" y="97" class="tm" font-size="11" text-anchor="middle" font-weight="normal">knows the format</text>
+<line x1="160" y1="84" x2="176" y2="84" class="s-ink" stroke-width="1.4" fill="none" marker-end="url(#arrow-ink)"/>
+<rect x="176" y="58" width="130" height="52" rx="6" class="f-soft-warn" />
+<rect x="176" y="58" width="130" height="52" rx="6" class="s-line" fill="none" stroke-width="1"/>
+<text x="241" y="82" class="t" font-size="13" text-anchor="middle" font-weight="600">validate</text>
+<text x="241" y="97" class="tm" font-size="11" text-anchor="middle" font-weight="normal">knows the format</text>
+<line x1="306" y1="84" x2="322" y2="84" class="s-ink" stroke-width="1.4" fill="none" marker-end="url(#arrow-ink)"/>
+<rect x="322" y="58" width="130" height="52" rx="6" class="f-soft-warn" />
+<rect x="322" y="58" width="130" height="52" rx="6" class="s-line" fill="none" stroke-width="1"/>
+<text x="387" y="82" class="t" font-size="13" text-anchor="middle" font-weight="600">look up parts</text>
+<text x="387" y="97" class="tm" font-size="11" text-anchor="middle" font-weight="normal">knows the format</text>
+<line x1="452" y1="84" x2="468" y2="84" class="s-ink" stroke-width="1.4" fill="none" marker-end="url(#arrow-ink)"/>
+<rect x="468" y="58" width="130" height="52" rx="6" class="f-soft-warn" />
+<rect x="468" y="58" width="130" height="52" rx="6" class="s-line" fill="none" stroke-width="1"/>
+<text x="533" y="82" class="t" font-size="13" text-anchor="middle" font-weight="600">price</text>
+<text x="533" y="97" class="tm" font-size="11" text-anchor="middle" font-weight="normal">knows the format</text>
+<line x1="598" y1="84" x2="614" y2="84" class="s-ink" stroke-width="1.4" fill="none" marker-end="url(#arrow-ink)"/>
+<rect x="614" y="58" width="130" height="52" rx="6" class="f-soft-warn" />
+<rect x="614" y="58" width="130" height="52" rx="6" class="s-line" fill="none" stroke-width="1"/>
+<text x="679" y="82" class="t" font-size="13" text-anchor="middle" font-weight="600">print lists</text>
+<text x="679" y="97" class="tm" font-size="11" text-anchor="middle" font-weight="normal">knows the format</text>
+<text x="30" y="134" class="t" font-size="12.5" text-anchor="start" font-weight="normal">Part numbers change from six digits to nine characters: all five change, over three months.</text>
+<text x="30" y="184" class="t" font-size="15" text-anchor="start" font-weight="600">Divided by decision</text>
+<text x="30" y="203" class="tm" font-size="12.5" text-anchor="start" font-weight="normal">One module hides the format; the others only ask it questions</text>
+<rect x="30" y="212" width="130" height="44" rx="6" class="f-faint" />
+<rect x="30" y="212" width="130" height="44" rx="6" class="s-line" fill="none" stroke-width="1"/>
+<text x="95" y="238.3" class="t" font-size="13" text-anchor="middle" font-weight="600">read orders</text>
+<line x1="95" y1="256" x2="380" y2="300" class="s-accent" stroke-width="1.2" fill="none" marker-end="url(#arrow-accent)"/>
+<rect x="176" y="212" width="130" height="44" rx="6" class="f-faint" />
+<rect x="176" y="212" width="130" height="44" rx="6" class="s-line" fill="none" stroke-width="1"/>
+<text x="241" y="238.3" class="t" font-size="13" text-anchor="middle" font-weight="600">validate</text>
+<line x1="241" y1="256" x2="380" y2="300" class="s-accent" stroke-width="1.2" fill="none" marker-end="url(#arrow-accent)"/>
+<rect x="468" y="212" width="130" height="44" rx="6" class="f-faint" />
+<rect x="468" y="212" width="130" height="44" rx="6" class="s-line" fill="none" stroke-width="1"/>
+<text x="533" y="238.3" class="t" font-size="13" text-anchor="middle" font-weight="600">price</text>
+<line x1="533" y1="256" x2="380" y2="300" class="s-accent" stroke-width="1.2" fill="none" marker-end="url(#arrow-accent)"/>
+<rect x="614" y="212" width="130" height="44" rx="6" class="f-faint" />
+<rect x="614" y="212" width="130" height="44" rx="6" class="s-line" fill="none" stroke-width="1"/>
+<text x="679" y="238.3" class="t" font-size="13" text-anchor="middle" font-weight="600">print lists</text>
+<line x1="679" y1="256" x2="380" y2="300" class="s-accent" stroke-width="1.2" fill="none" marker-end="url(#arrow-accent)"/>
+<rect x="270" y="300" width="220" height="44" rx="6" class="f-soft-ok" />
+<rect x="270" y="300" width="220" height="44" rx="6" class="s-line" fill="none" stroke-width="1"/>
+<text x="380" y="320" class="t" font-size="13" text-anchor="middle" font-weight="600">parts catalogue</text>
+<text x="380" y="335" class="tm" font-size="11" text-anchor="middle" font-weight="normal">the only code that knows the format</text>
+<text x="500" y="330" class="t" font-size="12.5" text-anchor="start" font-weight="normal">A later change: one module, two weeks.</text>
+</svg>

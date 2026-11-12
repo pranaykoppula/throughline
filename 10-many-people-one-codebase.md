@@ -34,6 +34,10 @@ None of it lasted on goodwill. When reviews were a team agreement, they were ski
 
 Years later, on a team using git, she watched a new developer use the history to answer a question nobody remembered the answer to: why did this odd line exist? The commit that added it explained a tax rule from 2004, with a link to the bug that had needed it. The codebase had become a system of its own. Its history was data, its branches and reviews were protocols, and its rules about who could change what were trust boundaries, just like the product's.
 
+![Top: three teams branch in January, February and March and merge in September; the branches drift and the merge takes three weeks. Bottom: everyone merges small changes into the shared code every day, so the lines never drift far apart.](images/figures/10-many-people-one-codebase.svg)
+
+*Sofia's branches: merged once a year, or merged every day.*
+
 Looking back, Sofia noticed something she hadn't expected. Every change of tool had been a change in how people worked: locking meant taking turns, merging meant working in parallel, review rules meant nobody worked alone. Choosing a tool was choosing a practice, whether or not anyone said so.
 
 ## It really happened
