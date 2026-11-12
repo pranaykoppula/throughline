@@ -61,6 +61,7 @@ Threads are separate lines of execution sharing one program's memory; they suit 
 - Learning this is also learning [graphs](../dsa/graphs.md), because deadlock between threads is a cycle in who waits for whom.
 - Learning this is also learning [JavaScript](javascript.md), because the browser's single event loop shaped how the whole language handles concurrency.
 - Learning this is also learning [state machines](../dsa/state-machines.md), because making each change one allowed move, applied atomically, is how shared state stays valid.
+- Learning this is also learning [amortised cost](../dsa/amortised-cost.md), because one expensive step on a single loop is paid by everyone waiting behind it.
 
 ## Resources
 

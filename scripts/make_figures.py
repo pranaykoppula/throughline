@@ -561,6 +561,114 @@ def fig13():
     return f
 
 
+# --------------------------------------------------------------------------- dsa figures
+
+def fig_dsa_growth():
+    f = Fig(400, "Four ways work can grow",
+            "A chart of how much work four kinds of code do as the data grows from 1 to 100 items. Work that grows "
+            "in step with the data rises as a straight line. Work that grows as n log n rises slightly faster. Work "
+            "that grows with the square of the data curves steeply upwards, and work that doubles with each extra "
+            "item shoots off the top of the chart almost at once.")
+    f.heading(30, 32, "Steps of work, as the data grows", "Every curve fits on the chart at small sizes; only some survive at 100")
+    top = 1000
+    p = axes(f, 90, 80, 470, 240, "Items of data (n)", "Steps", [(n, str(n)) for n in range(0, 101, 20)],
+             [(v, str(v)) for v in range(0, top + 1, 250)], (0, 100), (0, top))
+    curves = [("n", lambda n: n, "ok"), ("n log n", lambda n: n * math.log2(n) if n > 1 else 0, "accent"),
+              ("n²", lambda n: n * n, "amber"), ("2ⁿ", lambda n: 2 ** n, "warn")]
+    for label, fn, colour in curves:
+        pts, last = [], None
+        for i in range(0, 1001):
+            n = i / 10
+            v = fn(n)
+            if v > top:
+                pts.append(p(n, top))
+                last = n
+                break
+            pts.append(p(n, v))
+        f.poly(pts, colour, 2.4)
+        if last is None:
+            x, y = pts[-1]
+            f.text(x - 4, y - 8, label, "t", 13, "end", "600")
+        else:
+            x, y = p(last, top)
+            if label == "2ⁿ":
+                f.text(x - 6, y + 14, label, "t", 12.5, "end", "600")
+            else:
+                f.text(x + 6, y + 14, label + "  (both leave the chart)", "t", 12.5, "start", "600")
+    f.text(600, 120, "From 10 items to 100:", "t", 12, "start", "600")
+    for i, (lab, m) in enumerate([("n", "10 times the work"), ("n log n", "about 20 times"),
+                                  ("n²", "100 times"), ("2ⁿ", "a 1 with 27 zeros")]):
+        f.text(600, 142 + i * 20, f"{lab}: {m}", "tm", 11.5)
+    f.text(30, 385, "Ruairí's customer list grew like n; his duplicate check grew like n².", "tm", 11.5, italic=True)
+    return f
+
+
+def fig_dsa_amortised():
+    f = Fig(360, "Paying in lumps, or in small steps",
+            "Two panels. Left: the cost of each operation over time, nearly zero most of the time with tall, rare "
+            "spikes, and a flat dashed line showing the low average. Right: the same work done in many small steps, "
+            "with no tall spikes and a slightly higher average.")
+    for side, (x0, title, sub) in enumerate([
+            (30, "Rare, large lumps", "Cheapest in total; the deadline sees the spikes"),
+            (400, "Many small steps", "A little more in total; no spikes")]):
+        f.heading(x0, 32, title, sub)
+        base = 290
+        f.line(x0, base, x0 + 330, base, "ink", 1.2)
+        deadline_y = base - 120
+        f.line(x0, deadline_y, x0 + 330, deadline_y, "warn", 1.2, dash="5 4")
+        f.text(x0 + 330, deadline_y - 6, "deadline", "tm", 11, "end")
+        costs = []
+        for i in range(60):
+            if side == 0:
+                costs.append(190 if i in (11, 29, 47) else 4)
+            else:
+                costs.append(4 + 11.5 if i % 2 == 0 else 4 + 9)
+        for i, c in enumerate(costs):
+            cls = "f-warn" if c > 120 else "f-accent"
+            f.rect(x0 + 4 + i * 5.4, base - c, 4, c, cls, 1)
+        avg = sum(costs) / len(costs)
+        f.line(x0, base - avg, x0 + 330, base - avg, "ok", 1.6, dash="3 3")
+        f.text(x0 + 4, base - avg - 6, "average", "t", 11)
+    f.text(30, 330, "Operations, left to right. Height: the cost of each one.", "tm", 11.5, italic=True)
+    f.text(30, 348, "Illustrative numbers.", "tm", 11.5, italic=True)
+    return f
+
+
+def fig_dsa_sorting():
+    f = Fig(360, "Splitting around a bad pivot, and a good one",
+            "Two diagrams of quicksort on eight records that are already in order. Left: taking the first record as "
+            "the pivot puts nothing on one side and everything else on the other, so eight levels of splitting are "
+            "needed. Right: taking the middle value splits the records in half each time, so three levels are enough.")
+    for side, (x0, title, sub) in enumerate([
+            (30, "Pivot: the first record", "On sorted data, each split removes one record"),
+            (400, "Pivot: a middle value", "Each split halves what's left")]):
+        f.heading(x0, 32, title, sub)
+        unit, y = 38, 70
+        if side == 0:
+            for level in range(8):
+                n = 8 - level
+                f.rect(x0 + level * unit, y + level * 30, unit - 4, 22, "f-amber", 3)
+                f.rect(x0 + (level + 1) * unit, y + level * 30, (n - 1) * unit - 4 if n > 1 else 0, 22,
+                       "f-soft-warn", 3)
+            f.text(x0, y + 8 * 30 + 16, "8 levels: grows with n, so n² work in all", "t", 12.5)
+        else:
+            segs = [[(0, 8)]]
+            while segs[-1][0][1] - segs[-1][0][0] > 1:
+                nxt = []
+                for a, b in segs[-1]:
+                    m = (a + b) // 2
+                    nxt += [(a, m), (m, b)]
+                segs.append(nxt)
+            for level, row in enumerate(segs):
+                for a, b in row:
+                    f.rect(x0 + a * unit, y + level * 30, (b - a) * unit - 4, 22,
+                           "f-soft-ok" if b - a > 1 else "f-ok", 3)
+            f.text(x0, y + 8 * 30 + 16, "3 levels below the top: grows with log n, so n log n in all", "t", 12.5)
+    f.text(30, 345, "Margit's 1974 night: the orders arrived already sorted, and the first-record pivot did the worst thing possible.",
+           "tm", 11.5, italic=True)
+    return f
+
+
 FIGURES = {
     "00-representations": fig00, "01-one-machine-one-program": fig01, "02-one-machine-many-programs": fig02,
     "03-programs-too-big-for-one-head": fig03, "04-data-outlives-programs": fig04,
@@ -568,6 +676,7 @@ FIGURES = {
     "08-too-many-users-too-much-data": fig08, "09-buying-computers-is-too-slow": fig09,
     "10-many-people-one-codebase": fig10, "11-software-that-must-not-go-down": fig11,
     "12-machines-that-learn-from-data": fig12, "13-everything-still-exists-at-once": fig13,
+    "dsa-growth": fig_dsa_growth, "dsa-amortised-cost": fig_dsa_amortised, "dsa-sorting": fig_dsa_sorting,
 }
 
 

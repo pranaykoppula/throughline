@@ -58,6 +58,8 @@ A hash table stores values in an array of slots, choosing each value's slot by h
 - Learning this is also learning [caching](../latency/caching.md), because a cache is a hash table that's allowed to forget.
 - Learning this is also learning [access patterns](../data/access-patterns.md), because a hash table is what you get when the pattern is "find by key" and nothing else.
 - Learning this is also learning [distributions and percentiles](../math/percentiles.md), because "constant time on average" can hide a terrible worst case.
+- Learning this is also learning [growth](growth.md), because replacing "compare with everything" by "look it up" is the most common way out of quadratic code.
+- Learning this is also learning [amortised cost](amortised-cost.md), because doubling is cheap on average and Kenji's pause was the occasional lump.
 
 ## Resources
 

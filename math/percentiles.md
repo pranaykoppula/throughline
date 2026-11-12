@@ -61,6 +61,7 @@ A distribution is the full spread of values something takes. A percentile is a p
 - Learning this is also learning [profiling](../tooling/profiling.md), because a profile of averages can hide the slow cases users feel.
 - Learning this is also learning [round trips](../latency/round-trips.md), because the more calls a page waits on, the more it pays for each one's tail.
 - Learning this is also learning [compression](../info/compression.md), because an average is lossy compression of a distribution, and what it discards is the tail.
+- Learning this is also learning [amortised cost](../dsa/amortised-cost.md), because the occasional expensive operation lives in the tail, where the average doesn't look.
 
 ## Resources
 

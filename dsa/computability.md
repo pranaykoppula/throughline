@@ -62,6 +62,7 @@ Computability theory studies which problems can be solved by any algorithm at al
 - Learning this is also learning [floating point](../math/floating-point.md), because representations having edges is the same theme, one level down.
 - Learning this is also learning [power and predictability](power-and-predictability.md), because Turing's limits apply only at the top of a ladder, and choosing a lower rung is how engineers stay out of their reach.
 - Learning this is also learning [Bloom filters](bloom-filters.md), because a test that can't be exact still earns its place when you know which kind of mistake it makes.
+- Learning this is also learning [growth](growth.md), because many decidable problems still have no known way to solve them that grows slowly.
 
 ## Resources
 

@@ -63,6 +63,7 @@ Uncertainty can be measured as the number of yes-or-no questions needed to pin d
 - Learning this is also learning [statistical significance](../math/statistics.md), because both are about how much an observation should change what you believe.
 - Learning this is also learning [labels and training data](../data/labels.md), because a decision tree can only find the questions its data lets it ask.
 - Learning this is also learning [state estimation](../signals/state-estimation.md), because an estimator weighs each new reading by how much it reduces uncertainty, continuously.
+- Learning this is also learning [sorting](../dsa/sorting.md), because sorted data is what lets each question rule out half of what's left.
 
 ## Resources
 

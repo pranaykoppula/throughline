@@ -65,6 +65,7 @@ Languages form a ladder of power, often called the Chomsky hierarchy. *Regular* 
 - Learning this is also learning [input validation](../auth/input-validation.md), because the check that keeps bad input out can be the thing bad input attacks.
 - Learning this is also learning [language](../info/language.md), because the ladder began as a theory of grammar for human languages.
 - Learning this is also learning [tokens and context windows](../ai/tokens.md), because a model can be made to produce valid structured output by allowing only the tokens a grammar accepts next.
+- Learning this is also learning [growth](growth.md), because backtracking's running time grows exponentially with the line, which is what an attacker exploits.
 
 ## Resources
 
