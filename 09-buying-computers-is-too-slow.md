@@ -30,6 +30,10 @@ A year later the board asked the obvious question. If the cloud cost four millio
 
 There was one more thing he only noticed later, preparing for a sales meeting. Schools rarely left them, and the main reason was years of recorded lessons that would be painful to move. He'd spent a month resenting how hard Amazon made it to leave. His own product had been built the same way, and it was the most valuable thing the company owned.
 
+![Demand over two weeks with a sudden spike. Bought servers stay flat until new ones arrive five weeks later, so the spike is lost. Rented capacity rises within minutes to follow the spike and falls after it.](images/figures/09-buying-computers-is-too-slow.svg)
+
+*Tariq's spike, with bought servers and with rented ones.*
+
 Looking back, Tariq thought the cloud had changed less about technology than about money. Machines were rented by the unit, so cost became something you designed, like speed. Paying as you went instead of up front had changed who could start a company. And the hardest advantages to compete with, the cost of leaving, the value of a network, the savings of size, were mostly things engineers built or wore away, often without anyone calling them that.
 
 ## It really happened

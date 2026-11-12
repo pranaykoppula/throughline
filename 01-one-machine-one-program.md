@@ -34,6 +34,10 @@ She swapped the order of her two loops so the program walked along each row inst
 
 The one-level store hadn't failed her. It had hidden *where* her data lived, and she'd taken that to mean it no longer mattered. It still did. The machine would put things in the right place for her, but only if she touched things that were near each other at around the same time. She'd stopped deciding where her data lived. She hadn't stopped paying for where it lived.
 
+![A grid stored row by row, each row on its own page of memory. Walking down a column touches a different page at every step; walking along a row stays on one page until it ends.](images/figures/01-one-machine-one-program.svg)
+
+*Joan's grid: the same numbers, walked in two orders.*
+
 Looking back, everything she learned in those years came down to one idea: fast memory is small and close, big memory is slow and far, and the cost of anything you do is set by where the data is when you need it. The machines got faster for the rest of her career, and that never changed. Each new layer, caches in front of core and disks behind the drum, just added another floor to the same building.
 
 ## It really happened

@@ -30,6 +30,10 @@ His decision hadn't been wrong. Hashing really did stop anyone *reading* passwor
 
 While he was in there, he noticed something else. The account the website used to talk to the database could read every table, change any row, and delete the whole lot. It only ever needed to read products and write orders and posts. He gave it exactly that and nothing more. If someone got in again, they'd find a much smaller room.
 
+![Three accounts whose passwords are shown with what is stored. Plain hashes: two accounts with the same password store the same hash, and one guess cracks both. Salted hashes: a random salt per account makes every stored value different, so each guess has to be tried against each account.](images/figures/07-strangers-on-the-network.svg)
+
+*Marcus's two fixes: hash the passwords, then salt them.*
+
 Looking back, Marcus thought that everything he'd learned came from one shift. He had built the site for people he knew. Once strangers could reach it, every place where something crossed from outside to inside was a question: who is asking, and what should they be allowed to do? Trust nothing that has crossed a boundary. Give every part of the system the least it needs to do its job. And remember who actually gets hurt. When his database leaked, the harm fell on his customers, not on him. Years later, when the law started making companies pay for losing people's data, Marcus understood exactly why.
 
 ## It really happened

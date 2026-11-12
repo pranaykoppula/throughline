@@ -30,6 +30,10 @@ The real test came later, when orders doubled and the nightly run started overru
 
 She replaced the list, inside the module, with a hash table. It was a structure built for exactly what the catalogue was being asked to do over and over: find one item by its key. Because the rest of the system only ever asked the catalogue to find a part, nothing outside it changed. The lookups ran thirty times faster and the night run finished by three. She never rewrote the sort.
 
+![Top: five modules, one per step of the flowchart, and every one knows the part-number format, so a change to the format changes all five. Bottom: one catalogue module hides the format, and the others only ask it to find, check or print a part, so a change touches one module.](images/figures/03-programs-too-big-for-one-head.svg)
+
+*Elena's system, divided by step and then by decision.*
+
 Looking back, Elena thought the lesson ran in layers, like the systems themselves. The language had traded control for ease, and that had been worth it. The modules let six people work without holding the whole system in their heads, but only once each module hid a decision instead of a step. And when something was too slow, the answer wasn't to give up the abstraction. It was to measure, find the one piece that mattered, and replace it with something made for the job. Most of her work was putting existing pieces together. The skill was knowing which piece to replace, and only after measuring.
 
 ## It really happened

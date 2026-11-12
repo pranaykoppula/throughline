@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 360" width="760" height="360" role="img" aria-labelledby="t d">
+<title id="t">Building feeds when posts are written, with an exception</title>
+<desc id="d">Left: an ordinary climber posts, and the post is added to each of about two hundred followers' ready-made feeds. Right: an account with 1.8 million followers is left out of that; its posts are fetched and mixed in when a follower opens their feed.</desc>
+
+<style>
+  .bg { fill: #ffffff; }
+  .t { fill: #1f2328; } .tm { fill: #59636e; }
+  .f-ink { fill: #1f2328; } .s-ink { stroke: #1f2328; }
+  .f-line { fill: #d0d7de; } .s-line { stroke: #d0d7de; }
+  .f-faint { fill: #f6f8fa; } .s-faint { stroke: #f6f8fa; }
+  .f-accent { fill: #2a78d6; } .s-accent { stroke: #2a78d6; }
+  .f-warn { fill: #d64a4a; } .s-warn { stroke: #d64a4a; }
+  .f-ok { fill: #1baa7a; } .s-ok { stroke: #1baa7a; }
+  .f-amber { fill: #e09a1a; } .s-amber { stroke: #e09a1a; }
+  .f-soft-accent { fill: #ddeaf9; } .f-soft-warn { fill: #f8dede; } .f-soft-ok { fill: #d8f1e8; } .f-soft-amber { fill: #faecd2; }
+  @media (prefers-color-scheme: dark) {
+    .bg { fill: #0d1117; }
+    .t { fill: #e6edf3; } .tm { fill: #9198a1; }
+    .f-ink { fill: #e6edf3; } .s-ink { stroke: #e6edf3; }
+    .f-line { fill: #3d444d; } .s-line { stroke: #3d444d; }
+    .f-faint { fill: #161b22; } .s-faint { stroke: #161b22; }
+    .f-accent { fill: #4c9aff; } .s-accent { stroke: #4c9aff; }
+    .f-warn { fill: #ff7b72; } .s-warn { stroke: #ff7b72; }
+    .f-ok { fill: #3fb950; } .s-ok { stroke: #3fb950; }
+    .f-amber { fill: #e3b341; } .s-amber { stroke: #e3b341; }
+    .f-soft-accent { fill: #102a4a; } .f-soft-warn { fill: #4a1c1c; } .f-soft-ok { fill: #0f3a2a; } .f-soft-amber { fill: #3d2e0e; }
+  }
+  @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+  text { font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; }
+</style>
+<defs><marker id="arrow-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" class="f-ink"/></marker><marker id="arrow-accent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" class="f-accent"/></marker><marker id="arrow-warn" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" class="f-warn"/></marker><marker id="arrow-ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" class="f-ok"/></marker><marker id="arrow-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" class="f-amber"/></marker><marker id="arrow-line" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" class="f-line"/></marker></defs>
+<rect width="760" height="360" class="bg"/>
+<text x="30" y="30" class="t" font-size="15" text-anchor="start" font-weight="600">Most accounts: write to every follower's feed</text>
+<text x="30" y="49" class="tm" font-size="12.5" text-anchor="start" font-weight="normal">About two hundred small writes per post</text>
+<rect x="40" y="160" width="120" height="44" rx="6" class="f-soft-accent" />
+<rect x="40" y="160" width="120" height="44" rx="6" class="s-line" fill="none" stroke-width="1"/>
+<text x="100" y="186.3" class="t" font-size="13" text-anchor="middle" font-weight="600">a climber posts</text>
+<rect x="250" y="70" width="110" height="22" rx="4" class="f-faint" />
+<text x="305" y="85" class="tm" font-size="10" text-anchor="middle" font-weight="normal">a follower's feed</text>
+<line x1="160" y1="182" x2="248" y2="81" class="s-accent" stroke-width="1.1" fill="none" marker-end="url(#arrow-accent)"/>
+<rect x="250" y="100" width="110" height="22" rx="4" class="f-faint" />
+<text x="305" y="115" class="tm" font-size="10" text-anchor="middle" font-weight="normal">a follower's feed</text>
+<line x1="160" y1="182" x2="248" y2="111" class="s-accent" stroke-width="1.1" fill="none" marker-end="url(#arrow-accent)"/>
+<rect x="250" y="130" width="110" height="22" rx="4" class="f-faint" />
+<text x="305" y="145" class="tm" font-size="10" text-anchor="middle" font-weight="normal">a follower's feed</text>
+<line x1="160" y1="182" x2="248" y2="141" class="s-accent" stroke-width="1.1" fill="none" marker-end="url(#arrow-accent)"/>
+<rect x="250" y="160" width="110" height="22" rx="4" class="f-faint" />
+<text x="305" y="175" class="tm" font-size="10" text-anchor="middle" font-weight="normal">a follower's feed</text>
+<line x1="160" y1="182" x2="248" y2="171" class="s-accent" stroke-width="1.1" fill="none" marker-end="url(#arrow-accent)"/>
+<rect x="250" y="190" width="110" height="22" rx="4" class="f-faint" />
+<text x="305" y="205" class="tm" font-size="10" text-anchor="middle" font-weight="normal">a follower's feed</text>
+<line x1="160" y1="182" x2="248" y2="201" class="s-accent" stroke-width="1.1" fill="none" marker-end="url(#arrow-accent)"/>
+<rect x="250" y="220" width="110" height="22" rx="4" class="f-faint" />
+<text x="305" y="235" class="tm" font-size="10" text-anchor="middle" font-weight="normal">a follower's feed</text>
+<line x1="160" y1="182" x2="248" y2="231" class="s-accent" stroke-width="1.1" fill="none" marker-end="url(#arrow-accent)"/>
+<rect x="250" y="250" width="110" height="22" rx="4" class="f-faint" />
+<text x="305" y="265" class="tm" font-size="10" text-anchor="middle" font-weight="normal">a follower's feed</text>
+<line x1="160" y1="182" x2="248" y2="261" class="s-accent" stroke-width="1.1" fill="none" marker-end="url(#arrow-accent)"/>
+<rect x="250" y="280" width="110" height="22" rx="4" class="f-faint" />
+<text x="305" y="295" class="tm" font-size="10" text-anchor="middle" font-weight="normal">a follower's feed</text>
+<line x1="160" y1="182" x2="248" y2="291" class="s-accent" stroke-width="1.1" fill="none" marker-end="url(#arrow-accent)"/>
+<text x="305" y="325" class="t" font-size="12" text-anchor="middle" font-weight="normal">Opening the app: one lookup</text>
+<text x="400" y="30" class="t" font-size="15" text-anchor="start" font-weight="600">A few huge accounts: read at opening time</text>
+<text x="400" y="49" class="tm" font-size="12.5" text-anchor="start" font-weight="normal">1.8 million writes per post was too many</text>
+<rect x="410" y="90" width="150" height="44" rx="6" class="f-soft-amber" />
+<rect x="410" y="90" width="150" height="44" rx="6" class="s-line" fill="none" stroke-width="1"/>
+<text x="485" y="116.3" class="t" font-size="13" text-anchor="middle" font-weight="600">the champion posts</text>
+<text x="485" y="156" class="tm" font-size="11.5" text-anchor="middle" font-weight="normal">stored once</text>
+<rect x="600" y="200" width="130" height="60" rx="6" class="f-faint" />
+<rect x="600" y="200" width="130" height="60" rx="6" class="s-line" fill="none" stroke-width="1"/>
+<text x="665" y="228" class="t" font-size="13" text-anchor="middle" font-weight="600">a follower opens</text>
+<text x="665" y="243" class="tm" font-size="11" text-anchor="middle" font-weight="normal">the app</text>
+<line x1="560" y1="120" x2="650" y2="198" class="s-amber" stroke-width="1.4" fill="none" marker-end="url(#arrow-amber)"/>
+<text x="640" y="150" class="tm" font-size="11" text-anchor="start" font-weight="normal">fetched</text>
+<text x="640" y="164" class="tm" font-size="11" text-anchor="start" font-weight="normal">on opening</text>
+<rect x="420" y="200" width="150" height="60" rx="6" class="f-soft-accent" />
+<text x="495" y="226" class="t" font-size="11.5" text-anchor="middle" font-weight="normal">ready-made feed</text>
+<text x="495" y="242" class="tm" font-size="10.5" text-anchor="middle" font-weight="normal">from everyone else</text>
+<line x1="570" y1="230" x2="598" y2="230" class="s-accent" stroke-width="1.4" fill="none" marker-end="url(#arrow-accent)"/>
+<text x="570" y="325" class="t" font-size="12" text-anchor="middle" font-weight="normal">Mixed together: nobody waits</text>
+</svg>

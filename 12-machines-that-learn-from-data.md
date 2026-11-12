@@ -32,6 +32,10 @@ The second problem was worse. The assistant could issue small account credits, b
 
 She couldn't make the model reliably tell instructions from data. Nobody could. So she stopped trusting it at the boundary. The assistant could now only *suggest* a credit, and a plain rule checked the amount and the account's history before anything happened. The model got the least power it needed. Its answers also cited the help articles they came from, because the third thing they'd learned was that it would sometimes, confidently, describe a refund policy that didn't exist. Its output was useful and uncertain, and the product had to be built for both.
 
+![The share of spam caught over three years. A filter trained once starts at ninety-nine in a hundred and falls to eighty-five by 2004 as spammers change tactics. A filter retrained every week on fresh reports dips each time spammers change, then recovers.](images/figures/12-machines-that-learn-from-data.svg)
+
+*Nadia's filter, left alone and kept fed.*
+
 Looking back, Nadia thought the two halves of her career were the same lesson. Some transformations are learned from data rather than written, and they're only as good as the data and context they're given. The world moves, so the data does too. Asking a large model a question is a new kind of round trip, paid for in tokens, with an answer that might be wrong. And everything she'd learned about trust came back at the new boundary, unchanged.
 
 ## It really happened

@@ -28,6 +28,10 @@ She talked it over with one of the systems programmers, who had read a paper abo
 
 By 1966 the faculty wanted more than overnight results. They wanted to sit at a typewriter terminal, type a line, and get an answer while they were still thinking about the question. The center started running a time-sharing system. It sliced the processor so finely between a few dozen users that each of them felt they had the machine to themselves. Ruth watched it from her desk and saw her stopwatch night again, the other way round. Now the people were the slow device. The machine spent most of each second waiting for someone to finish typing, and in those gaps it could serve everyone else.
 
+![Top: one job alone keeps the processor busy about a fifth of the time; three jobs fill each other's waits. Bottom: two jobs each hold one tape drive and wait for the other's, a circle that never ends; asking for drives in number order makes the circle impossible.](images/figures/02-one-machine-many-programs.svg)
+
+*Ruth's two discoveries: sharing fills the waiting, and sharing can make a circle.*
+
 Looking back, Ruth thought the lesson of those years wasn't really about tape drives. A machine's resources are shared, so something has to divide them and decide who runs. Sharing means waiting, and the waiting, not the computing, was where nearly all the time went. Every improvement she'd seen had been a better way of filling the waiting with other work, and each one had brought a new way for things to get stuck.
 
 ## It really happened

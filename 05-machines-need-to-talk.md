@@ -32,6 +32,10 @@ She checked her own scripts and found that she'd made it worse herself. A year e
 
 The answer came from Van Jacobson at the lab down the road, who had been tracing the same collapse. His conclusion turned Lin's instinct upside down. A lost packet usually wasn't bad luck. It was the network saying *too much*. So the right response to loss was to slow down, not to try harder. Start sending gently and speed up only while things are going well. When packets go missing, cut back sharply, and wait longer before each retry. Within a couple of years his changes were in nearly every TCP implementation, and the collapses stopped. Lin rewrote her backup scripts to wait a little longer after each failure, with a random amount added so they didn't all retry at the same moment. It felt strange to make something more reliable by making it try less often, but that's what worked.
 
+![Two timelines of the same transfer across a long link. Top: send one block, wait a whole round trip for the confirmation, then send the next. Bottom: send eight numbered blocks before waiting; the confirmations come back while more blocks are going out.](images/figures/05-machines-need-to-talk.svg)
+
+*Lin's transfer, before and after she stopped waiting for every reply.*
+
 Looking back, Lin saw the same few facts underneath everything she'd done with networks. Data is rarely where it's needed, so it has to move, and moving it is slow and unreliable and paid for in round trips. Protocols are contracts between machines that can't see each other. Anything that crosses a network can be lost, delayed, or duplicated, so senders retry and receivers have to tolerate repeats. And retries have to back off, or a lot of well-behaved machines can bury a network together.
 
 There was one more thing she only noticed years later. By the late 1990s she was downloading whole operating systems over the network in an afternoon, for free. Copying software had stopped costing anything. The companies that did well were the ones selling what you couldn't download: service, support, and someone you could trust to fix it.

@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 380" width="760" height="380" role="img" aria-labelledby="t d">
+<title id="t">Buying capacity, or renting it</title>
+<desc id="d">Demand over two weeks with a sudden spike. Bought servers stay flat until new ones arrive five weeks later, so the spike is lost. Rented capacity rises within minutes to follow the spike and falls after it.</desc>
+
+<style>
+  .bg { fill: #ffffff; }
+  .t { fill: #1f2328; } .tm { fill: #59636e; }
+  .f-ink { fill: #1f2328; } .s-ink { stroke: #1f2328; }
+  .f-line { fill: #d0d7de; } .s-line { stroke: #d0d7de; }
+  .f-faint { fill: #f6f8fa; } .s-faint { stroke: #f6f8fa; }
+  .f-accent { fill: #2a78d6; } .s-accent { stroke: #2a78d6; }
+  .f-warn { fill: #d64a4a; } .s-warn { stroke: #d64a4a; }
+  .f-ok { fill: #1baa7a; } .s-ok { stroke: #1baa7a; }
+  .f-amber { fill: #e09a1a; } .s-amber { stroke: #e09a1a; }
+  .f-soft-accent { fill: #ddeaf9; } .f-soft-warn { fill: #f8dede; } .f-soft-ok { fill: #d8f1e8; } .f-soft-amber { fill: #faecd2; }
+  @media (prefers-color-scheme: dark) {
+    .bg { fill: #0d1117; }
+    .t { fill: #e6edf3; } .tm { fill: #9198a1; }
+    .f-ink { fill: #e6edf3; } .s-ink { stroke: #e6edf3; }
+    .f-line { fill: #3d444d; } .s-line { stroke: #3d444d; }
+    .f-faint { fill: #161b22; } .s-faint { stroke: #161b22; }
+    .f-accent { fill: #4c9aff; } .s-accent { stroke: #4c9aff; }
+    .f-warn { fill: #ff7b72; } .s-warn { stroke: #ff7b72; }
+    .f-ok { fill: #3fb950; } .s-ok { stroke: #3fb950; }
+    .f-amber { fill: #e3b341; } .s-amber { stroke: #e3b341; }
+    .f-soft-accent { fill: #102a4a; } .f-soft-warn { fill: #4a1c1c; } .f-soft-ok { fill: #0f3a2a; } .f-soft-amber { fill: #3d2e0e; }
+  }
+  @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+  text { font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; }
+</style>
+<defs><marker id="arrow-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" class="f-ink"/></marker><marker id="arrow-accent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" class="f-accent"/></marker><marker id="arrow-warn" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" class="f-warn"/></marker><marker id="arrow-ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" class="f-ok"/></marker><marker id="arrow-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" class="f-amber"/></marker><marker id="arrow-line" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" class="f-line"/></marker></defs>
+<rect width="760" height="380" class="bg"/>
+<text x="30" y="32" class="t" font-size="15" text-anchor="start" font-weight="600">Capacity against demand</text>
+<text x="30" y="51" class="tm" font-size="12.5" text-anchor="start" font-weight="normal">Servers needed, around the day a blog wrote about Tariq's company</text>
+<line x1="90" y1="310" x2="690" y2="310" class="s-line" stroke-width="1" fill="none"/>
+<text x="82" y="314" class="tm" font-size="11.5" text-anchor="end" font-weight="normal">0</text>
+<line x1="90" y1="233.3" x2="690" y2="233.3" class="s-line" stroke-width="1" fill="none"/>
+<text x="82" y="237.3" class="tm" font-size="11.5" text-anchor="end" font-weight="normal">20</text>
+<line x1="90" y1="156.7" x2="690" y2="156.7" class="s-line" stroke-width="1" fill="none"/>
+<text x="82" y="160.7" class="tm" font-size="11.5" text-anchor="end" font-weight="normal">40</text>
+<line x1="90" y1="80" x2="690" y2="80" class="s-line" stroke-width="1" fill="none"/>
+<text x="82" y="84" class="tm" font-size="11.5" text-anchor="end" font-weight="normal">60</text>
+<text x="90" y="327" class="tm" font-size="11.5" text-anchor="middle" font-weight="normal">0</text>
+<text x="175.7" y="327" class="tm" font-size="11.5" text-anchor="middle" font-weight="normal">2</text>
+<text x="261.4" y="327" class="tm" font-size="11.5" text-anchor="middle" font-weight="normal">4</text>
+<text x="347.1" y="327" class="tm" font-size="11.5" text-anchor="middle" font-weight="normal">6</text>
+<text x="432.9" y="327" class="tm" font-size="11.5" text-anchor="middle" font-weight="normal">8</text>
+<text x="518.6" y="327" class="tm" font-size="11.5" text-anchor="middle" font-weight="normal">10</text>
+<text x="604.3" y="327" class="tm" font-size="11.5" text-anchor="middle" font-weight="normal">12</text>
+<text x="690" y="327" class="tm" font-size="11.5" text-anchor="middle" font-weight="normal">14</text>
+<line x1="90" y1="310" x2="690" y2="310" class="s-ink" stroke-width="1.2" fill="none"/>
+<text x="390" y="346" class="tm" font-size="12" text-anchor="middle" font-weight="normal">Days</text>
+<text x="44" y="68" class="tm" font-size="12" text-anchor="start" font-weight="normal">Servers</text>
+<path d="M 90 290.8 L 94.3 287.5 L 98.6 285.4 L 102.9 285.4 L 107.1 287.5 L 111.4 290.8 L 115.7 294.2 L 120 296.3 L 124.3 296.3 L 128.6 294.2 L 132.9 290.8 L 137.1 287.5 L 141.4 285.4 L 145.7 285.4 L 150 287.4 L 154.3 290.8 L 158.6 294.2 L 162.9 296.3 L 167.1 296.3 L 171.4 294.1 L 175.7 290.7 L 180 287.3 L 184.3 285.1 L 188.6 285 L 192.9 286.8 L 197.1 289.7 L 201.4 292.2 L 205.7 292.7 L 210 290.1 L 214.3 283.7 L 218.6 273.7 L 222.9 260.6 L 227.1 244.9 L 231.4 227.2 L 235.7 207.6 L 240 186.1 L 244.3 163.3 L 248.6 140.3 L 252.9 119 L 257.1 102 L 261.4 91.9 L 265.7 90.7 L 270 99.1 L 274.3 116 L 278.6 139 L 282.9 164.4 L 287.1 188.7 L 291.4 208.8 L 295.7 223.1 L 300 231.5 L 304.3 235.1 L 308.6 236.1 L 312.9 236.4 L 317.1 237.6 L 321.4 240.3 L 325.7 244.2 L 330 248.1 L 334.3 251.1 L 338.6 252.3 L 342.9 251.7 L 347.1 250.2 L 351.4 249 L 355.7 249.4 L 360 252 L 364.3 256.8 L 368.6 262.9 L 372.9 269.1 L 377.1 273.9 L 381.4 276.5 L 385.7 276.9 L 390 275.9 L 394.3 274.7 L 398.6 274.5 L 402.9 276.3 L 407.1 279.9 L 411.4 284.6 L 415.7 289.1 L 420 292.2 L 424.3 293 L 428.6 291.6 L 432.9 288.8 L 437.1 285.9 L 441.4 284.2 L 445.7 284.5 L 450 286.8 L 454.3 290.3 L 458.6 293.8 L 462.9 296 L 467.1 296.1 L 471.4 294.1 L 475.7 290.7 L 480 287.4 L 484.3 285.3 L 488.6 285.3 L 492.9 287.4 L 497.1 290.8 L 501.4 294.2 L 505.7 296.3 L 510 296.3 L 514.3 294.2 L 518.6 290.8 L 522.9 287.5 L 527.1 285.4 L 531.4 285.4 L 535.7 287.5 L 540 290.8 L 544.3 294.2 L 548.6 296.3 L 552.9 296.3 L 557.1 294.2 L 561.4 290.8 L 565.7 287.5 L 570 285.4 L 574.3 285.4 L 578.6 287.5 L 582.9 290.8 L 587.1 294.2 L 591.4 296.3 L 595.7 296.3 L 600 294.2 L 604.3 290.8 L 608.6 287.5 L 612.9 285.4 L 617.1 285.4 L 621.4 287.5 L 625.7 290.8 L 630 294.2 L 634.3 296.3 L 638.6 296.3 L 642.9 294.2 L 647.1 290.8 L 651.4 287.5 L 655.7 285.4 L 660 285.4 L 664.3 287.5 L 668.6 290.8 L 672.9 294.2 L 677.1 296.3 L 681.4 296.3 L 685.7 294.2 L 690 290.8" class="s-ink" stroke-width="2" fill="none" />
+<path d="M 90 287 L 690 287" class="s-warn" stroke-width="2.2" fill="none" />
+<path d="M 90 284.1 L 94.3 280.2 L 98.6 277.8 L 102.9 277.8 L 107.1 280.2 L 111.4 284.1 L 115.7 288 L 120 290.4 L 124.3 290.4 L 128.6 288 L 132.9 284.1 L 137.1 280.2 L 141.4 277.8 L 145.7 277.8 L 150 280.2 L 154.3 284.1 L 158.6 288 L 162.9 290.4 L 167.1 290.4 L 171.4 287.9 L 175.7 284 L 180 280 L 184.3 277.5 L 188.6 277.4 L 192.9 279.5 L 197.1 282.8 L 201.4 285.6 L 205.7 286.3 L 210 283.3 L 214.3 275.9 L 218.6 264.4 L 222.9 249.3 L 227.1 231.4 L 231.4 211 L 235.7 188.4 L 240 163.7 L 244.3 137.5 L 248.6 111 L 252.9 86.5 L 257.1 66.9 L 261.4 55.4 L 265.7 54 L 270 63.6 L 274.3 83.1 L 278.6 109.5 L 282.9 138.8 L 287.1 166.7 L 291.4 189.8 L 295.7 206.3 L 300 215.9 L 304.3 220.1 L 308.6 221.1 L 312.9 221.5 L 317.1 222.9 L 321.4 226 L 325.7 230.5 L 330 235 L 334.3 238.4 L 338.6 239.8 L 342.9 239.2 L 347.1 237.4 L 351.4 236 L 355.7 236.4 L 360 239.4 L 364.3 245 L 368.6 252 L 372.9 259.1 L 377.1 264.7 L 381.4 267.7 L 385.7 268.2 L 390 267 L 394.3 265.5 L 398.6 265.4 L 402.9 267.4 L 407.1 271.5 L 411.4 277 L 415.7 282.2 L 420 285.7 L 424.3 286.7 L 428.6 285 L 432.9 281.8 L 437.1 278.4 L 441.4 276.5 L 445.7 276.8 L 450 279.4 L 454.3 283.5 L 458.6 287.6 L 462.9 290.1 L 467.1 290.2 L 471.4 287.8 L 475.7 284 L 480 280.2 L 484.3 277.8 L 488.6 277.8 L 492.9 280.2 L 497.1 284.1 L 501.4 288 L 505.7 290.4 L 510 290.4 L 514.3 288 L 518.6 284.1 L 522.9 280.2 L 527.1 277.8 L 531.4 277.8 L 535.7 280.2 L 540 284.1 L 544.3 288 L 548.6 290.4 L 552.9 290.4 L 557.1 288 L 561.4 284.1 L 565.7 280.2 L 570 277.8 L 574.3 277.8 L 578.6 280.2 L 582.9 284.1 L 587.1 288 L 591.4 290.4 L 595.7 290.4 L 600 288 L 604.3 284.1 L 608.6 280.2 L 612.9 277.8 L 617.1 277.8 L 621.4 280.2 L 625.7 284.1 L 630 288 L 634.3 290.4 L 638.6 290.4 L 642.9 288 L 647.1 284.1 L 651.4 280.2 L 655.7 277.8 L 660 277.8 L 664.3 280.2 L 668.6 284.1 L 672.9 288 L 677.1 290.4 L 681.4 290.4 L 685.7 288 L 690 284.1" class="s-ok" stroke-width="1.8" fill="none" />
+<line x1="420" y1="96" x2="446" y2="96" class="s-ink" stroke-width="2.2" fill="none"/>
+<text x="454" y="100" class="t" font-size="12" text-anchor="start" font-weight="normal">demand</text>
+<line x1="420" y1="116" x2="446" y2="116" class="s-ok" stroke-width="2.2" fill="none"/>
+<text x="454" y="120" class="t" font-size="12" text-anchor="start" font-weight="normal">rented: started in minutes</text>
+<line x1="420" y1="136" x2="446" y2="136" class="s-warn" stroke-width="2.2" fill="none"/>
+<text x="454" y="140" class="t" font-size="12" text-anchor="start" font-weight="normal">bought: six servers, more in five weeks</text>
+<text x="30" y="365" class="tm" font-size="11.5" text-anchor="start" font-weight="normal" font-style="italic">Illustrative shape. Renting removed the wait; it also made every design decision a line on a bill.</text>
+</svg>

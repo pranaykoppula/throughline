@@ -28,6 +28,10 @@ He got carried away. Every time someone asked a new question, he added an index 
 
 The moment he trusted the new system came by accident. A power cut hit in the middle of a payments batch. Walter drove in at midnight sure he'd find half the cheques recorded and half not, and a week of reconciliation ahead of him. Instead, the database had undone every payment that hadn't finished. Each batch had been all or nothing, exactly as the manual promised. He read that part of the manual again the next morning. Walter had always cared most about speed. He decided then that what a store *promised* mattered more.
 
+![Left: customers, then policies, then claims, then payments, in a tree. Asking which hospitals send the most claims means walking the whole tree. Right: the same facts as tables, linked by values, with an index on the hospital column, so the question reads only the matching rows.](images/figures/04-data-outlives-programs.svg)
+
+*Walter's tree and his tables, asked the same new question.*
+
 Looking back, Walter thought his whole career had been about outliving programs. The programs he'd written in 1972 were all gone by 1985. The claims were still there, and so was every shape decision anyone had made about them. The store you choose should follow how the data is read and written. Indexes buy reads with writes. And the promises a store makes about what happens when things go wrong are the part you'll be grateful for at midnight.
 
 ## It really happened

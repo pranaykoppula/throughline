@@ -22,14 +22,15 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Regenerate the graph and the map
+      - name: Regenerate the graph, the map and the figures
         run: |
           python3 scripts/make_graph.py
           python3 scripts/make_map.py
-      - name: graph.html and images/map.svg are up to date
+          python3 scripts/make_figures.py
+      - name: graph.html, images/map.svg and images/figures are up to date
         run: |
-          if ! git diff --quiet -- graph.html images/map.svg; then
-            echo "::error::graph.html or images/map.svg is out of date. Run python3 scripts/make_graph.py and python3 scripts/make_map.py, then commit the result."
-            git diff --stat -- graph.html images/map.svg
+          if [ -n "$(git status --porcelain -- graph.html images)" ]; then
+            echo "::error::Generated files are out of date. Run python3 scripts/make_graph.py, python3 scripts/make_map.py and python3 scripts/make_figures.py, then commit the result."
+            git status --short -- graph.html images
             exit 1
           fi

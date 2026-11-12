@@ -38,6 +38,10 @@ She called Sam, who used to work at a much bigger company, half embarrassed to b
 
 The hybrid shipped in a week. The champion posted again, and nothing happened. Maya checked the dashboards three times before she believed it.
 
+![Left: an ordinary climber posts, and the post is added to each of about two hundred followers' ready-made feeds. Right: an account with 1.8 million followers is left out of that; its posts are fetched and mixed in when a follower opens their feed.](images/figures/08-too-many-users-too-much-data.svg)
+
+*Maya's hybrid: precompute feeds for most accounts, fetch the giants at read time.*
+
 Looking back, she hadn't invented anything. She'd bought a bigger machine until that stopped making sense. She'd made **copies** and decided what to promise while they disagreed. She'd **precomputed** what was read far more than it was written, and **approximated** where exactness cost too much. And she'd learned to shape the design around how her users were actually spread, not around the average. A year later, when writes outgrew the main database too, she **split** the data across machines, and that was another story. Every step had been a reasonable guess that worked until it met something she couldn't have seen from where she stood.
 
 ## It really happened
