@@ -1,6 +1,6 @@
 # State machines
 
-Last reviewed: 2026-11-10
+Last reviewed: 2026-11-12
 
 A concept page: naming every state something can be in, and every allowed way to move between them.
 
@@ -30,10 +30,18 @@ Looking back, Chloe thought the flags had let everyone describe their own part o
 | [Consistency](../data/consistency.md) | Copies of a database applying the same changes | If every copy starts in the same state and applies the same moves in the same order, they end in the same state. |
 | [6, Anyone can publish](../06-anyone-can-publish.md) | A booking: free, held, booked | The server refused a move from booked to booked, which ended Hannah's double bookings. |
 | [Power and predictability](power-and-predictability.md) | Selim's spam rules, matched by a finite automaton | A fixed set of states meant every rule finished in time proportional to the email, whatever the rule. |
+| [Type systems](../runtimes/type-systems.md) | A type with exactly the allowed states | The compiler refuses an impossible state before the program ever runs. |
+| [Replication](../data/replication.md) | A replica applying the main database's changes | Same start, same moves, same order: the copy ends in the same state. |
+| [Event loops and threads](../runtimes/event-loops-and-threads.md) | Omar's ticket count, shared by many requests | Each change made as one allowed move, applied whole, kept the shared count valid. |
+| [Serialization formats](../data/serialization.md) | A parser reading a format | Reading one piece at a time, the parser always knows what may come next. |
+| [Pagination](../data/pagination.md) | Hamza's cursor | The state of a walk through a changing list, handed to the client instead of a count from the start. |
+| [State estimation](../signals/state-estimation.md) | Dorota's tractor: position, heading, speed | The other meaning of "state": continuous quantities, estimated from evidence, not named stages. |
 
-It shows up elsewhere too: parsers reading text one character at a time, traffic lights, user interfaces with modes, workflow and approval systems, and game characters.
+It shows up elsewhere too: traffic lights, user interfaces with modes, workflow and approval systems, subscriptions and payments, a keyboard deciding whether a bouncing switch was one press, robots switching between searching, approaching and grasping, and game characters.
 
 What these share is the same discipline: name the states, name the allowed moves, and refuse everything else. It turns a pile of flags into something both people and machines can check.
+
+Motif: [enforce it once, at the boundary](../motifs.md#enforce-it-once-at-the-boundary).
 
 ## It really happened
 
@@ -42,6 +50,8 @@ Chloe is fictional; TCP's state diagram is real and famous. The 1981 specificati
 ## What it is
 
 A state machine is a model of something that is always in exactly one of a fixed set of states, and moves between them only along defined transitions, triggered by events. Making it explicit in code means one place decides whether a move is allowed, impossible states can't be represented, and every move can be recorded. Replicating a state machine, with the same start and the same moves in the same order, is one of the main ways to keep copies consistent.
+
+The word "state" has a second meaning, and it causes real confusion. In control and robotics, a system's state is a set of continuous quantities, such as position, speed and heading, that can only be estimated from noisy measurements ([state estimation](../signals/state-estimation.md)). That's a different thing from the named stages here. Robots usually need both: a state machine for what they're doing (searching, approaching, grasping) and an estimate of where they are while they do it.
 
 ## Where it gets misapplied
 
@@ -58,6 +68,9 @@ A state machine is a model of something that is always in exactly one of a fixed
 - Learning this is also learning [input validation](../auth/input-validation.md), because refusing moves that aren't on the diagram is validating what a request is allowed to do.
 - Learning this is also learning [migrations](../data/migrations.md), because moving data into a new design often starts with untangling which states the old data was really in.
 - Learning this is also learning [power and predictability](power-and-predictability.md), because a state machine is the bottom rung of the ladder of languages, and its limits are what make it checkable.
+- Learning this is also learning [type systems](../runtimes/type-systems.md), because a type with exactly the allowed states lets the compiler refuse the impossible ones.
+- Learning this is also learning [replication](../data/replication.md), because a replica is a state machine fed the same moves in the same order.
+- Learning this is also learning [state estimation](../signals/state-estimation.md), because "state" means continuous quantities there, and robots need both kinds.
 
 ## Resources
 

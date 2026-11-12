@@ -86,6 +86,7 @@ A rule that everyone must remember everywhere will eventually be forgotten somew
 - [Input validation](auth/input-validation.md): Frank's line, which carried strangers' sound and the network's commands.
 - [Multi-tenancy](auth/multi-tenancy.md): Chidi's one line in every query, remembered until it wasn't.
 - [Type systems](runtimes/type-systems.md): a boundary enforced by a machine.
+- [State machines](dsa/state-machines.md): Chloe's one function that every change to an order went through.
 - [Encodings](info/encodings.md): decode at the border, and speak one convention inside.
 - [10, Many people, one codebase](10-many-people-one-codebase.md): practices that only held once a tool enforced them.
 - [CI pipelines](tooling/ci.md): the pipeline as the place a team's rules actually live.
