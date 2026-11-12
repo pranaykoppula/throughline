@@ -832,6 +832,161 @@ def fig_dsa_heaps():
     return f
 
 
+
+def fig_dsa_tries():
+    words = ["paracetamol", "paroxetine", "parafon", "hydralazine", "hydrochlorothiazide", "hydroxyzine"]
+    f = Fig(440, "A trie, plain and compressed",
+            "A tree of medicine names stored by their letters. Names sharing a beginning share a path from the top. "
+            "Left: one node per letter, with long single-file chains. Right: the same names with each single-file "
+            "chain merged into one node, branching only where names differ.")
+
+    def build(ws):
+        root = {}
+        for w in ws:
+            node = root
+            for ch in w:
+                node = node.setdefault(ch, {})
+            node["$"] = {}
+        return root
+
+    def compress(node):
+        out = {}
+        for ch, child in node.items():
+            if ch == "$":
+                out["$"] = {}
+                continue
+            label, cur = ch, child
+            while len(cur) == 1 and "$" not in cur:
+                (k, v), = cur.items()
+                label += k
+                cur = v
+            out[label] = compress(cur)
+        return out
+
+    def count(node):
+        return sum(1 + count(c) for k, c in node.items() if k != "$")
+
+    def width(label, node, small):
+        own = 40 if small else 6.6 * len(label) + 12
+        kids = sum(width(k, c, small) for k, c in node.items() if k != "$")
+        return max(own, kids)
+
+    def draw(node, x0, y, px, py, small):
+        x = x0
+        for k, c in [(k, c) for k, c in node.items() if k != "$"]:
+            w = width(k, c, small)
+            cx = x + w / 2
+            f.line(px, py + 8, cx, y - 8, "line", 1)
+            bw = 12 if small else 6.6 * len(k) + 8
+            f.rect(cx - bw / 2, y - 8, bw, 16, "f-ok" if "$" in c else "f-soft-accent", 4)
+            f.text(cx, y + 4, k, "t", 9.5 if small else 10.5, "middle", "600")
+            draw(c, x, y + (17 if small else 44), cx, y, small)
+            x += w
+
+    plain, comp = build(words), compress(build(words))
+    f.heading(30, 30, "One node per letter", f"{count(plain)} nodes for {len(words)} names")
+    wp = sum(width(k, c, True) for k, c in plain.items())
+    f.circle(30 + wp / 2, 62, 6, "f-ink")
+    draw(plain, 30, 84, 30 + wp / 2, 54, True)
+    f.heading(330, 30, "Single-file chains merged", f"{count(comp)} nodes for the same names")
+    wc = sum(width(k, c, False) for k, c in comp.items())
+    f.circle(330 + wc / 2, 62, 6, "f-ink")
+    draw(comp, 330, 100, 330 + wc / 2, 54, False)
+    f.text(330, 400, "Green: where a whole name ends.",
+           "tm", 11.5, italic=True)
+    f.text(330, 418, "Built by the script from the story's names.", "tm", 11.5, italic=True)
+    return f
+
+
+def fig_dsa_logs():
+    f = Fig(360, "A balance, and a ledger",
+            "Two ways to store a wallet. Left: one balance per account, overwritten by each change, with a corrupted "
+            "value and no way back. Right: a ledger of entries, each written once, with a duplicate bonus corrected "
+            "by a reversing entry, and the balance worked out as the sum of the entries.")
+    f.heading(30, 32, "Overwrite the balance", "Each change replaces the last")
+    vals = [("top-up", "500"), ("payment", "380"), ("bonus", "430"), ("bonus again (bug)", "480"), ("corrupted write", "9,104")]
+    for i, (what, v) in enumerate(vals):
+        y = 70 + i * 40
+        last = i == len(vals) - 1
+        f.rect(30, y, 300, 30, "f-soft-warn" if last else "f-faint", 4)
+        f.text(42, y + 20, what, "tm" if not last else "t", 12)
+        f.text(318, y + 20, f"balance: {v}", "t", 12, "end", "600" if last else "normal")
+        if not last:
+            f.line(320, y + 30, 320, y + 40, "line", 1)
+    f.text(30, 290, "Only the last row exists. The earlier ones are gone,", "t", 12)
+    f.text(30, 308, "so nobody can say what the balance should be.", "t", 12)
+    f.heading(400, 32, "Append to a ledger", "Each entry written once; the balance is their sum")
+    entries = [("top-up", "+500"), ("payment", "−120"), ("bonus", "+50"), ("bonus again (bug)", "+50"),
+               ("reversal of the duplicate", "−50")]
+    for i, (what, v) in enumerate(entries):
+        y = 70 + i * 40
+        cls = "f-soft-amber" if "bug" in what else "f-soft-ok" if "reversal" in what else "f-faint"
+        f.rect(400, y, 330, 30, cls, 4)
+        f.text(412, y + 20, what, "t", 12)
+        f.text(718, y + 20, v, "t", 12, "end", "600")
+    f.text(400, 290, "Balance: 500 − 120 + 50 + 50 − 50 = 430,", "t", 12, "start", "600")
+    f.text(400, 308, "and every step of how it got there.", "t", 12)
+    f.text(30, 345, "Pesos; illustrative entries.", "tm", 11.5, italic=True)
+    return f
+
+
+def fig_dsa_approx():
+    f = Fig(380, "Memory for an exact count and an approximate one",
+            "A chart of memory against the number of different readers counted. Remembering every reader exactly "
+            "grows in a straight line, from kilobytes to gigabytes. The approximate summary stays flat at about "
+            "twelve kilobytes however many readers there are, with an error of about one per cent.")
+    f.heading(30, 32, "Memory to count distinct readers", "Exact set against a 12 KB summary, on a log scale")
+    p = axes(f, 100, 80, 520, 230, "Different readers counted", "Memory",
+             [(3, "1,000"), (4, "10,000"), (5, "100,000"), (6, "1 million"), (7, "10 million"), (8, "100 million")],
+             [(3, "1 KB"), (4, "10 KB"), (5, "100 KB"), (6, "1 MB"), (7, "10 MB"), (8, "100 MB"), (9, "1 GB"), (10, "10 GB")],
+             (3, 8), (3, 10))
+    f.poly([p(x / 10, x / 10 + math.log10(16)) for x in range(30, 81)], "warn", 2.4)
+    f.poly([p(x / 10, math.log10(12 * 1024)) for x in range(30, 81)], "ok", 2.4)
+    x, y = p(5.2, 5.2 + math.log10(16))
+    f.text(x - 10, y - 12, "exact: about 16 bytes per reader", "t", 12, "end")
+    x, y = p(8, math.log10(12 * 1024))
+    f.text(x - 6, y - 10, "HyperLogLog: 12 KB, about ±1%", "t", 12, "end")
+    f.text(30, 365, "Assumes 16 bytes per stored reader ID; real sets use more once overheads are counted.",
+           "tm", 11.5, italic=True)
+    return f
+
+
+def fig_dsa_search():
+    docs = {1: "flood closes Kirkstall bypass", 2: "council debates flood defences", 3: "bypass vote delayed again"}
+    index = {}
+    for d, text in docs.items():
+        for w in text.split():
+            index.setdefault(w.lower(), []).append(d)
+    f = Fig(420, "An inverted index",
+            "An inverted index. Three short articles on the left. In the middle, a table from each word to the "
+            "articles containing it, in order. On the right, a two-word search fetching two lists and keeping only "
+            "the articles in both.")
+    f.heading(30, 32, "Articles", "Headlines stand in for the text")
+    for i, (d, text) in enumerate(docs.items()):
+        y = 66 + i * 52
+        f.rect(30, y, 210, 40, "f-faint", 5)
+        f.text(40, y + 16, f"article {d}", "tm", 11)
+        f.text(40, y + 32, text, "t", 11.5)
+    f.heading(270, 32, "Inverted index", "Word: the articles containing it")
+    for i, w in enumerate(sorted(index)):
+        y = 66 + i * 24
+        hl = w in ("flood", "bypass")
+        f.rect(270, y, 220, 20, "f-soft-accent" if hl else "f-faint", 3)
+        f.text(280, y + 14, w, "t", 11.5, "start", "600" if hl else "normal")
+        f.text(480, y + 14, ", ".join(str(n) for n in index[w]), "t", 11.5, "end")
+    f.heading(520, 32, "Search: flood bypass", "Walk both lists together")
+    a, b = index["flood"], index["bypass"]
+    f.text(520, 90, f"flood:   {', '.join(map(str, a))}", "t", 12.5)
+    f.text(520, 112, f"bypass: {', '.join(map(str, b))}", "t", 12.5)
+    both = sorted(set(a) & set(b))
+    f.rect(520, 130, 210, 34, "f-soft-ok", 5)
+    f.text(530, 152, f"in both: article {', '.join(map(str, both))}", "t", 12.5, "start", "600")
+    f.text(520, 196, "Then rank: rare words such as", "t", 12)
+    f.text(520, 214, "\"Kirkstall\" count for more than", "t", 12)
+    f.text(520, 232, "common ones such as \"flood\".", "t", 12)
+    return f
+
+
 FIGURES = {
     "00-representations": fig00, "01-one-machine-one-program": fig01, "02-one-machine-many-programs": fig02,
     "03-programs-too-big-for-one-head": fig03, "04-data-outlives-programs": fig04,
@@ -842,6 +997,8 @@ FIGURES = {
     "dsa-growth": fig_dsa_growth, "dsa-amortised-cost": fig_dsa_amortised, "dsa-sorting": fig_dsa_sorting,
     "dsa-divide-and-conquer": fig_dsa_divide, "dsa-dynamic-programming": fig_dsa_dp,
     "dsa-greedy": fig_dsa_greedy, "dsa-heaps": fig_dsa_heaps,
+    "dsa-tries": fig_dsa_tries, "dsa-append-only-logs": fig_dsa_logs,
+    "dsa-exact-or-approximate": fig_dsa_approx, "dsa-search": fig_dsa_search,
 }
 
 

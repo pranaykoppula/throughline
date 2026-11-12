@@ -85,6 +85,8 @@ Sorting arranges items by a key. Comparison sorts decide by comparing pairs: ins
 - Learning this is also learning [power and predictability](power-and-predictability.md), because an attacker who knows your algorithm can choose its worst case, as with regular expressions and hash tables.
 - Learning this is also learning [divide and conquer](divide-and-conquer.md), because merge sort and quicksort are its two classic forms: one does the work in combining, the other in splitting.
 - Learning this is also learning [heaps and priority queues](heaps.md), because heapsort and Margit's top-hundred list are both a heap, used differently.
+- Learning this is also learning [tries](tries.md), because a sorted list answers prefix questions as a range, and a trie answers them one keystroke at a time.
+- Learning this is also learning [search](search.md), because sorted order is the oldest index, and posting lists are kept sorted so they can be merged.
 
 ## Resources
 

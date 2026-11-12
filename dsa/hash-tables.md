@@ -60,6 +60,8 @@ A hash table stores values in an array of slots, choosing each value's slot by h
 - Learning this is also learning [distributions and percentiles](../math/percentiles.md), because "constant time on average" can hide a terrible worst case.
 - Learning this is also learning [growth](growth.md), because replacing "compare with everything" by "look it up" is the most common way out of quadratic code.
 - Learning this is also learning [amortised cost](amortised-cost.md), because doubling is cheap on average and Kenji's pause was the occasional lump.
+- Learning this is also learning [tries](tries.md), because a trie answers the question a hash table can't: which keys start with this?
+- Learning this is also learning [search](search.md), because looking up an exact keyword is the simplest kind of search, and the first one that stops being enough.
 
 ## Resources
 

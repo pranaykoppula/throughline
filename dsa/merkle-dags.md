@@ -59,6 +59,7 @@ A Merkle tree is a tree in which each leaf is labelled with the hash of a block 
 - Learning this is also learning [replication](../data/replication.md), because replicas use hash trees to find and repair differences.
 - Learning this is also learning [code signing](../auth/code-signing.md), because signing a root hash signs everything beneath it.
 - Learning this is also learning [storage tiers](../cost/storage-tiers.md), because naming blocks by content lets identical blocks be stored once.
+- Learning this is also learning [append-only logs](append-only-logs.md), because a git history is a log that's never edited, only added to.
 
 ## Resources
 

@@ -66,6 +66,7 @@ Divide and conquer solves a problem by splitting it into smaller subproblems of 
 - Learning this is also learning [partitioning](../data/partitioning.md), because splitting data across machines is a divide-and-conquer decision about which questions stay cheap.
 - Learning this is also learning [dynamic programming](dynamic-programming.md), because it's what to do when the pieces overlap instead of standing apart.
 - Learning this is also learning [growth](growth.md), because halving is why binary search grows only with the logarithm of the size, and splitting is why the good sorts grow as n log n.
+- Learning this is also learning [exact or approximate](exact-or-approximate.md), because mergeable summaries are the approximate way to combine distinct counts that don't add.
 
 ## Resources
 

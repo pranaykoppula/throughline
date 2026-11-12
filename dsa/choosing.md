@@ -14,6 +14,10 @@ Ask what you'll do to the data most often, in the words you'd use for it. Each o
 | "Give me everything between these two values", or "the next one in order" | A sorted array, or a tree such as a B-tree | Order lets you jump to the start of a range and walk from there | [Sorting](sorting.md), [B-trees](b-trees.md) |
 | "What's the most urgent thing now?" | A heap, as a priority queue | It always keeps the smallest (or largest) on top, cheaply | [Heaps and priority queues](heaps.md) |
 | "What's next, in the order things arrived?" | A queue | First in, first out, with room to decide what happens when it's full | [Queues](queues.md) |
+| "Everything that starts with this" | A trie | One step per character, however many keys there are | [Tries](tries.md) |
+| "Which documents mention these words, best first?" | An inverted index, with ranking | Each word points to its documents; ranking decides which come first | [Search](search.md) |
+| "What happened, and why is this value what it is?" | An append-only log | Keep the record; derive the current state from it | [Append-only logs](append-only-logs.md) |
+| "Roughly how many different ones?", over huge data | An approximate summary such as HyperLogLog | A few kilobytes and a known error, instead of remembering everything | [Exact or approximate](exact-or-approximate.md) |
 | "Undo the last thing", or "where was I before this?" | A stack | Last in, first out, which is how nesting and backtracking work | [Power and predictability](power-and-predictability.md) |
 | "What's connected to what?" | A graph | Things and the links between them, and questions like "can I get from here to there?" | [Graphs](graphs.md) |
 | "Which state is this in, and what can it do next?" | A state machine | A fixed set of states and allowed moves, so impossible ones can't happen | [State machines](state-machines.md) |

@@ -35,6 +35,7 @@ Any copy, kept to be faster, safer or closer, is sometimes out of date. The work
 - [Caching](latency/caching.md): every cache is a copy, and the system comes to depend on it.
 - [Replication](data/replication.md): Kwame's replica, and making sure only one copy accepts writes.
 - [Consistency](data/consistency.md): Tom's nine library branches, each with its own catalogue.
+- [Append-only logs](dsa/append-only-logs.md): Teresa's balance, a copy derived from the ledger, which wins whenever they disagree.
 
 ## Where the data is sets the cost
 

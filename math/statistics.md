@@ -64,6 +64,7 @@ Statistical significance is a way of asking how likely a difference this large w
 - Learning this is also learning [state estimation](../signals/state-estimation.md), because telling signal from noise, asked continuously about something moving, is how robots and phones know where they are.
 - Learning this is also learning [measures and targets](../info/measures-and-targets.md), because a number that's also a target moves for reasons that have nothing to do with what it measures.
 - Learning this is also learning [Bloom filters](../dsa/bloom-filters.md), because choosing between false positives and false negatives is a statistical trade-off with an engineering price on each side.
+- Learning this is also learning [exact or approximate](../dsa/exact-or-approximate.md), because an estimate needs its error stated, and must not drift into uses that need an exact answer.
 
 ## Resources
 

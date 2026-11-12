@@ -63,6 +63,7 @@ A measure (or metric, or proxy) is an observable quantity used to stand for some
 - Learning this is also learning [CI pipelines](../tooling/ci.md), because a pipeline's green is a measure, and every bypass makes it easier to reach and less true.
 - Learning this is also learning [statistical significance](../math/statistics.md), because a number can move without anything changing, and a target makes people want it to.
 - Learning this is also learning [language](language.md), because a measure is a sign, and like a word it means something only as long as people use it the same way.
+- Learning this is also learning [search](../dsa/search.md), because once a ranking decides who gets found, people write for the ranking instead of the reader.
 
 ## Resources
 

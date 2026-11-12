@@ -64,6 +64,7 @@ Sampling measures a continuous signal at regular intervals; quantisation rounds 
 - Learning this is also learning [compression](../info/compression.md), because sampling is the first lossy decision anyone makes about a signal, before any compression begins.
 - Learning this is also learning [state estimation](state-estimation.md), because every sample is one noisy glimpse, and estimation is how glimpses become a belief.
 - Learning this is also learning [feedback and control](feedback.md), because a controller only sees the world at its samples, and acts on what it saw.
+- Learning this is also learning [exact or approximate](../dsa/exact-or-approximate.md), because Henrik's per-minute summaries are a small, deliberate approximation of a large stream.
 
 ## Resources
 
