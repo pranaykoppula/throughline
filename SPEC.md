@@ -77,6 +77,10 @@ The eight verbs are named only where they earn their place: in bold, once, in a 
 
 Every figure is ours: a diagram of a page's problem or its solution, drawn by code in `scripts/make_figures.py` into `images/figures/`. No photographs or archival images, and no AI-generated images anywhere. A figure earns its place only if it shows something the prose can't, such as a mechanism, a timeline or a shape over time. On spine pages it sits in the story after the rethink, just before "Looking back", so it never gives away the answer to a *Before reading on* pause. Each has alt text describing what it shows and a one-line italic caption. Numbers in a figure come from the story; anything else is labelled illustrative. Figures carry their own light and dark colours, and any animation stops for readers who ask for reduced motion. CI fails if a figure differs from what the script draws.
 
+### 3.7 Depth in algorithms and system design
+
+The scope rule (a page must carry a mental model that recurs outside its own field) is relaxed in two places, because they're where people most often learn mechanics without intuition: `dsa/` and the system design family. There, a well-known technique can have its own page even if it recurs mostly inside computing, and a page may follow one technique through several changing needs (`dsa/sorting.md` follows one person through seven sorting methods). `dsa/choosing.md` is a guide page: no story, a table from the question you keep asking to the structure built for it, linked from the README.
+
 ## 4. The model
 
 Living text. Each numbered addition belongs to the spine page of the same number. Edit it there and here in the same change.

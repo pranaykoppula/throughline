@@ -59,6 +59,7 @@ An access pattern is how data is actually used: how often it's read compared wit
 - Learning this is also learning [hash tables](../dsa/hash-tables.md), because they make one pattern, finding by key, as cheap as possible.
 - Learning this is also learning [data modelling](modelling.md), because the shape of the data should come from the questions asked of it.
 - Learning this is also learning [profiling](../tooling/profiling.md), because you find the real pattern by measuring, not guessing.
+- Learning this is also learning [choosing a data structure](../dsa/choosing.md), because the guide starts from the same place: what you'll ask of the data most often.
 
 ## Resources
 

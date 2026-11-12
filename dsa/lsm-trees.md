@@ -62,6 +62,8 @@ A log-structured merge tree buffers writes in memory and in an append-only log, 
 - Learning this is also learning [latency numbers](../latency/latency-numbers.md), because sequential disk writes are far faster than scattered ones.
 - Learning this is also learning [replication](../data/replication.md), because the same append-only log that protects against crashes is often what's shipped to replicas.
 - Learning this is also learning [queueing](../latency/queueing.md), because compaction is a background queue that has to keep up.
+- Learning this is also learning [sorting](sorting.md), because sorting in memory and merging sorted files is how tapes were sorted sixty years ago.
+- Learning this is also learning [amortised cost](amortised-cost.md), because cheap writes now are paid for in merging later, at a moment the system doesn't choose.
 
 ## Resources
 

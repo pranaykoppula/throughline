@@ -43,6 +43,7 @@ Alongside the trunk:
 - [The model](the-model.md): the finished mental model. If you're experienced, find the sentence you doubt and go to its page.
 - [Forces](forces.md): the non-technical limits (money, law, distribution) that moved the field as much as hardware did.
 - [Pushback](pushback.md): questions for when a solution arrives before its problem.
+- [Choosing a data structure](dsa/choosing.md): start from the question you keep asking of your data, and find the structure built for it.
 - [Motifs](motifs.md): the shapes that keep recurring across these stories, such as *copies disagree* and *the sign drifts from the thing*, with every page where each appears.
 
 Links to pages that don't exist yet are deliberate. They're the branches nobody has written, and they're how this grows.

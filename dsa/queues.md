@@ -59,6 +59,7 @@ A queue is a data structure where items are added at one end and removed from th
 - Learning this is also learning [event loops and threads](../runtimes/event-loops-and-threads.md), because an event loop is a queue of ready work and a rule for taking from it.
 - Learning this is also learning [round trips](../latency/round-trips.md), because a message queue between services turns waiting for a reply into waiting in line.
 - Learning this is also learning [least privilege](../auth/least-privilege.md), because giving each customer their own line is limiting how much of the system any one of them can take.
+- Learning this is also learning [sorting](sorting.md), because a priority queue is usually a heap, the same structure heapsort uses.
 
 ## Resources
 

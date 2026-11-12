@@ -68,6 +68,7 @@ Motif: [enforce it once, at the boundary](motifs.md#enforce-it-once-at-the-bound
 - Learning this is also learning [least privilege](auth/least-privilege.md), because required review means no single person can put anything into the product alone.
 - Learning this is also learning [commit messages and design records](writing/commit-messages.md), because they're how the next person learns why.
 - Learning this is also learning [forces](forces.md#incentives-inside-the-org), because systems take the shape of the teams that build them.
+- Learning this is also learning [sorting](dsa/sorting.md), because merging two ordered histories is cheap only while they haven't drifted far apart, the same way merging two sorted lists is.
 
 ## Resources
 

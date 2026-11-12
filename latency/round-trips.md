@@ -60,6 +60,7 @@ A round trip is a message going out and its reply coming back. Its cost is mostl
 - Learning this is also learning [TLS](../auth/tls.md), because a secure connection costs round trips before it carries anything.
 - Learning this is also learning [serialization formats](../data/serialization.md), because what you put in each exchange, and how compactly, is the other half of the cost.
 - Learning this is also learning [feedback and control](../signals/feedback.md), because a round trip is the delay inside every loop that crosses a network, and delay limits how firmly a loop can correct.
+- Learning this is also learning [growth](../dsa/growth.md), because one request per item is linear growth in the most expensive unit there is.
 
 ## Resources
 
