@@ -63,6 +63,7 @@ Motif: [costs move; they don't disappear](motifs.md#costs-move-they-dont-disappe
 - Learning this is also learning [multi-tenancy](auth/multi-tenancy.md), because who may read which row is the boundary between one customer's data and another's.
 - Learning this is also learning [storage tiers](cost/storage-tiers.md), because storage, indexes and the writes they cost all show up on a bill.
 - Learning this is also learning [consistency](data/consistency.md), because the actuaries' second copy of the data, in a different shape, was a copy someone had to keep in step, and copies drift apart.
+- Learning this is also learning [append-only logs](dsa/append-only-logs.md), because the database could undo Walter's unfinished payments after the power cut only because it had logged each change before making it.
 
 ## Resources
 

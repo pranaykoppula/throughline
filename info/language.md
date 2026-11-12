@@ -67,6 +67,7 @@ Natural language transmits meaning efficiently by leaving most of it implicit, r
 - Learning this is also learning [power and predictability](../dsa/power-and-predictability.md), because the ladder of formal languages began as Chomsky's theory of grammar for human ones.
 - Learning this is also learning [meaning as use](meaning-as-use.md), because an interface's meaning, like a word's, is set by how people use it.
 - Learning this is also learning [encodings](encodings.md), because the most basic shared codebook in computing is the one that turns bytes into letters.
+- Learning this is also learning [search](../dsa/search.md), because keyword search sees only the words, and readers mean more than they type.
 
 ## Resources
 

@@ -60,6 +60,7 @@ A Bloom filter is a bit array with several hash functions. Adding an item sets t
 - Learning this is also learning [caching](../latency/caching.md), because both keep something small in memory to avoid slow reads, but a cache remembers answers and a filter only remembers what's certainly absent.
 - Learning this is also learning [observation](../info/observation.md), because a filter that's filling up fails silently, and only a measurement you set up will show it.
 - Learning this is also learning [statistical significance](../math/statistics.md), because false positives and false negatives are a trade-off you choose, and the right balance depends on what each mistake costs.
+- Learning this is also learning [exact or approximate](exact-or-approximate.md), because a Bloom filter is one of a family of small summaries that trade certainty for space.
 
 ## Resources
 

@@ -57,6 +57,7 @@ Commit messages, pull request descriptions and decision records are the written 
 - Learning this is also learning [migrations](../data/migrations.md), because knowing why the old shape existed is the first step to changing it safely.
 - Learning this is also learning [Merkle DAGs](../dsa/merkle-dags.md), because git's history is permanent, so what you write in it stays.
 - Learning this is also learning [coding agents](../tooling/coding-agents.md), because an agent reads the history and comments as context, and makes better changes when they explain why.
+- Learning this is also learning [append-only logs](../dsa/append-only-logs.md), because a history that's never rewritten is what lets someone later read why things are the way they are.
 
 ## Resources
 

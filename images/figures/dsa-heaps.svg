@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 390" width="760" height="390" role="img" aria-labelledby="t d">
+<title id="t">A heap as a tree and as an array</title>
+<desc id="d">A heap of timers drawn two ways: as a tree, with the soonest-due timer at the top and every timer due no later than the ones below it, and as the array it's actually stored in, with arrows showing that each item's children sit at twice its position and one more.</desc>
+
+<style>
+  .bg { fill: #ffffff; }
+  .t { fill: #1f2328; } .tm { fill: #59636e; }
+  .f-ink { fill: #1f2328; } .s-ink { stroke: #1f2328; }
+  .f-line { fill: #d0d7de; } .s-line { stroke: #d0d7de; }
+  .f-faint { fill: #f6f8fa; } .s-faint { stroke: #f6f8fa; }
+  .f-accent { fill: #2a78d6; } .s-accent { stroke: #2a78d6; }
+  .f-warn { fill: #d64a4a; } .s-warn { stroke: #d64a4a; }
+  .f-ok { fill: #1baa7a; } .s-ok { stroke: #1baa7a; }
+  .f-amber { fill: #e09a1a; } .s-amber { stroke: #e09a1a; }
+  .f-soft-accent { fill: #ddeaf9; } .f-soft-warn { fill: #f8dede; } .f-soft-ok { fill: #d8f1e8; } .f-soft-amber { fill: #faecd2; }
+  @media (prefers-color-scheme: dark) {
+    .bg { fill: #0d1117; }
+    .t { fill: #e6edf3; } .tm { fill: #9198a1; }
+    .f-ink { fill: #e6edf3; } .s-ink { stroke: #e6edf3; }
+    .f-line { fill: #3d444d; } .s-line { stroke: #3d444d; }
+    .f-faint { fill: #161b22; } .s-faint { stroke: #161b22; }
+    .f-accent { fill: #4c9aff; } .s-accent { stroke: #4c9aff; }
+    .f-warn { fill: #ff7b72; } .s-warn { stroke: #ff7b72; }
+    .f-ok { fill: #3fb950; } .s-ok { stroke: #3fb950; }
+    .f-amber { fill: #e3b341; } .s-amber { stroke: #e3b341; }
+    .f-soft-accent { fill: #102a4a; } .f-soft-warn { fill: #4a1c1c; } .f-soft-ok { fill: #0f3a2a; } .f-soft-amber { fill: #3d2e0e; }
+  }
+  @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+  text { font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; }
+</style>
+<defs><marker id="arrow-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" class="f-ink"/></marker><marker id="arrow-accent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" class="f-accent"/></marker><marker id="arrow-warn" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" class="f-warn"/></marker><marker id="arrow-ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" class="f-ok"/></marker><marker id="arrow-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" class="f-amber"/></marker><marker id="arrow-line" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" class="f-line"/></marker></defs>
+<rect width="760" height="390" class="bg"/>
+<text x="30" y="32" class="t" font-size="15" text-anchor="start" font-weight="600">Seconds until each timer is due</text>
+<text x="30" y="51" class="tm" font-size="12.5" text-anchor="start" font-weight="normal">Every timer is due no later than the ones below it</text>
+<line x1="380" y1="80" x2="210" y2="132" class="s-line" stroke-width="1.4" fill="none"/>
+<line x1="380" y1="80" x2="550" y2="132" class="s-line" stroke-width="1.4" fill="none"/>
+<line x1="210" y1="132" x2="125" y2="184" class="s-line" stroke-width="1.4" fill="none"/>
+<line x1="210" y1="132" x2="295" y2="184" class="s-line" stroke-width="1.4" fill="none"/>
+<line x1="550" y1="132" x2="465" y2="184" class="s-line" stroke-width="1.4" fill="none"/>
+<line x1="550" y1="132" x2="635" y2="184" class="s-line" stroke-width="1.4" fill="none"/>
+<line x1="125" y1="184" x2="82.5" y2="236" class="s-line" stroke-width="1.4" fill="none"/>
+<line x1="125" y1="184" x2="167.5" y2="236" class="s-line" stroke-width="1.4" fill="none"/>
+<line x1="295" y1="184" x2="252.5" y2="236" class="s-line" stroke-width="1.4" fill="none"/>
+<circle cx="380" cy="80" r="17" class="f-ok" />
+<text x="380" y="85" class="t" font-size="13" text-anchor="middle" font-weight="600">3</text>
+<circle cx="210" cy="132" r="17" class="f-soft-accent" />
+<text x="210" y="137" class="t" font-size="13" text-anchor="middle" font-weight="600">8</text>
+<circle cx="550" cy="132" r="17" class="f-soft-accent" />
+<text x="550" y="137" class="t" font-size="13" text-anchor="middle" font-weight="600">5</text>
+<circle cx="125" cy="184" r="17" class="f-soft-accent" />
+<text x="125" y="189" class="t" font-size="13" text-anchor="middle" font-weight="600">12</text>
+<circle cx="295" cy="184" r="17" class="f-soft-accent" />
+<text x="295" y="189" class="t" font-size="13" text-anchor="middle" font-weight="600">9</text>
+<circle cx="465" cy="184" r="17" class="f-soft-accent" />
+<text x="465" y="189" class="t" font-size="13" text-anchor="middle" font-weight="600">7</text>
+<circle cx="635" cy="184" r="17" class="f-soft-accent" />
+<text x="635" y="189" class="t" font-size="13" text-anchor="middle" font-weight="600">15</text>
+<circle cx="82.5" cy="236" r="17" class="f-soft-accent" />
+<text x="82.5" y="241" class="t" font-size="13" text-anchor="middle" font-weight="600">20</text>
+<circle cx="167.5" cy="236" r="17" class="f-soft-accent" />
+<text x="167.5" y="241" class="t" font-size="13" text-anchor="middle" font-weight="600">14</text>
+<circle cx="252.5" cy="236" r="17" class="f-soft-accent" />
+<text x="252.5" y="241" class="t" font-size="13" text-anchor="middle" font-weight="600">11</text>
+<text x="400" y="72" class="t" font-size="11.5" text-anchor="start" font-weight="normal">the next to fire</text>
+<text x="30" y="366" class="tm" font-size="12" text-anchor="start" font-weight="normal">Stored as an array: the children of position i are at 2i + 1 and 2i + 2</text>
+<rect x="30" y="290" width="48" height="30" rx="4" class="f-ok" />
+<text x="54" y="310" class="t" font-size="13" text-anchor="middle" font-weight="600">3</text>
+<text x="54" y="336" class="tm" font-size="11" text-anchor="middle" font-weight="normal">0</text>
+<rect x="82" y="290" width="48" height="30" rx="4" class="f-soft-accent" />
+<text x="106" y="310" class="t" font-size="13" text-anchor="middle" font-weight="600">8</text>
+<text x="106" y="336" class="tm" font-size="11" text-anchor="middle" font-weight="normal">1</text>
+<rect x="134" y="290" width="48" height="30" rx="4" class="f-soft-accent" />
+<text x="158" y="310" class="t" font-size="13" text-anchor="middle" font-weight="600">5</text>
+<text x="158" y="336" class="tm" font-size="11" text-anchor="middle" font-weight="normal">2</text>
+<rect x="186" y="290" width="48" height="30" rx="4" class="f-soft-accent" />
+<text x="210" y="310" class="t" font-size="13" text-anchor="middle" font-weight="600">12</text>
+<text x="210" y="336" class="tm" font-size="11" text-anchor="middle" font-weight="normal">3</text>
+<rect x="238" y="290" width="48" height="30" rx="4" class="f-soft-accent" />
+<text x="262" y="310" class="t" font-size="13" text-anchor="middle" font-weight="600">9</text>
+<text x="262" y="336" class="tm" font-size="11" text-anchor="middle" font-weight="normal">4</text>
+<rect x="290" y="290" width="48" height="30" rx="4" class="f-soft-accent" />
+<text x="314" y="310" class="t" font-size="13" text-anchor="middle" font-weight="600">7</text>
+<text x="314" y="336" class="tm" font-size="11" text-anchor="middle" font-weight="normal">5</text>
+<rect x="342" y="290" width="48" height="30" rx="4" class="f-soft-accent" />
+<text x="366" y="310" class="t" font-size="13" text-anchor="middle" font-weight="600">15</text>
+<text x="366" y="336" class="tm" font-size="11" text-anchor="middle" font-weight="normal">6</text>
+<rect x="394" y="290" width="48" height="30" rx="4" class="f-soft-accent" />
+<text x="418" y="310" class="t" font-size="13" text-anchor="middle" font-weight="600">20</text>
+<text x="418" y="336" class="tm" font-size="11" text-anchor="middle" font-weight="normal">7</text>
+<rect x="446" y="290" width="48" height="30" rx="4" class="f-soft-accent" />
+<text x="470" y="310" class="t" font-size="13" text-anchor="middle" font-weight="600">14</text>
+<text x="470" y="336" class="tm" font-size="11" text-anchor="middle" font-weight="normal">8</text>
+<rect x="498" y="290" width="48" height="30" rx="4" class="f-soft-accent" />
+<text x="522" y="310" class="t" font-size="13" text-anchor="middle" font-weight="600">11</text>
+<text x="522" y="336" class="tm" font-size="11" text-anchor="middle" font-weight="normal">9</text>
+<path d="M 106 290 Q 144.4 250 210 288" class="s-accent" stroke-width="1.4" fill="none" marker-end="url(#arrow-accent)" />
+<path d="M 106 290 Q 170.4 238 262 288" class="s-accent" stroke-width="1.4" fill="none" marker-end="url(#arrow-accent)" />
+<text x="560" y="310" class="tm" font-size="11.5" text-anchor="start" font-weight="normal">position 1's children:</text>
+<text x="560" y="326" class="tm" font-size="11.5" text-anchor="start" font-weight="normal">positions 3 and 4</text>
+</svg>

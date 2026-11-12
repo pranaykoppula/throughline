@@ -35,6 +35,7 @@ Any copy, kept to be faster, safer or closer, is sometimes out of date. The work
 - [Caching](latency/caching.md): every cache is a copy, and the system comes to depend on it.
 - [Replication](data/replication.md): Kwame's replica, and making sure only one copy accepts writes.
 - [Consistency](data/consistency.md): Tom's nine library branches, each with its own catalogue.
+- [Append-only logs](dsa/append-only-logs.md): Teresa's balance, a copy derived from the ledger, which wins whenever they disagree.
 
 ## Where the data is sets the cost
 
@@ -67,6 +68,7 @@ A design that makes one thing cheap usually makes something else dearer: later, 
 - [Serialization formats](data/serialization.md): Jonas's format, which felt free because its cost was deferred.
 - [Sorting](dsa/sorting.md): Margit's order, paid for once so that finding and merging were cheap ever after.
 - [Amortised cost](dsa/amortised-cost.md): Henrike's cheap average, paid for in a pause every two minutes.
+- [Dynamic programming](dsa/dynamic-programming.md): Imelda's table, memory spent so the same question is never answered twice.
 - [4, Data outlives programs](04-data-outlives-programs.md): the first program's shape, paid for by every later one.
 - [Data gravity](data/data-gravity.md): each terabyte raising the price of changing your mind.
 - [Queueing](latency/queueing.md): idle capacity saved, and paid for in other people's waiting.

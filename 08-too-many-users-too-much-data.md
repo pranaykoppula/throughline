@@ -75,6 +75,7 @@ Motif: [copies disagree](motifs.md#copies-disagree).
 - Learning this is also learning [queueing](latency/queueing.md), because the champion's post didn't fail; it waited behind 1.8 million writes, and everyone else waited behind it.
 - Learning this is also learning [hashing](dsa/hashing.md), because splitting data across machines, the step Maya hasn't taken yet, means choosing where each item lives, usually by hashing its key.
 - Learning this is also learning [growth](dsa/growth.md), because the champion's post cost work in proportion to her followers, and nothing at the average size had shown it.
+- Learning this is also learning [exact or approximate](dsa/exact-or-approximate.md), because Maya approximated where exactness cost too much, and that trade has a whole family of tools behind it.
 
 ## Resources
 

@@ -62,6 +62,7 @@ A cache is a copy of data kept closer to where it's needed than the original, be
 - Learning this is also learning [access patterns](../data/access-patterns.md), because caching only works when the same things are read again and again.
 - Learning this is also learning [latency numbers](latency-numbers.md), because the gap between near and far is the whole reason caches exist.
 - Learning this is also learning [queueing](queueing.md), because a stampede is a queue forming all at once at the slowest point in the system.
+- Learning this is also learning [dynamic programming](../dsa/dynamic-programming.md), because memoisation is a cache for computation, with the same question of when to forget.
 
 ## Resources
 
