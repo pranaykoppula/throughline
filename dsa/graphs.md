@@ -56,6 +56,9 @@ A graph is a set of nodes connected by edges, which can have directions and weig
 - Learning this is also learning [Merkle DAGs](merkle-dags.md), because git's history is a graph with no cycles, where each node is named by its content.
 - Learning this is also learning [round trips](../latency/round-trips.md), because routing is choosing paths through a graph of machines, each hop a delay.
 - Learning this is also learning [computability](computability.md), because some graph questions, like the shortest route visiting every city, have no known fast answer at all.
+- Learning this is also learning [dynamic programming](dynamic-programming.md), because a shortest path is built from the shortest paths to the junctions before it.
+- Learning this is also learning [greedy algorithms](greedy.md), because Dijkstra's algorithm is greedy and provably right, while the greedy delivery route isn't.
+- Learning this is also learning [heaps and priority queues](heaps.md), because Dijkstra's algorithm takes the nearest unexplored junction from a priority queue at every step.
 
 ## Resources
 

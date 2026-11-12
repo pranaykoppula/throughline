@@ -669,6 +669,169 @@ def fig_dsa_sorting():
     return f
 
 
+
+def fig_dsa_divide():
+    f = Fig(400, "Finding one bad commit among 400 by halving",
+            "A row of 400 commits. Each of nine steps tests the middle of the commits still in doubt and rules out "
+            "half of them, until one commit is left.")
+    f.heading(30, 32, "Nine builds instead of four hundred", "Each test of the middle commit rules out half of what's left")
+    def tests(c):
+        lo, hi, t = 0, 400, 0
+        while hi - lo > 1:
+            m = (lo + hi) // 2
+            lo, hi = (lo, m) if c < m else (m, hi)
+            t += 1
+        return t
+    culprit = next(c for c in range(280, 400) if tests(c) == 9)
+    x0, w = 120, 560
+    lo, hi, step, y = 0, 400, 0, 72
+    while True:
+        f.text(x0 - 10, y + 14, "start" if step == 0 else f"test {step}", "t", 11.5, "end")
+        f.rect(x0, y, w, 18, "f-faint", 3)
+        f.rect(x0 + lo / 400 * w, y, max((hi - lo) / 400 * w, 2), 18, "f-soft-amber" if hi - lo > 1 else "f-warn", 3)
+        f.text(x0 + w + 8, y + 14, f"{hi - lo} left", "tm", 11)
+        if hi - lo <= 1:
+            break
+        mid = (lo + hi) // 2
+        f.line(x0 + mid / 400 * w, y + 22, x0 + mid / 400 * w, y + 30, "ink", 1.2)
+        if culprit < mid:
+            hi = mid
+        else:
+            lo = mid
+        step += 1
+        y += 30
+    f.text(30, 392, "Commit positions are illustrative. 400 commits always take at most 9 tests, because 2⁹ = 512.",
+           "tm", 11.5, italic=True)
+    return f
+
+
+def fig_dsa_dp():
+    a, b = "ABCBDAB", "BDCABA"
+    n, m = len(a), len(b)
+    t = [[0] * (m + 1) for _ in range(n + 1)]
+    for i in range(1, n + 1):
+        for j in range(1, m + 1):
+            t[i][j] = t[i - 1][j - 1] + 1 if a[i - 1] == b[j - 1] else max(t[i - 1][j], t[i][j - 1])
+    path, i, j = set(), n, m
+    while i and j:
+        path.add((i, j))
+        if a[i - 1] == b[j - 1]:
+            i, j = i - 1, j - 1
+        elif t[i - 1][j] >= t[i][j - 1]:
+            i -= 1
+        else:
+            j -= 1
+    common = "".join(a[i - 1] for (i, j) in sorted(path) if a[i - 1] == b[j - 1] and t[i][j] == t[i - 1][j - 1] + 1)
+    f = Fig(450, "A table of answers to smaller questions",
+            "A table comparing two short words letter by letter, one along the top and one down the side. Each cell "
+            "holds the length of the longest common run of letters for those two prefixes. A highlighted path runs "
+            "from the bottom-right corner back to the top-left, marking the letters the two words share.")
+    f.heading(30, 32, "The longest run two sequences share, in order",
+              f"{a} against {b}: each cell answers one smaller question, once")
+    cw, x0, y0 = 40, 90, 80
+    for j in range(m + 1):
+        f.text(x0 + (j + 1) * cw + cw / 2, y0 + 16, b[j - 1] if j else "–", "t", 13, "middle", "600")
+    for i in range(n + 1):
+        f.text(x0 + cw / 2, y0 + (i + 1) * 36 + 22, a[i - 1] if i else "–", "t", 13, "middle", "600")
+        for j in range(m + 1):
+            x, y = x0 + (j + 1) * cw, y0 + (i + 1) * 36
+            on = (i, j) in path
+            match = on and i and j and a[i - 1] == b[j - 1] and t[i][j] == t[i - 1][j - 1] + 1
+            f.rect(x + 1, y + 1, cw - 2, 34, "f-ok" if match else "f-soft-ok" if on else "f-faint", 3)
+            f.text(x + cw / 2, y + 22, str(t[i][j]), "t", 12.5, "middle", "600" if on else "normal")
+    tx = x0 + (m + 2) * cw + 30
+    f.text(tx, 120, "How each cell is filled:", "t", 12.5, "start", "600")
+    for k, line in enumerate(["If the two letters match:", "  the cell up and to the left, plus one.",
+                              "If they don't:", "  the larger of the cell above", "  and the cell to the left.",
+                              "", f"Bottom-right: {t[n][m]}, the length of", f"the common run, here \"{common}\"."]):
+        f.text(tx, 144 + k * 19, line, "tm", 12)
+    return f
+
+
+def fig_dsa_greedy():
+    r = Rng(208)
+    pts = [(0.5, 0.5)] + [(r.next(), r.next()) for _ in range(12)]
+
+    def dist(p, q):
+        return math.hypot(p[0] - q[0], p[1] - q[1])
+
+    def length(route):
+        return sum(dist(pts[route[k]], pts[route[(k + 1) % len(route)]]) for k in range(len(route)))
+    route, left = [0], set(range(1, len(pts)))
+    while left:
+        nxt = min(left, key=lambda k: dist(pts[route[-1]], pts[k]))
+        route.append(nxt)
+        left.remove(nxt)
+    greedy = route[:]
+    improved = True
+    while improved:
+        improved = False
+        for i in range(1, len(route) - 1):
+            for j in range(i + 1, len(route)):
+                cand = route[:i] + route[i:j + 1][::-1] + route[j + 1:]
+                if length(cand) < length(route) - 1e-9:
+                    route, improved = cand, True
+    f = Fig(400, "A nearest-first route, and the same route with its crossings removed",
+            "Two delivery routes through the same twelve stops. Left: the nearest-stop route, efficient at first "
+            "and then crossing back over itself with long final legs. Right: the same route after removing every "
+            "crossing, shorter, with no legs crossing.")
+    gl, il = length(greedy), length(route)
+    for side, (x0, title, rt, colour) in enumerate([
+            (30, "Nearest stop first", greedy, "warn"), (400, "Then remove every crossing", route, "ok")]):
+        f.heading(x0, 32, title, f"Route length: {100 * length(rt) / il:.0f}" + (" (the improved route is 100)" if side == 0 else ""))
+        def xy(k):
+            return x0 + 20 + pts[k][0] * 300, 70 + pts[k][1] * 290
+        d = "M " + " L ".join(f"{num(xy(k)[0])} {num(xy(k)[1])}" for k in rt + [rt[0]])
+        f.path(d, colour, 2)
+        for k in range(len(pts)):
+            x, y = xy(k)
+            if k == 0:
+                f.rect(x - 7, y - 7, 14, 14, "f-ink", 2)
+            else:
+                f.circle(x, y, 5, "f-accent")
+        x, y = xy(0)
+        f.text(x + 10, y - 8, "depot", "tm", 11)
+    f.text(30, 390, f"Computed from the same twelve randomly placed stops; the greedy route is {100 * (gl / il - 1):.0f}% longer.",
+           "tm", 11.5, italic=True)
+    return f
+
+
+def fig_dsa_heaps():
+    vals = [3, 8, 5, 12, 9, 7, 15, 20, 14, 11]
+    f = Fig(390, "A heap as a tree and as an array",
+            "A heap of timers drawn two ways: as a tree, with the soonest-due timer at the top and every timer due no "
+            "later than the ones below it, and as the array it's actually stored in, with arrows showing that each "
+            "item's children sit at twice its position and one more.")
+    f.heading(30, 32, "Seconds until each timer is due", "Every timer is due no later than the ones below it")
+    pos = {}
+    for i, v in enumerate(vals):
+        level = int(math.log2(i + 1))
+        idx = i - (2 ** level - 1)
+        span = 680 / (2 ** level)
+        pos[i] = (40 + span * idx + span / 2, 80 + level * 52)
+    for i in range(len(vals)):
+        for c in (2 * i + 1, 2 * i + 2):
+            if c < len(vals):
+                f.line(pos[i][0], pos[i][1], pos[c][0], pos[c][1], "line", 1.4)
+    for i, v in enumerate(vals):
+        x, y = pos[i]
+        f.circle(x, y, 17, "f-ok" if i == 0 else "f-soft-accent")
+        f.text(x, y + 5, str(v), "t", 13, "middle", "600")
+    f.text(400, 72, "the next to fire", "t", 11.5, "start")
+    y = 290
+    f.text(30, y + 76, "Stored as an array: the children of position i are at 2i + 1 and 2i + 2", "tm", 12)
+    for i, v in enumerate(vals):
+        x = 30 + i * 52
+        f.rect(x, y, 48, 30, "f-ok" if i == 0 else "f-soft-accent", 4)
+        f.text(x + 24, y + 20, str(v), "t", 13, "middle", "600")
+        f.text(x + 24, y + 46, str(i), "tm", 11, "middle")
+    f.path(f"M {30 + 1 * 52 + 24} {y} Q {30 + 2.2 * 52} {y - 40} {30 + 3 * 52 + 24} {y - 2}", "accent", 1.4, arrow=True)
+    f.path(f"M {30 + 1 * 52 + 24} {y} Q {30 + 2.7 * 52} {y - 52} {30 + 4 * 52 + 24} {y - 2}", "accent", 1.4, arrow=True)
+    f.text(560, y + 20, "position 1's children:", "tm", 11.5)
+    f.text(560, y + 36, "positions 3 and 4", "tm", 11.5)
+    return f
+
+
 FIGURES = {
     "00-representations": fig00, "01-one-machine-one-program": fig01, "02-one-machine-many-programs": fig02,
     "03-programs-too-big-for-one-head": fig03, "04-data-outlives-programs": fig04,
@@ -677,6 +840,8 @@ FIGURES = {
     "10-many-people-one-codebase": fig10, "11-software-that-must-not-go-down": fig11,
     "12-machines-that-learn-from-data": fig12, "13-everything-still-exists-at-once": fig13,
     "dsa-growth": fig_dsa_growth, "dsa-amortised-cost": fig_dsa_amortised, "dsa-sorting": fig_dsa_sorting,
+    "dsa-divide-and-conquer": fig_dsa_divide, "dsa-dynamic-programming": fig_dsa_dp,
+    "dsa-greedy": fig_dsa_greedy, "dsa-heaps": fig_dsa_heaps,
 }
 
 

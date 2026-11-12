@@ -12,7 +12,7 @@ Ask what you'll do to the data most often, in the words you'd use for it. Each o
 | --- | --- | --- | --- |
 | "Give me the item with this key" | A hash table | One step, however many items there are | [Hash tables](hash-tables.md), [hashing](hashing.md) |
 | "Give me everything between these two values", or "the next one in order" | A sorted array, or a tree such as a B-tree | Order lets you jump to the start of a range and walk from there | [Sorting](sorting.md), [B-trees](b-trees.md) |
-| "What's the most urgent thing now?" | A heap, as a priority queue | It always keeps the smallest (or largest) on top, cheaply | [Queues](queues.md), [sorting](sorting.md) |
+| "What's the most urgent thing now?" | A heap, as a priority queue | It always keeps the smallest (or largest) on top, cheaply | [Heaps and priority queues](heaps.md) |
 | "What's next, in the order things arrived?" | A queue | First in, first out, with room to decide what happens when it's full | [Queues](queues.md) |
 | "Undo the last thing", or "where was I before this?" | A stack | Last in, first out, which is how nesting and backtracking work | [Power and predictability](power-and-predictability.md) |
 | "What's connected to what?" | A graph | Things and the links between them, and questions like "can I get from here to there?" | [Graphs](graphs.md) |
@@ -30,6 +30,17 @@ The question above picks a family. These pick between its members, and they're w
 2. **How often is it written, compared with read?** Structures that make reads cheap usually make writes dearer, and the reverse ([access patterns](../data/access-patterns.md), [LSM trees](lsm-trees.md)).
 3. **Where does it live?** In memory, on one disk, or across a network, the cost of a step changes by factors of thousands, and the best structure changes with it ([B-trees](b-trees.md), [latency numbers](../latency/latency-numbers.md)).
 4. **What's the worst moment, and who's waiting for it?** An excellent average can hide an occasional disaster, and an attacker can choose the input that causes it ([amortised cost](amortised-cost.md), [hashing](hashing.md)).
+
+## And for computing an answer
+
+Structures hold data; these are the main ways of working out an answer from it.
+
+| If the problem… | Try | Read |
+| --- | --- | --- |
+| Splits into smaller, separate problems of the same kind | Divide and conquer | [Divide and conquer](divide-and-conquer.md) |
+| Splits into smaller problems that keep recurring | Dynamic programming: solve each once and remember it | [Dynamic programming](dynamic-programming.md) |
+| Lets the best step now never block a better one later | A greedy algorithm | [Greedy algorithms](greedy.md) |
+| Has no fast exact method at all | A greedy start, then improvements, or an approximation | [Greedy algorithms](greedy.md), [computability](computability.md) |
 
 ## And remember
 

@@ -68,6 +68,7 @@ Motif: [layers hide things, until they leak](motifs.md#layers-hide-things-until-
 - Learning this is also learning [access patterns](data/access-patterns.md), because the catalogue was asked one question over and over, and the right structure followed from that question.
 - Learning this is also learning [profiling](tooling/profiling.md), because Elena was sure the sort was slow, and measurement said it was four percent.
 - Learning this is also learning [meaning as use](info/meaning-as-use.md), because an abstraction's real interface is everything its users can observe, not only what it documents.
+- Learning this is also learning [divide and conquer](dsa/divide-and-conquer.md), because dividing a system among people is the same move as dividing a problem: split so the pieces are independent, and know how they combine.
 
 ## Resources
 
