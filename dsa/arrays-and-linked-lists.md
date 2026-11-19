@@ -18,6 +18,10 @@ The game ran fine with a few hundred particles. In the big battle scenes, with t
 
 She rewrote it as a plain array of particles, stored side by side. To remove a dead particle, she copied the last particle into its place and shrank the count by one. That was cheap, at the price of not keeping the particles in order, which didn't matter for sparks. Walking the array now read memory in a straight line, and the processor fetched the next particles before they were needed. The update ran about eight times faster. Then she went further and split the particles' fields into separate arrays, all positions together and all colours together, because the movement step only touched positions. Another doubling.
 
+![Memory drawn as a row of cells. Top: six particles of a linked list, each allocated wherever memory was free, so walking from one to the next jumps back and forth across memory, and almost every jump misses the cache. Bottom: the same particles in an array, side by side, read in one straight line, with each fetch from memory bringing several particles at once.](../images/figures/dsa-arrays-and-linked-lists.svg)
+
+*The textbook counts steps; the machine charges for distance, and an array keeps every step short.*
+
 Looking back, Marta thought the textbook had been right about what it measured: the number of steps. On her machine, what a step cost depended entirely on where the data was. An array's data was together. A linked list's data was wherever it happened to land.
 
 ## Where it shows up
