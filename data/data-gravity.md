@@ -25,8 +25,8 @@ Looking back, Imogen thought the first decision hadn't been wrong. Putting every
 | Page | The heavy data | What it pulled towards it |
 | --- | --- | --- |
 | [9, Buying computers is too slow](../09-buying-computers-is-too-slow.md) | Tariq's two petabytes of video | The cost of leaving, built in all along; and his own customers, kept by years of recorded lessons. |
-| [Reading a cloud bill](../cost/cloud-bills.md) | Data transfer out | Usually the line nobody expected, and the price of moving data anywhere else. |
-| [Storage tiers](../cost/storage-tiers.md) | Petabytes in one store | The more there is, the more each move, between tiers or providers, costs. |
+| [Reading a cloud bill](../economics/cloud-bills.md) | Data transfer out | Usually the line nobody expected, and the price of moving data anywhere else. |
+| [Storage tiers](../economics/storage-tiers.md) | Petabytes in one store | The more there is, the more each move, between tiers or providers, costs. |
 | [Forces: switching costs](../forces.md#switching-costs-and-lock-in) | Any data a customer has built up | The moat seen from the vendor's side; the migration tax from the customer's. |
 
 It shows up elsewhere too: analytics teams moving their tools into the data warehouse, rather than exporting from it; companies choosing a cloud region because their biggest dataset is already there; and the long life of old databases nobody can afford to move.
@@ -52,11 +52,11 @@ Data gravity is the tendency of large datasets to be costly and slow to move, so
 
 ## Connections
 
-- Learning this is also learning [storage tiers](../cost/storage-tiers.md), because the size that makes data heavy is also what makes it expensive to store.
-- Learning this is also learning [reading a cloud bill](../cost/cloud-bills.md), because data transfer out is where gravity shows up as money.
+- Learning this is also learning [storage tiers](../economics/storage-tiers.md), because the size that makes data heavy is also what makes it expensive to store.
+- Learning this is also learning [reading a cloud bill](../economics/cloud-bills.md), because data transfer out is where gravity shows up as money.
 - Learning this is also learning [serialization formats](serialization.md), because data in an open format is lighter: more tools can read it where it is.
 - Learning this is also learning [migrations](migrations.md), because moving heavy data is the hardest kind of migration.
-- Learning this is also learning [managed services](../vendors/managed-services.md), because every service built next to your data adds to its pull.
+- Learning this is also learning [managed services](../economics/managed-services.md), because every service built next to your data adds to its pull.
 
 ## Resources
 

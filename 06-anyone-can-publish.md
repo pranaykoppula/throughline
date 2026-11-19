@@ -60,13 +60,15 @@ Motif: [copies disagree](motifs.md#copies-disagree).
 ## Connections
 
 - Learning this is also learning [networking](05-machines-need-to-talk.md), because HTTP is the contract between client and server, and every click is a round trip.
-- Learning this is also learning [input validation](auth/input-validation.md), because the client is untrusted by definition: anyone can change what their browser sends.
+- Learning this is also learning [input validation](security/input-validation.md), because the client is untrusted by definition: anyone can change what their browser sends.
 - Learning this is also learning [cursor pagination](data/pagination.md), because infinite feeds needed a way to page through data that changes underneath you, and page numbers couldn't do it.
-- Learning this is also learning [JavaScript](runtimes/javascript.md), because it won by shipping in the only browser that mattered, not by design.
+- Learning this is also learning [JavaScript](languages/javascript.md), because it won by shipping in the only browser that mattered, not by design.
 - Learning this is also learning [forces](forces.md#distribution-and-platform-power), because whoever controls the path to users decides what you have to build.
 - Learning this is also learning [consistency](data/consistency.md), because the double booking was two copies of the truth disagreeing, the same problem Maya met with read replicas on [page 8](08-too-many-users-too-much-data.md).
-- Learning this is also learning [round trips](latency/round-trips.md), because every page reload was a round trip, and Ajax was a way to make fewer and smaller ones.
+- Learning this is also learning [round trips](performance/round-trips.md), because every page reload was a round trip, and Ajax was a way to make fewer and smaller ones.
 - Learning this is also learning [state machines](dsa/state-machines.md), because a booking is free, held or booked, and the double booking was a move the server should never have allowed.
+- Learning this is also learning [tries](dsa/tries.md), because Google Suggest, one of the examples that gave Ajax its name, answered each keystroke with the searches starting with what you'd typed, which is the question a trie is built for.
+- Learning this is also learning [designed for human senses](signals/perception.md), because the client owns what's on the screen, and what a screen needs to show is set by people's eyes as much as by the data.
 
 ## Resources
 

@@ -58,8 +58,8 @@ A B-tree is a balanced search tree whose nodes each hold many keys, sized to mat
 
 - Learning this is also learning [hash tables](hash-tables.md), because they make the opposite trade: faster single lookups, no order.
 - Learning this is also learning [LSM trees](lsm-trees.md), because they give up some read speed for much cheaper writes.
-- Learning this is also learning [latency numbers](../latency/latency-numbers.md), because the gap between memory and disk is the whole reason for the shape.
-- Learning this is also learning [storage tiers](../cost/storage-tiers.md), because a B-tree is a small fast path into a large slow tier.
+- Learning this is also learning [latency numbers](../performance/latency-numbers.md), because the gap between memory and disk is the whole reason for the shape.
+- Learning this is also learning [storage tiers](../economics/storage-tiers.md), because a B-tree is a small fast path into a large slow tier.
 - Learning this is also learning [access patterns](../data/access-patterns.md), because whether an index helps depends on the queries actually run.
 - Learning this is also learning [sorting](sorting.md), because an index is order kept up to date as the data changes.
 

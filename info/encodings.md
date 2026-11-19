@@ -64,7 +64,7 @@ An encoding is a convention mapping meanings to bytes: characters to numbers (ch
 - Learning this is also learning [information](information.md), because an encoding is a codebook, and data means nothing to someone who doesn't share it.
 - Learning this is also learning [serialization formats](../data/serialization.md), because a format is a set of encodings agreed between two programs, and anything left unagreed is a bug waiting.
 - Learning this is also learning [designed for human senses](../signals/perception.md), because pixel values are encoded too, in a colour space recorded in a profile.
-- Learning this is also learning [input validation](../auth/input-validation.md), because text should be decoded and normalised before it's checked, or two spellings of the same thing get different answers.
+- Learning this is also learning [input validation](../security/input-validation.md), because text should be decoded and normalised before it's checked, or two spellings of the same thing get different answers.
 - Learning this is also learning [tokens and context windows](../ai/tokens.md), because language models read text as tokens built from encoded bytes, and the encoding shapes what a token can be.
 
 ## Resources

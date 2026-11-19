@@ -29,7 +29,7 @@ Looking back, Yusuf thought "fair" had been the wrong word for what he'd built. 
 | [2, One machine, many programs](../02-one-machine-many-programs.md) | Jobs waiting for the processor | The scheduler, with a clock so no job can keep the processor forever. |
 | [5, Machines need to talk](../05-machines-need-to-talk.md) | Packets in a router's buffer | First in, first out, until the buffer fills and packets are dropped. |
 | [8, Too many users, too much data](../08-too-many-users-too-much-data.md) | Feed updates behind the champion's post | One huge job at the front held up everyone, Yusuf's newsletter at a different scale. |
-| [Queueing](../latency/queueing.md) | Every line, anywhere | How long the wait is depends on how busy the server is; this page is about the order. |
+| [Queueing](../performance/queueing.md) | Every line, anywhere | How long the wait is depends on how busy the server is; this page is about the order. |
 
 It shows up elsewhere too: message brokers between services, print queues, breadth-first search in graphs, and the "please hold" line at a call centre.
 
@@ -49,16 +49,16 @@ A queue is a data structure where items are added at one end and removed from th
 
 - **One queue for everything.** Urgent and bulk work in the same line, so the urgent waits for the bulk.
 - **Strict priority with no floor.** Low-priority work that never runs while higher-priority work keeps arriving, called starvation.
-- **Unbounded queues.** A queue with no limit hides overload until it runs out of memory ([queueing](../latency/queueing.md)).
+- **Unbounded queues.** A queue with no limit hides overload until it runs out of memory ([queueing](../performance/queueing.md)).
 - **The mirror:** an elaborate priority scheme for a queue that's never more than a few items long. If it drains in a second, first in, first out is fine.
 
 ## Connections
 
-- Learning this is also learning [queueing](../latency/queueing.md), because how long a line gets depends on how busy the server is, whatever the order.
+- Learning this is also learning [queueing](../performance/queueing.md), because how long a line gets depends on how busy the server is, whatever the order.
 - Learning this is also learning [graphs](graphs.md), because breadth-first search is a queue of places to visit next.
-- Learning this is also learning [event loops and threads](../runtimes/event-loops-and-threads.md), because an event loop is a queue of ready work and a rule for taking from it.
-- Learning this is also learning [round trips](../latency/round-trips.md), because a message queue between services turns waiting for a reply into waiting in line.
-- Learning this is also learning [least privilege](../auth/least-privilege.md), because giving each customer their own line is limiting how much of the system any one of them can take.
+- Learning this is also learning [event loops and threads](../languages/event-loops-and-threads.md), because an event loop is a queue of ready work and a rule for taking from it.
+- Learning this is also learning [round trips](../performance/round-trips.md), because a message queue between services turns waiting for a reply into waiting in line.
+- Learning this is also learning [least privilege](../security/least-privilege.md), because giving each customer their own line is limiting how much of the system any one of them can take.
 - Learning this is also learning [sorting](sorting.md), because a priority queue is usually a heap, the same structure heapsort uses.
 - Learning this is also learning [greedy algorithms](greedy.md), because serving the shortest job next is a greedy rule that's good on average and unfair at the edges.
 - Learning this is also learning [heaps and priority queues](heaps.md), because a priority queue is usually a heap underneath.

@@ -68,14 +68,16 @@ Motif: [copies disagree](motifs.md#copies-disagree).
 
 - Learning this is also learning [consistency](data/consistency.md), because every copy is a second version of the truth and someone has to decide what to promise while they disagree.
 - Learning this is also learning [databases](04-data-outlives-programs.md), because replication and sharding are indexes and transactions stretched across machines.
-- Learning this is also learning [caching](latency/caching.md), because precomputing spends money at write time to save time at read time, and every cache is a copy that can go stale.
+- Learning this is also learning [caching](performance/caching.md), because precomputing spends money at write time to save time at read time, and every cache is a copy that can go stale.
 - Learning this is also learning [the web](06-anyone-can-publish.md), because the feed is an interface expectation that rebuilt the backend ([forces](forces.md#user-expectation-ratchets)).
 - Learning this is also learning [distributions and percentiles](math/percentiles.md), because the design broke on the tail of a distribution, not its average.
 - Learning this is also learning [access patterns](data/access-patterns.md), because fifty reads for every write is what made precomputing feeds the right call.
-- Learning this is also learning [queueing](latency/queueing.md), because the champion's post didn't fail; it waited behind 1.8 million writes, and everyone else waited behind it.
+- Learning this is also learning [queueing](performance/queueing.md), because the champion's post didn't fail; it waited behind 1.8 million writes, and everyone else waited behind it.
 - Learning this is also learning [hashing](dsa/hashing.md), because splitting data across machines, the step Maya hasn't taken yet, means choosing where each item lives, usually by hashing its key.
 - Learning this is also learning [growth](dsa/growth.md), because the champion's post cost work in proportion to her followers, and nothing at the average size had shown it.
 - Learning this is also learning [exact or approximate](dsa/exact-or-approximate.md), because Maya approximated where exactness cost too much, and that trade has a whole family of tools behind it.
+- Learning this is also learning [replication](data/replication.md), because the post that vanished and came back was Maya's read copies running behind the original.
+- Learning this is also learning [partitioning](data/partitioning.md), because splitting the data across machines is the step Maya hadn't taken yet, and it brings problems of its own.
 
 ## Resources
 

@@ -27,7 +27,7 @@ Looking back, Kofi thought he'd built a system that answered the question "is th
 | Page | What was observed | What wasn't |
 | --- | --- | --- |
 | [11, Software that must not go down](../11-software-that-must-not-go-down.md) | Whether each server was up | Whether anyone could buy a ticket, until Rosa built a robot that tried every minute. |
-| [Labels and training data](../data/labels.md) | What raters had ten seconds to judge | The hard cases, and the dialects the raters didn't know. |
+| [Labels and training data](../ai/labels.md) | What raters had ten seconds to judge | The hard cases, and the dialects the raters didn't know. |
 | [12, Machines that learn from data](../12-machines-that-learn-from-data.md) | Spam that users reported | Spam nobody bothered to report, and newsletters reported for the wrong reason. |
 | [Distributions and percentiles](../math/percentiles.md) | Overall averages | The small group whose experience was completely different. |
 | [Statistical significance](../math/statistics.md) | Two days of a button test | Every other day of the week, and the noise that would have shown up given time. |
@@ -61,7 +61,7 @@ Observation is always sampling: of time (how often you look), of space (where th
 - Learning this is also learning [information](information.md), because a reading only tells you something if it rules out possibilities, and a missing reading rules out nothing.
 - Learning this is also learning [compression](compression.md), because sampling is lossy compression of the world, decided before anyone knew what would matter.
 - Learning this is also learning [distributions and percentiles](../math/percentiles.md), because averages and slices are only as good as the sample beneath them.
-- Learning this is also learning [labels and training data](../data/labels.md), because a model learns only from what someone chose to record.
+- Learning this is also learning [labels and training data](../ai/labels.md), because a model learns only from what someone chose to record.
 - Learning this is also learning [statistical significance](../math/statistics.md), because a biased sample produces confident answers to the wrong question.
 - Learning this is also learning [sampling and aliasing](../signals/sampling.md), because sampling too slowly doesn't just leave gaps; it can draw a pattern that isn't there.
 - Learning this is also learning [state estimation](../signals/state-estimation.md), because when a sensor goes quiet, the honest response is to grow less certain, not to keep its last reading.

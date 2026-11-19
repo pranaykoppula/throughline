@@ -26,6 +26,7 @@ Looking back, Joaquín thought the filter had never lied about "no". Its "yes" h
 
 | Page | The cheap first test | What it was trusted with |
 | --- | --- | --- |
+| [4, Data outlives programs](../04-data-outlives-programs.md) | Lookups in stores that write all day | Skipping files that can't hold the key, without reading them. |
 | [LSM trees](lsm-trees.md) | Neha's filter on each file of sorted keys | Ruling files out, so a read checks only the few that might hold the key; a "maybe" still means reading the file. |
 | [Computability](computability.md) | Viktor's virus scanner | Living with an imperfect test: antivirus accepts false alarms and misses as the price of answering at all. |
 | [Sampling and observation](../info/observation.md) | Kofi's dashboard | The cost of a silent failure: skipped pages, like a dead sensor, raised no alarm until someone looked. |
@@ -57,7 +58,7 @@ A Bloom filter is a bit array with several hash functions. Adding an item sets t
 
 - Learning this is also learning [hashing](hashing.md), because a filter is several hashes of each key, packed into one shared array of bits.
 - Learning this is also learning [LSM trees](lsm-trees.md), because a filter per file is what keeps their reads fast.
-- Learning this is also learning [caching](../latency/caching.md), because both keep something small in memory to avoid slow reads, but a cache remembers answers and a filter only remembers what's certainly absent.
+- Learning this is also learning [caching](../performance/caching.md), because both keep something small in memory to avoid slow reads, but a cache remembers answers and a filter only remembers what's certainly absent.
 - Learning this is also learning [observation](../info/observation.md), because a filter that's filling up fails silently, and only a measurement you set up will show it.
 - Learning this is also learning [statistical significance](../math/statistics.md), because false positives and false negatives are a trade-off you choose, and the right balance depends on what each mistake costs.
 - Learning this is also learning [exact or approximate](exact-or-approximate.md), because a Bloom filter is one of a family of small summaries that trade certainty for space.

@@ -27,7 +27,7 @@ Looking back, Oskar thought floating point had never been wrong. It did exactly 
 | Page | The numbers | What went wrong, or right |
 | --- | --- | --- |
 | [0, Representations](../00-representations.md) | The Vancouver index and the Patriot clock | Tiny errors in representing tenths, accumulated until they mattered enormously. |
-| [JavaScript](../runtimes/javascript.md) | Every number in the language | `0.1 + 0.2` is `0.30000000000000004`, and Zara's prices came out as `59.99000000000001`. |
+| [JavaScript](../languages/javascript.md) | Every number in the language | `0.1 + 0.2` is `0.30000000000000004`, and Zara's prices came out as `59.99000000000001`. |
 | [Number systems](number-systems.md) | Fixed-width numbers | Floating point is one choice of how to spend a fixed number of bits. |
 | [Computability](../dsa/computability.md) | Representations with edges | Every way of writing numbers down stops being exact somewhere. |
 
@@ -55,7 +55,7 @@ Floating-point numbers store a sign, a fixed number of significant binary digits
 ## Connections
 
 - Learning this is also learning [number systems](number-systems.md), because floating point is one way to spend a fixed number of bits.
-- Learning this is also learning [JavaScript](../runtimes/javascript.md), because every number in it is a float.
+- Learning this is also learning [JavaScript](../languages/javascript.md), because every number in it is a float.
 - Learning this is also learning [statistical significance](statistics.md), because numerical error is one more source of noise in results.
 - Learning this is also learning [data modelling](../data/modelling.md), because choosing the type of each field, including money, is a modelling decision.
 - Learning this is also learning [computability](../dsa/computability.md), because representations having edges is the theme of page 0.

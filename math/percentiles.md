@@ -30,7 +30,7 @@ Looking back, Leo thought the average had been an honest number that answered th
 | --- | --- | --- |
 | [8, Too many users, too much data](../08-too-many-users-too-much-data.md) | Followers per account | The average account was fine for precomputed feeds. The champion, far out in the tail, broke them. |
 | [11, Software that must not go down](../11-software-that-must-not-go-down.md) | Checkout success by customer group | 99.95% overall hid customers in Brazil, on one card, on Android, all failing. |
-| [Queueing](../latency/queueing.md) | Waiting times near full capacity | The average wait looked acceptable while the unluckiest waited minutes. |
+| [Queueing](../performance/queueing.md) | Waiting times near full capacity | The average wait looked acceptable while the unluckiest waited minutes. |
 
 It shows up elsewhere too: response times on every dashboard, file sizes, how many items customers buy, and how often each key in a cache is read.
 
@@ -55,11 +55,11 @@ A distribution is the full spread of values something takes. A percentile is a p
 
 ## Connections
 
-- Learning this is also learning [queueing](../latency/queueing.md), because queues are what turn small variations into long tails.
+- Learning this is also learning [queueing](../performance/queueing.md), because queues are what turn small variations into long tails.
 - Learning this is also learning [statistical significance](statistics.md), because telling a real difference from noise is the next question after "what does the distribution look like?"
 - Learning this is also learning [hashing](../dsa/hashing.md), because skewed keys are a long tail too, and they decide where hot spots form.
-- Learning this is also learning [profiling](../tooling/profiling.md), because a profile of averages can hide the slow cases users feel.
-- Learning this is also learning [round trips](../latency/round-trips.md), because the more calls a page waits on, the more it pays for each one's tail.
+- Learning this is also learning [profiling](../performance/profiling.md), because a profile of averages can hide the slow cases users feel.
+- Learning this is also learning [round trips](../performance/round-trips.md), because the more calls a page waits on, the more it pays for each one's tail.
 - Learning this is also learning [compression](../info/compression.md), because an average is lossy compression of a distribution, and what it discards is the tail.
 - Learning this is also learning [amortised cost](../dsa/amortised-cost.md), because the occasional expensive operation lives in the tail, where the average doesn't look.
 - Learning this is also learning [exact or approximate](../dsa/exact-or-approximate.md), because percentiles over large streams are almost always estimated from compact summaries.

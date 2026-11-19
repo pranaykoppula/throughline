@@ -28,10 +28,11 @@ Looking back, Zainab thought every number in an image had already been shaped by
 
 | Page | The format | What it was designed around |
 | --- | --- | --- |
+| [6, Anyone can publish](../06-anyone-can-publish.md) | What the client puts on the screen | People's eyes, as much as the data behind it. |
 | [Compression](../info/compression.md) | JPEG and MP3 | Discarding what eyes and ears are least sensitive to: lossy compression with a good model of its receiver. |
 | [Sampling and aliasing](sampling.md) | The CD's 44,100 samples a second | Just over twice the highest pitch people hear. |
 | [Floating-point](../math/floating-point.md) | Numbers with more precision near zero | The same idea as gamma: spend the limited values where the differences matter. |
-| [Labels and training data](../data/labels.md) | What raters judged in ten seconds | Human perception as the measuring instrument, with its own blind spots. |
+| [Labels and training data](../ai/labels.md) | What raters judged in ten seconds | Human perception as the measuring instrument, with its own blind spots. |
 
 It shows up elsewhere too: screens with red, green and blue sub-pixels because people have three kinds of colour receptor, film and video at 24 to 60 pictures a second because that's enough to see motion, decibels measured on a scale that follows how loudness is perceived, contrast rules for accessible text, and the "night mode" that shifts screens away from blue.
 
@@ -61,7 +62,7 @@ Formats for images, video and sound encode values according to human perception,
 - Learning this is also learning [compression](../info/compression.md), because lossy formats succeed by modelling what people notice, and fail when the model is wrong.
 - Learning this is also learning [sampling](sampling.md), because the sample rate and bit depth of every output format were chosen from human limits.
 - Learning this is also learning [floating-point](../math/floating-point.md), because both spend a limited supply of values unevenly, where the differences matter most.
-- Learning this is also learning [labels and training data](../data/labels.md), because a model of human perception can be trained or calibrated on too narrow a group, and inherit its blind spots.
+- Learning this is also learning [labels and training data](../ai/labels.md), because a model of human perception can be trained or calibrated on too narrow a group, and inherit its blind spots.
 - Learning this is also learning [encodings](../info/encodings.md), because a colour profile is an encoding, and throwing it away is decoding with the wrong codebook.
 
 ## Resources

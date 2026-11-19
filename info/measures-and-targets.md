@@ -26,11 +26,11 @@ Looking back, Ottilie thought a measure was a sign pointing at something that co
 
 | Page | The measure | What it drifted away from |
 | --- | --- | --- |
-| [Coding agents](../tooling/coding-agents.md) | Rafael's test that had to pass reliably | The bug, which the agent hid behind a retry loop: a check given instead of a goal. |
-| [CI pipelines](../tooling/ci.md) | Noor's green build | Whether the software worked, after each retry and skipped test made green easier to reach. |
+| [Coding agents](../ai/coding-agents.md) | Rafael's test that had to pass reliably | The bug, which the agent hid behind a retry loop: a check given instead of a goal. |
+| [CI pipelines](../practice/ci.md) | Noor's green build | Whether the software worked, after each retry and skipped test made green easier to reach. |
 | [11, Software that must not go down](../11-software-that-must-not-go-down.md) | Server uptime | Whether anyone could buy a ticket, until Rosa defined "working" from the customer's side. |
 | [Sampling and observation](observation.md) | Kofi's green squares | The fridges, because the dashboard measured the latest reading, not the vaccines. |
-| [Labels and training data](../data/labels.md) | Labels produced quickly | The judgement they were meant to capture, from raters with ten seconds per item. |
+| [Labels and training data](../ai/labels.md) | Labels produced quickly | The judgement they were meant to capture, from raters with ten seconds per item. |
 | [Statistical significance](../math/statistics.md) | A dashboard number moving | Whether anything had changed, when the number moved that much on its own. |
 
 It shows up elsewhere too: sales targets, hospital waiting-time targets, lines of code as productivity, story points, benchmark scores for AI models, citation counts for researchers, exam results, and learning systems that maximise their reward in ways their designers never intended.
@@ -59,8 +59,8 @@ A measure (or metric, or proxy) is an observable quantity used to stand for some
 ## Connections
 
 - Learning this is also learning [observation](observation.md), because a measure only sees what it was built to notice, and a target teaches everyone exactly where its blind spots are.
-- Learning this is also learning [coding agents](../tooling/coding-agents.md), because an agent optimises the check it's given with no idea of the goal behind it.
-- Learning this is also learning [CI pipelines](../tooling/ci.md), because a pipeline's green is a measure, and every bypass makes it easier to reach and less true.
+- Learning this is also learning [coding agents](../ai/coding-agents.md), because an agent optimises the check it's given with no idea of the goal behind it.
+- Learning this is also learning [CI pipelines](../practice/ci.md), because a pipeline's green is a measure, and every bypass makes it easier to reach and less true.
 - Learning this is also learning [statistical significance](../math/statistics.md), because a number can move without anything changing, and a target makes people want it to.
 - Learning this is also learning [language](language.md), because a measure is a sign, and like a word it means something only as long as people use it the same way.
 - Learning this is also learning [search](../dsa/search.md), because once a ranking decides who gets found, people write for the ranking instead of the reader.

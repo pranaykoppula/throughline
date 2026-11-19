@@ -29,7 +29,7 @@ Looking back, Hamza thought page numbers had come from printed books, where page
 | [6, Anyone can publish](../06-anyone-can-publish.md) | Infinite feeds | A way to page through data that changes underneath you; page numbers couldn't do it. |
 | [8, Too many users, too much data](../08-too-many-users-too-much-data.md) | Maya's precomputed feeds | The same feed, built at write time, served a slice at a time. |
 | [B-trees](../dsa/b-trees.md) | An index on time and ID | Lets the database jump to "older than this" directly, instead of counting. |
-| [Round trips](../latency/round-trips.md) | Each page a request | Page size trades round trips against the size of each response. |
+| [Round trips](../performance/round-trips.md) | Each page a request | Page size trades round trips against the size of each response. |
 
 It shows up elsewhere too: search results, API endpoints listing records, admin screens, and exports of large tables.
 
@@ -57,7 +57,7 @@ Pagination returns a large result in pieces. Offset pagination, skipping N and t
 - Learning this is also learning [B-trees](../dsa/b-trees.md), because keyset pagination is a range scan from a position, which is what B-tree indexes do well.
 - Learning this is also learning [access patterns](access-patterns.md), because "newest first, then keep scrolling" is a pattern the index should be built for.
 - Learning this is also learning [consistency](consistency.md), because a list changing between requests is copies of the truth at different moments.
-- Learning this is also learning [round trips](../latency/round-trips.md), because each page is a round trip.
+- Learning this is also learning [round trips](../performance/round-trips.md), because each page is a round trip.
 - Learning this is also learning [state machines](../dsa/state-machines.md), because a cursor is the state of a walk through the list, handed to the client to keep.
 
 ## Resources

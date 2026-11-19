@@ -32,7 +32,7 @@ Looking back, Mei Lin thought lossy compression was a decision about the receive
 | [Distributions and percentiles](../math/percentiles.md) | Thousands of response times into one average | The tail, which is where users suffered. |
 | [11, Software that must not go down](../11-software-that-must-not-go-down.md) | Every checkout into overall success rates | One small group whose checkouts were all failing. |
 | [Tokens and context windows](../ai/tokens.md) | A contract cut down to the few most relevant sections | Whatever retrieval judged irrelevant, which is right until it isn't. |
-| [Storage tiers](../cost/storage-tiers.md) | Thumbnails kept hot, originals archived | Detail, for most uses; the cost motive behind every compression decision. |
+| [Storage tiers](../economics/storage-tiers.md) | Thumbnails kept hot, originals archived | Detail, for most uses; the cost motive behind every compression decision. |
 
 It shows up elsewhere too: images, audio and video, log sampling, summaries, executive dashboards, abstracts of papers, and the "too long; didn't read" line at the top of a document.
 
@@ -59,8 +59,8 @@ Compression represents data in fewer bits. Lossless compression removes statisti
 
 - Learning this is also learning [information](information.md), because compression removes redundancy, which is also what protects a message from errors.
 - Learning this is also learning [distributions and percentiles](../math/percentiles.md), because an average is the most common lossy compression of all.
-- Learning this is also learning [storage tiers](../cost/storage-tiers.md), because the motive for compressing is almost always cost.
-- Learning this is also learning [round trips](../latency/round-trips.md), because smaller payloads cross the network faster.
+- Learning this is also learning [storage tiers](../economics/storage-tiers.md), because the motive for compressing is almost always cost.
+- Learning this is also learning [round trips](../performance/round-trips.md), because smaller payloads cross the network faster.
 - Learning this is also learning [tokens and context windows](../ai/tokens.md), because summarising a long conversation for a model is lossy compression with a model of what matters.
 - Learning this is also learning [designed for human senses](../signals/perception.md), because JPEG and MP3 work by modelling human eyes and ears, and image numbers are already shaped by that model.
 - Learning this is also learning [greedy algorithms](../dsa/greedy.md), because Huffman codes are built greedily, and are provably the shortest possible.

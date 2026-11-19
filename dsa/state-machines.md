@@ -30,9 +30,9 @@ Looking back, Chloe thought the flags had let everyone describe their own part o
 | [Consistency](../data/consistency.md) | Copies of a database applying the same changes | If every copy starts in the same state and applies the same moves in the same order, they end in the same state. |
 | [6, Anyone can publish](../06-anyone-can-publish.md) | A booking: free, held, booked | The server refused a move from booked to booked, which ended Hannah's double bookings. |
 | [Power and predictability](power-and-predictability.md) | Selim's spam rules, matched by a finite automaton | A fixed set of states meant every rule finished in time proportional to the email, whatever the rule. |
-| [Type systems](../runtimes/type-systems.md) | A type with exactly the allowed states | The compiler refuses an impossible state before the program ever runs. |
+| [Type systems](../languages/type-systems.md) | A type with exactly the allowed states | The compiler refuses an impossible state before the program ever runs. |
 | [Replication](../data/replication.md) | A replica applying the main database's changes | Same start, same moves, same order: the copy ends in the same state. |
-| [Event loops and threads](../runtimes/event-loops-and-threads.md) | Omar's ticket count, shared by many requests | Each change made as one allowed move, applied whole, kept the shared count valid. |
+| [Event loops and threads](../languages/event-loops-and-threads.md) | Omar's ticket count, shared by many requests | Each change made as one allowed move, applied whole, kept the shared count valid. |
 | [Serialization formats](../data/serialization.md) | A parser reading a format | Reading one piece at a time, the parser always knows what may come next. |
 | [Pagination](../data/pagination.md) | Hamza's cursor | The state of a walk through a changing list, handed to the client instead of a count from the start. |
 | [State estimation](../signals/state-estimation.md) | Dorota's tractor: position, heading, speed | The other meaning of "state": continuous quantities, estimated from evidence, not named stages. |
@@ -65,10 +65,10 @@ The word "state" has a second meaning, and it causes real confusion. In control 
 - Learning this is also learning [consistency](../data/consistency.md), because copies that apply the same moves in the same order stay identical.
 - Learning this is also learning [graphs](graphs.md), because a state machine is a graph of states and arrows, and graph questions, like "can this state be reached?", apply to it.
 - Learning this is also learning [serialization formats](../data/serialization.md), because parsing a format is usually a state machine reading one piece at a time.
-- Learning this is also learning [input validation](../auth/input-validation.md), because refusing moves that aren't on the diagram is validating what a request is allowed to do.
+- Learning this is also learning [input validation](../security/input-validation.md), because refusing moves that aren't on the diagram is validating what a request is allowed to do.
 - Learning this is also learning [migrations](../data/migrations.md), because moving data into a new design often starts with untangling which states the old data was really in.
 - Learning this is also learning [power and predictability](power-and-predictability.md), because a state machine is the bottom rung of the ladder of languages, and its limits are what make it checkable.
-- Learning this is also learning [type systems](../runtimes/type-systems.md), because a type with exactly the allowed states lets the compiler refuse the impossible ones.
+- Learning this is also learning [type systems](../languages/type-systems.md), because a type with exactly the allowed states lets the compiler refuse the impossible ones.
 - Learning this is also learning [replication](../data/replication.md), because a replica is a state machine fed the same moves in the same order.
 - Learning this is also learning [state estimation](../signals/state-estimation.md), because "state" means continuous quantities there, and robots need both kinds.
 

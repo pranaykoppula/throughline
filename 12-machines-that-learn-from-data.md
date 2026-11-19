@@ -66,14 +66,16 @@ Motifs: [every correction acts on old news](motifs.md#every-correction-acts-on-o
 
 ## Connections
 
-- Learning this is also learning [labels and training data](data/labels.md), because training data and context are the whole of what a model knows, and Nadia's mislabelled newsletters taught it the wrong thing.
+- Learning this is also learning [labels and training data](ai/labels.md), because training data and context are the whole of what a model knows, and Nadia's mislabelled newsletters taught it the wrong thing.
 - Learning this is also learning [statistical significance](math/statistics.md), because "is this pattern real?" is a statistics question before it's an engineering one.
 - Learning this is also learning [tokens and context windows](ai/tokens.md), because tokens are the new round trip, and you pay for each one.
-- Learning this is also learning [prompt injection](ai/prompt-injection.md), because it's SQL injection at a new boundary, and it isn't solved. The rule underneath is page 7's: [input from outside is data](auth/input-validation.md), never instructions.
-- Learning this is also learning [coding agents](tooling/coding-agents.md), because coding agents, Claude Code among them, are now one of the means on the ladder.
-- Learning this is also learning [least privilege](auth/least-privilege.md), because the fix for the $500 credit was the same as for Marcus's database account: give the model only the power it needs.
-- Learning this is also learning [reading a cloud bill](cost/cloud-bills.md), because the assistant's token bill was a design decision wearing a price tag, like Tariq's data transfer.
+- Learning this is also learning [prompt injection](ai/prompt-injection.md), because it's SQL injection at a new boundary, and it isn't solved. The rule underneath is page 7's: [input from outside is data](security/input-validation.md), never instructions.
+- Learning this is also learning [coding agents](ai/coding-agents.md), because coding agents, Claude Code among them, are now one of the means on the ladder.
+- Learning this is also learning [least privilege](security/least-privilege.md), because the fix for the $500 credit was the same as for Marcus's database account: give the model only the power it needs.
+- Learning this is also learning [reading a cloud bill](economics/cloud-bills.md), because the assistant's token bill was a design decision wearing a price tag, like Tariq's data transfer.
 - Learning this is also learning [feedback and control](signals/feedback.md), because gradient descent is a correction loop, and a learning rate that's too large overshoots the same way a drone does.
+- Learning this is also learning [information gain](info/information-gain.md), because the spam filter weighed the words that most changed the odds and ignored the ones that appeared everywhere.
+- Learning this is also learning [language as compression](info/language.md), because a short question only makes sense with the context the listener already has, which is why Nadia had to send the help centre with every one.
 
 ## Resources
 

@@ -36,7 +36,7 @@ Looking back, Ruairí thought neither piece of code had been wrong; both gave th
 
 | Page | What grew | How the cost grew with it |
 | --- | --- | --- |
-| [Round trips](../latency/round-trips.md) | Ayesha's requests, one per item on the screen | In step with the items, each one paying a full round trip: the same shape as Ruairí's customer list. |
+| [Round trips](../performance/round-trips.md) | Ayesha's requests, one per item on the screen | In step with the items, each one paying a full round trip: the same shape as Ruairí's customer list. |
 | [Sorting](sorting.md) | Margit's runs of records | Sliding each record into place grew with the square of the run; splitting grew only a little faster than the run. |
 | [8, Too many users, too much data](../08-too-many-users-too-much-data.md) | The champion's followers | One post became 1.8 million writes, because the work grew with the follower count. |
 | [Hashing](hashing.md) | Keys chosen by strangers to collide | A lookup that should take one step took as many steps as there were keys. |
@@ -68,7 +68,7 @@ Growth, or asymptotic complexity, describes how the cost of an algorithm (time, 
 
 - Learning this is also learning [hash tables](hash-tables.md), because turning "compare with everything" into "look it up" is the most common fix for quadratic code.
 - Learning this is also learning [sorting](sorting.md), because the gap between sorts that grow as n² and as n log n is the clearest example of shape mattering.
-- Learning this is also learning [round trips](../latency/round-trips.md), because one request per item is linear growth in the most expensive unit there is.
+- Learning this is also learning [round trips](../performance/round-trips.md), because one request per item is linear growth in the most expensive unit there is.
 - Learning this is also learning [amortised cost](amortised-cost.md), because the growth of an average and the growth of the worst moment can be different things.
 - Learning this is also learning [computability](computability.md), because some problems have no known solution that grows slowly, and that's a fact about the problem, not the programmer.
 

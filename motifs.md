@@ -1,12 +1,31 @@
 # Motifs
 
-Last reviewed: 2026-11-11
+Last reviewed: 2026-11-19
 
 The same few shapes keep turning up in stories that look nothing alike: a hotel price in two regions, a library catalogue in nine branches and a design shared between browsers are all *copies that disagree*. Recognising a shape you've met before is much of what experience feels like, and it's what makes a new problem less strange. This page names the shapes that recur most often in this wiki, and lists where each one appears.
 
 The names are used the same way everywhere. A page that shows a motif clearly says so in one line, "Motif:", at the end of its Where it shows up section, or of What survived on a spine page. Not every appearance is labelled: only where the shape is the point.
 
 These are patterns across this wiki's stories, which are mostly fiction. They're a way of seeing, not findings about the world. Test each against the real cases in It really happened, and against what you've built.
+
+## Motifs and the model
+
+[The model](the-model.md) is the argument, one sentence per spine page, in the order the problems arrived. The motifs are the same ideas seen sideways: a sentence of the model, pulled out of its era and found again in other stories. So most motifs belong to one or two sentences, and meeting a motif on a concept page is a hint about which spine page to read next. Two motifs aren't in the model at all; they're shapes the stories kept showing that no single era owns.
+
+| Motif | Sentence of the model |
+| --- | --- |
+| [Every representation has an edge](#every-representation-has-an-edge) | 0 |
+| [Copies disagree](#copies-disagree) | 8, and 6 |
+| [Where the data is sets the cost](#where-the-data-is-sets-the-cost) | 1, and 5 |
+| [Waiting is where the time goes](#waiting-is-where-the-time-goes) | 2 |
+| [Costs move; they don't disappear](#costs-move-they-dont-disappear) | 4, 9 and 13 |
+| [Layers hide things, until they leak](#layers-hide-things-until-they-leak) | 3 |
+| [Enforce it once, at the boundary](#enforce-it-once-at-the-boundary) | 7 and 10 |
+| [The least power, for the shortest time](#the-least-power-for-the-shortest-time) | 7 |
+| [A cheap check before an expensive one](#a-cheap-check-before-an-expensive-one) | Not in the model; 8's approximate answers come closest |
+| [The sign drifts from the thing](#the-sign-drifts-from-the-thing) | 11 |
+| [Every correction acts on old news](#every-correction-acts-on-old-news) | Not in the model; 5's retries and 12's learning both meet it |
+| [The old keeps running](#the-old-keeps-running) | 13 |
 
 ## The verbs
 
@@ -32,7 +51,7 @@ Any copy, kept to be faster, safer or closer, is sometimes out of date. The work
 
 - [6, Anyone can publish](06-anyone-can-publish.md): Hannah's server and the copies in a million browsers.
 - [8, Too many users, too much data](08-too-many-users-too-much-data.md): Maya's copies, and what to promise while they disagree.
-- [Caching](latency/caching.md): every cache is a copy, and the system comes to depend on it.
+- [Caching](performance/caching.md): every cache is a copy, and the system comes to depend on it.
 - [Replication](data/replication.md): Kwame's replica, and making sure only one copy accepts writes.
 - [Consistency](data/consistency.md): Tom's nine library branches, each with its own catalogue.
 - [Append-only logs](dsa/append-only-logs.md): Teresa's balance, a copy derived from the ledger, which wins whenever they disagree.
@@ -44,8 +63,8 @@ Near is fast, small and expensive; far is slow, big and cheap. The price of almo
 - [1, One machine, one program](01-one-machine-one-program.md): core memory near the processor, drums further away.
 - [Arrays and linked lists](dsa/arrays-and-linked-lists.md): Marta's linked list, scattered across memory.
 - [B-trees](dsa/b-trees.md): Leonard's tree, reshaped for the size of a disk block.
-- [Latency numbers](latency/latency-numbers.md): Daniel's table of how far away everything is.
-- [Round trips](latency/round-trips.md): Ayesha's users on trains.
+- [Latency numbers](performance/latency-numbers.md): Daniel's table of how far away everything is.
+- [Round trips](performance/round-trips.md): Ayesha's users on trains.
 - [Data gravity](data/data-gravity.md): Imogen's petabytes, which pulled everything towards them.
 - [Tokens and context windows](ai/tokens.md): the context window as a small, expensive, fast tier.
 - [9, Buying computers is too slow](09-buying-computers-is-too-slow.md): Tariq's bill, topped by moving data, not computing.
@@ -55,10 +74,10 @@ Near is fast, small and expensive; far is slow, big and cheap. The price of almo
 Most slowness isn't work; it's waiting for something shared. Systems near full use make everyone wait, and a little slack keeps the line short.
 
 - [2, One machine, many programs](02-one-machine-many-programs.md): Ruth's programs, idle while a tape drive turned.
-- [Queueing](latency/queueing.md): Signe's servers, run close to full.
+- [Queueing](performance/queueing.md): Signe's servers, run close to full.
 - [Queues](dsa/queues.md): Yusuf's line, and deciding who goes next.
-- [Event loops and threads](runtimes/event-loops-and-threads.md): Omar's two ways of sharing time.
-- [Round trips](latency/round-trips.md): every reply you wait for.
+- [Event loops and threads](languages/event-loops-and-threads.md): Omar's two ways of sharing time.
+- [Round trips](performance/round-trips.md): every reply you wait for.
 
 ## Costs move; they don't disappear
 
@@ -71,7 +90,7 @@ A design that makes one thing cheap usually makes something else dearer: later, 
 - [Dynamic programming](dsa/dynamic-programming.md): Imelda's table, memory spent so the same question is never answered twice.
 - [4, Data outlives programs](04-data-outlives-programs.md): the first program's shape, paid for by every later one.
 - [Data gravity](data/data-gravity.md): each terabyte raising the price of changing your mind.
-- [Queueing](latency/queueing.md): idle capacity saved, and paid for in other people's waiting.
+- [Queueing](performance/queueing.md): idle capacity saved, and paid for in other people's waiting.
 - [13, Everything still exists at once](13-everything-still-exists-at-once.md): switching costs paid now, benefits arriving later to someone else.
 
 ## Layers hide things, until they leak
@@ -80,20 +99,20 @@ An abstraction lets you forget the layer below. You get to forget until the laye
 
 - [3, Programs too big for one head](03-programs-too-big-for-one-head.md): Elena's layers, each trading control for ease.
 - [9, Buying computers is too slow](09-buying-computers-is-too-slow.md): a virtual machine hides the hardware, but not the neighbours.
-- [Managed services](vendors/managed-services.md): Tamsin's services, rungs someone else built and could move.
+- [Managed services](economics/managed-services.md): Tamsin's services, rungs someone else built and could move.
 
 ## Enforce it once, at the boundary
 
 A rule that everyone must remember everywhere will eventually be forgotten somewhere. Put it at the edge, in one place, in something that can't forget.
 
 - [7, Strangers on the network](07-strangers-on-the-network.md): every place where something crosses from outside to inside.
-- [Input validation](auth/input-validation.md): Frank's line, which carried strangers' sound and the network's commands.
-- [Multi-tenancy](auth/multi-tenancy.md): Chidi's one line in every query, remembered until it wasn't.
-- [Type systems](runtimes/type-systems.md): a boundary enforced by a machine.
+- [Input validation](security/input-validation.md): Frank's line, which carried strangers' sound and the network's commands.
+- [Multi-tenancy](security/multi-tenancy.md): Chidi's one line in every query, remembered until it wasn't.
+- [Type systems](languages/type-systems.md): a boundary enforced by a machine.
 - [State machines](dsa/state-machines.md): Chloe's one function that every change to an order went through.
 - [Encodings](info/encodings.md): decode at the border, and speak one convention inside.
 - [10, Many people, one codebase](10-many-people-one-codebase.md): practices that only held once a tool enforced them.
-- [CI pipelines](tooling/ci.md): the pipeline as the place a team's rules actually live.
+- [CI pipelines](practice/ci.md): the pipeline as the place a team's rules actually live.
 - [11, Software that must not go down](11-software-that-must-not-go-down.md): the Therac-25, whose protection depended on the thing it protected.
 
 ## The least power, for the shortest time
@@ -101,12 +120,12 @@ A rule that everyone must remember everywhere will eventually be forgotten somew
 Anything that grants power is a key, and its power is the size of the damage when it leaks. Keep it narrow, keep it short-lived, and keep a way to take it back. The same goes for languages.
 
 - [7, Strangers on the network](07-strangers-on-the-network.md): give every party the least it needs.
-- [Least privilege](auth/least-privilege.md): Grace's permissions, a decision about the worst day.
-- [Cloud IAM](auth/cloud-iam.md): one administrator key, used everywhere and never expiring.
-- [Sessions and tokens](auth/sessions-and-tokens.md): Ana Lucía's token, a password with a shorter life.
-- [Key management](crypto/key-management.md): Bram's key, which failed because it was everywhere and lived forever.
+- [Least privilege](security/least-privilege.md): Grace's permissions, a decision about the worst day.
+- [Cloud IAM](security/cloud-iam.md): one administrator key, used everywhere and never expiring.
+- [Sessions and tokens](security/sessions-and-tokens.md): Ana Lucía's token, a password with a shorter life.
+- [Key management](security/key-management.md): Bram's key, which failed because it was everywhere and lived forever.
 - [12, Machines that learn from data](12-machines-that-learn-from-data.md): a model given only the power it needs.
-- [Coding agents](tooling/coding-agents.md): an agent working inside the access it has.
+- [Coding agents](ai/coding-agents.md): an agent working inside the access it has.
 - [Power and predictability](dsa/power-and-predictability.md): the least powerful language that does the job.
 
 ## A cheap check before an expensive one
@@ -115,7 +134,7 @@ A quick test that's sure about "no" and only hopeful about "yes" saves most of t
 
 - [Bloom filters](dsa/bloom-filters.md): Joaquín's filter, which let a hint make a final decision.
 - [LSM trees](dsa/lsm-trees.md): Neha's filter on each file.
-- [Caching](latency/caching.md): look nearby before going far.
+- [Caching](performance/caching.md): look nearby before going far.
 - [Computability](dsa/computability.md): Viktor's scanner, which accepts false alarms as the price of answering at all.
 
 ## The sign drifts from the thing
@@ -124,10 +143,10 @@ A number, a label or a description stands for something you can't see directly. 
 
 - [Measures and targets](info/measures-and-targets.md): Ottilie's coverage gate.
 - [Sampling and observation](info/observation.md): Kofi's green squares, and the fridges they didn't show.
-- [Labels and training data](data/labels.md): judgements made in ten seconds.
+- [Labels and training data](ai/labels.md): judgements made in ten seconds.
 - [11, Software that must not go down](11-software-that-must-not-go-down.md): servers up, and nobody able to buy a ticket.
-- [CI pipelines](tooling/ci.md): Noor's green build.
-- [Coding agents](tooling/coding-agents.md): Rafael's passing test, and the bug behind it.
+- [CI pipelines](practice/ci.md): Noor's green build.
+- [Coding agents](ai/coding-agents.md): Rafael's passing test, and the bug behind it.
 - [Distributions and percentiles](math/percentiles.md): Leo's average, which described nobody.
 - [Statistical significance](math/statistics.md): Lucas's dashboard, read like a scoreboard.
 - [Meaning as use](info/meaning-as-use.md): Rui's documentation, and what users actually relied on.
@@ -138,7 +157,7 @@ A system that measures and corrects is always correcting what it saw a moment ag
 
 - [Feedback and control](signals/feedback.md): Astrid's drone, bobbing past its target.
 - [5, Machines need to talk](05-machines-need-to-talk.md): retrying harder into a congested network, until backoff.
-- [Queueing](latency/queueing.md): clients retrying into a full queue.
+- [Queueing](performance/queueing.md): clients retrying into a full queue.
 - [12, Machines that learn from data](12-machines-that-learn-from-data.md): gradient descent, and a learning rate that overshoots.
 - [State estimation](signals/state-estimation.md): Dorota's tractor, which had to know how old and how sure its picture was.
 
@@ -149,4 +168,4 @@ Almost nothing is replaced cleanly. The old system keeps running beside the new 
 - [13, Everything still exists at once](13-everything-still-exists-at-once.md): Ines's bank, where every era still ran.
 - [Migrations](data/migrations.md): Bilal's two shapes of the data, alive at once.
 - [Meaning as use](info/meaning-as-use.md): Rui's ordering, promised by nobody and relied on by everyone.
-- [JavaScript](runtimes/javascript.md): Zara's quirks, frozen by success.
+- [JavaScript](languages/javascript.md): Zara's quirks, frozen by success.

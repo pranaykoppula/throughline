@@ -31,7 +31,7 @@ Looking back, Tom thought the mistake had been treating the copies as the truth.
 | [8, Too many users, too much data](../08-too-many-users-too-much-data.md) | The main database and its read replicas | You always see your own posts; everyone else sees them within a second or so. |
 | [13, Everything still exists at once](../13-everything-still-exists-at-once.md) | The old payments system and the new one | Neither is trusted until they've matched every night for a month. |
 
-It shows up elsewhere too: every cache ([caching](../latency/caching.md)), every offline-capable app, and every learned model, which is a copy of the world as it was when the training data was collected ([page 12](../12-machines-that-learn-from-data.md)).
+It shows up elsewhere too: every cache ([caching](../performance/caching.md)), every offline-capable app, and every learned model, which is a copy of the world as it was when the training data was collected ([page 12](../12-machines-that-learn-from-data.md)).
 
 The pages use four different answers. You can have **one owner** decide, as Tom, Hannah and every primary database do. You can promise **read-your-writes**, as Maya does: you see your own changes, and others catch up. You can **merge** later, as Amazon's shopping cart does, accepting that a deleted item may come back. Or you can **compare and reconcile**, as Ines does, trusting nothing until the copies agree. None of them is free.
 
@@ -55,8 +55,8 @@ Consistency is what a system promises about how copies of data relate to each ot
 ## Connections
 
 - Learning this is also learning [replication](replication.md), because replicas are the copies most systems deliberately make.
-- Learning this is also learning [caching](../latency/caching.md), because a cache is a copy you've agreed to let go stale.
-- Learning this is also learning [queueing](../latency/queueing.md), because asking the owner means waiting for it, and everyone who asks waits in line.
+- Learning this is also learning [caching](../performance/caching.md), because a cache is a copy you've agreed to let go stale.
+- Learning this is also learning [queueing](../performance/queueing.md), because asking the owner means waiting for it, and everyone who asks waits in line.
 - Learning this is also learning [migrations](migrations.md), because running old and new side by side is two copies on purpose.
 - Learning this is also learning [state machines](../dsa/state-machines.md), because agreeing copies are often built by applying the same changes in the same order.
 

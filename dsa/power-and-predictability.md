@@ -26,11 +26,12 @@ Looking back, Selim thought he'd chosen the library for everything it could do, 
 
 | Page | The language | What its power cost, or what limiting it bought |
 | --- | --- | --- |
+| [3, Programs too big for one head](../03-programs-too-big-for-one-head.md) | Turing-complete languages, nearly all of them | They can compute anything, so nobody can check in advance what a program will do. |
 | [State machines](state-machines.md) | Chloe's nine order states | The bottom rung: a finite list of states and moves, so every order can be checked and nothing impossible can happen. |
 | [Computability](computability.md) | Viktor's virus scanner, against programs that can do anything | The top rung: once a language can express everything, no tool can predict in general what its programs will do. |
 | [Hashing](hashing.md) | A hash table fed keys chosen by strangers | The same attack as Selim's email: choose the input that makes the worst case happen. |
-| [Input validation](../auth/input-validation.md) | Checks run on input from outside | A check whose running time an attacker controls is itself a way in. |
-| [Build systems and package managers](../tooling/build-systems.md) | Build files | A build file that can run arbitrary code can't be analysed without running it, so the build can't know what depends on what. |
+| [Input validation](../security/input-validation.md) | Checks run on input from outside | A check whose running time an attacker controls is itself a way in. |
+| [Build systems and package managers](../practice/build-systems.md) | Build files | A build file that can run arbitrary code can't be analysed without running it, so the build can't know what depends on what. |
 
 It shows up elsewhere too: parsing HTML with regular expressions, configuration formats that grew conditionals and loops, template languages, spreadsheets (Excel's formulas became able to express any computation in 2020), smart contracts that charge for every step so that programs must stop, and forcing a language model to produce valid JSON by running a grammar alongside it.
 
@@ -62,7 +63,7 @@ Languages form a ladder of power, often called the Chomsky hierarchy. *Regular* 
 - Learning this is also learning [state machines](state-machines.md), because a finite automaton is a state machine reading text, and it's the bottom rung of the ladder.
 - Learning this is also learning [computability](computability.md), because the top rung is where Turing's limits begin.
 - Learning this is also learning [hashing](hashing.md), because both are attacks on the worst case, where the attacker chooses the input.
-- Learning this is also learning [input validation](../auth/input-validation.md), because the check that keeps bad input out can be the thing bad input attacks.
+- Learning this is also learning [input validation](../security/input-validation.md), because the check that keeps bad input out can be the thing bad input attacks.
 - Learning this is also learning [language](../info/language.md), because the ladder began as a theory of grammar for human languages.
 - Learning this is also learning [tokens and context windows](../ai/tokens.md), because a model can be made to produce valid structured output by allowing only the tokens a grammar accepts next.
 - Learning this is also learning [growth](growth.md), because backtracking's running time grows exponentially with the line, which is what an attacker exploits.

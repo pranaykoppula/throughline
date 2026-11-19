@@ -32,7 +32,7 @@ The question above picks a family. These pick between its members, and they're w
 
 1. **How big will it get?** Something that's fine for a thousand items can be hopeless for a million, and the difference is the *shape* of the cost, not its speed ([growth](growth.md)).
 2. **How often is it written, compared with read?** Structures that make reads cheap usually make writes dearer, and the reverse ([access patterns](../data/access-patterns.md), [LSM trees](lsm-trees.md)).
-3. **Where does it live?** In memory, on one disk, or across a network, the cost of a step changes by factors of thousands, and the best structure changes with it ([B-trees](b-trees.md), [latency numbers](../latency/latency-numbers.md)).
+3. **Where does it live?** In memory, on one disk, or across a network, the cost of a step changes by factors of thousands, and the best structure changes with it ([B-trees](b-trees.md), [latency numbers](../performance/latency-numbers.md)).
 4. **What's the worst moment, and who's waiting for it?** An excellent average can hide an occasional disaster, and an attacker can choose the input that causes it ([amortised cost](amortised-cost.md), [hashing](hashing.md)).
 
 ## And for computing an answer

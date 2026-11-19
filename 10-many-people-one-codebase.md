@@ -64,12 +64,13 @@ Motif: [enforce it once, at the boundary](motifs.md#enforce-it-once-at-the-bound
 ## Connections
 
 - Learning this is also learning [Merkle DAGs](dsa/merkle-dags.md), because git is a content-addressed graph of commits, where each one is named by the hash of what it contains. It's the same [hashing](dsa/hashing.md) that hid Marcus's passwords, used for identity instead of secrecy.
-- Learning this is also learning [CI pipelines](tooling/ci.md), because the build server is where Sofia's rules lived, and each one shapes how your team works.
-- Learning this is also learning [least privilege](auth/least-privilege.md), because required review means no single person can put anything into the product alone.
-- Learning this is also learning [commit messages and design records](writing/commit-messages.md), because they're how the next person learns why.
+- Learning this is also learning [CI pipelines](practice/ci.md), because the build server is where Sofia's rules lived, and each one shapes how your team works.
+- Learning this is also learning [least privilege](security/least-privilege.md), because required review means no single person can put anything into the product alone.
+- Learning this is also learning [commit messages and design records](practice/commit-messages.md), because they're how the next person learns why.
 - Learning this is also learning [forces](forces.md#incentives-inside-the-org), because systems take the shape of the teams that build them.
 - Learning this is also learning [sorting](dsa/sorting.md), because merging two ordered histories is cheap only while they haven't drifted far apart, the same way merging two sorted lists is.
 - Learning this is also learning [dynamic programming](dsa/dynamic-programming.md), because every merge starts by comparing versions to find what they share, which is how `diff` works.
+- Learning this is also learning [code signing](security/code-signing.md), because review decides what goes into the codebase, and signing is how anyone downstream checks that what they received is what was reviewed.
 
 ## Resources
 

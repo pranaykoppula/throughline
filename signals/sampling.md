@@ -28,6 +28,7 @@ Looking back, Henrik thought sampling too slowly hadn't quietly lost information
 
 | Page | What was sampled | What the gaps did |
 | --- | --- | --- |
+| [11, Software that must not go down](../11-software-that-must-not-go-down.md) | Rosa's ticket robot, once a minute | Anything that failed and recovered between purchases went unseen. |
 | [Sampling and observation](../info/observation.md) | Kofi's fridge, every thirty minutes | A fridge warming and cooling every forty minutes looked cool every time: the same effect, over hours. |
 | [Floating-point](../math/floating-point.md) | Real numbers squeezed into a fixed number of bits | Quantisation: the values in between are rounded away. |
 | [Compression](../info/compression.md) | Henrik's summaries, kept instead of every reading | Choosing what to keep, before anyone knows what they'll need. |

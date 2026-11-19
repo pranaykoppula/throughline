@@ -28,6 +28,7 @@ Looking back, Dorota thought the tractor had never known where it was, and never
 
 | Page | The estimate | What tracking uncertainty changed |
 | --- | --- | --- |
+| [5, Machines need to talk](../05-machines-need-to-talk.md) | TCP's estimate of each connection's delay | Timeouts set from a smoothed estimate, not from the last noisy round trip. |
 | [Sampling and observation](../info/observation.md) | Kofi's fridges, and the sensor that went silent | Silence had to mean "unknown", a grey square, not the last good reading. |
 | [Information gain](../info/information-gain.md) | What each new reading is worth | A reading is worth exactly how much it reduces your uncertainty. |
 | [Statistical significance](../math/statistics.md) | Is this difference real, or noise? | The same question, asked once about a dataset instead of continuously about a moving tractor. |

@@ -74,7 +74,7 @@ for (const l of links) {
   l.source.neighbours.add(l.target); l.target.neighbours.add(l.source);
 }
 for (const n of nodes) {
-  n.r = (n.family === "spine" ? 6 : 3.5) + Math.sqrt(n.degree) * 1.3;
+  n.r = (n.family === "spine" || n.index ? 6 : 3.5) + Math.sqrt(n.degree) * 1.3;
   n.color = (DATA.families[n.family] || { color: "#8b949e" }).color;
 }
 
@@ -204,7 +204,7 @@ function draw() {
   ctx.textAlign = "center"; ctx.textBaseline = "top";
   for (const n of nodes) {
     if (!visible(n)) continue;
-    const forced = focus ? focus.has(n) : n.family === "spine" || n.family === "reference";
+    const forced = focus ? focus.has(n) : n.family === "spine" || n.family === "reference" || n.index;
     const a = forced ? 1 : dim(n) ? 0 : labelAlpha;
     if (a <= 0.02) continue;
     const [x, y] = toScreen(n);

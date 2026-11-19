@@ -28,7 +28,7 @@ Looking back, Rui thought the documentation had been a statement of what he hope
 
 | Page | The interface | What its users made it mean |
 | --- | --- | --- |
-| [JavaScript](../runtimes/javascript.md) | Zara's quirks, such as `"2" + 3` | The web came to depend on them, so they were frozen by success and can never be fixed. |
+| [JavaScript](../languages/javascript.md) | Zara's quirks, such as `"2" + 3` | The web came to depend on them, so they were frozen by success and can never be fixed. |
 | [3, Programs too big for one head](../03-programs-too-big-for-one-head.md) | A module's hidden behaviour behind its interface | With enough users, every observable behaviour is depended on by someone. |
 | [Serialization formats](../data/serialization.md) | Jonas's messages between services | Every message was a contract, whether or not anyone wrote it down. |
 | [13, Everything still exists at once](../13-everything-still-exists-at-once.md) | Ines's old and new payment systems, run side by side | Each nightly mismatch was an undocumented rule the old system had come to mean. |
@@ -59,7 +59,7 @@ Meaning as use is the idea that what a sign means is settled by how it's used, n
 
 ## Connections
 
-- Learning this is also learning [JavaScript](../runtimes/javascript.md), because the web's dependence on its quirks is this law at the scale of a whole platform.
+- Learning this is also learning [JavaScript](../languages/javascript.md), because the web's dependence on its quirks is this law at the scale of a whole platform.
 - Learning this is also learning [serialization formats](../data/serialization.md), because a format is an interface between programs, and unwritten parts of it get depended on too.
 - Learning this is also learning [migrations](../data/migrations.md), because changing a system that others depend on means keeping old and new behaviour alive together for a while.
 - Learning this is also learning [language](language.md), because an interface is a language its users speak, and its meaning is set by them as much as by its designers.

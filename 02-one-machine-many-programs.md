@@ -55,8 +55,8 @@ Motif: [waiting is where the time goes](motifs.md#waiting-is-where-the-time-goes
 
 ## Connections
 
-- Learning this is also learning [event loops and threads](runtimes/event-loops-and-threads.md), because the concurrency model is a choice your language's runtime makes for you, and it decides what blocks.
-- Learning this is also learning [queueing](latency/queueing.md), because most latency is time spent waiting in a queue, and queues get long suddenly as a machine nears full.
+- Learning this is also learning [event loops and threads](languages/event-loops-and-threads.md), because the concurrency model is a choice your language's runtime makes for you, and it decides what blocks.
+- Learning this is also learning [queueing](performance/queueing.md), because most latency is time spent waiting in a queue, and queues get long suddenly as a machine nears full.
 - Learning this is also learning [reliability](11-software-that-must-not-go-down.md), because something has to notice when a process dies or gets stuck, and decide what to do.
 - Learning this is also learning [queues](dsa/queues.md), because a scheduler is a queue with rules about who goes next.
 - Learning this is also learning [graphs](dsa/graphs.md), because a deadlock is a cycle in a graph of who waits for whom, and finding cycles is a standard graph algorithm.

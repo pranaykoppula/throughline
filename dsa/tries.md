@@ -32,6 +32,7 @@ Looking back, Anjali thought the tree had been the right idea from the start, be
 
 | Page | The prefixes | What the tree gave |
 | --- | --- | --- |
+| [6, Anyone can publish](../06-anyone-can-publish.md) | Google Suggest, an early Ajax example | Every search starting with what you'd typed, at each keystroke. |
 | [Search](search.md) | Agnes's archive search box, suggesting as readers typed | Popular queries completed from their first few letters. |
 | [Sorting](sorting.md) | Names in alphabetical order | A sorted list can find a prefix too, as a range; a trie avoids starting again on every keystroke. |
 | [Hash tables](hash-tables.md) | Exact keys | The contrast: perfect for "this key", useless for "keys starting with this". |
@@ -62,7 +63,7 @@ A trie stores a set of strings as a tree in which each edge is labelled with a c
 - Learning this is also learning [search](search.md), because prefix completion is the first thing a search box does.
 - Learning this is also learning [hash tables](hash-tables.md), because both find keys quickly, but only a trie can answer questions about beginnings.
 - Learning this is also learning [sorting](sorting.md), because a sorted list answers prefix questions as ranges, which is the alternative to a trie.
-- Learning this is also learning [round trips](../latency/round-trips.md), because a suggestion that needs a database query on every keystroke pays a round trip per letter.
+- Learning this is also learning [round trips](../performance/round-trips.md), because a suggestion that needs a database query on every keystroke pays a round trip per letter.
 - Learning this is also learning [tokens and context windows](../ai/tokens.md), because tokenisers match the longest known piece of text at each position, a trie-shaped question.
 
 ## Resources
