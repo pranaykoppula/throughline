@@ -83,7 +83,7 @@ Every figure is ours: a diagram of a page's problem or its solution, drawn by co
 
 ### 3.7 Depth in algorithms and system design
 
-The scope rule (a page must carry a mental model that recurs outside its own field) is relaxed in two places, because they're where people most often learn mechanics without intuition: `dsa/` and the system design family. There, a well-known technique can have its own page even if it recurs mostly inside computing, and a page may follow one technique through several changing needs (`dsa/sorting.md` follows one person through seven sorting methods). `dsa/choosing.md` is a guide page: no story, a table from the question you keep asking to the structure built for it, linked from the README.
+The scope rule (a page must carry a mental model that recurs outside its own field) is relaxed in two places, because they're where people most often learn mechanics without intuition: `dsa/` and the system design family. There, a well-known technique can have its own page even if it recurs mostly inside computing, and a page may follow one technique through several changing needs (`dsa/sorting.md` follows one person through seven sorting methods). `dsa/choosing.md` is a guide page: no story, a table from the question you keep asking to the structure built for it, linked from the README. Neither family has a page limit (the owner's decision, 2026-11-19), but depth doesn't exempt a page from the other rules: each is linked from a spine page and listed in its family's index.
 
 ## 4. The model
 
