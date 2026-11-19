@@ -22,6 +22,10 @@ On average, the hash table had been fast. On one occasion, it had stopped the wo
 
 Kenji's fix was to grow the table gradually. When it got full, the server allocated the new, larger table but didn't move anything yet. From then on, every lookup or insert also moved a few entries from the old table to the new one. Lookups checked both tables until the move was finished. Growth that used to happen in one two-second lump now happened in thousands of microsecond-sized steps, spread over a minute. Nobody noticed it at all. He also started the table at a sensible size for launch day, so it rarely needed to grow during the busiest hour.
 
+![Two timelines of a game server over ninety seconds. Top: the table doubles all at once at the thirtieth second, moving four million entries, and the server answers nothing for nearly two seconds. Bottom: the same four million entries are moved a few at a time with every request, spread over a minute, and the server keeps answering throughout.](../images/figures/dsa-hash-tables.svg)
+
+*The same work, done all at once or a little at a time: the average is identical, and only one of them freezes the game.*
+
 Looking back, Kenji thought the lesson was about "on average". A doubling hash table really is fast on average. But a game server, like most servers, is judged by its worst moment, and the average had been hiding a two-second pause inside it.
 
 ## Where it shows up

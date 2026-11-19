@@ -22,6 +22,10 @@ Leonard noticed that the disk read a whole block at a time, several thousand byt
 
 To stop the tree going lopsided, he never let a node get too full. When it did, it split into two half-full nodes and passed the middle key up to its parent. If the parent filled, it split too. The tree grew upwards from the root, a level at a time, and every leaf stayed the same distance from the top, whatever order the parts arrived in. Sequential part numbers just filled and split the rightmost nodes, neatly.
 
+![Two ways to index two million part numbers on disk. Left: a binary tree with one part number per node, about twenty-one levels deep, so a lookup reads twenty-one places on the disk. Right: a B-tree whose nodes are whole disk blocks of about two hundred keys each: one block at the top, two hundred below it, forty thousand below those, enough for eight million parts in three reads.](../images/figures/dsa-b-trees.svg)
+
+*On a disk the cost is the read, not the comparison, so the right tree is as wide as a block and only a few levels deep.*
+
 Looking back, Leonard thought the textbook tree had been designed for memory, where every node is equally cheap to reach. On a disk, the shape that mattered was set by the size of a block. Once he designed for that, the right structure was wide, shallow, and always balanced.
 
 ## Where it shows up

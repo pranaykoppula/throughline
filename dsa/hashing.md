@@ -20,6 +20,10 @@ In use, it didn't. Railways numbered their cars in blocks, and a great many numb
 
 Her fix was to stop using any part of the number directly and to mix all of it. She combined the digits, multiplied, took the remainder after dividing by the number of slots, and chose that number with care. Cars whose numbers differed by one digit now landed in unrelated slots, and the slots filled evenly. When two cars did land in the same slot, which was certain to happen sometimes, the second went in the next free one. She learned to keep the table no more than about two thirds full, because past that point, chains of displaced cars grew quickly.
 
+![Two bar charts of how many freight cars land in each of a thousand slots. Top: slot chosen by the car number's last three digits, with tall spikes at slots 0, 100 and 500 holding hundreds of cars, and most other slots far below average. Bottom: slot chosen by mixing all the digits, with every slot close to the average of twenty.](../images/figures/dsa-hashing.svg)
+
+*Real keys are never spread evenly, so a hash has to spread them: same key, same slot, and similar keys far apart.*
+
 Looking back, Dorothy thought the idea was strange when you first met it and obvious ever after. Take any key, however long or awkward, and boil it down to a small number that looks random but is always the same for the same key. Once you have that, you can use it to decide where things go.
 
 ## Where it shows up
