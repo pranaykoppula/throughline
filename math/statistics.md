@@ -31,7 +31,7 @@ Looking back, Lucas thought the dashboard had been honest, and he had read it li
 | [12, Machines that learn from data](../12-machines-that-learn-from-data.md) | Is this pattern in the data real? | A model learns whatever patterns are in its data, real or accidental. |
 | [Distributions and percentiles](percentiles.md) | What does the spread look like? | You can't judge a difference without knowing the normal variation. |
 | [11, Software that must not go down](../11-software-that-must-not-go-down.md) | Is this group's failure rate really different? | Rosa's Brazilian customers were a real signal in a small group; the opposite mistake is chasing noise in a small group. |
-| [Profiling](../tooling/profiling.md) | Did this change actually make it faster? | One run proves little; timings wobble too. |
+| [Profiling](../performance/profiling.md) | Did this change actually make it faster? | One run proves little; timings wobble too. |
 
 It shows up elsewhere too: performance benchmarks, alert thresholds, fraud detection, and every "this metric went up after we shipped" conversation.
 
@@ -57,10 +57,10 @@ Statistical significance is a way of asking how likely a difference this large w
 ## Connections
 
 - Learning this is also learning [distributions and percentiles](percentiles.md), because significance is about whether two distributions really differ.
-- Learning this is also learning [labels and training data](../data/labels.md), because a model trained on noise learns noise.
-- Learning this is also learning [profiling](../tooling/profiling.md), because a benchmark run once is an anecdote.
+- Learning this is also learning [labels and training data](../ai/labels.md), because a model trained on noise learns noise.
+- Learning this is also learning [profiling](../performance/profiling.md), because a benchmark run once is an anecdote.
 - Learning this is also learning [access patterns](../data/access-patterns.md), because deciding what's typical usage is a statistics question.
-- Learning this is also learning [the cost of reliability](../cost/reliability.md), because judging whether a change made things more reliable needs enough incidents to compare.
+- Learning this is also learning [the cost of reliability](../economics/reliability.md), because judging whether a change made things more reliable needs enough incidents to compare.
 - Learning this is also learning [state estimation](../signals/state-estimation.md), because telling signal from noise, asked continuously about something moving, is how robots and phones know where they are.
 - Learning this is also learning [measures and targets](../info/measures-and-targets.md), because a number that's also a target moves for reasons that have nothing to do with what it measures.
 - Learning this is also learning [Bloom filters](../dsa/bloom-filters.md), because choosing between false positives and false negatives is a statistical trade-off with an engineering price on each side.

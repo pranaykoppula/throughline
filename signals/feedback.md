@@ -31,9 +31,9 @@ Looking back, Astrid thought every loop that corrected itself was pulling agains
 | Page | The loop | What it learned about overshoot and delay |
 | --- | --- | --- |
 | [5, Machines need to talk](../05-machines-need-to-talk.md) | Lin's backups and TCP, retrying when packets were lost | Retrying harder made congestion worse; Jacobson's fix made loss a signal to slow down, a feedback loop for the whole internet. |
-| [Queueing](../latency/queueing.md) | Clients retrying into a full queue | Every retry is a correction based on old news; backoff weakens the correction so the queue can recover. |
+| [Queueing](../performance/queueing.md) | Clients retrying into a full queue | Every retry is a correction based on old news; backoff weakens the correction so the queue can recover. |
 | [12, Machines that learn from data](../12-machines-that-learn-from-data.md) | Gradient descent nudging a model's numbers | A learning rate that's too large overshoots and diverges; too small and training never arrives, the same trade as Astrid's. |
-| [Round trips](../latency/round-trips.md) | Any loop that crosses a network | The round trip is the delay in the loop, and it limits how quickly any correction can safely act. |
+| [Round trips](../performance/round-trips.md) | Any loop that crosses a network | The round trip is the delay in the loop, and it limits how quickly any correction can safely act. |
 | [State estimation](state-estimation.md) | Astrid's pressure sensor plus accelerometer | Better knowledge of where you are, sooner, is often the best fix for a loop. |
 
 It shows up elsewhere too: autoscalers that add servers after a peak has passed and remove them just as the next one arrives, thermostats, cruise control, central banks setting interest rates, shops whose orders swing wildly because of delays in the supply chain, and teams that overcorrect after an incident with rules that cause the next one.
@@ -61,8 +61,8 @@ A feedback controller repeatedly measures a system's output, compares it with a 
 
 ## Connections
 
-- Learning this is also learning [queueing](../latency/queueing.md), because retrying is a feedback loop, and backoff is how you keep it from amplifying the overload.
-- Learning this is also learning [round trips](../latency/round-trips.md), because a network's delay is the delay in every loop that crosses it.
+- Learning this is also learning [queueing](../performance/queueing.md), because retrying is a feedback loop, and backoff is how you keep it from amplifying the overload.
+- Learning this is also learning [round trips](../performance/round-trips.md), because a network's delay is the delay in every loop that crosses it.
 - Learning this is also learning [state estimation](state-estimation.md), because a controller can only be as good as its knowledge of where it is.
 - Learning this is also learning [sampling](sampling.md), because a controller sees the world only at its samples, and anything between them is invisible to it.
 - Learning this is also learning [state machines](../dsa/state-machines.md), because robots usually need both, and the word "state" means something different in each: a named stage there, a continuous quantity such as height here.

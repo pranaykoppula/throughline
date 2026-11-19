@@ -35,7 +35,7 @@ Looking back, Imelda thought the recursion had been right about the problem and 
 | Page | The overlapping questions | What remembering them bought |
 | --- | --- | --- |
 | [Graphs](graphs.md) | Ruth's shortest distance to each junction | Each junction's best distance, worked out once and reused by every route through it. |
-| [Caching](../latency/caching.md) | The same request, asked many times | Memoisation is caching applied to computation: remember an answer instead of recomputing it. |
+| [Caching](../performance/caching.md) | The same request, asked many times | Memoisation is caching applied to computation: remember an answer instead of recomputing it. |
 | [10, Many people, one codebase](../10-many-people-one-codebase.md) | Sofia's merges, line by line | Every merge starts with a comparison like Imelda's, finding what two versions have in common. |
 | [Divide and conquer](divide-and-conquer.md) | Pieces that don't overlap | The contrast: when subproblems are separate, solve them separately; when they repeat, remember. |
 | [Growth](growth.md) | Imelda's first version | Exponential growth from a dozen innocent lines, cut to the size of a table. |
@@ -66,7 +66,7 @@ Dynamic programming applies when a problem has optimal substructure (the best an
 ## Connections
 
 - Learning this is also learning [divide and conquer](divide-and-conquer.md), because both split a problem into smaller ones; dynamic programming is for when the pieces overlap.
-- Learning this is also learning [caching](../latency/caching.md), because memoisation is a cache for computation, with the same question of when to forget.
+- Learning this is also learning [caching](../performance/caching.md), because memoisation is a cache for computation, with the same question of when to forget.
 - Learning this is also learning [graphs](graphs.md), because shortest-path algorithms build each node's best distance from its neighbours'.
 - Learning this is also learning [growth](growth.md), because the difference between the recursion and the table is the difference between exponential and polynomial.
 - Learning this is also learning [greedy algorithms](greedy.md), because the two are the main ways to build an optimal answer step by step, and knowing which one applies is most of the skill.

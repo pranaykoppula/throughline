@@ -29,7 +29,7 @@ Looking back, Yasmin thought the first model hadn't been careless. It had been d
 | [4, Data outlives programs](../04-data-outlives-programs.md) | Walter's tree, shaped for monthly statements | Questions that started from a hospital, not a customer. |
 | [Access patterns](access-patterns.md) | Storage shaped by how data is used | The model decides what can be stored; access patterns decide how. |
 | [State machines](../dsa/state-machines.md) | Chloe's orders as a set of flags | Which combinations were possible; nine named states could. |
-| [Labels and training data](labels.md) | What gets recorded about each example | A model can only learn from what was written down. |
+| [Labels and training data](../ai/labels.md) | What gets recorded about each example | A model can only learn from what was written down. |
 
 It shows up elsewhere too: names, addresses, currencies, time zones and anything that seemed simple in the first country a product launched in.
 
@@ -57,7 +57,7 @@ Data modelling identifies the entities in a domain, the attributes recorded abou
 - Learning this is also learning [access patterns](access-patterns.md), because the model decides what can be stored and the patterns decide how it's arranged.
 - Learning this is also learning [state machines](../dsa/state-machines.md), because many entities have lifecycles that are part of the model.
 - Learning this is also learning [migrations](migrations.md), because changing a model that's already full of data is a migration.
-- Learning this is also learning [type systems](../runtimes/type-systems.md), because a schema is the model written down for a machine to check.
+- Learning this is also learning [type systems](../languages/type-systems.md), because a schema is the model written down for a machine to check.
 - Learning this is also learning [floating point](../math/floating-point.md), because choosing how to store money is a modelling decision.
 
 ## Resources

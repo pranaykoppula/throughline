@@ -48,17 +48,17 @@ An access pattern is how data is actually used: how often it's read compared wit
 ## Where it gets misapplied
 
 - **Storing data the way it's described.** Arthur's catalogue order. A tidy schema that matches the business's vocabulary but not its queries.
-- **Designing for the pattern you imagine.** Measure what's actually read and written before choosing ([profiling](../tooling/profiling.md)).
+- **Designing for the pattern you imagine.** Measure what's actually read and written before choosing ([profiling](../performance/profiling.md)).
 - **Optimising for one pattern forever.** Walter's tree and Arthur's summer layout.
 - **The mirror:** designing for every possible pattern. A store with fifteen indexes is fast to read any way and slow to write at all ([page 4](../04-data-outlives-programs.md)).
 
 ## Connections
 
 - Learning this is also learning [B-trees](../dsa/b-trees.md) and [LSM trees](../dsa/lsm-trees.md), because each is built for a different balance of reads and writes.
-- Learning this is also learning [caching](../latency/caching.md), because a cache is Arthur's front shelves: the popular items, near.
+- Learning this is also learning [caching](../performance/caching.md), because a cache is Arthur's front shelves: the popular items, near.
 - Learning this is also learning [hash tables](../dsa/hash-tables.md), because they make one pattern, finding by key, as cheap as possible.
 - Learning this is also learning [data modelling](modelling.md), because the shape of the data should come from the questions asked of it.
-- Learning this is also learning [profiling](../tooling/profiling.md), because you find the real pattern by measuring, not guessing.
+- Learning this is also learning [profiling](../performance/profiling.md), because you find the real pattern by measuring, not guessing.
 - Learning this is also learning [choosing a data structure](../dsa/choosing.md), because the guide starts from the same place: what you'll ask of the data most often.
 
 ## Resources

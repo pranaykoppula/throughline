@@ -28,8 +28,8 @@ Looking back, Jonas thought the built-in format had felt free because its cost w
 | --- | --- | --- |
 | [5, Machines need to talk](../05-machines-need-to-talk.md) | Everything on the wire | Both sides must agree on what the bytes mean, though they can't see each other. |
 | [13, Everything still exists at once](../13-everything-still-exists-at-once.md) | A partner bank's file format, changed with two weeks' notice | Contract drift: two sides of an interface changing separately. |
-| [Input validation](../auth/input-validation.md) | Parsing input from outside | A format that can carry code is a format strangers can attack. |
-| [Round trips](../latency/round-trips.md) | What goes in each exchange | Size and shape of the payload are the other half of a request's cost. |
+| [Input validation](../security/input-validation.md) | Parsing input from outside | A format that can carry code is a format strangers can attack. |
+| [Round trips](../performance/round-trips.md) | What goes in each exchange | Size and shape of the payload are the other half of a request's cost. |
 | [State machines](../dsa/state-machines.md) | Parsers | Reading a format is usually a state machine consuming one piece at a time. |
 
 It shows up elsewhere too: file formats that outlive the programs that wrote them, configuration files, database storage formats, and APIs between companies.
@@ -55,11 +55,11 @@ Serialization turns in-memory data into bytes; deserialization turns them back. 
 
 ## Connections
 
-- Learning this is also learning [input validation](../auth/input-validation.md), because parsing is where strangers' bytes first meet your code.
+- Learning this is also learning [input validation](../security/input-validation.md), because parsing is where strangers' bytes first meet your code.
 - Learning this is also learning [migrations](migrations.md), because changing a format that's already stored is a migration.
 - Learning this is also learning [state machines](../dsa/state-machines.md), because parsers are state machines.
-- Learning this is also learning [round trips](../latency/round-trips.md), because a compact format makes each exchange cheaper.
-- Learning this is also learning [type systems](../runtimes/type-systems.md), because a schema is a type that crosses a boundary between programs.
+- Learning this is also learning [round trips](../performance/round-trips.md), because a compact format makes each exchange cheaper.
+- Learning this is also learning [type systems](../languages/type-systems.md), because a schema is a type that crosses a boundary between programs.
 - Learning this is also learning [encodings](../info/encodings.md), because a unit, a time zone or a character set is a convention, and the bytes don't carry it unless you make them.
 
 ## Resources

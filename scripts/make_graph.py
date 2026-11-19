@@ -13,24 +13,12 @@ import posixpath
 import re
 import subprocess
 
+import families
+
 FAMILIES = {
     "spine": ("Spine", "#e6edf3"),
     "reference": ("Reference", "#f0b72f"),
-    "data": ("Data", "#2a78d6"),
-    "dsa": ("DSA", "#1baa7a"),
-    "auth": ("Trust", "#d64a4a"),
-    "latency": ("Latency", "#e09a1a"),
-    "cost": ("Cost", "#8a5cd6"),
-    "math": ("Math", "#4fb3d9"),
-    "runtimes": ("Runtimes", "#d6559f"),
-    "tooling": ("Tooling", "#7fbf3f"),
-    "vendors": ("Vendors", "#b08a5a"),
-    "cloud": ("Cloud", "#5ac8b8"),
-    "ai": ("AI", "#a371f7"),
-    "writing": ("Writing", "#8b949e"),
-    "info": ("Information", "#e86fe0"),
-    "crypto": ("Cryptography", "#f0883e"),
-    "signals": ("Signals and control", "#ffa198"),
+    **{folder: (short, colour) for folder, (_, short, colour) in families.FAMILIES.items()},
 }
 
 REFERENCE = ["the-model.md", "forces.md", "pushback.md", "motifs.md"]
@@ -82,9 +70,11 @@ def main():
             "id": path,
             "title": title,
             "family": family_of(path),
-            "summary": first_sentence(section(text, "Problem")),
+            "summary": first_sentence(section(text, "Problem") or text.split("A family index. ", 1)[-1]),
             "exists": True,
         }
+        if path.endswith("/README.md"):
+            nodes[path]["index"] = True
         body = text.split("## The model so far", 1)[0]
         for href in LINK.findall(body):
             if href.startswith(("http://", "https://", "mailto:", "#")):

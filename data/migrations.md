@@ -60,7 +60,7 @@ A migration changes data's shape or location while systems depend on it. Done sa
 - Learning this is also learning [state machines](../dsa/state-machines.md), because untangling which states old data was really in is often the first job.
 - Learning this is also learning [serialization formats](serialization.md), because changing a stored format is a migration, and good formats make it easier.
 - Learning this is also learning [data gravity](data-gravity.md), because moving large data is slow enough that every migration plan has to account for it.
-- Learning this is also learning [CI pipelines](../tooling/ci.md), because shipping each small step safely depends on deploying often, as Sofia learned.
+- Learning this is also learning [CI pipelines](../practice/ci.md), because shipping each small step safely depends on deploying often, as Sofia learned.
 - Learning this is also learning [meaning as use](../info/meaning-as-use.md), because the behaviour a migration must preserve includes everything users rely on, promised or not.
 
 ## Resources

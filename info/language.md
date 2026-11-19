@@ -28,10 +28,11 @@ Looking back, Daniela thought the product manager's sentence hadn't been careles
 
 | Page | The words | What they left out |
 | --- | --- | --- |
+| [12, Machines that learn from data](../12-machines-that-learn-from-data.md) | Customers' short questions to Nadia's assistant | The context: she had to send the help centre with every one. |
 | [Information](information.md) | A code word in a telegram | Meaning, which lived in a codebook the new agent didn't share. |
 | [Compression](compression.md) | A briefing slide's headline | The caveat lower down, which was the whole point. |
-| [Coding agents](../tooling/coding-agents.md) | "Make the test pass reliably" | The goal behind the check, which the agent had no way to know. |
-| [Commit messages and design records](../writing/commit-messages.md) | "fix" | Why, which only the author knew, and then nobody did. |
+| [Coding agents](../ai/coding-agents.md) | "Make the test pass reliably" | The goal behind the check, which the agent had no way to know. |
+| [Commit messages and design records](../practice/commit-messages.md) | "fix" | Why, which only the author knew, and then nobody did. |
 | [Serialization formats](../data/serialization.md) | A field called `impulse` | The unit, assumed by both sides and different for each. |
 
 It shows up elsewhere too: in prompts to language models, which fill every gap with the most typical reading; in contracts; in handovers between shifts; in user interface labels; and in every ticket titled "Fix the login thing".
@@ -63,7 +64,7 @@ Natural language transmits meaning efficiently by leaving most of it implicit, r
 - Learning this is also learning [compression](compression.md), because a summary is lossy compression with the writer's idea of what matters.
 - Learning this is also learning [data modelling](../data/modelling.md), because modelling a domain starts with agreeing what its words mean.
 - Learning this is also learning [tokens and context windows](../ai/tokens.md), because a prompt is compressed language decoded by a reader who knows only what's in the window.
-- Learning this is also learning [commit messages and design records](../writing/commit-messages.md), because writing for a future reader is writing for someone outside your context.
+- Learning this is also learning [commit messages and design records](../practice/commit-messages.md), because writing for a future reader is writing for someone outside your context.
 - Learning this is also learning [power and predictability](../dsa/power-and-predictability.md), because the ladder of formal languages began as Chomsky's theory of grammar for human ones.
 - Learning this is also learning [meaning as use](meaning-as-use.md), because an interface's meaning, like a word's, is set by how people use it.
 - Learning this is also learning [encodings](encodings.md), because the most basic shared codebook in computing is the one that turns bytes into letters.

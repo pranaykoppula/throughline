@@ -30,6 +30,7 @@ Looking back, Tunde thought a greedy choice was a bet that the future wouldn't m
 
 | Page | The greedy choice | Did it work? |
 | --- | --- | --- |
+| [5, Machines need to talk](../05-machines-need-to-talk.md) | Routing every packet along the shortest path | Yes: for shortest paths, extending the nearest router first is provably right. |
 | [Graphs](graphs.md) | Ruth's shortest path, always extending the nearest junction | Yes, provably, because distances can't be negative. |
 | [Computability](computability.md) | The shortest route through many cities | No known method is both exact and fast; greedy rules and improvements are what's actually used. |
 | [Queues](queues.md) | Yusuf's short interactive jobs served first | Waiting falls on average, and long jobs can starve unless something guarantees them a turn. |

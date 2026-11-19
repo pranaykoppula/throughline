@@ -38,7 +38,7 @@ Looking back, Sigrid thought each structure she'd tried had been fast at somethi
 | [Queues](queues.md) | Yusuf's interactive jobs ahead of long ones | Serving by priority instead of by arrival, which a priority queue does directly. |
 | [Graphs](graphs.md) | The nearest junction not yet explored | Dijkstra's algorithm takes it from a priority queue at every step. |
 | [2, One machine, many programs](../02-one-machine-many-programs.md) | The next job to give the processor | A scheduler choosing who runs, many times a second. |
-| [Event loops and threads](../runtimes/event-loops-and-threads.md) | The next timer an event loop must fire | Every event loop keeps its timers in a structure like Sigrid's. |
+| [Event loops and threads](../languages/event-loops-and-threads.md) | The next timer an event loop must fire | Every event loop keeps its timers in a structure like Sigrid's. |
 
 It shows up elsewhere too: hospital triage, operating-system schedulers, network routers prioritising traffic, simulations processing the next event in time order, merging many sorted files at once, and leaderboards showing the top ten of millions.
 
@@ -66,7 +66,7 @@ A binary heap is a complete binary tree stored in an array, where every parent i
 - Learning this is also learning [queues](queues.md), because a priority queue is a queue that serves by importance instead of by arrival, and a heap is how it's usually built.
 - Learning this is also learning [sorting](sorting.md), because heapsort is a heap emptied in order, and the top-hundred list is a heap that never grows.
 - Learning this is also learning [graphs](graphs.md), because Dijkstra's algorithm is a heap of junctions ordered by distance.
-- Learning this is also learning [event loops and threads](../runtimes/event-loops-and-threads.md), because every event loop has to know which timer fires next.
+- Learning this is also learning [event loops and threads](../languages/event-loops-and-threads.md), because every event loop has to know which timer fires next.
 - Learning this is also learning [growth](growth.md), because the heap's logarithmic steps are what make three hundred thousand timers cost about twenty steps each.
 
 ## Resources

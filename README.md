@@ -44,15 +44,29 @@ Alongside the trunk:
 - [Forces](forces.md): the non-technical limits (money, law, distribution) that moved the field as much as hardware did.
 - [Pushback](pushback.md): questions for when a solution arrives before its problem.
 - [Choosing a data structure](dsa/choosing.md): start from the question you keep asking of your data, and find the structure built for it.
-- [Motifs](motifs.md): the shapes that keep recurring across these stories, such as *copies disagree* and *the sign drifts from the thing*, with every page where each appears.
+- [Motifs](motifs.md): the shapes that keep recurring across these stories, such as *copies disagree* and *the sign drifts from the thing*, with every page where each appears and the sentence of the model each one echoes.
 
 Links to pages that don't exist yet are deliberate. They're the branches nobody has written, and they're how this grows.
 
 ## The map
 
-![The throughline: fourteen stops in order, with the hubs each page comes back to](images/map.svg)
+![The throughline: fourteen stops in order, with the families each page connects to](images/map.svg)
 
-The dots are the hubs: families of ideas every few pages come back to. Each family is a folder of short branch pages, one concept each, such as `dsa/hash-tables.md`. To redraw the map after changing a page's Connections, edit `scripts/make_map.py` and run `python3 scripts/make_map.py`.
+The dots are the families each page's Connections reach. A family is a field, and a folder of short branch pages, one concept each, such as `dsa/hash-tables.md`. Each folder opens on an index that lists its pages in reading order:
+
+- [Algorithms and data structures](dsa/README.md)
+- [Data systems](data/README.md)
+- [Performance](performance/README.md)
+- [Economics](economics/README.md)
+- [Security](security/README.md), including cryptography
+- [Programming languages](languages/README.md)
+- [Engineering practice](practice/README.md)
+- [Machine learning and AI](ai/README.md)
+- [Mathematics](math/README.md)
+- [Information and meaning](info/README.md)
+- [Signals and control](signals/README.md)
+
+The map is drawn from the pages, so after changing a page's Connections, run `python3 scripts/make_map.py`.
 
 For the whole web rather than the trunk, open [the graph](https://pranaykoppula.github.io/throughline/graph.html), or `graph.html` from your clone. Every page is a node and every link is an edge, as in Obsidian's graph view: hover a page to see what it connects to, and click it to open it. It's drawn from the pages' links, so after adding a page or a link, run `python3 scripts/make_graph.py`.
 

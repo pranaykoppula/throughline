@@ -61,9 +61,9 @@ A hash function turns any input into a fixed-size value. The same input always g
 - Learning this is also learning [hash tables](hash-tables.md), because they're the lookup job done well: hashing plus a plan for collisions and a rule for when to grow.
 - Learning this is also learning [Merkle DAGs](merkle-dags.md), because naming things by the hash of their contents is what lets git, and much else, check a whole history by checking one value.
 - Learning this is also learning [consistent hashing](../data/partitioning.md), because placement has to survive machines being added and removed.
-- Learning this is also learning [caching](../latency/caching.md), because a cache is a hash table that's allowed to forget.
-- Learning this is also learning [password storage](../auth/password-storage.md), because secrecy needs the slow, salted kind.
-- Learning this is also learning [input validation](../auth/input-validation.md), because hash flooding is strangers choosing your keys.
+- Learning this is also learning [caching](../performance/caching.md), because a cache is a hash table that's allowed to forget.
+- Learning this is also learning [password storage](../security/password-storage.md), because secrecy needs the slow, salted kind.
+- Learning this is also learning [input validation](../security/input-validation.md), because hash flooding is strangers choosing your keys.
 - Learning this is also learning [power and predictability](power-and-predictability.md), because a backtracking regular expression is attacked the same way: by choosing the input that triggers the worst case.
 - Learning this is also learning [Bloom filters](bloom-filters.md), because several hashes of one key, packed into a shared array of bits, can rule a key out without storing it.
 

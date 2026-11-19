@@ -60,10 +60,12 @@ Motif: [costs move; they don't disappear](motifs.md#costs-move-they-dont-disappe
 - Learning this is also learning [B-trees](dsa/b-trees.md), because they're what Walter's index was, and they're still behind most indexes: sorted, shallow, and cheap to read from disk.
 - Learning this is also learning [LSM trees](dsa/lsm-trees.md), because they make the opposite trade, cheaper writes for costlier reads, for stores that write all day.
 - Learning this is also learning [hardware](01-one-machine-one-program.md), because every index exists to avoid reading from the slow floor of the memory hierarchy.
-- Learning this is also learning [multi-tenancy](auth/multi-tenancy.md), because who may read which row is the boundary between one customer's data and another's.
-- Learning this is also learning [storage tiers](cost/storage-tiers.md), because storage, indexes and the writes they cost all show up on a bill.
+- Learning this is also learning [multi-tenancy](security/multi-tenancy.md), because who may read which row is the boundary between one customer's data and another's.
+- Learning this is also learning [storage tiers](economics/storage-tiers.md), because storage, indexes and the writes they cost all show up on a bill.
 - Learning this is also learning [consistency](data/consistency.md), because the actuaries' second copy of the data, in a different shape, was a copy someone had to keep in step, and copies drift apart.
 - Learning this is also learning [append-only logs](dsa/append-only-logs.md), because the database could undo Walter's unfinished payments after the power cut only because it had logged each change before making it.
+- Learning this is also learning [data modelling](data/modelling.md), because Walter's tree was a picture of the company drawn from monthly statements, and the hospital question was the first one it couldn't answer.
+- Learning this is also learning [Bloom filters](dsa/bloom-filters.md), because stores built on LSM trees keep one for each file, so most lookups can skip files that can't hold the key without reading them.
 
 ## Resources
 

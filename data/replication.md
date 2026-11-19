@@ -57,8 +57,8 @@ Replication keeps copies of data on several machines, usually one primary that a
 
 - Learning this is also learning [consistency](consistency.md), because replicas are the copies most systems make on purpose.
 - Learning this is also learning [state machines](../dsa/state-machines.md), because a replica applying the same changes in the same order ends in the same state.
-- Learning this is also learning [round trips](../latency/round-trips.md), because synchronous replication adds a round trip to every write.
-- Learning this is also learning [the cost of reliability](../cost/reliability.md), because every replica is capacity paid for in case of failure.
+- Learning this is also learning [round trips](../performance/round-trips.md), because synchronous replication adds a round trip to every write.
+- Learning this is also learning [the cost of reliability](../economics/reliability.md), because every replica is capacity paid for in case of failure.
 - Learning this is also learning [partitioning](partitioning.md), because replication copies data while partitioning splits it, and most large systems do both.
 - Learning this is also learning [error detection and correction](../info/error-correction.md), because a replica that copies faithfully also copies corruption, and only checksums can tell the copies apart.
 - Learning this is also learning [append-only logs](../dsa/append-only-logs.md), because a replica is a second reader of the same log of changes.

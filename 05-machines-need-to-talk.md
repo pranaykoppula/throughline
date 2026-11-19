@@ -63,15 +63,18 @@ Motif: [every correction acts on old news](motifs.md#every-correction-acts-on-ol
 
 - Learning this is also learning [state machines](dsa/state-machines.md), because a TCP connection is one: a fixed set of states and the messages that move between them.
 - Learning this is also learning [shortest paths](dsa/graphs.md), because routing a packet is finding a path through a graph of machines.
-- Learning this is also learning [TLS](auth/tls.md), because a network you can't see into is one where you can't tell who's on the other end without it.
-- Learning this is also learning [round trips](latency/round-trips.md), because round trips, not bandwidth, decide how fast most things feel.
+- Learning this is also learning [TLS](security/tls.md), because a network you can't see into is one where you can't tell who's on the other end without it.
+- Learning this is also learning [round trips](performance/round-trips.md), because round trips, not bandwidth, decide how fast most things feel.
 - Learning this is also learning [serialization formats](data/serialization.md), because everything on the wire has to be turned into bytes in a format both sides agree on.
 - Learning this is also learning [deadlock](02-one-machine-many-programs.md), because congestion collapse is deadlock's cousin: every party behaving reasonably, and the whole stuck.
-- Learning this is also learning [queueing](latency/queueing.md), because a router's buffer is a queue, and congestion collapse is what happens when a queue overflows and everyone retries into it.
-- Learning this is also learning [caching](latency/caching.md), because Netflix's servers inside internet providers are copies placed near viewers, the cheapest round trip being the one you don't make.
-- Learning this is also learning [latency numbers](latency/latency-numbers.md), because a round trip across a continent costs about a million times a memory read, and Lin's transfer was mostly that.
+- Learning this is also learning [queueing](performance/queueing.md), because a router's buffer is a queue, and congestion collapse is what happens when a queue overflows and everyone retries into it.
+- Learning this is also learning [caching](performance/caching.md), because Netflix's servers inside internet providers are copies placed near viewers, the cheapest round trip being the one you don't make.
+- Learning this is also learning [latency numbers](performance/latency-numbers.md), because a round trip across a continent costs about a million times a memory read, and Lin's transfer was mostly that.
 - Learning this is also learning [information](info/information.md), because Lin's block numbers and confirmations were redundancy added on purpose, so that loss and duplication could be noticed.
 - Learning this is also learning [feedback and control](signals/feedback.md), because Jacobson's fix made packet loss a signal to slow down, turning the whole internet into a feedback loop.
+- Learning this is also learning [error detection and correction](info/error-correction.md), because Lin's numbered blocks and confirmations were error detection: a way to notice that something was lost or repeated, and put it right.
+- Learning this is also learning [greedy algorithms](dsa/greedy.md), because the shortest-path routing that carries every packet always extends the nearest unexplored router first, and for shortest paths that greedy choice is provably right.
+- Learning this is also learning [state estimation](signals/state-estimation.md), because Jacobson's fix also had TCP keep a running estimate of each connection's delay, smoothed from noisy measurements, to decide when a packet was really lost.
 
 ## Resources
 

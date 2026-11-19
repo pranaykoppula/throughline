@@ -25,7 +25,7 @@ Looking back, Marta thought the textbook had been right about what it measured: 
 | Page | The layout | What it decided |
 | --- | --- | --- |
 | [1, One machine, one program](../01-one-machine-one-program.md) | Joan's grid, walked against its layout | The same lesson with pages and a drum: touching data in the order it's stored is fast; jumping around is slow. |
-| [Latency numbers](../latency/latency-numbers.md) | Cache against main memory | About a hundred times apart, which is why data kept together wins. |
+| [Latency numbers](../performance/latency-numbers.md) | Cache against main memory | About a hundred times apart, which is why data kept together wins. |
 | [Access patterns](../data/access-patterns.md) | Storing fields together, as in column stores | Marta's split arrays are a column store in miniature. |
 | [Hash tables](hash-tables.md) | Open addressing keeps entries in one array | Often faster than chaining, which scatters entries in linked lists. |
 
@@ -48,14 +48,14 @@ An array stores elements contiguously, so any element can be reached by position
 - **Choosing by big-O alone.** Marta's linked list: fewer steps on paper, far slower in practice.
 - **Linked lists by default.** In most code, a dynamic array is the better starting point.
 - **Arrays where order must be kept and the middle changes constantly.** Shifting large arrays repeatedly is genuinely slow; other structures exist for this.
-- **The mirror:** contorting every data structure for cache layout in code where performance doesn't matter. Measure first ([profiling](../tooling/profiling.md)).
+- **The mirror:** contorting every data structure for cache layout in code where performance doesn't matter. Measure first ([profiling](../performance/profiling.md)).
 
 ## Connections
 
-- Learning this is also learning [latency numbers](../latency/latency-numbers.md), because the gap between cache and memory decides which structure wins.
+- Learning this is also learning [latency numbers](../performance/latency-numbers.md), because the gap between cache and memory decides which structure wins.
 - Learning this is also learning [access patterns](../data/access-patterns.md), because walking data in order is the pattern caches reward.
 - Learning this is also learning [hash tables](hash-tables.md), because how a hash table stores collisions is a choice between these two.
-- Learning this is also learning [profiling](../tooling/profiling.md), because Marta found the real cost by measuring, not by reasoning from the textbook.
+- Learning this is also learning [profiling](../performance/profiling.md), because Marta found the real cost by measuring, not by reasoning from the textbook.
 - Learning this is also learning [B-trees](b-trees.md), because packing many keys into one node is the same idea for disks.
 
 ## Resources

@@ -31,7 +31,7 @@ Looking back, Tobias thought the lesson was counter-intuitive and simple. A good
 | Page | The search | The question that earned its keep |
 | --- | --- | --- |
 | [Information](information.md) | Any message | A message carries information by ruling out possibilities. A question is the same thing, from the other side. |
-| [Profiling](../tooling/profiling.md) | Where the time goes | One measurement of the whole program ruled out more than three weeks of hunches about the matrix routine. |
+| [Profiling](../performance/profiling.md) | Where the time goes | One measurement of the whole program ruled out more than three weeks of hunches about the matrix routine. |
 | [B-trees](../dsa/b-trees.md) | A key among millions | Each disk read answers a question with two hundred possible answers, not two, so three reads find one part in eight million. |
 | [12, Machines that learn from data](../12-machines-that-learn-from-data.md) | Spam or not | Graham's filter weighed the words that most changed the odds, and ignored the ones that appeared everywhere. |
 | [Statistical significance](../math/statistics.md) | Did the change make a difference? | A test whose result you could predict in advance, like Lucas's two-day button test, isn't telling you anything. |
@@ -58,10 +58,10 @@ Uncertainty can be measured as the number of yes-or-no questions needed to pin d
 ## Connections
 
 - Learning this is also learning [information](information.md), because information gain is entropy before the question minus entropy after it.
-- Learning this is also learning [profiling](../tooling/profiling.md), because a good measurement is a question chosen to rule out the most.
+- Learning this is also learning [profiling](../performance/profiling.md), because a good measurement is a question chosen to rule out the most.
 - Learning this is also learning [B-trees](../dsa/b-trees.md), because each wide node answers a many-way question in one read.
 - Learning this is also learning [statistical significance](../math/statistics.md), because both are about how much an observation should change what you believe.
-- Learning this is also learning [labels and training data](../data/labels.md), because a decision tree can only find the questions its data lets it ask.
+- Learning this is also learning [labels and training data](../ai/labels.md), because a decision tree can only find the questions its data lets it ask.
 - Learning this is also learning [state estimation](../signals/state-estimation.md), because an estimator weighs each new reading by how much it reduces uncertainty, continuously.
 - Learning this is also learning [sorting](../dsa/sorting.md), because sorted data is what lets each question rule out half of what's left.
 - Learning this is also learning [divide and conquer](../dsa/divide-and-conquer.md), because halving the possibilities is binary search, and `git bisect` is binary search over history.

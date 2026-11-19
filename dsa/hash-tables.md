@@ -29,7 +29,7 @@ Looking back, Kenji thought the lesson was about "on average". A doubling hash t
 | Page | The table | What it was for |
 | --- | --- | --- |
 | [3, Programs too big for one head](../03-programs-too-big-for-one-head.md) | Elena's parts catalogue | Find one part by its number, thirty times faster than searching a list. |
-| [Caching](../latency/caching.md) | Nearly every cache | A hash table that's allowed to forget. |
+| [Caching](../performance/caching.md) | Nearly every cache | A hash table that's allowed to forget. |
 | [Hashing](hashing.md) | Dorothy's freight-car slots | The first hash tables, and the lesson that real keys aren't spread evenly. |
 
 It shows up elsewhere too: database hash indexes, the dictionaries and maps built into most programming languages, symbol tables in compilers, and deduplication.
@@ -55,7 +55,7 @@ A hash table stores values in an array of slots, choosing each value's slot by h
 
 - Learning this is also learning [hashing](hashing.md), because the table is only as good as the hash that places its keys.
 - Learning this is also learning [B-trees](b-trees.md), because they make the other trade: slightly slower lookups, but keys kept in order.
-- Learning this is also learning [caching](../latency/caching.md), because a cache is a hash table that's allowed to forget.
+- Learning this is also learning [caching](../performance/caching.md), because a cache is a hash table that's allowed to forget.
 - Learning this is also learning [access patterns](../data/access-patterns.md), because a hash table is what you get when the pattern is "find by key" and nothing else.
 - Learning this is also learning [distributions and percentiles](../math/percentiles.md), because "constant time on average" can hide a terrible worst case.
 - Learning this is also learning [growth](growth.md), because replacing "compare with everything" by "look it up" is the most common way out of quadratic code.

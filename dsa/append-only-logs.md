@@ -38,7 +38,7 @@ Looking back, Teresa thought the original design had kept the answer and thrown 
 | [4, Data outlives programs](../04-data-outlives-programs.md) | The database's own record of each change in a batch | Walter's payments undone cleanly after a power cut, because the database had logged them before applying them. |
 | [Merkle DAGs](merkle-dags.md) | Git's history of commits | Nothing in the past is changed; a new commit points at the old ones, and history can always be read back. |
 | [Replication](../data/replication.md) | The main database's log of changes | A replica that applies the same log in the same order ends in the same state. |
-| [Commit messages and design records](../writing/commit-messages.md) | The reasons behind a codebase's changes | Decisions explained by reading what happened, in order. |
+| [Commit messages and design records](../practice/commit-messages.md) | The reasons behind a codebase's changes | Decisions explained by reading what happened, in order. |
 
 It shows up elsewhere too: double-entry bookkeeping, bank statements, message systems such as Kafka, event sourcing in application design, audit trails in medicine and aviation, blockchains, and laboratory notebooks, where mistakes are crossed out with a single line so they can still be read.
 
@@ -68,7 +68,7 @@ An append-only log is a sequence of records that can only be added to at the end
 - Learning this is also learning [LSM trees](lsm-trees.md), because they're a log made fast to read, with compaction as the price.
 - Learning this is also learning [replication](../data/replication.md), because a replica is a second reader of the same log.
 - Learning this is also learning [Merkle DAGs](merkle-dags.md), because git's history is an append-only log whose entries vouch for everything before them.
-- Learning this is also learning [caching](../latency/caching.md), because a balance derived from a ledger is a cache, and the ledger wins when they disagree.
+- Learning this is also learning [caching](../performance/caching.md), because a balance derived from a ledger is a cache, and the ledger wins when they disagree.
 - Learning this is also learning [migrations](../data/migrations.md), because a log of what happened lets you rebuild state in a new shape without guessing what the old shape meant.
 
 ## Resources

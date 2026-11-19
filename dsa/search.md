@@ -38,6 +38,7 @@ Looking back, Agnes thought the archive had asked her three different questions 
 
 | Page | The search | The technique |
 | --- | --- | --- |
+| [3, Programs too big for one head](../03-programs-too-big-for-one-head.md) | Elena's catalogue, one exact part number at a time | Exact lookup by key, before anyone asks in their own words. |
 | [Sorting](sorting.md) | Agnes's headline list, 1987 | Sorted order, searched by halving. |
 | [Hash tables](hash-tables.md) | Agnes's keywords, 1989 | Exact keys, found in one step. |
 | [Tries](tries.md) | Suggestions from the first few letters | Prefixes, one step per keystroke. |

@@ -59,9 +59,9 @@ A log-structured merge tree buffers writes in memory and in an append-only log, 
 - Learning this is also learning [B-trees](b-trees.md), because they make the opposite trade between reads and writes.
 - Learning this is also learning [Bloom filters](bloom-filters.md), because they rule out files that cannot contain a key without reading them.
 - Learning this is also learning [access patterns](../data/access-patterns.md), because the ratio of writes to reads decides which structure fits.
-- Learning this is also learning [latency numbers](../latency/latency-numbers.md), because sequential disk writes are far faster than scattered ones.
+- Learning this is also learning [latency numbers](../performance/latency-numbers.md), because sequential disk writes are far faster than scattered ones.
 - Learning this is also learning [replication](../data/replication.md), because the same append-only log that protects against crashes is often what's shipped to replicas.
-- Learning this is also learning [queueing](../latency/queueing.md), because compaction is a background queue that has to keep up.
+- Learning this is also learning [queueing](../performance/queueing.md), because compaction is a background queue that has to keep up.
 - Learning this is also learning [sorting](sorting.md), because sorting in memory and merging sorted files is how tapes were sorted sixty years ago.
 - Learning this is also learning [amortised cost](amortised-cost.md), because cheap writes now are paid for in merging later, at a moment the system doesn't choose.
 - Learning this is also learning [append-only logs](append-only-logs.md), because an LSM tree is a log made fast to read, with compaction as its closing of the books.

@@ -59,16 +59,21 @@ Motifs: [enforce it once, at the boundary](motifs.md#enforce-it-once-at-the-boun
 
 ## Connections
 
-- Learning this is also learning [sessions and tokens](auth/sessions-and-tokens.md), because once a password is checked, something has to prove who you are on every later request, and that something can be stolen too.
+- Learning this is also learning [sessions and tokens](security/sessions-and-tokens.md), because once a password is checked, something has to prove who you are on every later request, and that something can be stolen too.
 - Learning this is also learning [networking](05-machines-need-to-talk.md), because tokens and passwords travel, and every hop is a place they can leak.
 - Learning this is also learning [AI](12-machines-that-learn-from-data.md), because prompt injection is Marcus's search box again: input from outside being treated as instructions.
-- Learning this is also learning [software supply chain](vendors/supply-chain.md), because every library you install is code from strangers you've decided to trust.
+- Learning this is also learning [software supply chain](security/supply-chain.md), because every library you install is code from strangers you've decided to trust.
 - Learning this is also learning [the web](06-anyone-can-publish.md), because the client is a stranger's machine, and anything it sends can be forged.
 - Learning this is also learning [hashing](dsa/hashing.md), because the one-way fingerprint that hides Marcus's passwords also finds Elena's parts ([page 3](03-programs-too-big-for-one-head.md)), spreads Maya's data across machines ([page 8](08-too-many-users-too-much-data.md)), and names every git commit ([page 10](10-many-people-one-codebase.md)).
-- Learning this is also learning [input validation](auth/input-validation.md), because Marcus's search box, Hannah's browser ([page 6](06-anyone-can-publish.md)) and Nadia's support assistant ([page 12](12-machines-that-learn-from-data.md)) all needed the same rule: input from outside is data, never instructions.
-- Learning this is also learning [least privilege](auth/least-privilege.md), because Marcus's database account could delete everything and only needed to read products and write orders.
-- Learning this is also learning [TLS](auth/tls.md), because a password checked carefully on the server is no use if it crossed the internet in plain text to get there.
-- Learning this is also learning [password storage](auth/password-storage.md), because Marcus upgraded each password at its owner's next login, and the accounts nobody logs into stay weak until someone wraps them.
+- Learning this is also learning [input validation](security/input-validation.md), because Marcus's search box, Hannah's browser ([page 6](06-anyone-can-publish.md)) and Nadia's support assistant ([page 12](12-machines-that-learn-from-data.md)) all needed the same rule: input from outside is data, never instructions.
+- Learning this is also learning [least privilege](security/least-privilege.md), because Marcus's database account could delete everything and only needed to read products and write orders.
+- Learning this is also learning [TLS](security/tls.md), because a password checked carefully on the server is no use if it crossed the internet in plain text to get there.
+- Learning this is also learning [password storage](security/password-storage.md), because Marcus upgraded each password at its owner's next login, and the accounts nobody logs into stay weak until someone wraps them.
+- Learning this is also learning [public-key cryptography](security/public-key.md), because Diffie–Hellman and RSA are what let a stranger's browser agree a secret with Marcus's server that nobody listening could learn.
+- Learning this is also learning [symmetric encryption](security/symmetric-encryption.md), because once that secret is agreed, everything else on the connection is encrypted with it.
+- Learning this is also learning [randomness](security/randomness.md), because Marcus's salts worked only because nobody could guess them, and every key and token has the same need.
+- Learning this is also learning [key management](security/key-management.md), because encryption doesn't remove a secret, it moves it into a key, and the key then needs all the care Marcus gave his passwords.
+- Learning this is also learning [communication with adversaries](info/secrecy.md), because whoever leaked Marcus's database was an adversary reading what they found, not noise corrupting it, and that changes what protection has to do.
 
 ## Resources
 

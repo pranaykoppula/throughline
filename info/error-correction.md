@@ -31,7 +31,7 @@ Looking back, Felipe thought he'd learned that redundancy only works if it's str
 | [Information](information.md) | Code words differing in at least two letters | Detect a single garbled letter, though not fix it. Thomas's telegraph code. |
 | [5, Machines need to talk](../05-machines-need-to-talk.md) | Numbered blocks, confirmations and checksums on every packet | Detect loss, duplication and damage, then resend. |
 | [Replication](../data/replication.md) | Replicas of a database | Survive a machine dying, and faithfully copy a mistake. |
-| [Storage tiers](../cost/storage-tiers.md) | Facebook's warm storage using erasure coding | Survive failures with less space than full copies. |
+| [Storage tiers](../economics/storage-tiers.md) | Facebook's warm storage using erasure coding | Survive failures with less space than full copies. |
 | [Merkle DAGs](../dsa/merkle-dags.md) | Hashes of blocks, then of hashes | Find exactly which blocks differ between two copies. |
 
 It shows up elsewhere too: memory chips that correct their own errors, CDs and QR codes that still work when scratched or smudged, check digits on card numbers and book ISBNs, and the parity in RAID storage.
@@ -61,7 +61,7 @@ Error detection adds redundancy, such as parity bits, checksums or check digits,
 - Learning this is also learning [hashing](../dsa/hashing.md), because a checksum is a hash used for detection rather than lookup.
 - Learning this is also learning [Merkle DAGs](../dsa/merkle-dags.md), because a tree of checksums finds exactly where two copies differ.
 - Learning this is also learning [replication](../data/replication.md), because replicas protect against losing a machine, not against slowly corrupting data.
-- Learning this is also learning [storage tiers](../cost/storage-tiers.md), because erasure coding trades computation for space, and changes what each tier costs.
+- Learning this is also learning [storage tiers](../economics/storage-tiers.md), because erasure coding trades computation for space, and changes what each tier costs.
 
 ## Resources
 

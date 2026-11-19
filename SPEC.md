@@ -59,7 +59,11 @@ Page 0 is a different kind of page from 1–13: it's a preface, not a problem an
 
 ### 3.3 The graph
 
-Every page has a **Connections** section: one line per edge, of the form *learning this is also learning X, because Y*. The "because" is the content. Edges may point at pages that don't exist; those dangling links are the frontier and are how the wiki grows. Each edge points at one specific concept, never a whole subject: *[hash tables](dsa/hash-tables.md)*, not *DSA*. Branch pages live in one folder per family (`dsa/`, `data/`, `latency/`, `cost/`, `math/`, `auth/`, `runtimes/`, `tooling/`, `vendors/`, `writing/`, `cloud/`, `ai/`, `info/`, `crypto/`, `signals/`), one concept per page. The families are the hubs. The README carries a map of the spine showing which families each page connects to (`images/map.svg`, drawn by `scripts/make_map.py`), and `graph.html` shows every page and link as a graph (drawn by `scripts/make_graph.py`). Expected hubs: data, DSA, trust, latency, cost.
+Every page has a **Connections** section: one line per edge, of the form *learning this is also learning X, because Y*. The "because" is the content. Edges may point at pages that don't exist; those dangling links are the frontier and are how the wiki grows. Each edge points at one specific concept, never a whole subject: *[hash tables](dsa/hash-tables.md)*, not *DSA*. Branch pages live in one folder per family, one concept per page. A family is a field, the kind of shelf a reader would look for the page on, never a theme or a tool: `dsa/` (algorithms and data structures), `data/` (data systems), `performance/`, `economics/`, `security/`, `languages/`, `practice/` (engineering practice), `ai/`, `math/`, `info/` (information and meaning) and `signals/` (signals and control). A page goes in the field whose textbook would teach it; a field that's only a few pages lives inside a larger one (cryptography is four pages in `security/`) until it outgrows it. `scripts/families.py` lists them, with their names and colours.
+
+The families are the hubs. Each folder has a `README.md` index: one paragraph on the field, then every page in it in reading order, which is the order the spine first needs them, unless the pages build on one another (as in `dsa/`, `info/` and `signals/`). Every concept page is linked from at least one spine page's body, so the spine reaches the whole wiki; the guide page `dsa/choosing.md` is the one exception. `scripts/check_links.py` fails if either rule breaks.
+
+The README carries a map of the spine showing which families each page's Connections reach (`images/map.svg`, drawn by `scripts/make_map.py` from the pages themselves), and `graph.html` shows every page and link as a graph (drawn by `scripts/make_graph.py`).
 
 ### 3.4 The lens
 
@@ -71,7 +75,7 @@ The eight verbs are named only where they earn their place: in bold, once, in a 
 
 ### 3.5 Motifs
 
-`motifs.md` names about a dozen shapes that recur across stories (*copies disagree*, *costs move; they don't disappear*, *the sign drifts from the thing* and others), each with one or two sentences and every page where it appears. A page that shows a motif clearly ends its Where it shows up section, or a spine page its What survived, with one line: `Motif: [name](motifs.md#anchor).` At most two per page, and only where the shape is the point. The names stay fixed so that meeting one again is recognition, the way "Ladder:" works. Motifs are patterns across this wiki's mostly fictional stories, not findings about the world, and the page says so.
+`motifs.md` names about a dozen shapes that recur across stories (*copies disagree*, *costs move; they don't disappear*, *the sign drifts from the thing* and others), each with one or two sentences and every page where it appears. A page that shows a motif clearly ends its Where it shows up section, or a spine page its What survived, with one line: `Motif: [name](motifs.md#anchor).` At most two per page, and only where the shape is the point. The names stay fixed so that meeting one again is recognition, the way "Ladder:" works. Motifs are patterns across this wiki's mostly fictional stories, not findings about the world, and the page says so. Most motifs are a sentence of the model seen across eras, and `motifs.md` says which; a new motif should either map to a sentence or say plainly that it's a shape no era owns. The model is the argument, the motifs are recognition, and the families are where things live.
 
 ### 3.6 Figures
 
@@ -79,7 +83,7 @@ Every figure is ours: a diagram of a page's problem or its solution, drawn by co
 
 ### 3.7 Depth in algorithms and system design
 
-The scope rule (a page must carry a mental model that recurs outside its own field) is relaxed in two places, because they're where people most often learn mechanics without intuition: `dsa/` and the system design family. There, a well-known technique can have its own page even if it recurs mostly inside computing, and a page may follow one technique through several changing needs (`dsa/sorting.md` follows one person through seven sorting methods). `dsa/choosing.md` is a guide page: no story, a table from the question you keep asking to the structure built for it, linked from the README.
+The scope rule (a page must carry a mental model that recurs outside its own field) is relaxed in two places, because they're where people most often learn mechanics without intuition: `dsa/` and the system design family. There, a well-known technique can have its own page even if it recurs mostly inside computing, and a page may follow one technique through several changing needs (`dsa/sorting.md` follows one person through seven sorting methods). `dsa/choosing.md` is a guide page: no story, a table from the question you keep asking to the structure built for it, linked from the README. Neither family has a page limit (the owner's decision, 2026-11-19), but depth doesn't exempt a page from the other rules: each is linked from a spine page and listed in its family's index.
 
 ## 4. The model
 

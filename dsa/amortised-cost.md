@@ -30,11 +30,12 @@ Looking back, Henrike thought amortised cost was an honest promise that she'd re
 
 | Page | What was paid occasionally | Who was waiting when it came |
 | --- | --- | --- |
+| [3, Programs too big for one head](../03-programs-too-big-for-one-head.md) | Elena's hash table of parts, growing as the catalogue grew | A nightly batch run, which can absorb an occasional pause; a customer waiting on a page might not. |
 | [Hash tables](hash-tables.md) | Kenji's table doubling and moving every entry | Every player in the game, for a noticeable pause. |
 | [LSM trees](lsm-trees.md) | Neha's background merging of small files into large ones | Reads, which slowed while the merges competed for the disk. |
 | [Distributions and percentiles](../math/percentiles.md) | The slow tail of response times | The users in the tail, whom the average describes as fine. |
-| [Event loops and threads](../runtimes/event-loops-and-threads.md) | One long piece of work on the single loop | Every other request, stuck behind it. |
-| [Queueing](../latency/queueing.md) | A burst arriving at a busy server | Everyone in the queue behind the burst. |
+| [Event loops and threads](../languages/event-loops-and-threads.md) | One long piece of work on the single loop | Every other request, stuck behind it. |
+| [Queueing](../performance/queueing.md) | A burst arriving at a busy server | Everyone in the queue behind the burst. |
 
 It shows up elsewhere too: lists in most languages that grow by doubling, databases rebuilding statistics or indexes, log files rotated and compressed once a day, nightly batch jobs, a team that saves all its clean-up for one week a year, and the monthly bill that arrives for a month of small decisions.
 
@@ -65,7 +66,7 @@ The amortised cost of an operation is its total cost over a long sequence of ope
 - Learning this is also learning [hash tables](hash-tables.md), because their doubling is the most familiar amortised cost, and Kenji's pause is what it feels like.
 - Learning this is also learning [distributions and percentiles](../math/percentiles.md), because the occasional expensive moment lives in the tail, where averages don't look.
 - Learning this is also learning [LSM trees](lsm-trees.md), because they make writes cheap now by agreeing to merge later.
-- Learning this is also learning [event loops and threads](../runtimes/event-loops-and-threads.md), because an expensive moment on a single loop is paid by everyone waiting on it.
+- Learning this is also learning [event loops and threads](../languages/event-loops-and-threads.md), because an expensive moment on a single loop is paid by everyone waiting on it.
 
 ## Resources
 

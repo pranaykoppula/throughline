@@ -9,11 +9,11 @@ The owner wants engineers to *feel* how real problems were met: a person who doe
 ## Layout
 
 - `00`–`13-*.md`: the spine, fourteen problems in historical order. Page 0 is a brief history in several anecdotes; pages 1–13 follow one fictional person each.
-- Concept pages in family folders, one concept per page: `dsa/ data/ latency/ cost/ math/ auth/ runtimes/ tooling/ vendors/ writing/ cloud/ ai/ info/ crypto/ signals/`. The five map hubs are Data, DSA, Trust (`auth/`), Latency, Cost.
+- Concept pages in family folders, one concept per page: `dsa/ data/ performance/ economics/ security/ languages/ practice/ ai/ math/ info/ signals/`. A family is a field (SPEC 3.3), listed with its name and colour in `scripts/families.py`; a new folder goes there first. Each folder's `README.md` is its index, listing every page in reading order; add a new page to it.
 - `the-model.md` (the cumulative model), `forces.md`, `pushback.md`, `motifs.md` (recurring shapes, with every page each appears on), `README.md`, `SPEC.md`.
 - `graph.html` (every page and link), `images/map.svg` (the spine as a transit line), both generated.
-- `scripts/check_model.py`, `scripts/make_graph.py` (+ `graph_template.html`), `scripts/make_map.py` (hub dots are a hand-edited list in it), `scripts/make_figures.py` (every figure, as SVG).
-- `.github/workflows/checks.yml` runs the model check and fails if `graph.html` or `images/map.svg` differ from what the scripts produce.
+- `scripts/check_model.py`, `scripts/make_graph.py` (+ `graph_template.html`), `scripts/make_map.py` (dots read from each spine page's Connections), `scripts/check_links.py` (every concept page linked from the spine, every index complete), `scripts/make_figures.py` (every figure, as SVG).
+- `.github/workflows/checks.yml` runs the model and link checks and fails if `graph.html` or `images/map.svg` differ from what the scripts produce.
 - `_config.yml` publishes the site with GitHub Pages (Jekyll, `jekyll-theme-primer`).
 
 ## Page shapes
@@ -35,7 +35,7 @@ Concept page (SPEC 7.1): Problem · The story · **Where it shows up** (table: p
 ## Verbs and motifs
 
 - Eight verbs (represent, store, move, transform, find, decide, show, protect), bolded once in a spine page's Problem or a concept page's opening line, only where the verb is what the page is about.
-- `motifs.md` holds twelve named shapes with every page where each appears. A page that shows one clearly ends Where it shows up (or a spine page's What survived) with `Motif: [name](motifs.md#anchor).` At most two, only where the shape is the point. Keep the names fixed; add a page to the motif's list and the line to the page in the same change. New motifs need more than a couple of pages behind them.
+- `motifs.md` holds twelve named shapes with every page where each appears, and which sentence of the model each one is (two belong to none). A page that shows one clearly ends Where it shows up (or a spine page's What survived) with `Motif: [name](motifs.md#anchor).` At most two, only where the shape is the point. Keep the names fixed; add a page to the motif's list and the line to the page in the same change. New motifs need more than a couple of pages behind them.
 
 ## Figures
 
@@ -59,12 +59,13 @@ Concept page (SPEC 7.1): Problem · The story · **Where it shows up** (table: p
 
 ```
 python3 scripts/make_graph.py
-python3 scripts/make_map.py      # only changes if make_map.py's hub list changed
+python3 scripts/make_map.py      # changes when a spine page's Connections reach a new family
 python3 scripts/make_figures.py  # images/figures/
 python3 scripts/check_model.py
+python3 scripts/check_links.py
 ```
 
-Commit `graph.html` with the change. A model sentence lives in `the-model.md`, SPEC section 4, its own page and every later page; edit all in one change. Update the map's hub dots by hand if a spine page's Connections change family.
+Commit `graph.html` with the change. A model sentence lives in `the-model.md`, SPEC section 4, its own page and every later page; edit all in one change.
 
 ## Git workflow
 
@@ -72,10 +73,10 @@ Commit `graph.html` with the change. A model sentence lives in `the-model.md`, S
 - For a larger batch the owner may want to review, start a branch from `origin/main`, named for what it does in lowercase kebab-case (`add-time-and-clocks`, `fix-graph-click`, `verify-links`), and open a PR when asked. The owner merges by squash. Don't reuse `claude/project-overview-6pngmr`; that was the first session's branch, and the original of that name was renamed to `main` on GitHub.
 - Commit messages end with the attribution lines the session provides.
 
-## Status (2026-11-04)
+## Status (2026-11-19)
 
-- Done: all 14 spine pages; 83 concept pages across 15 families (including `dsa/bloom-filters.md`, and `dsa/` growth, amortised-cost, sorting, divide-and-conquer, dynamic-programming, greedy, heaps, tries, append-only-logs, exact-or-approximate and search) plus the guide page `dsa/choosing.md`, including `info/` (information, compression, language, observation, error-correction, information-gain, secrecy; and, from the meaning-making angle, measures-and-targets, encodings, meaning-as-use) and `crypto/` (symmetric-encryption, public-key, key-management, randomness), merged in PR #4; and `signals/` (sampling, perception, feedback, state-estimation) plus `dsa/power-and-predictability.md` (the automata ladder), merged in PR #6.
-- Exception from the owner: `dsa/` and system design get depth (SPEC 3.7). Planned next: figures for the twelve older `dsa/` pages, then a `design/` family starting with `approach.md`. Batches of about four, each page with a figure.
+- Done: all 14 spine pages; 83 concept pages across 11 families (including `dsa/bloom-filters.md`, and `dsa/` growth, amortised-cost, sorting, divide-and-conquer, dynamic-programming, greedy, heaps, tries, append-only-logs, exact-or-approximate and search) plus the guide page `dsa/choosing.md`, including `info/` (information, compression, language, observation, error-correction, information-gain, secrecy; and, from the meaning-making angle, measures-and-targets, encodings, meaning-as-use) and the cryptography pages (symmetric-encryption, public-key, key-management, randomness, now in `security/`), merged in PR #4; and `signals/` (sampling, perception, feedback, state-estimation) plus `dsa/power-and-predictability.md` (the automata ladder), merged in PR #6. The fifteen original folders were regrouped into eleven fields, with an index per family, in the `regroup-families` branch.
+- Exception from the owner: `dsa/` and system design get depth (SPEC 3.7), with no page limit (2026-11-19); each page still needs a spine backlink and a line in its index. Planned next: figures for the twelve older `dsa/` pages, then a `design/` family starting with `approach.md`. Batches of about four, each page with a figure.
 - Scope rule from the owner: a new page must carry a mental model that recurs outside its own field. Everything else is a row in an existing table, a line in "elsewhere too", or a link in Resources; depth lives in external sources. Input devices, displays, sound, robotics planning and safety were folded in that way, not given pages.
 - The owner's interest: tech as the meeting of meaning-making (semiotics, linguistics, hermeneutics) and mathematics. Stories here are fiction, so don't present patterns across them as findings about the world. Reading-list items (Naur, Weaver, Winograd and Flores, Lakatos, Bender and Koller) are in the relevant Resources sections.
 - Candidates for later pages: embeddings (with the search gap), names and identity (check whether a row in `data/modelling.md` is enough).

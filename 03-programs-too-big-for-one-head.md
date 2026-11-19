@@ -61,14 +61,17 @@ Motif: [layers hide things, until they leak](motifs.md#layers-hide-things-until-
 
 - Learning this is also learning [hash tables](dsa/hash-tables.md), because Elena's fix was choosing the structure built for her access pattern: find one item by its key. A hash table is one of four jobs [hashing](dsa/hashing.md) does in these stories.
 - Learning this is also learning [hardware](01-one-machine-one-program.md), because "compiled", "interpreted" and "garbage collected" are all prices paid at the layer underneath.
-- Learning this is also learning [build systems and package managers](tooling/build-systems.md), because they're abstractions for managing other abstractions, and they break in the same ways.
-- Learning this is also learning [type systems](runtimes/type-systems.md), because a type is a boundary the compiler enforces, so people don't have to remember it.
+- Learning this is also learning [build systems and package managers](practice/build-systems.md), because they're abstractions for managing other abstractions, and they break in the same ways.
+- Learning this is also learning [type systems](languages/type-systems.md), because a type is a boundary the compiler enforces, so people don't have to remember it.
 - Learning this is also learning [collaboration](10-many-people-one-codebase.md), because a module boundary is also a boundary between people, and types are documentation for the next person.
 - Learning this is also learning [representations](00-representations.md), because every abstraction is a representation, and it has an edge where the layer underneath shows through.
 - Learning this is also learning [access patterns](data/access-patterns.md), because the catalogue was asked one question over and over, and the right structure followed from that question.
-- Learning this is also learning [profiling](tooling/profiling.md), because Elena was sure the sort was slow, and measurement said it was four percent.
+- Learning this is also learning [profiling](performance/profiling.md), because Elena was sure the sort was slow, and measurement said it was four percent.
 - Learning this is also learning [meaning as use](info/meaning-as-use.md), because an abstraction's real interface is everything its users can observe, not only what it documents.
 - Learning this is also learning [divide and conquer](dsa/divide-and-conquer.md), because dividing a system among people is the same move as dividing a problem: split so the pieces are independent, and know how they combine.
+- Learning this is also learning [amortised cost](dsa/amortised-cost.md), because the hash table Elena chose stays fast on average by occasionally stopping to grow and move every entry, and amortised cost is how you count that.
+- Learning this is also learning [power and predictability](dsa/power-and-predictability.md), because Turing-completeness, which nearly every language has, also means nobody can check in advance what a program will do; the least powerful language that does the job stays checkable.
+- Learning this is also learning [search](dsa/search.md), because Elena's catalogue answered one exact question, a part number, and search is what finding becomes when people ask in their own words.
 
 ## Resources
 

@@ -63,11 +63,13 @@ Motifs: [the sign drifts from the thing](motifs.md#the-sign-drifts-from-the-thin
 - Learning this is also learning [operating systems](02-one-machine-many-programs.md), because processes die and machines get stuck, and something has to notice.
 - Learning this is also learning [scale](08-too-many-users-too-much-data.md), because with many machines, something is always partly broken.
 - Learning this is also learning [collaboration](10-many-people-one-codebase.md), because incidents are handled by teams, and blameless reviews are a team practice.
-- Learning this is also learning [the cost of reliability](cost/reliability.md), because every extra nine costs more than the last.
+- Learning this is also learning [the cost of reliability](economics/reliability.md), because every extra nine costs more than the last.
 - Learning this is also learning [distributions and percentiles](math/percentiles.md), because averages hide the tail, and the tail is where users suffer.
-- Learning this is also learning [queueing](latency/queueing.md), because the checkout timed out waiting on a slow payment provider, and waiting, not failing, is how most outages start.
+- Learning this is also learning [queueing](performance/queueing.md), because the checkout timed out waiting on a slow payment provider, and waiting, not failing, is how most outages start.
 - Learning this is also learning [sampling and observation](info/observation.md), because green squares measured what the monitors were built to see, and silence from a monitor is not the same as health.
 - Learning this is also learning [measures and targets](info/measures-and-targets.md), because "working" has to be defined from the customer's side before anyone is judged by it, or the number and the service drift apart.
+- Learning this is also learning [compression](info/compression.md), because an overall success rate is a lossy summary of every checkout, and the customers in Brazil were exactly what the summary threw away.
+- Learning this is also learning [sampling and aliasing](signals/sampling.md), because Rosa's robot bought a ticket once a minute, and anything that failed and recovered between its purchases was invisible to it.
 
 ## Resources
 

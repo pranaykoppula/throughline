@@ -28,7 +28,7 @@ Looking back, Tomás thought the big window had tempted him to treat context as 
 | --- | --- | --- |
 | [12, Machines that learn from data](../12-machines-that-learn-from-data.md) | Nadia's whole help centre, sent with every question | Sending only the three most relevant articles cut the bill by ninety percent and improved the answers. |
 | [Prompt injection](prompt-injection.md) | Everything in the window, instructions and material alike | To the model it's all just tokens, which is why hidden instructions work. |
-| [Reading a cloud bill](../cost/cloud-bills.md) | Tokens in, tokens out | A design decision wearing a price tag, billed per word. |
+| [Reading a cloud bill](../economics/cloud-bills.md) | Tokens in, tokens out | A design decision wearing a price tag, billed per word. |
 
 It shows up elsewhere too: chat history that grows until it has to be summarised or cut, coding agents deciding which files to read, and the difference in cost between a short answer and a long one.
 
@@ -54,9 +54,9 @@ A token is the unit of text a language model processes, often a word or part of 
 ## Connections
 
 - Learning this is also learning [prompt injection](prompt-injection.md), because everything in the window is just tokens, with no built-in difference between instruction and material.
-- Learning this is also learning [round trips](../latency/round-trips.md), because each call to a model is a round trip whose cost grows with what you send.
-- Learning this is also learning [reading a cloud bill](../cost/cloud-bills.md), because tokens are the line on the bill.
-- Learning this is also learning [caching](../latency/caching.md), because reusing a repeated prefix is caching for models.
+- Learning this is also learning [round trips](../performance/round-trips.md), because each call to a model is a round trip whose cost grows with what you send.
+- Learning this is also learning [reading a cloud bill](../economics/cloud-bills.md), because tokens are the line on the bill.
+- Learning this is also learning [caching](../performance/caching.md), because reusing a repeated prefix is caching for models.
 - Learning this is also learning [access patterns](../data/access-patterns.md), because retrieval is choosing what to read based on the question asked.
 - Learning this is also learning [power and predictability](../dsa/power-and-predictability.md), because forcing a model to produce valid JSON works by running a grammar alongside it and allowing only the tokens it accepts.
 - Learning this is also learning [tries](../dsa/tries.md), because tokenisers match the longest known piece of text at each position, a trie-shaped question.

@@ -14,6 +14,8 @@ jobs:
           python-version: "3.12"
       - name: Every copy of the model matches the-model.md
         run: python3 scripts/check_model.py
+      - name: Every concept page is reachable from the spine, and every family index is complete
+        run: python3 scripts/check_links.py
 
   check-generated:
     runs-on: ubuntu-latest

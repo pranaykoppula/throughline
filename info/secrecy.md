@@ -29,8 +29,8 @@ Looking back, Lionel thought he'd learned that an adversary changes every questi
 | Page | The adversary | What they wanted |
 | --- | --- | --- |
 | [7, Strangers on the network](../07-strangers-on-the-network.md) | Whoever leaked Marcus's database | To read passwords, which is why they're stored so they can't be read. |
-| [TLS](../auth/tls.md) | Anyone on the path between browser and server | To read card numbers, or to pretend to be the shop. |
-| [Code signing](../auth/code-signing.md) | Whoever replaced Harriet's installer | To change what customers installed, and have it look genuine. |
+| [TLS](../security/tls.md) | Anyone on the path between browser and server | To read card numbers, or to pretend to be the shop. |
+| [Code signing](../security/code-signing.md) | Whoever replaced Harriet's installer | To change what customers installed, and have it look genuine. |
 | [Information](information.md) | Nobody, yet | Thomas's code had the same structure as Lionel's, but its only enemy was noise. |
 | [Hashing](../dsa/hashing.md) | Strangers choosing keys for a hash table | To make a predictable hash slow everything down. |
 
@@ -58,11 +58,11 @@ Communication with adversaries is communication over a channel where someone del
 ## Connections
 
 - Learning this is also learning [information](information.md), because the redundancy that protects against noise is a gift to an adversary.
-- Learning this is also learning [TLS](../auth/tls.md), because it's this page's three goals, applied to every connection on the web.
-- Learning this is also learning [code signing](../auth/code-signing.md), because it answers integrity and authenticity, without confidentiality.
-- Learning this is also learning [password storage](../auth/password-storage.md), because storing secrets assumes the adversary will one day read the database.
+- Learning this is also learning [TLS](../security/tls.md), because it's this page's three goals, applied to every connection on the web.
+- Learning this is also learning [code signing](../security/code-signing.md), because it answers integrity and authenticity, without confidentiality.
+- Learning this is also learning [password storage](../security/password-storage.md), because storing secrets assumes the adversary will one day read the database.
 - Learning this is also learning [error detection and correction](error-correction.md), because a checksum stops noise and an adversary can simply recompute it; integrity against an adversary needs a key.
-- Learning this is also learning [symmetric encryption](../crypto/symmetric-encryption.md), because Lionel's daily key list is its ancestor, and frequency analysis still works on encryption that lets identical messages look identical.
+- Learning this is also learning [symmetric encryption](../security/symmetric-encryption.md), because Lionel's daily key list is its ancestor, and frequency analysis still works on encryption that lets identical messages look identical.
 
 ## Resources
 

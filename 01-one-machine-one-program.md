@@ -62,14 +62,14 @@ Motif: [where the data is sets the cost](motifs.md#where-the-data-is-sets-the-co
 
 ## Connections
 
-- Learning this is also learning [latency numbers](latency/latency-numbers.md), because a memory read, a disk read and a network round trip differ by factors of a thousand, and those ratios explain why some things are fast.
+- Learning this is also learning [latency numbers](performance/latency-numbers.md), because a memory read, a disk read and a network round trip differ by factors of a thousand, and those ratios explain why some things are fast.
 - Learning this is also learning [arrays and linked lists](dsa/arrays-and-linked-lists.md), because an array that keeps its data together often beats a linked list that's better on paper, for exactly Joan's reason.
 - Learning this is also learning [cloud](09-buying-computers-is-too-slow.md), because a rented machine is still a machine with the same hierarchy, now with a network at the bottom.
-- Learning this is also learning [storage tiers](cost/storage-tiers.md), because fast storage is expensive storage at every level, and cloud pricing is the memory hierarchy with a price list.
+- Learning this is also learning [storage tiers](economics/storage-tiers.md), because fast storage is expensive storage at every level, and cloud pricing is the memory hierarchy with a price list.
 - Learning this is also learning [access patterns](data/access-patterns.md), because Joan's grid was fast or slow depending only on the order she touched it.
-- Learning this is also learning [profiling](tooling/profiling.md), because finding where the time goes comes before making anything faster, and on Joan's machine it went to the drum.
+- Learning this is also learning [profiling](performance/profiling.md), because finding where the time goes comes before making anything faster, and on Joan's machine it went to the drum.
 - Learning this is also learning [abstraction](03-programs-too-big-for-one-head.md), because the one-level store hid where data lived but not what it cost, and every abstraction leaks the same way.
-- Learning this is also learning [caching](latency/caching.md), because core memory in front of the drum was the first cache, and every cache since is the same trade at a different scale.
+- Learning this is also learning [caching](performance/caching.md), because core memory in front of the drum was the first cache, and every cache since is the same trade at a different scale.
 
 ## Resources
 
