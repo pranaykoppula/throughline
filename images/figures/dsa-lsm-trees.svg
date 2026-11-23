@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 390" width="760" height="390" role="img" aria-labelledby="t d">
+<title id="t">Writing where the data belongs, or writing in order</title>
+<desc id="d">Two ways of writing monitoring data to one disk. Top: a B-tree index updated in place, where points from thousands of servers arrive interleaved and each write lands on a different page, so the disk jumps back and forth. Bottom: points are sorted in memory and written out in long sequential runs as unchangeable files, which a background process later merges into fewer, larger files.</desc>
+
+<style>
+  .bg { fill: #ffffff; }
+  .t { fill: #1f2328; } .tm { fill: #59636e; }
+  .f-ink { fill: #1f2328; } .s-ink { stroke: #1f2328; }
+  .f-line { fill: #d0d7de; } .s-line { stroke: #d0d7de; }
+  .f-faint { fill: #f6f8fa; } .s-faint { stroke: #f6f8fa; }
+  .f-accent { fill: #2a78d6; } .s-accent { stroke: #2a78d6; }
+  .f-warn { fill: #d64a4a; } .s-warn { stroke: #d64a4a; }
+  .f-ok { fill: #1baa7a; } .s-ok { stroke: #1baa7a; }
+  .f-amber { fill: #e09a1a; } .s-amber { stroke: #e09a1a; }
+  .f-soft-accent { fill: #ddeaf9; } .f-soft-warn { fill: #f8dede; } .f-soft-ok { fill: #d8f1e8; } .f-soft-amber { fill: #faecd2; }
+  @media (prefers-color-scheme: dark) {
+    .bg { fill: #0d1117; }
+    .t { fill: #e6edf3; } .tm { fill: #9198a1; }
+    .f-ink { fill: #e6edf3; } .s-ink { stroke: #e6edf3; }
+    .f-line { fill: #3d444d; } .s-line { stroke: #3d444d; }
+    .f-faint { fill: #161b22; } .s-faint { stroke: #161b22; }
+    .f-accent { fill: #4c9aff; } .s-accent { stroke: #4c9aff; }
+    .f-warn { fill: #ff7b72; } .s-warn { stroke: #ff7b72; }
+    .f-ok { fill: #3fb950; } .s-ok { stroke: #3fb950; }
+    .f-amber { fill: #e3b341; } .s-amber { stroke: #e3b341; }
+    .f-soft-accent { fill: #102a4a; } .f-soft-warn { fill: #4a1c1c; } .f-soft-ok { fill: #0f3a2a; } .f-soft-amber { fill: #3d2e0e; }
+  }
+  @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+  text { font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; }
+</style>
+<defs><marker id="arrow-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" class="f-ink"/></marker><marker id="arrow-accent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" class="f-accent"/></marker><marker id="arrow-warn" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" class="f-warn"/></marker><marker id="arrow-ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" class="f-ok"/></marker><marker id="arrow-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" class="f-amber"/></marker><marker id="arrow-line" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" class="f-line"/></marker></defs>
+<rect width="760" height="390" class="bg"/>
+<text x="30" y="32" class="t" font-size="15" text-anchor="start" font-weight="600">Update the index in place</text>
+<text x="30" y="51" class="tm" font-size="12.5" text-anchor="start" font-weight="normal">Points from thousands of servers arrive interleaved; each lands on a different page</text>
+<rect x="40" y="94" width="680" height="28" rx="4" class="f-faint" />
+<rect x="40" y="94" width="680" height="28" rx="4" class="s-line" fill="none" stroke-width="1"/>
+<path d="M 604.1 92 Q 655.2 79.7 706.3 92" class="s-line" stroke-width="1.1" fill="none" />
+<path d="M 706.3 92 Q 381.4 56.9 56.5 92" class="s-line" stroke-width="1.1" fill="none" />
+<path d="M 56.5 92 Q 283.6 65.1 510.7 92" class="s-line" stroke-width="1.1" fill="none" />
+<path d="M 510.7 92 Q 462.7 80 414.7 92" class="s-line" stroke-width="1.1" fill="none" />
+<path d="M 414.7 92 Q 259.3 71 103.8 92" class="s-line" stroke-width="1.1" fill="none" />
+<path d="M 103.8 92 Q 182.5 77.4 261.1 92" class="s-line" stroke-width="1.1" fill="none" />
+<path d="M 261.1 92 Q 324.2 78.7 387.3 92" class="s-line" stroke-width="1.1" fill="none" />
+<path d="M 387.3 92 Q 220.6 70.1 53.9 92" class="s-line" stroke-width="1.1" fill="none" />
+<path d="M 53.9 92 Q 153.5 75.7 253 92" class="s-line" stroke-width="1.1" fill="none" />
+<path d="M 253 92 Q 311.6 79.1 370.2 92" class="s-line" stroke-width="1.1" fill="none" />
+<path d="M 370.2 92 Q 362.7 83.4 355.2 92" class="s-line" stroke-width="1.1" fill="none" />
+<path d="M 355.2 92 Q 209.4 71.8 63.5 92" class="s-line" stroke-width="1.1" fill="none" />
+<path d="M 63.5 92 Q 181.4 74.2 299.2 92" class="s-line" stroke-width="1.1" fill="none" />
+<rect x="602.1" y="96" width="4" height="24" rx="1" class="f-warn" />
+<rect x="704.3" y="96" width="4" height="24" rx="1" class="f-warn" />
+<rect x="54.5" y="96" width="4" height="24" rx="1" class="f-warn" />
+<rect x="508.7" y="96" width="4" height="24" rx="1" class="f-warn" />
+<rect x="412.7" y="96" width="4" height="24" rx="1" class="f-warn" />
+<rect x="101.8" y="96" width="4" height="24" rx="1" class="f-warn" />
+<rect x="259.1" y="96" width="4" height="24" rx="1" class="f-warn" />
+<rect x="385.3" y="96" width="4" height="24" rx="1" class="f-warn" />
+<rect x="51.9" y="96" width="4" height="24" rx="1" class="f-warn" />
+<rect x="251" y="96" width="4" height="24" rx="1" class="f-warn" />
+<rect x="368.2" y="96" width="4" height="24" rx="1" class="f-warn" />
+<rect x="353.2" y="96" width="4" height="24" rx="1" class="f-warn" />
+<rect x="61.5" y="96" width="4" height="24" rx="1" class="f-warn" />
+<rect x="297.2" y="96" width="4" height="24" rx="1" class="f-warn" />
+<text x="40" y="142" class="t" font-size="12" text-anchor="start" font-weight="normal">The disk spends its time seeking, to change a few bytes here and a few bytes there.</text>
+<text x="30" y="172" class="t" font-size="15" text-anchor="start" font-weight="600">Sort in memory, write in order, merge later</text>
+<text x="30" y="191" class="tm" font-size="12.5" text-anchor="start" font-weight="normal">When memory holds a few hundred megabytes, write it out in one pass</text>
+<rect x="40" y="214" width="150" height="40" rx="6" class="f-soft-accent" />
+<rect x="40" y="214" width="150" height="40" rx="6" class="s-line" fill="none" stroke-width="1"/>
+<text x="115" y="232" class="t" font-size="13" text-anchor="middle" font-weight="600">memory</text>
+<text x="115" y="247" class="tm" font-size="11" text-anchor="middle" font-weight="normal">sorted, filling</text>
+<line x1="194" y1="234" x2="226" y2="234" class="s-ink" stroke-width="1.5" fill="none" marker-end="url(#arrow-ink)"/>
+<rect x="232" y="220" width="92" height="28" rx="3" class="f-soft-ok" />
+<line x1="239.7" y1="226" x2="239.7" y2="242" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="247.3" y1="226" x2="247.3" y2="242" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="255" y1="226" x2="255" y2="242" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="262.7" y1="226" x2="262.7" y2="242" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="270.3" y1="226" x2="270.3" y2="242" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="278" y1="226" x2="278" y2="242" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="285.7" y1="226" x2="285.7" y2="242" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="293.3" y1="226" x2="293.3" y2="242" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="301" y1="226" x2="301" y2="242" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="308.7" y1="226" x2="308.7" y2="242" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="316.3" y1="226" x2="316.3" y2="242" class="s-ok" stroke-width="0.8" fill="none"/>
+<text x="278" y="264" class="tm" font-size="11" text-anchor="middle" font-weight="normal">file 1</text>
+<rect x="330" y="220" width="92" height="28" rx="3" class="f-soft-ok" />
+<line x1="337.7" y1="226" x2="337.7" y2="242" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="345.3" y1="226" x2="345.3" y2="242" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="353" y1="226" x2="353" y2="242" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="360.7" y1="226" x2="360.7" y2="242" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="368.3" y1="226" x2="368.3" y2="242" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="376" y1="226" x2="376" y2="242" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="383.7" y1="226" x2="383.7" y2="242" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="391.3" y1="226" x2="391.3" y2="242" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="399" y1="226" x2="399" y2="242" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="406.7" y1="226" x2="406.7" y2="242" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="414.3" y1="226" x2="414.3" y2="242" class="s-ok" stroke-width="0.8" fill="none"/>
+<text x="376" y="264" class="tm" font-size="11" text-anchor="middle" font-weight="normal">file 2</text>
+<rect x="428" y="220" width="92" height="28" rx="3" class="f-soft-ok" />
+<line x1="435.7" y1="226" x2="435.7" y2="242" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="443.3" y1="226" x2="443.3" y2="242" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="451" y1="226" x2="451" y2="242" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="458.7" y1="226" x2="458.7" y2="242" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="466.3" y1="226" x2="466.3" y2="242" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="474" y1="226" x2="474" y2="242" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="481.7" y1="226" x2="481.7" y2="242" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="489.3" y1="226" x2="489.3" y2="242" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="497" y1="226" x2="497" y2="242" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="504.7" y1="226" x2="504.7" y2="242" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="512.3" y1="226" x2="512.3" y2="242" class="s-ok" stroke-width="0.8" fill="none"/>
+<text x="474" y="264" class="tm" font-size="11" text-anchor="middle" font-weight="normal">file 3</text>
+<rect x="526" y="220" width="92" height="28" rx="3" class="f-soft-ok" />
+<line x1="533.7" y1="226" x2="533.7" y2="242" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="541.3" y1="226" x2="541.3" y2="242" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="549" y1="226" x2="549" y2="242" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="556.7" y1="226" x2="556.7" y2="242" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="564.3" y1="226" x2="564.3" y2="242" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="572" y1="226" x2="572" y2="242" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="579.7" y1="226" x2="579.7" y2="242" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="587.3" y1="226" x2="587.3" y2="242" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="595" y1="226" x2="595" y2="242" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="602.7" y1="226" x2="602.7" y2="242" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="610.3" y1="226" x2="610.3" y2="242" class="s-ok" stroke-width="0.8" fill="none"/>
+<text x="572" y="264" class="tm" font-size="11" text-anchor="middle" font-weight="normal">file 4</text>
+<rect x="624" y="220" width="92" height="28" rx="3" class="f-soft-ok" />
+<line x1="631.7" y1="226" x2="631.7" y2="242" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="639.3" y1="226" x2="639.3" y2="242" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="647" y1="226" x2="647" y2="242" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="654.7" y1="226" x2="654.7" y2="242" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="662.3" y1="226" x2="662.3" y2="242" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="670" y1="226" x2="670" y2="242" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="677.7" y1="226" x2="677.7" y2="242" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="685.3" y1="226" x2="685.3" y2="242" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="693" y1="226" x2="693" y2="242" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="700.7" y1="226" x2="700.7" y2="242" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="708.3" y1="226" x2="708.3" y2="242" class="s-ok" stroke-width="0.8" fill="none"/>
+<text x="670" y="264" class="tm" font-size="11" text-anchor="middle" font-weight="normal">file 5</text>
+<line x1="278" y1="272" x2="380" y2="306" class="s-amber" stroke-width="1.2" fill="none"/>
+<line x1="376" y1="272" x2="380" y2="306" class="s-amber" stroke-width="1.2" fill="none"/>
+<line x1="474" y1="272" x2="380" y2="306" class="s-amber" stroke-width="1.2" fill="none"/>
+<rect x="330" y="308" width="190" height="24" rx="3" class="f-soft-amber" />
+<text x="425" y="324" class="t" font-size="11.5" text-anchor="middle" font-weight="normal">merged, in the background</text>
+<text x="540" y="324" class="t" font-size="12" text-anchor="start" font-weight="600">the cost paid later</text>
+<text x="40" y="356" class="t" font-size="12" text-anchor="start" font-weight="normal">Writes became long runs, which the disk is fast at. Reads now check memory and several files, newest first.</text>
+<text x="30" y="380" class="tm" font-size="11.5" text-anchor="start" font-weight="normal" font-style="italic">Neha's system: 150,000 points a second. Positions on the disk are illustrative.</text>
+</svg>

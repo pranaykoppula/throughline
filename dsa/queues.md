@@ -20,6 +20,10 @@ The queue had done exactly what it was built to do. First in, first out had been
 
 Yusuf split the one queue into three: one for messages a person was actively waiting for, like password resets and two-factor codes, one for receipts and notifications, and one for bulk mail. Workers always took from the urgent queue first, then the next, and only then from bulk. That fixed the resets, and created a new worry, that bulk mail might never be sent if urgent mail kept arriving. So bulk was guaranteed a share of the workers whatever else was happening. And within bulk, each customer had their own line, served in turn, so one retailer's two million emails couldn't hold up another's ten thousand.
 
+![Two ways of queuing outgoing email in front of the same workers. Top: one first-in, first-out queue, where a retailer's two million newsletters arrived first and a password reset waits behind all of them, for hours. Bottom: three queues, urgent mail first, then receipts, then bulk, with bulk guaranteed a share of the workers and each bulk customer served in turn, so the reset waits seconds.](../images/figures/dsa-queues.svg)
+
+*First in, first out is fair to the order things arrived in; deciding who goes next is fair to the people waiting.*
+
 Looking back, Yusuf thought "fair" had been the wrong word for what he'd built. First in, first out was fair to the queue. What people needed was fairness to the people waiting, which meant deciding who goes next on purpose.
 
 ## Where it shows up
