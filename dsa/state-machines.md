@@ -20,6 +20,10 @@ Chloe replaced the fields with one: the order's state. She drew every state an o
 
 She also had the function record every move, with the time and what asked for it. Questions that used to take an afternoon of digging, such as *why was this refunded?*, now took a glance at the order's history.
 
+![Left: five yes-or-no fields on an order make thirty-two combinations, and code could set any of them; three impossible combinations Chloe found are marked: cancelled and shipped, on forty orders; refunded but not paid, on eleven; paid, cancelled and awaiting stock at once, on three. Right: nine states and the moves the business allowed between them. Placed goes to paid or cancelled; paid to awaiting stock, packing, or cancelled and refunded; awaiting stock to packing; packing to shipped; shipped to delivered or returned. There is no arrow from cancelled to shipped.](../images/figures/dsa-state-machines.svg)
+
+*Flags allow every combination; a state machine allows only the moves someone drew.*
+
 Looking back, Chloe thought the flags had let everyone describe their own part of an order's life and nobody describe the whole. Drawing the states and arrows had been an afternoon's work, and the arguments it started with the business about which arrows should exist were the most useful conversations she had all year.
 
 ## Where it shows up

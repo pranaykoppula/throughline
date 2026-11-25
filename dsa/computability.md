@@ -20,6 +20,10 @@ An older colleague with a mathematics background listened to him one evening and
 
 It was oddly freeing. Viktor stopped aiming for a scanner that was always right about everything and chose which way to be wrong. The scanner would flag anything suspicious, accepting some false alarms, and pass flagged programs to a second stage. That stage ran them for a limited time in an isolated sandbox and watched what they actually did. A program that didn't finish in the time limit wasn't declared safe or dangerous. It was simply treated as unknown and held. Signature lists stayed, because they were fast and certain for the known cases. The product got much better, not because it solved the problem, but because it stopped pretending it could.
 
+![A flow chart of Viktor's scanner. Every program first meets the signature list: a known virus is blocked, fast and certain. The rest meet a scanner that flags anything suspicious, accepting false alarms; unflagged programs pass. Flagged programs run in an isolated sandbox with a time limit: one that does harm is blocked, one that finishes harmlessly passes, and one still running at the limit is held as unknown.](../images/figures/dsa-computability.svg)
+
+*A perfect detector can't exist, so each stage chooses which mistake to make, and nothing runs without a limit.*
+
 Looking back, Viktor thought knowing what was impossible had been the most practical thing he'd learned. It told him which kind of mistake to choose, and to put a time limit on everything.
 
 ## Where it shows up

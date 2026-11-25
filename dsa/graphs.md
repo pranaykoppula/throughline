@@ -18,6 +18,10 @@ It worked for a year, while the company knew a few thousand addresses. Then it w
 
 Ruth stopped storing answers and started storing the network. Each junction became a point, each stretch of road between junctions a line with a length, about ninety thousand lines for the whole city. When the planner needed a distance, it worked it out on the spot. It started from the first address, and always extended the shortest route found so far, one road at a time, until it reached the second. Kept in a priority queue, the routes still to explore came out in order of length, and a typical query touched a few thousand roads and finished in a fraction of a second. A closed road was one line removed, and every route avoided it immediately.
 
+![Left: bars on a logarithmic scale comparing what each design stores. A few thousand addresses mean millions of pairs; forty thousand addresses mean eight hundred million; the road network for the whole city is ninety thousand stretches of road. Right: a small grid of junctions and roads, with one road closed. A search from A spreads out in order of distance, and stops when it reaches B, having explored only the junctions nearer than B; the shortest route avoids the closed road.](../images/figures/dsa-graphs.svg)
+
+*A table of every answer is a picture of one night; the graph is the city, and a closed road is one line removed.*
+
 Looking back, Ruth thought she'd made the classic mistake of storing every answer to a question when she could store the thing the question was about. A table of distances was a picture of the city on one night. The graph was the city.
 
 ## Where it shows up
