@@ -987,6 +987,164 @@ def fig_dsa_search():
     return f
 
 
+def fig_dsa_arrays():
+    f = Fig(370, "A linked list and an array, laid out in memory",
+            "Memory drawn as a row of cells. Top: six particles of a linked list, each allocated wherever memory "
+            "was free, so walking from one to the next jumps back and forth across memory, and almost every jump "
+            "misses the cache. Bottom: the same particles in an array, side by side, read in one straight line, with "
+            "each fetch from memory bringing several particles at once.")
+    cells, x0, cw = 34, 30, 20
+
+    def row(y, filled, cls):
+        for i in range(cells):
+            f.rect(x0 + i * cw, y, cw - 2, 26, cls if i in filled else "f-faint", 3)
+
+    f.heading(30, 32, "Linked list", "Each particle allocated wherever memory was free")
+    order = [3, 21, 9, 30, 14, 26]
+    row(100, set(order), "f-soft-warn")
+    for k, i in enumerate(order):
+        f.text(x0 + i * cw + 9, 118, str(k + 1), "t", 11, "middle", "600")
+    for a, b in zip(order, order[1:]):
+        xa, xb = x0 + a * cw + 9, x0 + b * cw + 9
+        f.path(f"M {xa} 98 Q {(xa + xb) / 2} {98 - 8 - abs(xb - xa) * 0.08} {xb} 98", "warn", 1.4, arrow=True)
+    f.text(30, 148, "Every step to the next particle is a jump, and almost every jump is a trip to slow memory.", "t", 12)
+
+    f.heading(30, 186, "Array", "The same particles side by side")
+    row(226, set(range(6)), "f-soft-ok")
+    for k in range(6):
+        f.text(x0 + k * cw + 9, 244, str(k + 1), "t", 11, "middle", "600")
+    for start in (0, 4):
+        f.rect(x0 + start * cw - 3 + (2 if start else 0), 222, 4 * cw - (2 if start else 0), 34, "s-ok", 4, 'fill="none" stroke-width="1.5"')
+    f.line(x0, 270, x0 + 6 * cw, 270, "ok", 1.6, arrow=True)
+    f.text(x0, 290, "One straight line: each fetch from memory brings several particles, and the processor fetches", "t", 12)
+    f.text(x0, 307, "the next ones before they're needed. Marta's update ran about eight times faster.", "t", 12)
+    f.text(30, 350, "Six particles of Marta's thirty thousand; positions in memory illustrative.", "tm", 11.5, italic=True)
+    return f
+
+
+def fig_dsa_hashing():
+    rng = Rng(1955)
+    cars = []
+    while len(cars) < 20000:
+        r = rng.next()
+        if r < 0.04:
+            pick = rng.next()
+            ends = 0 if pick < 0.45 else 500 if pick < 0.75 else 100
+        elif r < 0.1:
+            ends = int(rng.next() * 10) * 100
+        else:
+            ends = int(rng.next() * 1000)
+        cars.append(int(rng.next() * 900 + 100) * 1000 + ends)
+
+    def mixed(n):
+        return ((n * 2654435761) % 2 ** 32) * 1000 >> 32
+
+    f = Fig(450, "Twenty thousand freight cars in a thousand slots, two ways",
+            "Two bar charts of how many freight cars land in each of a thousand slots. Top: slot chosen by the "
+            "car number's last three digits, with tall spikes at slots 0, 100 and 500 holding hundreds of cars, and "
+            "most other slots far below average. Bottom: slot chosen by mixing all the digits, with every slot close "
+            "to the average of twenty.")
+    for k, (title, sub, slot, cls) in enumerate([
+            ("Last three digits", "Slot 000 holds every car whose number ends in 000", lambda n: n % 1000, "f-warn"),
+            ("Every digit mixed", "Similar numbers land far apart", mixed, "f-ok")]):
+        y0 = 32 + k * 190
+        counts = [0] * 1000
+        for c in cars:
+            counts[slot(c)] += 1
+        f.heading(30, y0, title, f"{sub}; fullest slot: {max(counts)} cars")
+        top, h, x0, wd = 400, 120, 60, 680
+        base = y0 + 40 + h
+        for i, n in enumerate(counts):
+            bh = min(n, top) / top * h
+            f.rect(x0 + i * wd / 1000 - 0.5, base - bh, 1.6, bh, cls, 0)
+        f.line(x0, base, x0 + wd, base, "ink", 1)
+        ay = base - 20 / top * h
+        f.line(x0, ay, x0 + wd, ay, "accent", 1, dash="4 3")
+        f.text(x0 - 6, ay + 4, "20", "tm", 11, "end")
+        f.text(x0 - 6, base - h + 4, f"{top}+", "tm", 11, "end")
+        for v in (0, 500, 999):
+            f.text(x0 + v * wd / 1000, base + 14, str(v), "tm", 10.5, "middle")
+    f.text(30, 432, "Illustrative car numbers, issued in blocks as in the story; the dashed line is the average, 20 per slot.",
+           "tm", 11.5, italic=True)
+    return f
+
+
+def fig_dsa_hash_tables():
+    f = Fig(330, "Growing a hash table all at once, and a little at a time",
+            "Two timelines of a game server over ninety seconds. Top: the table doubles all at once at the thirtieth "
+            "second, moving four million entries, and the server answers nothing for nearly two seconds. Bottom: "
+            "the same four million entries are moved a few at a time with every request, spread over a minute, and "
+            "the server keeps answering throughout.")
+    x0, wd, span = 40, 680, 90
+
+    def x(t):
+        return x0 + t / span * wd
+
+    for k, (title, sub) in enumerate([("All at once", "Allocate a table twice the size, then move every entry"),
+                                      ("A little at a time", "Every request also moves a few entries across")]):
+        y = 32 + k * 125
+        f.heading(30, y, title, sub)
+        by = y + 36
+        f.rect(x(0), by, wd, 26, "f-soft-ok", 4)
+        if k == 0:
+            f.rect(x(30), by - 4, x(32) - x(30), 34, "f-warn", 2)
+            f.text(x(30), by + 50, "nearly two seconds: 4 million entries moved at once, no answers, every player frozen",
+                   "t", 11.5)
+        else:
+            f.rect(x(30), by + 9, x(90) - x(30), 8, "f-amber", 2)
+            f.text(x(30), by + 50, "the same 4 million entries, microseconds per request, over a minute: nobody noticed",
+                   "t", 11.5)
+    for t in range(0, 91, 15):
+        f.text(x(t), 300, f"{t}s", "tm", 11, "middle")
+    f.text(30, 322, "Green: the server answering. The table fills past three-quarters at the thirtieth second.",
+           "tm", 11.5, italic=True)
+    return f
+
+
+def fig_dsa_btrees():
+    f = Fig(400, "Twenty-one reads, or three",
+            "Two ways to index two million part numbers on disk. Left: a binary tree with one part number per node, "
+            "about twenty-one levels deep, so a lookup reads twenty-one places on the disk. Right: a B-tree whose "
+            "nodes are whole disk blocks of about two hundred keys each: one block at the top, two hundred below "
+            "it, forty thousand below those, enough for eight million parts in three reads.")
+    f.heading(30, 32, "One key per node", "About 21 levels for 2 million parts")
+    for lvl in range(21):
+        y = 70 + lvl * 14
+        x = 150 + (18 if lvl % 2 else -18)
+        if lvl:
+            f.line(px, py, x, y, "line", 1.2)
+        f.circle(x, y, 4.5, "f-warn")
+        px, py = x, y
+    f.text(200, 70 + 10 * 14, "21 reads,", "t", 12.5, "start", "600")
+    f.text(200, 70 + 10 * 14 + 17, "one seek each", "t", 12)
+
+    f.heading(330, 32, "A disk block per node", "About 200 keys in each")
+    levels = [(1, "1 block"), (200, "200 blocks"), (40000, "40,000 blocks")]
+    for lvl, (n, label) in enumerate(levels):
+        y = 80 + lvl * 92
+        shown = min(n, 5)
+        bw = 210 if n == 1 else 46
+        total = shown * bw + (shown - 1) * 10 + (30 if n > 5 else 0)
+        sx = 330 + (300 - total) / 2
+        for b in range(shown):
+            bx = sx + b * (bw + 10) + (30 if n > 5 and b == shown - 1 else 0)
+            f.rect(bx, y, bw, 26, "f-soft-ok", 3)
+            ticks = 40 if n == 1 else 10
+            for t in range(1, ticks):
+                tx = bx + t * bw / ticks
+                f.line(tx, y + 6, tx, y + 20, "ok", 0.8)
+            if lvl < 2:
+                cx = bx + bw / 2
+                f.line(cx, y + 26, cx, y + 92, "line", 1.1)
+        if n > 5:
+            f.text(sx + 4 * (bw + 10) + 8, y + 18, "…", "t", 14, "middle", "600")
+        f.text(648, y + 18, label, "t", 12, "start", "600" if lvl == 2 else "normal")
+    f.text(330, 340, "3 reads: 200 × 200 × 200 = 8 million parts", "t", 12.5, "start", "600")
+    f.text(30, 385, "Leonard's index: about 21 seeks for a binary search or a balanced binary tree; 3 for the B-tree.",
+           "tm", 11.5, italic=True)
+    return f
+
+
 FIGURES = {
     "00-representations": fig00, "01-one-machine-one-program": fig01, "02-one-machine-many-programs": fig02,
     "03-programs-too-big-for-one-head": fig03, "04-data-outlives-programs": fig04,
@@ -999,6 +1157,8 @@ FIGURES = {
     "dsa-greedy": fig_dsa_greedy, "dsa-heaps": fig_dsa_heaps,
     "dsa-tries": fig_dsa_tries, "dsa-append-only-logs": fig_dsa_logs,
     "dsa-exact-or-approximate": fig_dsa_approx, "dsa-search": fig_dsa_search,
+    "dsa-arrays-and-linked-lists": fig_dsa_arrays, "dsa-hashing": fig_dsa_hashing,
+    "dsa-hash-tables": fig_dsa_hash_tables, "dsa-b-trees": fig_dsa_btrees,
 }
 
 

@@ -1,0 +1,233 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 400" width="760" height="400" role="img" aria-labelledby="t d">
+<title id="t">Twenty-one reads, or three</title>
+<desc id="d">Two ways to index two million part numbers on disk. Left: a binary tree with one part number per node, about twenty-one levels deep, so a lookup reads twenty-one places on the disk. Right: a B-tree whose nodes are whole disk blocks of about two hundred keys each: one block at the top, two hundred below it, forty thousand below those, enough for eight million parts in three reads.</desc>
+
+<style>
+  .bg { fill: #ffffff; }
+  .t { fill: #1f2328; } .tm { fill: #59636e; }
+  .f-ink { fill: #1f2328; } .s-ink { stroke: #1f2328; }
+  .f-line { fill: #d0d7de; } .s-line { stroke: #d0d7de; }
+  .f-faint { fill: #f6f8fa; } .s-faint { stroke: #f6f8fa; }
+  .f-accent { fill: #2a78d6; } .s-accent { stroke: #2a78d6; }
+  .f-warn { fill: #d64a4a; } .s-warn { stroke: #d64a4a; }
+  .f-ok { fill: #1baa7a; } .s-ok { stroke: #1baa7a; }
+  .f-amber { fill: #e09a1a; } .s-amber { stroke: #e09a1a; }
+  .f-soft-accent { fill: #ddeaf9; } .f-soft-warn { fill: #f8dede; } .f-soft-ok { fill: #d8f1e8; } .f-soft-amber { fill: #faecd2; }
+  @media (prefers-color-scheme: dark) {
+    .bg { fill: #0d1117; }
+    .t { fill: #e6edf3; } .tm { fill: #9198a1; }
+    .f-ink { fill: #e6edf3; } .s-ink { stroke: #e6edf3; }
+    .f-line { fill: #3d444d; } .s-line { stroke: #3d444d; }
+    .f-faint { fill: #161b22; } .s-faint { stroke: #161b22; }
+    .f-accent { fill: #4c9aff; } .s-accent { stroke: #4c9aff; }
+    .f-warn { fill: #ff7b72; } .s-warn { stroke: #ff7b72; }
+    .f-ok { fill: #3fb950; } .s-ok { stroke: #3fb950; }
+    .f-amber { fill: #e3b341; } .s-amber { stroke: #e3b341; }
+    .f-soft-accent { fill: #102a4a; } .f-soft-warn { fill: #4a1c1c; } .f-soft-ok { fill: #0f3a2a; } .f-soft-amber { fill: #3d2e0e; }
+  }
+  @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+  text { font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; }
+</style>
+<defs><marker id="arrow-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" class="f-ink"/></marker><marker id="arrow-accent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" class="f-accent"/></marker><marker id="arrow-warn" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" class="f-warn"/></marker><marker id="arrow-ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" class="f-ok"/></marker><marker id="arrow-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" class="f-amber"/></marker><marker id="arrow-line" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" class="f-line"/></marker></defs>
+<rect width="760" height="400" class="bg"/>
+<text x="30" y="32" class="t" font-size="15" text-anchor="start" font-weight="600">One key per node</text>
+<text x="30" y="51" class="tm" font-size="12.5" text-anchor="start" font-weight="normal">About 21 levels for 2 million parts</text>
+<circle cx="132" cy="70" r="4.5" class="f-warn" />
+<line x1="132" y1="70" x2="168" y2="84" class="s-line" stroke-width="1.2" fill="none"/>
+<circle cx="168" cy="84" r="4.5" class="f-warn" />
+<line x1="168" y1="84" x2="132" y2="98" class="s-line" stroke-width="1.2" fill="none"/>
+<circle cx="132" cy="98" r="4.5" class="f-warn" />
+<line x1="132" y1="98" x2="168" y2="112" class="s-line" stroke-width="1.2" fill="none"/>
+<circle cx="168" cy="112" r="4.5" class="f-warn" />
+<line x1="168" y1="112" x2="132" y2="126" class="s-line" stroke-width="1.2" fill="none"/>
+<circle cx="132" cy="126" r="4.5" class="f-warn" />
+<line x1="132" y1="126" x2="168" y2="140" class="s-line" stroke-width="1.2" fill="none"/>
+<circle cx="168" cy="140" r="4.5" class="f-warn" />
+<line x1="168" y1="140" x2="132" y2="154" class="s-line" stroke-width="1.2" fill="none"/>
+<circle cx="132" cy="154" r="4.5" class="f-warn" />
+<line x1="132" y1="154" x2="168" y2="168" class="s-line" stroke-width="1.2" fill="none"/>
+<circle cx="168" cy="168" r="4.5" class="f-warn" />
+<line x1="168" y1="168" x2="132" y2="182" class="s-line" stroke-width="1.2" fill="none"/>
+<circle cx="132" cy="182" r="4.5" class="f-warn" />
+<line x1="132" y1="182" x2="168" y2="196" class="s-line" stroke-width="1.2" fill="none"/>
+<circle cx="168" cy="196" r="4.5" class="f-warn" />
+<line x1="168" y1="196" x2="132" y2="210" class="s-line" stroke-width="1.2" fill="none"/>
+<circle cx="132" cy="210" r="4.5" class="f-warn" />
+<line x1="132" y1="210" x2="168" y2="224" class="s-line" stroke-width="1.2" fill="none"/>
+<circle cx="168" cy="224" r="4.5" class="f-warn" />
+<line x1="168" y1="224" x2="132" y2="238" class="s-line" stroke-width="1.2" fill="none"/>
+<circle cx="132" cy="238" r="4.5" class="f-warn" />
+<line x1="132" y1="238" x2="168" y2="252" class="s-line" stroke-width="1.2" fill="none"/>
+<circle cx="168" cy="252" r="4.5" class="f-warn" />
+<line x1="168" y1="252" x2="132" y2="266" class="s-line" stroke-width="1.2" fill="none"/>
+<circle cx="132" cy="266" r="4.5" class="f-warn" />
+<line x1="132" y1="266" x2="168" y2="280" class="s-line" stroke-width="1.2" fill="none"/>
+<circle cx="168" cy="280" r="4.5" class="f-warn" />
+<line x1="168" y1="280" x2="132" y2="294" class="s-line" stroke-width="1.2" fill="none"/>
+<circle cx="132" cy="294" r="4.5" class="f-warn" />
+<line x1="132" y1="294" x2="168" y2="308" class="s-line" stroke-width="1.2" fill="none"/>
+<circle cx="168" cy="308" r="4.5" class="f-warn" />
+<line x1="168" y1="308" x2="132" y2="322" class="s-line" stroke-width="1.2" fill="none"/>
+<circle cx="132" cy="322" r="4.5" class="f-warn" />
+<line x1="132" y1="322" x2="168" y2="336" class="s-line" stroke-width="1.2" fill="none"/>
+<circle cx="168" cy="336" r="4.5" class="f-warn" />
+<line x1="168" y1="336" x2="132" y2="350" class="s-line" stroke-width="1.2" fill="none"/>
+<circle cx="132" cy="350" r="4.5" class="f-warn" />
+<text x="200" y="210" class="t" font-size="12.5" text-anchor="start" font-weight="600">21 reads,</text>
+<text x="200" y="227" class="t" font-size="12" text-anchor="start" font-weight="normal">one seek each</text>
+<text x="330" y="32" class="t" font-size="15" text-anchor="start" font-weight="600">A disk block per node</text>
+<text x="330" y="51" class="tm" font-size="12.5" text-anchor="start" font-weight="normal">About 200 keys in each</text>
+<rect x="375" y="80" width="210" height="26" rx="3" class="f-soft-ok" />
+<line x1="380.2" y1="86" x2="380.2" y2="100" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="385.5" y1="86" x2="385.5" y2="100" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="390.8" y1="86" x2="390.8" y2="100" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="396" y1="86" x2="396" y2="100" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="401.2" y1="86" x2="401.2" y2="100" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="406.5" y1="86" x2="406.5" y2="100" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="411.8" y1="86" x2="411.8" y2="100" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="417" y1="86" x2="417" y2="100" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="422.2" y1="86" x2="422.2" y2="100" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="427.5" y1="86" x2="427.5" y2="100" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="432.8" y1="86" x2="432.8" y2="100" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="438" y1="86" x2="438" y2="100" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="443.2" y1="86" x2="443.2" y2="100" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="448.5" y1="86" x2="448.5" y2="100" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="453.8" y1="86" x2="453.8" y2="100" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="459" y1="86" x2="459" y2="100" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="464.2" y1="86" x2="464.2" y2="100" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="469.5" y1="86" x2="469.5" y2="100" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="474.8" y1="86" x2="474.8" y2="100" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="480" y1="86" x2="480" y2="100" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="485.2" y1="86" x2="485.2" y2="100" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="490.5" y1="86" x2="490.5" y2="100" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="495.8" y1="86" x2="495.8" y2="100" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="501" y1="86" x2="501" y2="100" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="506.2" y1="86" x2="506.2" y2="100" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="511.5" y1="86" x2="511.5" y2="100" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="516.8" y1="86" x2="516.8" y2="100" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="522" y1="86" x2="522" y2="100" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="527.2" y1="86" x2="527.2" y2="100" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="532.5" y1="86" x2="532.5" y2="100" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="537.8" y1="86" x2="537.8" y2="100" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="543" y1="86" x2="543" y2="100" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="548.2" y1="86" x2="548.2" y2="100" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="553.5" y1="86" x2="553.5" y2="100" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="558.8" y1="86" x2="558.8" y2="100" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="564" y1="86" x2="564" y2="100" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="569.2" y1="86" x2="569.2" y2="100" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="574.5" y1="86" x2="574.5" y2="100" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="579.8" y1="86" x2="579.8" y2="100" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="480" y1="106" x2="480" y2="172" class="s-line" stroke-width="1.1" fill="none"/>
+<text x="648" y="98" class="t" font-size="12" text-anchor="start" font-weight="normal">1 block</text>
+<rect x="330" y="172" width="46" height="26" rx="3" class="f-soft-ok" />
+<line x1="334.6" y1="178" x2="334.6" y2="192" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="339.2" y1="178" x2="339.2" y2="192" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="343.8" y1="178" x2="343.8" y2="192" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="348.4" y1="178" x2="348.4" y2="192" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="353" y1="178" x2="353" y2="192" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="357.6" y1="178" x2="357.6" y2="192" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="362.2" y1="178" x2="362.2" y2="192" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="366.8" y1="178" x2="366.8" y2="192" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="371.4" y1="178" x2="371.4" y2="192" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="353" y1="198" x2="353" y2="264" class="s-line" stroke-width="1.1" fill="none"/>
+<rect x="386" y="172" width="46" height="26" rx="3" class="f-soft-ok" />
+<line x1="390.6" y1="178" x2="390.6" y2="192" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="395.2" y1="178" x2="395.2" y2="192" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="399.8" y1="178" x2="399.8" y2="192" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="404.4" y1="178" x2="404.4" y2="192" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="409" y1="178" x2="409" y2="192" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="413.6" y1="178" x2="413.6" y2="192" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="418.2" y1="178" x2="418.2" y2="192" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="422.8" y1="178" x2="422.8" y2="192" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="427.4" y1="178" x2="427.4" y2="192" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="409" y1="198" x2="409" y2="264" class="s-line" stroke-width="1.1" fill="none"/>
+<rect x="442" y="172" width="46" height="26" rx="3" class="f-soft-ok" />
+<line x1="446.6" y1="178" x2="446.6" y2="192" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="451.2" y1="178" x2="451.2" y2="192" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="455.8" y1="178" x2="455.8" y2="192" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="460.4" y1="178" x2="460.4" y2="192" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="465" y1="178" x2="465" y2="192" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="469.6" y1="178" x2="469.6" y2="192" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="474.2" y1="178" x2="474.2" y2="192" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="478.8" y1="178" x2="478.8" y2="192" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="483.4" y1="178" x2="483.4" y2="192" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="465" y1="198" x2="465" y2="264" class="s-line" stroke-width="1.1" fill="none"/>
+<rect x="498" y="172" width="46" height="26" rx="3" class="f-soft-ok" />
+<line x1="502.6" y1="178" x2="502.6" y2="192" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="507.2" y1="178" x2="507.2" y2="192" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="511.8" y1="178" x2="511.8" y2="192" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="516.4" y1="178" x2="516.4" y2="192" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="521" y1="178" x2="521" y2="192" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="525.6" y1="178" x2="525.6" y2="192" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="530.2" y1="178" x2="530.2" y2="192" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="534.8" y1="178" x2="534.8" y2="192" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="539.4" y1="178" x2="539.4" y2="192" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="521" y1="198" x2="521" y2="264" class="s-line" stroke-width="1.1" fill="none"/>
+<rect x="584" y="172" width="46" height="26" rx="3" class="f-soft-ok" />
+<line x1="588.6" y1="178" x2="588.6" y2="192" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="593.2" y1="178" x2="593.2" y2="192" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="597.8" y1="178" x2="597.8" y2="192" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="602.4" y1="178" x2="602.4" y2="192" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="607" y1="178" x2="607" y2="192" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="611.6" y1="178" x2="611.6" y2="192" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="616.2" y1="178" x2="616.2" y2="192" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="620.8" y1="178" x2="620.8" y2="192" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="625.4" y1="178" x2="625.4" y2="192" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="607" y1="198" x2="607" y2="264" class="s-line" stroke-width="1.1" fill="none"/>
+<text x="562" y="190" class="t" font-size="14" text-anchor="middle" font-weight="600">…</text>
+<text x="648" y="190" class="t" font-size="12" text-anchor="start" font-weight="normal">200 blocks</text>
+<rect x="330" y="264" width="46" height="26" rx="3" class="f-soft-ok" />
+<line x1="334.6" y1="270" x2="334.6" y2="284" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="339.2" y1="270" x2="339.2" y2="284" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="343.8" y1="270" x2="343.8" y2="284" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="348.4" y1="270" x2="348.4" y2="284" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="353" y1="270" x2="353" y2="284" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="357.6" y1="270" x2="357.6" y2="284" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="362.2" y1="270" x2="362.2" y2="284" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="366.8" y1="270" x2="366.8" y2="284" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="371.4" y1="270" x2="371.4" y2="284" class="s-ok" stroke-width="0.8" fill="none"/>
+<rect x="386" y="264" width="46" height="26" rx="3" class="f-soft-ok" />
+<line x1="390.6" y1="270" x2="390.6" y2="284" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="395.2" y1="270" x2="395.2" y2="284" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="399.8" y1="270" x2="399.8" y2="284" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="404.4" y1="270" x2="404.4" y2="284" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="409" y1="270" x2="409" y2="284" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="413.6" y1="270" x2="413.6" y2="284" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="418.2" y1="270" x2="418.2" y2="284" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="422.8" y1="270" x2="422.8" y2="284" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="427.4" y1="270" x2="427.4" y2="284" class="s-ok" stroke-width="0.8" fill="none"/>
+<rect x="442" y="264" width="46" height="26" rx="3" class="f-soft-ok" />
+<line x1="446.6" y1="270" x2="446.6" y2="284" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="451.2" y1="270" x2="451.2" y2="284" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="455.8" y1="270" x2="455.8" y2="284" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="460.4" y1="270" x2="460.4" y2="284" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="465" y1="270" x2="465" y2="284" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="469.6" y1="270" x2="469.6" y2="284" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="474.2" y1="270" x2="474.2" y2="284" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="478.8" y1="270" x2="478.8" y2="284" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="483.4" y1="270" x2="483.4" y2="284" class="s-ok" stroke-width="0.8" fill="none"/>
+<rect x="498" y="264" width="46" height="26" rx="3" class="f-soft-ok" />
+<line x1="502.6" y1="270" x2="502.6" y2="284" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="507.2" y1="270" x2="507.2" y2="284" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="511.8" y1="270" x2="511.8" y2="284" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="516.4" y1="270" x2="516.4" y2="284" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="521" y1="270" x2="521" y2="284" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="525.6" y1="270" x2="525.6" y2="284" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="530.2" y1="270" x2="530.2" y2="284" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="534.8" y1="270" x2="534.8" y2="284" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="539.4" y1="270" x2="539.4" y2="284" class="s-ok" stroke-width="0.8" fill="none"/>
+<rect x="584" y="264" width="46" height="26" rx="3" class="f-soft-ok" />
+<line x1="588.6" y1="270" x2="588.6" y2="284" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="593.2" y1="270" x2="593.2" y2="284" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="597.8" y1="270" x2="597.8" y2="284" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="602.4" y1="270" x2="602.4" y2="284" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="607" y1="270" x2="607" y2="284" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="611.6" y1="270" x2="611.6" y2="284" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="616.2" y1="270" x2="616.2" y2="284" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="620.8" y1="270" x2="620.8" y2="284" class="s-ok" stroke-width="0.8" fill="none"/>
+<line x1="625.4" y1="270" x2="625.4" y2="284" class="s-ok" stroke-width="0.8" fill="none"/>
+<text x="562" y="282" class="t" font-size="14" text-anchor="middle" font-weight="600">…</text>
+<text x="648" y="282" class="t" font-size="12" text-anchor="start" font-weight="600">40,000 blocks</text>
+<text x="330" y="340" class="t" font-size="12.5" text-anchor="start" font-weight="600">3 reads: 200 × 200 × 200 = 8 million parts</text>
+<text x="30" y="385" class="tm" font-size="11.5" text-anchor="start" font-weight="normal" font-style="italic">Leonard's index: about 21 seeks for a binary search or a balanced binary tree; 3 for the B-tree.</text>
+</svg>
