@@ -20,6 +20,10 @@ Selim learned that there were two quite different kinds of engine behind the sam
 
 He moved the filter to an engine that guaranteed linear time. It refused patterns that needed backreferences. About thirty rules had to be rewritten, and the five that genuinely needed to compare one part of a message with another became small pieces of ordinary code, reviewed and tested like any other change. Every rule now ran against a set of deliberately hostile test messages before it went live, and every message had a time budget. When an analyst later asked for a rule that matched balanced brackets in HTML, Selim explained that no regular expression could do it, because counting nesting to any depth needs memory that grows, which is what a parser's stack is for. And when another asked whether the rule language could have loops and functions, he said no, and wrote down why.
 
+![A line chart on a logarithmic time scale. As the line of text that almost matches gets longer, a backtracking engine's time doubles with every extra character, from microseconds to more than ten minutes at thirty characters. A linear-time engine's time grows in step with the length and stays in microseconds. A dashed line marks a ten-millisecond time budget per message.](../images/figures/dsa-power-and-predictability.svg)
+
+*The feature that made the engine powerful was the same one that made its running time unknowable in advance.*
+
 Looking back, Selim thought he'd chosen the library for everything it could do, and that was exactly the problem. Less power had given him something he hadn't known to want: knowing, before any rule ran, the longest it could possibly take.
 
 ## Where it shows up

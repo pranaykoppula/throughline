@@ -1292,6 +1292,196 @@ def fig_dsa_queues():
     return f
 
 
+def edge_point(a, b, w, h):
+    """Where the line from the centre of box a towards point b leaves a box of size w by h."""
+    dx, dy = b[0] - a[0], b[1] - a[1]
+    s = min(w / 2 / abs(dx) if dx else 1e9, h / 2 / abs(dy) if dy else 1e9)
+    return a[0] + dx * s, a[1] + dy * s
+
+
+def fig_dsa_graphs():
+    import heapq
+    f = Fig(400, "Store every distance, or store the roads",
+            "Left: bars on a logarithmic scale comparing what each design stores. A few thousand addresses mean "
+            "millions of pairs; forty thousand addresses mean eight hundred million; the road network for the whole "
+            "city is ninety thousand stretches of road. Right: a small grid of junctions and roads, with one road "
+            "closed. A search from A spreads out in order of distance, and stops when it reaches B, having explored "
+            "only the junctions nearer than B; the shortest route avoids the closed road.")
+    f.heading(30, 32, "What gets stored", "Every pair of addresses, or the roads between junctions")
+    rows = [("4,000 addresses: pairs", 4000 * 3999 / 2, "f-soft-warn"), ("40,000 addresses: pairs", 40000 * 39999 / 2, "f-warn"),
+            ("The city's roads", 90000, "f-ok")]
+    for i, (label, n, cls) in enumerate(rows):
+        y = 84 + i * 62
+        bw = (math.log10(n) - 3) / 6 * 250
+        f.text(40, y, label, "t", 12, "start", "600")
+        f.rect(40, y + 8, bw, 22, cls, 3)
+        f.text(46 + bw, y + 24, f"{n / 1e6:,.0f} million" if n >= 1e6 else f"{n:,.0f}", "t", 12)
+    for v, lab in [(3, "1,000"), (6, "1 million"), (9, "1 billion")]:
+        x = 40 + (v - 3) / 6 * 250
+        f.line(x, 268, x, 274, "ink", 1)
+        f.text(x, 288, lab, "tm", 11, "middle")
+    f.line(40, 268, 290, 268, "ink", 1)
+    f.text(40, 306, "Logarithmic scale: each step is a thousand times more.", "tm", 11.5)
+
+    cols, rws, x0, y0, step = 12, 7, 384, 78, 32
+    rng = Rng(1998)
+    adj = {}
+    closed = ((3, 3), (4, 3))
+    for c in range(cols):
+        for r in range(rws):
+            for d in ((1, 0), (0, 1)):
+                o = (c + d[0], r + d[1])
+                if o[0] < cols and o[1] < rws:
+                    wt = 1 + rng.next()
+                    if ((c, r), o) != closed:
+                        adj.setdefault((c, r), []).append((o, wt))
+                        adj.setdefault(o, []).append(((c, r), wt))
+    src, dst = (2, 3), (5, 3)
+    dist, prev, heap, done = {src: 0}, {}, [(0, src)], []
+    while heap:
+        d, u = heapq.heappop(heap)
+        if u in done:
+            continue
+        done.append(u)
+        if u == dst:
+            break
+        for v, wt in adj.get(u, []):
+            if d + wt < dist.get(v, 1e9):
+                dist[v], prev[v] = d + wt, u
+                heapq.heappush(heap, (d + wt, v))
+    route, u = [dst], dst
+    while u != src:
+        u = prev[u]
+        route.append(u)
+
+    def pt(n):
+        return x0 + n[0] * step, y0 + n[1] * step
+
+    f.heading(380, 32, "Search the roads when asked", "Explore outward in order of distance; stop at B")
+    for u, outs in adj.items():
+        for v, _ in outs:
+            if u < v:
+                f.line(*pt(u), *pt(v), "line", 1.2)
+    a, b = pt(closed[0]), pt(closed[1])
+    f.line(*a, *b, "warn", 2, dash="3 3")
+    mx, my = (a[0] + b[0]) / 2, (a[1] + b[1]) / 2
+    f.text(mx, my + 5, "×", "f-warn", 16, "middle", "700")
+    f.text(mx, my + 20, "closed", "tm", 10.5, "middle")
+    f.poly([pt(n) for n in route], "accent", 3)
+    explored = set(done)
+    for c in range(cols):
+        for r in range(rws):
+            n = (c, r)
+            f.circle(*pt(n), 5, "f-ok" if n in explored else "f-line")
+    for n, lab in ((src, "A"), (dst, "B")):
+        f.circle(*pt(n), 9, "f-accent")
+        f.text(pt(n)[0], pt(n)[1] + 4, lab, "bg", 11, "middle", "700")
+    f.circle(388, 330, 5, "f-ok")
+    f.text(398, 334, f"explored: {len(explored)} of {cols * rws} junctions", "t", 12)
+    f.line(570, 330, 594, 330, "accent", 3)
+    f.text(600, 334, "shortest route", "t", 12)
+    f.text(30, 386, "Ruth's numbers on the left; the grid is illustrative. Her city had about ninety thousand stretches of road, "
+           "and a query explored a few thousand.", "tm", 11.5, italic=True)
+    return f
+
+
+def fig_dsa_state_machines():
+    f = Fig(400, "Flags that allow anything, or states that allow only what's real",
+            "Left: five yes-or-no fields on an order make thirty-two combinations, and code could set any of them; "
+            "three impossible combinations Chloe found are marked: cancelled and shipped, on forty orders; refunded "
+            "but not paid, on eleven; paid, cancelled and awaiting stock at once, on three. Right: nine states and "
+            "the moves the business allowed between them. Placed goes to paid or cancelled; paid to awaiting stock, "
+            "packing, or cancelled and refunded; awaiting stock to packing; packing to shipped; shipped to delivered "
+            "or returned. There is no arrow from cancelled to shipped.")
+    f.heading(30, 32, "Five flags", "32 combinations, all reachable")
+    for i in range(32):
+        r, c = divmod(i, 4)
+        x, y = 40 + c * 50, 76 + r * 28
+        f.rect(x, y, 44, 22, "f-faint", 3)
+    found = [(1, 2, "40", "cancelled and shipped"), (3, 0, "11", "refunded, not paid"), (5, 3, "3", "paid, cancelled, awaiting stock")]
+    for r, c, n, _ in found:
+        x, y = 40 + c * 50, 76 + r * 28
+        f.rect(x, y, 44, 22, "f-warn", 3)
+        f.text(x + 22, y + 15, n, "bg", 11.5, "middle", "700")
+    for k, (_, _, n, label) in enumerate(found):
+        f.text(40, 320 + k * 17, f"{n} orders: {label}", "t", 12)
+
+    f.heading(290, 32, "Nine states, and only the allowed moves", "One function makes every move, or refuses it")
+    bw, bh = 116, 30
+    pos = {"placed": (350, 92), "paid": (490, 92), "awaiting stock": (640, 92),
+           "cancelled": (350, 172), "cancelled and refunded": (490, 172), "packing": (640, 172),
+           "shipped": (640, 252), "delivered": (540, 322), "returned": (690, 322)}
+    moves = [("placed", "paid"), ("placed", "cancelled"), ("paid", "awaiting stock"), ("paid", "cancelled and refunded"),
+             ("paid", "packing"), ("awaiting stock", "packing"), ("packing", "shipped"), ("shipped", "delivered"),
+             ("shipped", "returned")]
+    for a, b in moves:
+        p1 = edge_point(pos[a], pos[b], bw + 4, bh + 4)
+        p2 = edge_point(pos[b], pos[a], bw + 10, bh + 10)
+        f.line(*p1, *p2, "ink", 1.4, arrow=True)
+    p1 = edge_point(pos["cancelled"], pos["shipped"], bw + 4, bh + 4)
+    p2 = edge_point(pos["shipped"], pos["cancelled"], bw + 10, bh + 10)
+    f.line(*p1, *p2, "warn", 1.4, dash="4 3")
+    mx, my = (p1[0] + p2[0]) / 2, (p1[1] + p2[1]) / 2
+    f.text(mx, my + 5, "×", "f-warn", 16, "middle", "700")
+    f.text(mx - 12, my + 22, "no such move", "tm", 11, "end")
+    for name, (x, y) in pos.items():
+        w = bw + 26 if name == "cancelled and refunded" else bw
+        cls = "f-soft-warn" if name.startswith("cancelled") else "f-soft-accent"
+        f.box(x - w / 2, y - bh / 2, w, bh, name, cls, size=11.5)
+    f.text(30, 390, "Chloe's order system. Which flag combinations sit where in the grid is illustrative.", "tm", 11.5, italic=True)
+    return f
+
+
+def fig_dsa_power():
+    f = Fig(360, "Two engines, one pattern, one line that almost matches",
+            "A line chart on a logarithmic time scale. As the line of text that almost matches gets longer, a "
+            "backtracking engine's time doubles with every extra character, from microseconds to more than ten "
+            "minutes at thirty characters. A linear-time engine's time grows in step with the length and stays in "
+            "microseconds. A dashed line marks a ten-millisecond time budget per message.")
+    f.heading(30, 32, "Time to give up on one line", "A repetition inside a repetition, against text that fails only at the end")
+    p = axes(f, 100, 80, 600, 200, "characters in the line that almost matches", "time",
+             [(0, "0"), (10, "10"), (20, "20"), (30, "30")],
+             [(-6, "1 µs"), (-3, "1 ms"), (0, "1 s"), (math.log10(60), "1 min"), (3, "17 min")], (0, 31), (-6.3, 3.2))
+    f.poly([p(n, math.log10(1e-6 * 2 ** n)) for n in range(0, 31)], "warn", 2.5)
+    f.poly([p(n, math.log10(1e-6 * max(n, 1))) for n in range(0, 31)], "ok", 2.5)
+    by = p(0, -2)[1]
+    f.line(100, by, 700, by, "amber", 1.2, dash="5 4")
+    f.text(104, by - 6, "a 10 ms budget per message", "tm", 11)
+    f.text(p(1, 1.6)[0], p(1, 1.6)[1], "backtracking: doubles with every character", "t", 12, "start", "600")
+    f.text(p(30, 0)[0] - 6, p(30, -4.2)[1], "one pass: grows with the length", "t", 12, "end", "600")
+    f.text(30, 346, "Illustrative timings: a microsecond per step. Real engines differ in speed, not in shape.", "tm", 11.5, italic=True)
+    return f
+
+
+def fig_dsa_computability():
+    f = Fig(400, "Choosing which way to be wrong",
+            "A flow chart of Viktor's scanner. Every program first meets the signature list: a known virus is "
+            "blocked, fast and certain. The rest meet a scanner that flags anything suspicious, accepting false "
+            "alarms; unflagged programs pass. Flagged programs run in an isolated sandbox with a time limit: one "
+            "that does harm is blocked, one that finishes harmlessly passes, and one still running at the limit is "
+            "held as unknown.")
+    f.heading(30, 32, "No program can decide this for every program", "So each stage chooses its mistakes, and everything has a time limit")
+    stages = [("Signature list", "fast, certain, only the known", 84), ("Suspicious?", "flags freely: false alarms accepted", 176),
+              ("Sandbox", "run it, watch it, with a time limit", 268)]
+    for label, sub, y in stages:
+        f.box(40, y, 230, 52, label, "f-soft-accent", sub=sub)
+    f.line(155, 136, 155, 172, "ink", 1.5, arrow=True)
+    f.text(163, 158, "not known", "tm", 11)
+    f.line(155, 228, 155, 264, "ink", 1.5, arrow=True)
+    f.text(163, 250, "flagged", "tm", 11)
+    outs = [(110, "blocked", "a known virus", "f-soft-warn"), (202, "passed", "nothing suspicious", "f-soft-ok"),
+            (264, "blocked", "it did harm", "f-soft-warn"), (306, "passed", "it finished harmlessly", "f-soft-ok"),
+            (348, "held: unknown", "still running at the limit", "f-soft-amber")]
+    src = {110: 110, 202: 202, 264: 282, 306: 294, 348: 306}
+    for y, label, why, cls in outs:
+        f.line(274, src[y], 470, y, "ink", 1.4, arrow=True)
+        f.box(478, y - 19, 180, 38, label, cls, size=12, sub=why)
+    f.text(666, 345, "neither safe", "tm", 11)
+    f.text(666, 359, "nor dangerous", "tm", 11)
+    f.text(30, 392, "Viktor's scanner. Each stage can still be wrong; what changed is that he chose how.", "tm", 11.5, italic=True)
+    return f
+
+
 FIGURES = {
     "00-representations": fig00, "01-one-machine-one-program": fig01, "02-one-machine-many-programs": fig02,
     "03-programs-too-big-for-one-head": fig03, "04-data-outlives-programs": fig04,
@@ -1308,6 +1498,8 @@ FIGURES = {
     "dsa-hash-tables": fig_dsa_hash_tables, "dsa-b-trees": fig_dsa_btrees,
     "dsa-bloom-filters": fig_dsa_bloom, "dsa-lsm-trees": fig_dsa_lsm,
     "dsa-merkle-dags": fig_dsa_merkle, "dsa-queues": fig_dsa_queues,
+    "dsa-graphs": fig_dsa_graphs, "dsa-state-machines": fig_dsa_state_machines,
+    "dsa-power-and-predictability": fig_dsa_power, "dsa-computability": fig_dsa_computability,
 }
 
 
