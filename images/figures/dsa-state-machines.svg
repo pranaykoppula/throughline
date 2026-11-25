@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 400" width="760" height="400" role="img" aria-labelledby="t d">
+<title id="t">Flags that allow anything, or states that allow only what's real</title>
+<desc id="d">Left: five yes-or-no fields on an order make thirty-two combinations, and code could set any of them; three impossible combinations Chloe found are marked: cancelled and shipped, on forty orders; refunded but not paid, on eleven; paid, cancelled and awaiting stock at once, on three. Right: nine states and the moves the business allowed between them. Placed goes to paid or cancelled; paid to awaiting stock, packing, or cancelled and refunded; awaiting stock to packing; packing to shipped; shipped to delivered or returned. There is no arrow from cancelled to shipped.</desc>
+
+<style>
+  .bg { fill: #ffffff; }
+  .t { fill: #1f2328; } .tm { fill: #59636e; }
+  .f-ink { fill: #1f2328; } .s-ink { stroke: #1f2328; }
+  .f-line { fill: #d0d7de; } .s-line { stroke: #d0d7de; }
+  .f-faint { fill: #f6f8fa; } .s-faint { stroke: #f6f8fa; }
+  .f-accent { fill: #2a78d6; } .s-accent { stroke: #2a78d6; }
+  .f-warn { fill: #d64a4a; } .s-warn { stroke: #d64a4a; }
+  .f-ok { fill: #1baa7a; } .s-ok { stroke: #1baa7a; }
+  .f-amber { fill: #e09a1a; } .s-amber { stroke: #e09a1a; }
+  .f-soft-accent { fill: #ddeaf9; } .f-soft-warn { fill: #f8dede; } .f-soft-ok { fill: #d8f1e8; } .f-soft-amber { fill: #faecd2; }
+  @media (prefers-color-scheme: dark) {
+    .bg { fill: #0d1117; }
+    .t { fill: #e6edf3; } .tm { fill: #9198a1; }
+    .f-ink { fill: #e6edf3; } .s-ink { stroke: #e6edf3; }
+    .f-line { fill: #3d444d; } .s-line { stroke: #3d444d; }
+    .f-faint { fill: #161b22; } .s-faint { stroke: #161b22; }
+    .f-accent { fill: #4c9aff; } .s-accent { stroke: #4c9aff; }
+    .f-warn { fill: #ff7b72; } .s-warn { stroke: #ff7b72; }
+    .f-ok { fill: #3fb950; } .s-ok { stroke: #3fb950; }
+    .f-amber { fill: #e3b341; } .s-amber { stroke: #e3b341; }
+    .f-soft-accent { fill: #102a4a; } .f-soft-warn { fill: #4a1c1c; } .f-soft-ok { fill: #0f3a2a; } .f-soft-amber { fill: #3d2e0e; }
+  }
+  @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+  text { font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; }
+</style>
+<defs><marker id="arrow-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" class="f-ink"/></marker><marker id="arrow-accent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" class="f-accent"/></marker><marker id="arrow-warn" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" class="f-warn"/></marker><marker id="arrow-ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" class="f-ok"/></marker><marker id="arrow-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" class="f-amber"/></marker><marker id="arrow-line" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" class="f-line"/></marker></defs>
+<rect width="760" height="400" class="bg"/>
+<text x="30" y="32" class="t" font-size="15" text-anchor="start" font-weight="600">Five flags</text>
+<text x="30" y="51" class="tm" font-size="12.5" text-anchor="start" font-weight="normal">32 combinations, all reachable</text>
+<rect x="40" y="76" width="44" height="22" rx="3" class="f-faint" />
+<rect x="90" y="76" width="44" height="22" rx="3" class="f-faint" />
+<rect x="140" y="76" width="44" height="22" rx="3" class="f-faint" />
+<rect x="190" y="76" width="44" height="22" rx="3" class="f-faint" />
+<rect x="40" y="104" width="44" height="22" rx="3" class="f-faint" />
+<rect x="90" y="104" width="44" height="22" rx="3" class="f-faint" />
+<rect x="140" y="104" width="44" height="22" rx="3" class="f-faint" />
+<rect x="190" y="104" width="44" height="22" rx="3" class="f-faint" />
+<rect x="40" y="132" width="44" height="22" rx="3" class="f-faint" />
+<rect x="90" y="132" width="44" height="22" rx="3" class="f-faint" />
+<rect x="140" y="132" width="44" height="22" rx="3" class="f-faint" />
+<rect x="190" y="132" width="44" height="22" rx="3" class="f-faint" />
+<rect x="40" y="160" width="44" height="22" rx="3" class="f-faint" />
+<rect x="90" y="160" width="44" height="22" rx="3" class="f-faint" />
+<rect x="140" y="160" width="44" height="22" rx="3" class="f-faint" />
+<rect x="190" y="160" width="44" height="22" rx="3" class="f-faint" />
+<rect x="40" y="188" width="44" height="22" rx="3" class="f-faint" />
+<rect x="90" y="188" width="44" height="22" rx="3" class="f-faint" />
+<rect x="140" y="188" width="44" height="22" rx="3" class="f-faint" />
+<rect x="190" y="188" width="44" height="22" rx="3" class="f-faint" />
+<rect x="40" y="216" width="44" height="22" rx="3" class="f-faint" />
+<rect x="90" y="216" width="44" height="22" rx="3" class="f-faint" />
+<rect x="140" y="216" width="44" height="22" rx="3" class="f-faint" />
+<rect x="190" y="216" width="44" height="22" rx="3" class="f-faint" />
+<rect x="40" y="244" width="44" height="22" rx="3" class="f-faint" />
+<rect x="90" y="244" width="44" height="22" rx="3" class="f-faint" />
+<rect x="140" y="244" width="44" height="22" rx="3" class="f-faint" />
+<rect x="190" y="244" width="44" height="22" rx="3" class="f-faint" />
+<rect x="40" y="272" width="44" height="22" rx="3" class="f-faint" />
+<rect x="90" y="272" width="44" height="22" rx="3" class="f-faint" />
+<rect x="140" y="272" width="44" height="22" rx="3" class="f-faint" />
+<rect x="190" y="272" width="44" height="22" rx="3" class="f-faint" />
+<rect x="140" y="104" width="44" height="22" rx="3" class="f-warn" />
+<text x="162" y="119" class="bg" font-size="11.5" text-anchor="middle" font-weight="700">40</text>
+<rect x="40" y="160" width="44" height="22" rx="3" class="f-warn" />
+<text x="62" y="175" class="bg" font-size="11.5" text-anchor="middle" font-weight="700">11</text>
+<rect x="190" y="216" width="44" height="22" rx="3" class="f-warn" />
+<text x="212" y="231" class="bg" font-size="11.5" text-anchor="middle" font-weight="700">3</text>
+<text x="40" y="320" class="t" font-size="12" text-anchor="start" font-weight="normal">40 orders: cancelled and shipped</text>
+<text x="40" y="337" class="t" font-size="12" text-anchor="start" font-weight="normal">11 orders: refunded, not paid</text>
+<text x="40" y="354" class="t" font-size="12" text-anchor="start" font-weight="normal">3 orders: paid, cancelled, awaiting stock</text>
+<text x="290" y="32" class="t" font-size="15" text-anchor="start" font-weight="600">Nine states, and only the allowed moves</text>
+<text x="290" y="51" class="tm" font-size="12.5" text-anchor="start" font-weight="normal">One function makes every move, or refuses it</text>
+<line x1="410" y1="92" x2="427" y2="92" class="s-ink" stroke-width="1.4" fill="none" marker-end="url(#arrow-ink)"/>
+<line x1="350" y1="109" x2="350" y2="152" class="s-ink" stroke-width="1.4" fill="none" marker-end="url(#arrow-ink)"/>
+<line x1="550" y1="92" x2="577" y2="92" class="s-ink" stroke-width="1.4" fill="none" marker-end="url(#arrow-ink)"/>
+<line x1="490" y1="109" x2="490" y2="152" class="s-ink" stroke-width="1.4" fill="none" marker-end="url(#arrow-ink)"/>
+<line x1="521.9" y1="109" x2="602.5" y2="152" class="s-ink" stroke-width="1.4" fill="none" marker-end="url(#arrow-ink)"/>
+<line x1="640" y1="109" x2="640" y2="152" class="s-ink" stroke-width="1.4" fill="none" marker-end="url(#arrow-ink)"/>
+<line x1="640" y1="189" x2="640" y2="232" class="s-ink" stroke-width="1.4" fill="none" marker-end="url(#arrow-ink)"/>
+<line x1="615.7" y1="269" x2="568.6" y2="302" class="s-ink" stroke-width="1.4" fill="none" marker-end="url(#arrow-ink)"/>
+<line x1="652.1" y1="269" x2="675.7" y2="302" class="s-ink" stroke-width="1.4" fill="none" marker-end="url(#arrow-ink)"/>
+<line x1="410" y1="188.6" x2="577" y2="234.6" class="s-warn" stroke-width="1.4" fill="none" stroke-dasharray="4 3"/>
+<text x="493.5" y="216.6" class="f-warn" font-size="16" text-anchor="middle" font-weight="700">×</text>
+<text x="481.5" y="233.6" class="tm" font-size="11" text-anchor="end" font-weight="normal">no such move</text>
+<rect x="292" y="77" width="116" height="30" rx="6" class="f-soft-accent" />
+<rect x="292" y="77" width="116" height="30" rx="6" class="s-line" fill="none" stroke-width="1"/>
+<text x="350" y="95.8" class="t" font-size="11.5" text-anchor="middle" font-weight="600">placed</text>
+<rect x="432" y="77" width="116" height="30" rx="6" class="f-soft-accent" />
+<rect x="432" y="77" width="116" height="30" rx="6" class="s-line" fill="none" stroke-width="1"/>
+<text x="490" y="95.8" class="t" font-size="11.5" text-anchor="middle" font-weight="600">paid</text>
+<rect x="582" y="77" width="116" height="30" rx="6" class="f-soft-accent" />
+<rect x="582" y="77" width="116" height="30" rx="6" class="s-line" fill="none" stroke-width="1"/>
+<text x="640" y="95.8" class="t" font-size="11.5" text-anchor="middle" font-weight="600">awaiting stock</text>
+<rect x="292" y="157" width="116" height="30" rx="6" class="f-soft-warn" />
+<rect x="292" y="157" width="116" height="30" rx="6" class="s-line" fill="none" stroke-width="1"/>
+<text x="350" y="175.8" class="t" font-size="11.5" text-anchor="middle" font-weight="600">cancelled</text>
+<rect x="419" y="157" width="142" height="30" rx="6" class="f-soft-warn" />
+<rect x="419" y="157" width="142" height="30" rx="6" class="s-line" fill="none" stroke-width="1"/>
+<text x="490" y="175.8" class="t" font-size="11.5" text-anchor="middle" font-weight="600">cancelled and refunded</text>
+<rect x="582" y="157" width="116" height="30" rx="6" class="f-soft-accent" />
+<rect x="582" y="157" width="116" height="30" rx="6" class="s-line" fill="none" stroke-width="1"/>
+<text x="640" y="175.8" class="t" font-size="11.5" text-anchor="middle" font-weight="600">packing</text>
+<rect x="582" y="237" width="116" height="30" rx="6" class="f-soft-accent" />
+<rect x="582" y="237" width="116" height="30" rx="6" class="s-line" fill="none" stroke-width="1"/>
+<text x="640" y="255.8" class="t" font-size="11.5" text-anchor="middle" font-weight="600">shipped</text>
+<rect x="482" y="307" width="116" height="30" rx="6" class="f-soft-accent" />
+<rect x="482" y="307" width="116" height="30" rx="6" class="s-line" fill="none" stroke-width="1"/>
+<text x="540" y="325.8" class="t" font-size="11.5" text-anchor="middle" font-weight="600">delivered</text>
+<rect x="632" y="307" width="116" height="30" rx="6" class="f-soft-accent" />
+<rect x="632" y="307" width="116" height="30" rx="6" class="s-line" fill="none" stroke-width="1"/>
+<text x="690" y="325.8" class="t" font-size="11.5" text-anchor="middle" font-weight="600">returned</text>
+<text x="30" y="390" class="tm" font-size="11.5" text-anchor="start" font-weight="normal" font-style="italic">Chloe's order system. Which flag combinations sit where in the grid is illustrative.</text>
+</svg>
