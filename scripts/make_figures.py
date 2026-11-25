@@ -1145,6 +1145,153 @@ def fig_dsa_btrees():
     return f
 
 
+def fig_dsa_bloom():
+    k = 3
+    bits = k / -math.log(1 - 0.01 ** (1 / k))
+
+    def wrong(x, size=1):
+        return (1 - math.exp(-k * x / (bits * size))) ** k
+
+    f = Fig(350, "A Bloom filter as the crawl outgrew it",
+            "A line chart of how often the crawler's filter wrongly answered 'probably seen', against the number of "
+            "URLs it held, as a multiple of the number it was sized for. At the size it was built for, one in a "
+            "hundred. When the crawl tripled, about one in seven, with the curve still climbing. A second, flat line "
+            "near zero shows the filter resized for twice the new crawl.")
+    f.heading(30, 32, "Wrong \"probably seen\" answers", "The filter was never wrong about \"no\"; its \"yes\" got worse as it filled")
+    p = axes(f, 90, 84, 620, 176, "URLs held, as a multiple of what the filter was sized for", "wrong yes",
+             [(0, "0"), (1, "1×"), (2, "2×"), (3, "3×")], [(0, "0"), (0.05, "5%"), (0.10, "10%"), (0.15, "15%"), (0.2, "20%")],
+             (0, 3.3), (0, 0.2))
+    f.poly([p(i / 50, wrong(i / 50)) for i in range(166)], "warn", 2.5)
+    f.poly([p(i / 50, wrong(i / 50, 6)) for i in range(166)], "ok", 2.5)
+    for x, label, dx in [(1, "1 in 100: the size it was built for", -8), (3, "about 1 in 7: three more countries", -8)]:
+        px, py = p(x, wrong(x))
+        f.line(px, py, px, p(x, 0)[1], "line", 1, dash="3 3")
+        f.circle(px, py, 4.5, "f-warn")
+        f.text(px + dx, py - 9, label, "t", 12, "start" if dx > 0 else "end", "600")
+    f.text(p(3, 0)[0] - 8, p(3, wrong(3, 6))[1] - 8, "resized for twice the new crawl", "t", 12, "end")
+    f.text(30, 336, "Three hash functions, an illustrative choice that matches the story's one in a hundred and one in seven.",
+           "tm", 11.5, italic=True)
+    return f
+
+
+def fig_dsa_lsm():
+    f = Fig(390, "Writing where the data belongs, or writing in order",
+            "Two ways of writing monitoring data to one disk. Top: a B-tree index updated in place, where points "
+            "from thousands of servers arrive interleaved and each write lands on a different page, so the disk "
+            "jumps back and forth. Bottom: points are sorted in memory and written out in long sequential runs as "
+            "unchangeable files, which a background process later merges into fewer, larger files.")
+    f.heading(30, 32, "Update the index in place", "Points from thousands of servers arrive interleaved; each lands on a different page")
+    f.rect(40, 94, 680, 28, "f-faint", 4)
+    f.rect(40, 94, 680, 28, "s-line", 4, 'fill="none" stroke-width="1"')
+    rng = Rng(2008)
+    xs = [50 + rng.next() * 660 for _ in range(14)]
+    for a, b in zip(xs, xs[1:]):
+        f.path(f"M {num(a)} 92 Q {num((a + b) / 2)} {num(92 - abs(b - a) / 24 - 8)} {num(b)} 92", "line", 1.1)
+    for x in xs:
+        f.rect(x - 2, 96, 4, 24, "f-warn", 1)
+    f.text(40, 142, "The disk spends its time seeking, to change a few bytes here and a few bytes there.", "t", 12)
+
+    f.heading(30, 172, "Sort in memory, write in order, merge later", "When memory holds a few hundred megabytes, write it out in one pass")
+    f.box(40, 214, 150, 40, "memory", "f-soft-accent", sub="sorted, filling")
+    f.line(194, 234, 226, 234, "ink", 1.5, arrow=True)
+    for i in range(5):
+        x = 232 + i * 98
+        f.rect(x, 220, 92, 28, "f-soft-ok", 3)
+        for t in range(1, 12):
+            f.line(x + t * 92 / 12, 226, x + t * 92 / 12, 242, "ok", 0.8)
+        f.text(x + 46, 264, f"file {i + 1}", "tm", 11, "middle")
+    for i in range(3):
+        f.line(278 + i * 98, 272, 380, 306, "amber", 1.2)
+    f.rect(330, 308, 190, 24, "f-soft-amber", 3)
+    f.text(425, 324, "merged, in the background", "t", 11.5, "middle")
+    f.text(540, 324, "the cost paid later", "t", 12, "start", "600")
+    f.text(40, 356, "Writes became long runs, which the disk is fast at. Reads now check memory and several files, newest first.", "t", 12)
+    f.text(30, 380, "Neha's system: 150,000 points a second. Positions on the disk are illustrative.", "tm", 11.5, italic=True)
+    return f
+
+
+def fig_dsa_merkle():
+    f = Fig(420, "Following the hashes that differ",
+            "A tree of hashes for a file server: one hash at the top, four folders, three files in each folder, "
+            "and the blocks of two files. Comparing top-down, the top hash differs, so the four folder hashes are "
+            "compared; two differ and two match. Only the files inside the two differing folders are compared, then "
+            "only the blocks of the two differing files, which finds three corrupted blocks. Matching branches are "
+            "never opened.")
+    f.heading(30, 32, "Start at the top, open only what differs", "One comparison when nothing has changed; a few more for each level when something has")
+    bad, ok, skip = "f-warn", "f-ok", "f-line"
+    root = (380, 84)
+    folders = [(110, ok), (290, bad), (470, ok), (650, bad)]
+    bad_files = {(1, 1): [False, True, False, True], (3, 0): [False, False, True, False]}
+    f.circle(*root, 10, bad)
+    f.text(root[0] + 16, root[1] + 4, "the whole server", "tm", 11.5)
+    count = 1
+    for fi, (fx, fcls) in enumerate(folders):
+        f.line(root[0], root[1] + 10, fx, 150, "line", 1.2)
+        f.circle(fx, 160, 9, fcls)
+        count += 1
+        for j in range(3):
+            x = fx - 50 + j * 50
+            f.line(fx, 169, x, 222, "line", 1.1)
+            if fcls == ok:
+                f.circle(x, 230, 7, skip)
+                continue
+            count += 1
+            blocks = bad_files.get((fi, j))
+            f.circle(x, 230, 7, bad if blocks else ok)
+            if blocks:
+                for b, broken in enumerate(blocks):
+                    bx = x - 39 + b * 26
+                    f.line(x, 237, bx + 10, 290, "line", 1)
+                    f.rect(bx, 290, 20, 20, bad if broken else ok, 3)
+                    count += 1
+    f.text(110, 196, "matches: stop", "tm", 11, "middle")
+    f.text(470, 196, "matches: stop", "tm", 11, "middle")
+    for i, (cls, label) in enumerate([(bad, "hash differs: look inside"), (ok, "hash matches: everything below matches"),
+                                      (skip, "never compared")]):
+        f.circle((48, 248, 540)[i], 346, 6, cls)
+        f.text((60, 260, 552)[i], 350, label, "t", 12)
+    f.text(40, 382, f"{count} comparisons find the 3 bad blocks here; among Ingrid's two terabytes, a few hundred did.", "t", 12.5, "start", "600")
+    f.text(30, 408, "An illustrative tree: the real one had millions of blocks under the same shape.", "tm", 11.5, italic=True)
+    return f
+
+
+def fig_dsa_queues():
+    f = Fig(390, "One line, or three",
+            "Two ways of queuing outgoing email in front of the same workers. Top: one first-in, first-out queue, "
+            "where a retailer's two million newsletters arrived first and a password reset waits behind all of them, "
+            "for hours. Bottom: three queues, urgent mail first, then receipts, then bulk, with bulk guaranteed a share "
+            "of the workers and each bulk customer served in turn, so the reset waits seconds.")
+    f.heading(30, 32, "One queue, first in, first out", "Tuesday morning: the newsletter went in first")
+    f.rect(40, 76, 560, 34, "f-faint", 4)
+    f.rect(130, 80, 460, 26, "f-soft-amber", 3)
+    f.text(360, 98, "2,000,000 newsletters, one retailer", "t", 12, "middle", "600")
+    f.rect(52, 80, 66, 26, "f-warn", 3)
+    f.text(85, 98, "reset", "t", 11.5, "middle", "600")
+    f.line(604, 93, 630, 93, "ink", 1.5, arrow=True)
+    f.box(636, 72, 84, 42, "workers")
+    f.text(40, 132, "The reset waits behind every newsletter: hours, with the workers as fast as ever.", "t", 12)
+
+    f.heading(30, 172, "Three queues, and who goes next decided on purpose", "Urgent first, then receipts; bulk always gets a share, one customer at a time")
+    lanes = [("Urgent", [("reset", "f-warn"), ("code", "f-warn")], "first"),
+             ("Receipts", [("receipt", "f-soft-accent")] * 3, "next"),
+             ("Bulk", [("retailer", "f-soft-amber"), ("shop B", "f-faint"), ("retailer", "f-soft-amber"),
+                       ("shop C", "f-faint")], "always a share")]
+    for i, (name, items, rule) in enumerate(lanes):
+        y = 210 + i * 46
+        f.text(40, y + 22, name, "t", 12.5, "start", "600")
+        f.rect(130, y, 470, 34, "f-faint", 4)
+        for j, (label, cls) in enumerate(items):
+            x = 588 - (j + 1) * 82
+            f.rect(x, y + 4, 76, 26, cls, 3)
+            f.text(x + 38, y + 22, label, "t", 11.5, "middle")
+        f.line(604, y + 17, 630, y + 17, "ink", 1.5, arrow=True)
+        f.text(140, y + 22, rule, "tm", 11.5)
+    f.box(636, 206, 84, 126, "workers")
+    f.text(40, 362, "The reset waits seconds. The newsletter still goes out, and no one sender holds up another.", "t", 12)
+    f.text(30, 382, "Yusuf's mail service; queue lengths are not to scale.", "tm", 11.5, italic=True)
+    return f
+
+
 FIGURES = {
     "00-representations": fig00, "01-one-machine-one-program": fig01, "02-one-machine-many-programs": fig02,
     "03-programs-too-big-for-one-head": fig03, "04-data-outlives-programs": fig04,
@@ -1159,6 +1306,8 @@ FIGURES = {
     "dsa-exact-or-approximate": fig_dsa_approx, "dsa-search": fig_dsa_search,
     "dsa-arrays-and-linked-lists": fig_dsa_arrays, "dsa-hashing": fig_dsa_hashing,
     "dsa-hash-tables": fig_dsa_hash_tables, "dsa-b-trees": fig_dsa_btrees,
+    "dsa-bloom-filters": fig_dsa_bloom, "dsa-lsm-trees": fig_dsa_lsm,
+    "dsa-merkle-dags": fig_dsa_merkle, "dsa-queues": fig_dsa_queues,
 }
 
 

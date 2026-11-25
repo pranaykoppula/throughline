@@ -20,6 +20,10 @@ Over the next year the site added shops in three more countries, and the crawl t
 
 Joaquín kept the filter and changed what its answers were allowed to decide. A "no" still meant fetch the page straight away, with no further check, which was the case for most new links and where nearly all the saving came from. A "probably yes" now meant check the exact list on disk before skipping. The filter's mistakes became an extra disk read, not a missing product. He sized the filter for twice the current crawl, and started a fresh filter each day, so it never filled up and old entries never needed deleting. And because the failure had been silent, he made it visible. Every hour the crawler tested the filter with a sample of URLs it knew were new and recorded how often it wrongly answered "probably yes". When that rate rose, the dashboard showed it.
 
+![A line chart of how often the crawler's filter wrongly answered 'probably seen', against the number of URLs it held, as a multiple of the number it was sized for. At the size it was built for, one in a hundred. When the crawl tripled, about one in seven, with the curve still climbing. A second, flat line near zero shows the filter resized for twice the new crawl.](../images/figures/dsa-bloom-filters.svg)
+
+*A Bloom filter's "no" stays certain however full it gets; its "yes" only weakens, so size it for the crawl you'll have and check every yes.*
+
 Looking back, Joaquín thought the filter had never lied about "no". Its "yes" had only ever been a hint, and he'd let a hint make a final decision. The filter's job was to make most questions cheap, not to answer the hard ones.
 
 ## Where it shows up

@@ -22,6 +22,10 @@ Reading got harder. To find a value, the system had to check memory and then sev
 
 That background merging caused the next problem. During heavy traffic, merging fell behind, the number of files grew, and reads slowed down. Neha tuned how often merges ran and how many files were allowed to pile up, and learned to watch merge backlog as closely as she watched disk space.
 
+![Two ways of writing monitoring data to one disk. Top: a B-tree index updated in place, where points from thousands of servers arrive interleaved and each write lands on a different page, so the disk jumps back and forth. Bottom: points are sorted in memory and written out in long sequential runs as unchangeable files, which a background process later merges into fewer, larger files.](../images/figures/dsa-lsm-trees.svg)
+
+*The same writes in a different order: paid for now in scattered seeks, or later in merging.*
+
 Looking back, Neha thought she'd learned that there's no free write. The B-tree paid for each write immediately, in scattered updates. The new design paid later, in merging, and in reads that had to look in several places. For a system that wrote far more than it read, paying later in bulk was the better deal.
 
 ## Where it shows up

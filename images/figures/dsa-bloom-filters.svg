@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 350" width="760" height="350" role="img" aria-labelledby="t d">
+<title id="t">A Bloom filter as the crawl outgrew it</title>
+<desc id="d">A line chart of how often the crawler's filter wrongly answered 'probably seen', against the number of URLs it held, as a multiple of the number it was sized for. At the size it was built for, one in a hundred. When the crawl tripled, about one in seven, with the curve still climbing. A second, flat line near zero shows the filter resized for twice the new crawl.</desc>
+
+<style>
+  .bg { fill: #ffffff; }
+  .t { fill: #1f2328; } .tm { fill: #59636e; }
+  .f-ink { fill: #1f2328; } .s-ink { stroke: #1f2328; }
+  .f-line { fill: #d0d7de; } .s-line { stroke: #d0d7de; }
+  .f-faint { fill: #f6f8fa; } .s-faint { stroke: #f6f8fa; }
+  .f-accent { fill: #2a78d6; } .s-accent { stroke: #2a78d6; }
+  .f-warn { fill: #d64a4a; } .s-warn { stroke: #d64a4a; }
+  .f-ok { fill: #1baa7a; } .s-ok { stroke: #1baa7a; }
+  .f-amber { fill: #e09a1a; } .s-amber { stroke: #e09a1a; }
+  .f-soft-accent { fill: #ddeaf9; } .f-soft-warn { fill: #f8dede; } .f-soft-ok { fill: #d8f1e8; } .f-soft-amber { fill: #faecd2; }
+  @media (prefers-color-scheme: dark) {
+    .bg { fill: #0d1117; }
+    .t { fill: #e6edf3; } .tm { fill: #9198a1; }
+    .f-ink { fill: #e6edf3; } .s-ink { stroke: #e6edf3; }
+    .f-line { fill: #3d444d; } .s-line { stroke: #3d444d; }
+    .f-faint { fill: #161b22; } .s-faint { stroke: #161b22; }
+    .f-accent { fill: #4c9aff; } .s-accent { stroke: #4c9aff; }
+    .f-warn { fill: #ff7b72; } .s-warn { stroke: #ff7b72; }
+    .f-ok { fill: #3fb950; } .s-ok { stroke: #3fb950; }
+    .f-amber { fill: #e3b341; } .s-amber { stroke: #e3b341; }
+    .f-soft-accent { fill: #102a4a; } .f-soft-warn { fill: #4a1c1c; } .f-soft-ok { fill: #0f3a2a; } .f-soft-amber { fill: #3d2e0e; }
+  }
+  @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+  text { font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; }
+</style>
+<defs><marker id="arrow-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" class="f-ink"/></marker><marker id="arrow-accent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" class="f-accent"/></marker><marker id="arrow-warn" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" class="f-warn"/></marker><marker id="arrow-ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" class="f-ok"/></marker><marker id="arrow-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" class="f-amber"/></marker><marker id="arrow-line" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" class="f-line"/></marker></defs>
+<rect width="760" height="350" class="bg"/>
+<text x="30" y="32" class="t" font-size="15" text-anchor="start" font-weight="600">Wrong "probably seen" answers</text>
+<text x="30" y="51" class="tm" font-size="12.5" text-anchor="start" font-weight="normal">The filter was never wrong about "no"; its "yes" got worse as it filled</text>
+<line x1="90" y1="260" x2="710" y2="260" class="s-line" stroke-width="1" fill="none"/>
+<text x="82" y="264" class="tm" font-size="11.5" text-anchor="end" font-weight="normal">0</text>
+<line x1="90" y1="216" x2="710" y2="216" class="s-line" stroke-width="1" fill="none"/>
+<text x="82" y="220" class="tm" font-size="11.5" text-anchor="end" font-weight="normal">5%</text>
+<line x1="90" y1="172" x2="710" y2="172" class="s-line" stroke-width="1" fill="none"/>
+<text x="82" y="176" class="tm" font-size="11.5" text-anchor="end" font-weight="normal">10%</text>
+<line x1="90" y1="128" x2="710" y2="128" class="s-line" stroke-width="1" fill="none"/>
+<text x="82" y="132" class="tm" font-size="11.5" text-anchor="end" font-weight="normal">15%</text>
+<line x1="90" y1="84" x2="710" y2="84" class="s-line" stroke-width="1" fill="none"/>
+<text x="82" y="88" class="tm" font-size="11.5" text-anchor="end" font-weight="normal">20%</text>
+<text x="90" y="277" class="tm" font-size="11.5" text-anchor="middle" font-weight="normal">0</text>
+<text x="277.9" y="277" class="tm" font-size="11.5" text-anchor="middle" font-weight="normal">1×</text>
+<text x="465.8" y="277" class="tm" font-size="11.5" text-anchor="middle" font-weight="normal">2×</text>
+<text x="653.6" y="277" class="tm" font-size="11.5" text-anchor="middle" font-weight="normal">3×</text>
+<line x1="90" y1="260" x2="710" y2="260" class="s-ink" stroke-width="1.2" fill="none"/>
+<text x="400" y="296" class="tm" font-size="12" text-anchor="middle" font-weight="normal">URLs held, as a multiple of what the filter was sized for</text>
+<text x="44" y="72" class="tm" font-size="12" text-anchor="start" font-weight="normal">wrong yes</text>
+<path d="M 90 260 L 93.8 260 L 97.5 260 L 101.3 260 L 105 260 L 108.8 260 L 112.5 260 L 116.3 260 L 120.1 260 L 123.8 259.9 L 127.6 259.9 L 131.3 259.9 L 135.1 259.8 L 138.8 259.8 L 142.6 259.8 L 146.4 259.7 L 150.1 259.6 L 153.9 259.6 L 157.6 259.5 L 161.4 259.4 L 165.2 259.3 L 168.9 259.2 L 172.7 259.1 L 176.4 259 L 180.2 258.8 L 183.9 258.7 L 187.7 258.5 L 191.5 258.4 L 195.2 258.2 L 199 258 L 202.7 257.8 L 206.5 257.6 L 210.2 257.4 L 214 257.1 L 217.8 256.9 L 221.5 256.6 L 225.3 256.4 L 229 256.1 L 232.8 255.8 L 236.5 255.5 L 240.3 255.2 L 244.1 254.8 L 247.8 254.5 L 251.6 254.1 L 255.3 253.7 L 259.1 253.4 L 262.8 253 L 266.6 252.5 L 270.4 252.1 L 274.1 251.7 L 277.9 251.2 L 281.6 250.7 L 285.4 250.2 L 289.2 249.7 L 292.9 249.2 L 296.7 248.7 L 300.4 248.1 L 304.2 247.6 L 307.9 247 L 311.7 246.4 L 315.5 245.8 L 319.2 245.2 L 323 244.6 L 326.7 243.9 L 330.5 243.3 L 334.2 242.6 L 338 241.9 L 341.8 241.2 L 345.5 240.5 L 349.3 239.7 L 353 239 L 356.8 238.2 L 360.5 237.4 L 364.3 236.6 L 368.1 235.8 L 371.8 235 L 375.6 234.2 L 379.3 233.3 L 383.1 232.5 L 386.8 231.6 L 390.6 230.7 L 394.4 229.8 L 398.1 228.9 L 401.9 227.9 L 405.6 227 L 409.4 226 L 413.2 225 L 416.9 224.1 L 420.7 223.1 L 424.4 222 L 428.2 221 L 431.9 220 L 435.7 218.9 L 439.5 217.8 L 443.2 216.8 L 447 215.7 L 450.7 214.6 L 454.5 213.4 L 458.2 212.3 L 462 211.1 L 465.8 210 L 469.5 208.8 L 473.3 207.6 L 477 206.4 L 480.8 205.2 L 484.5 204 L 488.3 202.8 L 492.1 201.5 L 495.8 200.3 L 499.6 199 L 503.3 197.7 L 507.1 196.4 L 510.8 195.1 L 514.6 193.8 L 518.4 192.5 L 522.1 191.2 L 525.9 189.8 L 529.6 188.5 L 533.4 187.1 L 537.2 185.7 L 540.9 184.3 L 544.7 182.9 L 548.4 181.5 L 552.2 180.1 L 555.9 178.7 L 559.7 177.2 L 563.5 175.8 L 567.2 174.3 L 571 172.8 L 574.7 171.4 L 578.5 169.9 L 582.2 168.4 L 586 166.9 L 589.8 165.4 L 593.5 163.8 L 597.3 162.3 L 601 160.8 L 604.8 159.2 L 608.5 157.7 L 612.3 156.1 L 616.1 154.5 L 619.8 152.9 L 623.6 151.3 L 627.3 149.7 L 631.1 148.1 L 634.8 146.5 L 638.6 144.9 L 642.4 143.3 L 646.1 141.6 L 649.9 140 L 653.6 138.3 L 657.4 136.7 L 661.2 135 L 664.9 133.3 L 668.7 131.7 L 672.4 130 L 676.2 128.3 L 679.9 126.6 L 683.7 124.9 L 687.5 123.2 L 691.2 121.5 L 695 119.7 L 698.7 118 L 702.5 116.3 L 706.2 114.5 L 710 112.8" class="s-warn" stroke-width="2.5" fill="none" />
+<path d="M 90 260 L 93.8 260 L 97.5 260 L 101.3 260 L 105 260 L 108.8 260 L 112.5 260 L 116.3 260 L 120.1 260 L 123.8 260 L 127.6 260 L 131.3 260 L 135.1 260 L 138.8 260 L 142.6 260 L 146.4 260 L 150.1 260 L 153.9 260 L 157.6 260 L 161.4 260 L 165.2 260 L 168.9 260 L 172.7 260 L 176.4 260 L 180.2 260 L 183.9 260 L 187.7 260 L 191.5 260 L 195.2 260 L 199 260 L 202.7 260 L 206.5 260 L 210.2 260 L 214 260 L 217.8 260 L 221.5 260 L 225.3 260 L 229 260 L 232.8 260 L 236.5 260 L 240.3 260 L 244.1 260 L 247.8 260 L 251.6 260 L 255.3 260 L 259.1 260 L 262.8 260 L 266.6 260 L 270.4 260 L 274.1 259.9 L 277.9 259.9 L 281.6 259.9 L 285.4 259.9 L 289.2 259.9 L 292.9 259.9 L 296.7 259.9 L 300.4 259.9 L 304.2 259.9 L 307.9 259.9 L 311.7 259.9 L 315.5 259.9 L 319.2 259.9 L 323 259.9 L 326.7 259.9 L 330.5 259.9 L 334.2 259.9 L 338 259.9 L 341.8 259.9 L 345.5 259.9 L 349.3 259.9 L 353 259.9 L 356.8 259.8 L 360.5 259.8 L 364.3 259.8 L 368.1 259.8 L 371.8 259.8 L 375.6 259.8 L 379.3 259.8 L 383.1 259.8 L 386.8 259.8 L 390.6 259.8 L 394.4 259.8 L 398.1 259.8 L 401.9 259.8 L 405.6 259.8 L 409.4 259.7 L 413.2 259.7 L 416.9 259.7 L 420.7 259.7 L 424.4 259.7 L 428.2 259.7 L 431.9 259.7 L 435.7 259.7 L 439.5 259.7 L 443.2 259.7 L 447 259.6 L 450.7 259.6 L 454.5 259.6 L 458.2 259.6 L 462 259.6 L 465.8 259.6 L 469.5 259.6 L 473.3 259.6 L 477 259.6 L 480.8 259.5 L 484.5 259.5 L 488.3 259.5 L 492.1 259.5 L 495.8 259.5 L 499.6 259.5 L 503.3 259.5 L 507.1 259.4 L 510.8 259.4 L 514.6 259.4 L 518.4 259.4 L 522.1 259.4 L 525.9 259.4 L 529.6 259.4 L 533.4 259.3 L 537.2 259.3 L 540.9 259.3 L 544.7 259.3 L 548.4 259.3 L 552.2 259.3 L 555.9 259.2 L 559.7 259.2 L 563.5 259.2 L 567.2 259.2 L 571 259.2 L 574.7 259.1 L 578.5 259.1 L 582.2 259.1 L 586 259.1 L 589.8 259.1 L 593.5 259 L 597.3 259 L 601 259 L 604.8 259 L 608.5 259 L 612.3 258.9 L 616.1 258.9 L 619.8 258.9 L 623.6 258.9 L 627.3 258.9 L 631.1 258.8 L 634.8 258.8 L 638.6 258.8 L 642.4 258.8 L 646.1 258.7 L 649.9 258.7 L 653.6 258.7 L 657.4 258.7 L 661.2 258.6 L 664.9 258.6 L 668.7 258.6 L 672.4 258.6 L 676.2 258.5 L 679.9 258.5 L 683.7 258.5 L 687.5 258.5 L 691.2 258.4 L 695 258.4 L 698.7 258.4 L 702.5 258.3 L 706.2 258.3 L 710 258.3" class="s-ok" stroke-width="2.5" fill="none" />
+<line x1="277.9" y1="251.2" x2="277.9" y2="260" class="s-line" stroke-width="1" fill="none" stroke-dasharray="3 3"/>
+<circle cx="277.9" cy="251.2" r="4.5" class="f-warn" />
+<text x="269.9" y="242.2" class="t" font-size="12" text-anchor="end" font-weight="600">1 in 100: the size it was built for</text>
+<line x1="653.6" y1="138.3" x2="653.6" y2="260" class="s-line" stroke-width="1" fill="none" stroke-dasharray="3 3"/>
+<circle cx="653.6" cy="138.3" r="4.5" class="f-warn" />
+<text x="645.6" y="129.3" class="t" font-size="12" text-anchor="end" font-weight="600">about 1 in 7: three more countries</text>
+<text x="645.6" y="250.7" class="t" font-size="12" text-anchor="end" font-weight="normal">resized for twice the new crawl</text>
+<text x="30" y="336" class="tm" font-size="11.5" text-anchor="start" font-weight="normal" font-style="italic">Three hash functions, an illustrative choice that matches the story's one in a hundred and one in seven.</text>
+</svg>

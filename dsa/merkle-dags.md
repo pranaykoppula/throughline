@@ -22,6 +22,10 @@ Now the nightly comparison started at the top. If the two top hashes matched, ev
 
 There was a bonus she hadn't planned. Because each block was named by the hash of its contents, two identical blocks anywhere had the same name, and needed storing only once. Copies of the same presentation in twenty people's folders took the space of one.
 
+![A tree of hashes for a file server: one hash at the top, four folders, three files in each folder, and the blocks of two files. Comparing top-down, the top hash differs, so the four folder hashes are compared; two differ and two match. Only the files inside the two differing folders are compared, then only the blocks of the two differing files, which finds three corrupted blocks. Matching branches are never opened.](../images/figures/dsa-merkle-dags.svg)
+
+*When every name is the hash of what's beneath it, a mismatch says where to look, and a match says where not to.*
+
 Looking back, Ingrid thought the idea was simple once seen: if every piece is named by what it contains, and every group by the names of its pieces, then the name at the top tells you everything, and the names below tell you where to look.
 
 ## Where it shows up
