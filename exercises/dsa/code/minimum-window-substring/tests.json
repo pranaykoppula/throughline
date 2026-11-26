@@ -1,0 +1,72 @@
+[
+ {
+  "name": "the example in the story",
+  "input": "ADOBECODEBANC\nABC\n",
+  "output": "BANC\n"
+ },
+ {
+  "name": "the whole log",
+  "input": "a\na\n",
+  "output": "a\n"
+ },
+ {
+  "name": "not enough repeats",
+  "input": "a\naa\n",
+  "output": "\n"
+ },
+ {
+  "name": "repeats needed",
+  "input": "aaflslflsldkalskaaa\naaa\n",
+  "output": "aaa\n"
+ },
+ {
+  "name": "case matters",
+  "input": "aA\nA\n",
+  "output": "A\n"
+ },
+ {
+  "name": "signature not present",
+  "input": "abcdef\nxyz\n",
+  "output": "\n"
+ },
+ {
+  "name": "at the very end",
+  "input": "zzzzzzabc\ncba\n",
+  "output": "abc\n"
+ },
+ {
+  "name": "signature longer than the log",
+  "input": "ab\nabc\n",
+  "output": "\n"
+ },
+ {
+  "name": "random log 1",
+  "input": "geGbBfHbbghHCcbHcBAfeHcgACeEDHCbDDAAGhhFfgfFAheGgdfEFAEDAECeeeDEBBhCHBbgCCBccDDfDCdfehgcdBbeBHcDHhGfbbFbgAGhfhGDfbghDDFHbGhagFCgaFghcHEADhCfbAeCaHdFEECBGAdEhfFBdaEfdEHbHbBgEEhhAHEDcbFabgeafdcacCfbEafCBCBBCCAFCfbHfhhEhDEDdcBcccHEEBbEFFcDFHD\nFFDDF\n",
+  "output": "FFcDFHD\n"
+ },
+ {
+  "name": "random log 2",
+  "input": "ffcHCcccecbgEedHbeAFhbCHBcDHfhechAggDfdcGdFbdcFEFcADagbEFGdaBBhGaEbDeACgHBbGhEGfHgEhCGghad\nEEFFEABB\n",
+  "output": "EFcADagbEFGdaBBhGaE\n"
+ },
+ {
+  "name": "random log 3",
+  "input": "BDbHheHaaFGcHdFcfacbhadGbACEHdFhHACBdBhHeCBEGEDFFHaBBaeAdefEcEfCACfGhgCdcDFAbbFEHgEHeGceagGeBBabGdFBdCBEgffFDcBEfCFEEhcfafEEFaghBhhgeFeHdaebBhBEFchDBFdHBhgBcCDcgEgaFEcaeeHeAeGbaeDaaCAgcHFCHDdeCgDEBahBaCEBEdghFdhEGHGffCBbaGDCEhFgDeBdaCggBcdDhFdCEacHgAbHeBEebgBGhhDHdbAACegBABfcdHEbEFHDEDdBEabDgFGAHDhGADhEEFHHehaGfcAdGhcHDhFFD\nDCFFFFFA\n",
+  "output": "FGcHdFcfacbhadGbACEHdFhHACBdBhHeCBEGEDFF\n"
+ },
+ {
+  "name": "random log 4",
+  "input": "DAcHfcFHAdhEfgabeGbdBHEBbCHgCacDgCGEGCdFDBfgdCFGbBfCgfDgCEfdDCcfDACDAggcACCEcfHfeedgFhhGHFEeBDCFffcBedebGBeafhFAAhcbfdDeeBeBachfEbCeeEabcgbAchhFFECAgDefCdgBcbDHCDccBGgCEaFfbBDAcdgEEDBGFbCCGfDffFFGbEFdaahFAGhcfCDbehCdChDCdGAFChehcfHHeACaAEhDfFHHBbABBEFggeeABbbdBHADbCACBDdCfddAghAbhDEcdfFFECgCGHcAafFfHafcBDGahbHEDEbCAhaFbABDfEaggBbHgFbg\nFC\n",
+  "output": "CF\n"
+ },
+ {
+  "name": "random log 5",
+  "input": "HdECHCHBHCbCheAGAHAEDBEEBbHHBdBfeBFHdhAehBgdbABHHBChECCfFfDCfCffFECFBFBaDEegbecgDbhCgCFACGgEdFGHCecFhCbEAEbHBbgcCdEcEBGHHFGcgaCEegcfAfhfbFDadGGegbhgfeEhbeeaHeDdehCdcACafeaBdbfFeedH\nCEABB\n",
+  "output": "ABHHBChE\n"
+ },
+ {
+  "name": "3,000 events, five needed",
+  "input": "otvtjdnnmqlckwbauqcehddlbdtwswmsojqdamdjnbdjflfsjyzlvjtfdejuledfoddvrtvgcppbnvyeukagzjdxlrmlqkjzmkztzmcctvxnkfptjlkpiylyndcpmjuyvkpyrfexnjxfilbzlhmxguhecnhiflmlchjrcvhyyvgkuhnggfntntbebxadcdyeczyeqefdpgqkfjchzgrdqclbncabjgevolnheyohwokfjuhhkgovufnhlgnusfcpalapcabpfmtmdfiwixhccoynzhvjpcqbqtbmlipadrixltaonpssdthfudgtyxpdpkgvjxjvlmgomsakmcfsstxtqcfwgeppvaidwgucqxwjghiwfvgcvssrcurqfwhaplitpskzplgbyntnqyjgbqtgbzxhvcbthvssvjxyularcakjowwreeskwpztkbuqubbfljuacjwdlocebotbcexvvodlkxswqjlthbfxvytnxbdqsyimngtjlykumsjssqctmfulwmuimrjywkbiyhzmarflsliwfjzzojhhttmeszzylyvbnldaoucoyxvsljszqbhcwrorbflyvlvcrowjymgaydvpiqcjrrhjrchqityhscyujnwdsxklblzvwignfeydviwddglzsyaovzlflvthkeheipxgrdzmprqocffzohmuvyssriunpcjwjanatqohyjnrjjydjkpqelfdjgscciisifrcpgtazxehiurgpdlwhooozydmnftcvcvcbhlyffzkcyoqjmrtxmoonvmftdkzsiprwjxkvloijjfdiadpbqymbyqplgwwslafhuyiqiaqwhoxpdwraafolpkwqtzwbkumsmjocfysqowydivfnfteauvdvohigevckzigwvzhgusgnoxyrhcozrgkdvqhuimcizvtvdhbarcwnactdfxyhbcbtautjdozxlyatkuefrndubrjcglnffexivzcyozlsvuedwqyhtdgudpzgqyalqxlzetoglzegfxxlljmrlimerliseyuvygooeiilxowlejdxjebhubfahddswyjqlhnwzypmkwknpbkbjcokqmcneigtthzzlzstlksoqcaxcqistxmazfuqdhbiytwsrculwoznvfanrnewypzvplovndrpnifhtjdatftofgduzeqoqanqnpfqijairvjynujnheczaijpssknwryrtlsdzbqgdlzcrhnnqdoegcepmayswcfujzmqvqhnugvpjmbrhndldlqszeduuuhvnslsxvmwjhtcsyeoxbzuabtnpulkwumoupfofzatcitlselzlfvevdzesgcphnnwrtweiezphamdxzjhntrnmkmvbucwzxricqtyimeturnktukwgwtsdkiwqxvmhdefmifsowuyleyojkamytccoeibxlcstffyfcosqerhthcqzfxhewdrdeizbuoqwagfotxenxpgtaijcmnixobdizinxpbshqzakheqkfxbgdltzjlvjeplcprsquevououyijxohwzvrldrvoyumospfnqjwfsuwaskwngrtphxaimajbqkegjroftcngvocljuqbbkwzknkkwwawqrblpaknqvqlfxfzdrctyrfqeykylekjxzgpertcrexrllawhbglfjymnstnmbltskqmbzkvkqviyxgighvqmhhmtkzlfrdwmtyzvndumecrsiiziynlkmhuitkihqzrqgmxwxlxafihjatswyxclwprtzcfdqfrfjpelembaqkqohhzopcipzxwggeusyhajqicqvmudasmoosrviyirawtpolavegwdljlxzdavkakyfbddaykpsqnwxivhjaipturbpqjjhsrbrgvinaohraxsgavszupuljlcmhwdoalhfoarkebkmasniciygtzeryeytmyjumtdvrdogzyzqlcotsilhtxutxueqoknwwvicpchghmonvqafbftzxigzvtcnfiykxrlbiuxuxlrhygerkjvschtqdaardgvwehyrmizogcbireurtdhlromhhnsdiediynbdayrwcxdhftqqnhyuzxbathvzegrbzwrreeixkjrmhumubbzojuegklrnqahhmhspjseqkppggdmtdytdabljzzzydaidgsdilcwlxuhrbaxorwvwbtqoivhpayzghdnoqifjjztntddnkexidzpqrzfaltfmlvgnzdldznqifzgqvgvolnkijxmapclvuicuahnfzqzfespjyvsaeqdikasfzzmczlrwcuxxxdybyhephiprjfvyviaeuvxkhnrhzkdfddmpajwadbhzjhdfnujpeywlnwkzomhucqfriebgmaghscxgcvrhfftwqhaasabnzekzomahrrmvkgbjmnmpjventuucbxgtbquvgfjwsrnppjssvfkmiugbjxicdztthjoisphqosanzkrzmchiqydivivvaqbptnrqgyguyizcslbklhqnkzsfuvwukeguaeqvesjoremzkkyiagdlfnwzjkiqjkopmuoiizgputrhquzhsbgcbooapqghqubfukjqtwrcdjkesnysxyibfgmjribpnjpnzrueqzxsrihrqrybrvbmjfwosebrdocsqorzwbwtkelztgxeneihhbwulnubceumnhudbwiqyndcrembtoulvepuxbfjopiltyvqkxceseuewqzqlhhnfzrppqxsiquyxtswwgqidbeoshiqpbxibqorhladjujmccgtpgdbopzigsgdmjpojcgefargfmckuffgsoohhvnvgtlxulglssyuaovbxuhtmqfwuukqcagsjrespsimxdfipufnvtizitxyqcrmlotqwuifwohwcnezekftiklnsjixiiarfhfxnabveakhbzdlahbeeoqnrinuwnnzetegktibsoduedvoyasrmdyqtwqsocokff\nqzxjq\n",
+  "output": "qyjgbqtgbzx\n"
+ }
+]

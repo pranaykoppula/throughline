@@ -108,3 +108,5 @@ Sorting arranges items by a key. Comparison sorts decide by comparing pairs: ins
 ## Go and look
 
 Find out which algorithm your language's built-in sort uses, and whether it's stable. Then time it on a million numbers that are random, already sorted, and sorted in reverse. If the times differ a lot, the sort is reacting to the order already in the data.
+
+Practise this: [two depots, one median](../exercises/dsa/median-of-two-sorted-arrays.md) (LeetCode 4, Hard), which finds the middle of two sorted lists without merging them.

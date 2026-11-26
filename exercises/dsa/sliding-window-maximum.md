@@ -236,6 +236,6 @@ impl Solution {
 
 ## Related
 
-- The other exercise in this category: Shortest Subarray with Sum at Least K (LeetCode 862), coming in a later batch.
+- The other exercise in this category: [the shortest good run](shortest-subarray-with-sum-at-least-k.md) (LeetCode 862).
 - Concept pages: [queues](../../dsa/queues.md), [heaps](../../dsa/heaps.md), [amortised cost](../../dsa/amortised-cost.md), [growth](../../dsa/growth.md).
 - More practice of the same shape: problems tagged "monotonic queue" on LeetCode or NeetCode.
