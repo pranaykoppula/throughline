@@ -83,3 +83,5 @@ A greedy algorithm builds a solution step by step, at each step choosing the opt
 ## Go and look
 
 Find a rule in something you run that picks "the best one now": the least-busy server, the cheapest supplier, the nearest warehouse. Ask whether a choice it makes now could make a later choice worse, and whether anyone has ever compared its results with a better plan.
+
+Practise this: [splitting the translation](../exercises/dsa/split-array-largest-sum.md) (LeetCode 410, Hard), where a greedy fill is provably safe and answers a yes-or-no question for a binary search.
