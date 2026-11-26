@@ -29,10 +29,29 @@ jobs:
           python3 scripts/make_graph.py
           python3 scripts/make_map.py
           python3 scripts/make_figures.py
-      - name: graph.html, images/map.svg and images/figures are up to date
+          python3 scripts/make_exercises.py
+      - name: graph.html, images/, and the code on exercise pages are up to date
         run: |
-          if [ -n "$(git status --porcelain -- graph.html images)" ]; then
-            echo "::error::Generated files are out of date. Run python3 scripts/make_graph.py, python3 scripts/make_map.py and python3 scripts/make_figures.py, then commit the result."
-            git status --short -- graph.html images
+          if [ -n "$(git status --porcelain -- graph.html images exercises)" ]; then
+            echo "::error::Generated files are out of date. Run python3 scripts/make_graph.py, python3 scripts/make_map.py, python3 scripts/make_figures.py and python3 scripts/make_exercises.py, then commit the result."
+            git status --short -- graph.html images exercises
             exit 1
           fi
+
+  test-exercises:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "21"
+      - uses: actions/setup-go@v5
+        with:
+          go-version: "1.24"
+      - uses: dtolnay/rust-toolchain@stable
+      - name: Every exercise's solution passes its tests in Python, C++, Java, Go and Rust
+        run: python3 scripts/test_exercises.py

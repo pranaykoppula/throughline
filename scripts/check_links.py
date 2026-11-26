@@ -2,7 +2,7 @@
 
 Run from the repo root: python3 scripts/check_links.py
 Fails if
-- a folder of pages isn't listed in families.py,
+- a folder of pages isn't listed in families.py (exercises/ is exempt: it isn't a family),
 - a concept page isn't linked from any spine page's body (the guide pages in GUIDES are exempt),
 - a family's README.md doesn't list every page in its folder exactly once, or lists one that isn't there.
 """
@@ -16,6 +16,7 @@ import sys
 from families import FAMILIES
 
 GUIDES = {"dsa/choosing.md"}
+NOT_FAMILIES = {"exercises"}  # practice problems: kept out of the graph and these checks (SPEC 3.8)
 LINK = re.compile(r"\]\(([^)\s]+)\)")
 
 
@@ -30,7 +31,7 @@ def main():
     errors = []
 
     folders = {p.split("/")[0] for p in glob.glob("*/*.md")}
-    for folder in sorted(folders - set(FAMILIES)):
+    for folder in sorted(folders - set(FAMILIES) - NOT_FAMILIES):
         errors.append(f"{folder}/ has pages but isn't a family in scripts/families.py")
 
     from_spine = set()

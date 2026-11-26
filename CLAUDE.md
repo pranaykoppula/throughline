@@ -12,7 +12,7 @@ The owner wants engineers to *feel* how real problems were met: a person who doe
 - Concept pages in family folders, one concept per page: `dsa/ data/ performance/ economics/ security/ languages/ practice/ ai/ math/ info/ signals/`. A family is a field (SPEC 3.3), listed with its name and colour in `scripts/families.py`; a new folder goes there first. Each folder's `README.md` is its index, listing every page in reading order; add a new page to it.
 - `the-model.md` (the cumulative model), `forces.md`, `pushback.md`, `motifs.md` (recurring shapes, with every page each appears on), `README.md`, `SPEC.md`.
 - `graph.html` (every page and link), `images/map.svg` (the spine as a transit line), both generated.
-- `scripts/check_model.py`, `scripts/make_graph.py` (+ `graph_template.html`), `scripts/make_map.py` (dots read from each spine page's Connections), `scripts/check_links.py` (every concept page linked from the spine, every index complete), `scripts/make_figures.py` (every figure, as SVG).
+- `scripts/check_model.py`, `scripts/make_graph.py` (+ `graph_template.html`), `scripts/make_map.py` (dots read from each spine page's Connections), `scripts/check_links.py` (every concept page linked from the spine, every index complete), `scripts/make_figures.py` (every figure, as SVG), `scripts/make_exercises.py` and `scripts/test_exercises.py` (exercise code and its tests).
 - `.github/workflows/checks.yml` runs the model and link checks and fails if `graph.html` or `images/map.svg` differ from what the scripts produce.
 - `_config.yml` publishes the site with GitHub Pages (Jekyll, `jekyll-theme-primer`).
 
@@ -43,6 +43,12 @@ Concept page (SPEC 7.1): Problem · The story · **Where it shows up** (table: p
 - Spine pages: one figure, in the story just before "Looking back" (after the rethink, so it doesn't spoil the pause), with alt text and an italic caption. Concept pages next, folder by folder in the order SPEC lists the families.
 - Use the story's numbers; label anything else illustrative. Check light and dark by rendering with Playwright before committing.
 
+## Exercises
+
+- `exercises/dsa/` (LeetCode Hard only, two per category of `dsa/choosing.md`; the list of 24 is in `exercises/dsa/README.md`) and `exercises/design/` (after the `design/` family). Not concept pages: no graph, no `check_links.py`, no index rules beyond their READMEs. Concept pages link to them one way, with "Practise this:" at the end of Go and look.
+- Page shape (SPEC 3.8): situation · problem with a link to LeetCode · the question it asks · the tempting first answer · three hints (collapsed) · solution (collapsed: prose, why, time and memory, code) · where people slip · related. Our own words, never LeetCode's text. Check the problem is still Hard and free before writing it.
+- Code in `exercises/<area>/code/<slug>/`: `solution.py`, `solution.cpp`, `Solution.java`, `solution.go`, `solution.rs` (LeetCode signatures), drivers `driver.py`, `driver.cpp`, `Main.java`, `main.go`, `driver.rs`, and `tests.json`. Never edit code on the page; run `make_exercises.py`. Every solution must pass `test_exercises.py` in all five languages before it's committed.
+
 ## Connections
 
 - One line each: "Learning this is also learning [specific concept](path), because …". Point at one concept, never a whole subject (`dsa/hash-tables.md`, not "DSA").
@@ -61,6 +67,8 @@ Concept page (SPEC 7.1): Problem · The story · **Where it shows up** (table: p
 python3 scripts/make_graph.py
 python3 scripts/make_map.py      # changes when a spine page's Connections reach a new family
 python3 scripts/make_figures.py  # images/figures/
+python3 scripts/make_exercises.py # copies exercise code into its page
+python3 scripts/test_exercises.py # every exercise, five languages (needs g++, javac, go, rustc)
 python3 scripts/check_model.py
 python3 scripts/check_links.py
 ```
@@ -76,7 +84,7 @@ Commit `graph.html` with the change. A model sentence lives in `the-model.md`, S
 ## Status (2026-11-19)
 
 - Done: all 14 spine pages; 83 concept pages across 11 families (including `dsa/bloom-filters.md`, and `dsa/` growth, amortised-cost, sorting, divide-and-conquer, dynamic-programming, greedy, heaps, tries, append-only-logs, exact-or-approximate and search) plus the guide page `dsa/choosing.md`, including `info/` (information, compression, language, observation, error-correction, information-gain, secrecy; and, from the meaning-making angle, measures-and-targets, encodings, meaning-as-use) and the cryptography pages (symmetric-encryption, public-key, key-management, randomness, now in `security/`), merged in PR #4; and `signals/` (sampling, perception, feedback, state-estimation) plus `dsa/power-and-predictability.md` (the automata ladder), merged in PR #6. The fifteen original folders were regrouped into eleven fields, with an index per family, in the `regroup-families` branch.
-- Exception from the owner: `dsa/` and system design get depth (SPEC 3.7), with no page limit (2026-11-19); each page still needs a spine backlink and a line in its index. Every `dsa/` page except the guide now has a figure (the last twelve in `dsa-figures-1` to `-3`). Planned next: a `design/` family starting with `approach.md`. Batches of about four, each page with a figure.
+- Exception from the owner: `dsa/` and system design get depth (SPEC 3.7), with no page limit (2026-11-19); each page still needs a spine backlink and a line in its index. Every `dsa/` page except the guide now has a figure (the last twelve in `dsa-figures-1` to `-3`). Planned next: the 23 remaining `exercises/dsa/` problems in batches of four, then a `design/` family starting with `approach.md`, then design exercises. Batches of about four, each page with a figure.
 - Scope rule from the owner: a new page must carry a mental model that recurs outside its own field. Everything else is a row in an existing table, a line in "elsewhere too", or a link in Resources; depth lives in external sources. Input devices, displays, sound, robotics planning and safety were folded in that way, not given pages.
 - The owner's interest: tech as the meeting of meaning-making (semiotics, linguistics, hermeneutics) and mathematics. Stories here are fiction, so don't present patterns across them as findings about the world. Reading-list items (Naur, Weaver, Winograd and Flores, Lakatos, Bender and Koller) are in the relevant Resources sections.
 - Candidates for later pages: embeddings (with the search gap), names and identity (check whether a row in `data/modelling.md` is enough).

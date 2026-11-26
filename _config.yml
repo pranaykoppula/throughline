@@ -4,3 +4,4 @@ theme: jekyll-theme-primer
 exclude:
   - scripts
   - CLAUDE.md
+  - exercises/dsa/code

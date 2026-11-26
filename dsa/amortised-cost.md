@@ -85,3 +85,5 @@ The amortised cost of an operation is its total cost over a long sequence of ope
 ## Go and look
 
 Find a graph of response times for something you run, and look at its slowest one in a thousand rather than its average. If it spikes at regular intervals, look for something that runs on a timer or when a buffer fills.
+
+Practise this: [the busiest five minutes](../exercises/dsa/sliding-window-maximum.md) (LeetCode 239, Hard), where each step can do a lot of work and the total still stays small.

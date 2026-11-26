@@ -82,6 +82,8 @@ def main():
             target = posixpath.normpath(posixpath.join(posixpath.dirname(path), href.split("#")[0]))
             if not target.endswith(".md") or target == path or target in ("README.md", "SPEC.md"):
                 continue
+            if target.startswith("exercises/"):  # practice problems stay out of the graph (SPEC 3.8)
+                continue
             links.add(tuple(sorted((path, target))))
 
     for a, b in links:

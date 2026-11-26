@@ -85,6 +85,14 @@ Every figure is ours: a diagram of a page's problem or its solution, drawn by co
 
 The scope rule (a page must carry a mental model that recurs outside its own field) is relaxed in two places, because they're where people most often learn mechanics without intuition: `dsa/` and the system design family. There, a well-known technique can have its own page even if it recurs mostly inside computing, and a page may follow one technique through several changing needs (`dsa/sorting.md` follows one person through seven sorting methods). `dsa/choosing.md` is a guide page: no story, a table from the question you keep asking to the structure built for it, linked from the README. Neither family has a page limit (the owner's decision, 2026-11-19), but depth doesn't exempt a page from the other rules: each is linked from a spine page and listed in its family's index.
 
+### 3.8 Exercises
+
+`exercises/` holds practice for the two areas with depth: `exercises/dsa/` (LeetCode Hard problems only, two for each kind of question in `dsa/choosing.md`) and `exercises/design/` (design cases, two for each kind of system, written after the system design pages). Exercises aren't concept pages: they're left out of the graph and of `check_links.py`, and concept pages link to them one way, with a "Practise this" line at the end of Go and look.
+
+Each exercise page follows one shape: the situation (a short scene with a motive, in our own words, never LeetCode's text), the problem in a paragraph with a link to the original, the question it asks (linked to `dsa/choosing.md` and its concept pages), the tempting first answer and why it fails, three hints in collapsed sections, the solution in a collapsed section (the idea in prose, why it works, time and memory, then the code), where people slip, and related pages.
+
+Code comes in Python, C++, Java, Go and Rust, with LeetCode's signatures so it can be pasted there. The code lives in `exercises/<area>/code/<exercise>/`, one solution file per language, with a small driver per language and `tests.json`. `scripts/make_exercises.py` copies the solutions into the page between `<!-- code:start -->` and `<!-- code:end -->`, as one collapsible section per language; on the published site `_includes/head-custom.html` turns them into tabs and remembers the reader's language. `scripts/test_exercises.py` runs every solution in every language against its tests, and CI fails on any failure or any page out of date.
+
 ## 4. The model
 
 Living text. Each numbered addition belongs to the spine page of the same number. Edit it there and here in the same change.

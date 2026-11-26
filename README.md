@@ -44,6 +44,7 @@ Alongside the trunk:
 - [Forces](forces.md): the non-technical limits (money, law, distribution) that moved the field as much as hardware did.
 - [Pushback](pushback.md): questions for when a solution arrives before its problem.
 - [Choosing a data structure](dsa/choosing.md): start from the question you keep asking of your data, and find the structure built for it.
+- [Exercises](exercises/README.md): LeetCode Hard problems told as situations, with staged hints and solutions in five languages. Design cases will follow.
 - [Motifs](motifs.md): the shapes that keep recurring across these stories, such as *copies disagree* and *the sign drifts from the thing*, with every page where each appears and the sentence of the model each one echoes.
 
 Links to pages that don't exist yet are deliberate. They're the branches nobody has written, and they're how this grows.
