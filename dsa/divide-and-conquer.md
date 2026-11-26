@@ -86,4 +86,4 @@ Divide and conquer solves a problem by splitting it into smaller subproblems of 
 
 Next time something broke between a good version and a bad one, try `git bisect` instead of reading the history. Then find a report in something you run that adds up numbers from separate pieces, and check whether those numbers really add.
 
-Practise this: [two depots, one median](../exercises/dsa/median-of-two-sorted-arrays.md) (LeetCode 4, Hard), halving the shorter list until the split is right.
+Practise this: [two depots, one median](../exercises/dsa/median-of-two-sorted-arrays.md) (LeetCode 4, Hard), halving the shorter list until the split is right, and [splitting the translation](../exercises/dsa/split-array-largest-sum.md) (LeetCode 410, Hard), halving the range of possible answers.

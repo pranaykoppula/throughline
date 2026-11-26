@@ -277,6 +277,6 @@ impl Solution {
 
 ## Related
 
-- The other exercise in this category: Split Array Largest Sum (LeetCode 410), coming in a later batch.
+- The other exercise in this category: [splitting the translation](split-array-largest-sum.md) (LeetCode 410).
 - Concept pages: [sorting](../../dsa/sorting.md), [divide and conquer](../../dsa/divide-and-conquer.md), [information gain](../../info/information-gain.md), [growth](../../dsa/growth.md).
 - More practice of the same shape: problems tagged "binary search" on LeetCode or NeetCode, especially those searching for a split point.

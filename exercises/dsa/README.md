@@ -5,10 +5,10 @@ Twenty-four LeetCode Hard problems, two for each kind of question. The categorie
 | The question it asks | Exercises | Concept pages |
 | --- | --- | --- |
 | Find by key | [The first free locker](first-missing-positive.md) (41); [The shortest crash signature](minimum-window-substring.md) (76) | [hash tables](../../dsa/hash-tables.md), [hashing](../../dsa/hashing.md) |
-| Order and halving | [Two depots, one median](median-of-two-sorted-arrays.md) (4); Split Array Largest Sum (410) | [sorting](../../dsa/sorting.md), [divide and conquer](../../dsa/divide-and-conquer.md) |
-| The most urgent next | Find Median from Data Stream (295); The Skyline Problem (218) | [heaps](../../dsa/heaps.md) |
+| Order and halving | [Two depots, one median](median-of-two-sorted-arrays.md) (4); [Splitting the translation](split-array-largest-sum.md) (410) | [sorting](../../dsa/sorting.md), [divide and conquer](../../dsa/divide-and-conquer.md) |
+| The most urgent next | [The waiting-room screen](find-median-from-data-stream.md) (295); [The city's outline](the-skyline-problem.md) (218) | [heaps](../../dsa/heaps.md) |
 | Next in line, over a window | [The busiest five minutes](sliding-window-maximum.md) (239); [The shortest good run](shortest-subarray-with-sum-at-least-k.md) (862) | [queues](../../dsa/queues.md), [amortised cost](../../dsa/amortised-cost.md) |
-| Nesting and undo | Largest Rectangle in Histogram (84); Basic Calculator (224) | [power and predictability](../../dsa/power-and-predictability.md) |
+| Nesting and undo | [The biggest banner](largest-rectangle-in-histogram.md) (84); Basic Calculator (224) | [power and predictability](../../dsa/power-and-predictability.md) |
 | What connects to what | Swim in Rising Water (778); Critical Connections in a Network (1192) | [graphs](../../dsa/graphs.md), [greedy algorithms](../../dsa/greedy.md) |
 | Which state, what next | Valid Number (65); Regular Expression Matching (10) | [state machines](../../dsa/state-machines.md), [power and predictability](../../dsa/power-and-predictability.md) |
 | Everything with this prefix | Word Search II (212); Prefix and Suffix Search (745) | [tries](../../dsa/tries.md) |
