@@ -225,6 +225,6 @@ impl Solution {
 
 ## Related
 
-- The other exercise in this category: Basic Calculator (LeetCode 224), coming in a later batch.
+- The other exercise in this category: [the formula box](basic-calculator.md) (LeetCode 224).
 - Concept pages: [power and predictability](../../dsa/power-and-predictability.md), [divide and conquer](../../dsa/divide-and-conquer.md), [amortised cost](../../dsa/amortised-cost.md), [growth](../../dsa/growth.md).
 - More practice of the same shape: problems tagged "monotonic stack", such as the largest rectangle of ones in a grid.
