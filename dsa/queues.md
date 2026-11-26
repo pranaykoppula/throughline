@@ -85,4 +85,4 @@ A queue is a data structure where items are added at one end and removed from th
 
 Find a queue in something you run and check whether everything in it is equally urgent. If it isn't, find out what happens to the urgent items when a big batch arrives.
 
-Practise this: [the busiest five minutes](../exercises/dsa/sliding-window-maximum.md) (LeetCode 239, Hard).
+Practise this: [the busiest five minutes](../exercises/dsa/sliding-window-maximum.md) (LeetCode 239, Hard) and [the shortest good run](../exercises/dsa/shortest-subarray-with-sum-at-least-k.md) (LeetCode 862, Hard).

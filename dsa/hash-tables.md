@@ -84,3 +84,5 @@ A hash table stores values in an array of slots, choosing each value's slot by h
 ## Go and look
 
 Find the biggest hash table, dictionary or map in something you've built and ask what happens when it grows. Then find out how big it gets on your busiest day.
+
+Practise this: [the first free locker](../exercises/dsa/first-missing-positive.md) (LeetCode 41, Hard), where the array itself is the table, and [the shortest crash signature](../exercises/dsa/minimum-window-substring.md) (LeetCode 76, Hard).
