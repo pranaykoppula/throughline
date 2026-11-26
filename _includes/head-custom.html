@@ -1,0 +1,52 @@
+<!-- Throughline: turn each exercise's language sections into tabs, and remember the reader's language. -->
+<style>
+  .code-tabs .tab-bar { display: flex; flex-wrap: wrap; gap: 4px; border-bottom: 1px solid #d0d7de; margin: 16px 0 0; }
+  .code-tabs .tab-bar button {
+    font: inherit; font-size: 14px; padding: 6px 14px; border: 1px solid transparent; border-bottom: none;
+    border-radius: 6px 6px 0 0; background: none; color: #59636e; cursor: pointer; margin-bottom: -1px;
+  }
+  .code-tabs .tab-bar button[aria-selected="true"] { border-color: #d0d7de; background: #fff; color: #1f2328; font-weight: 600; }
+  .code-tabs.tabbed > details > summary { display: none; }
+  .code-tabs.tabbed > details { margin: 0; }
+  .code-tabs.tabbed > details:not([open]) { display: none; }
+</style>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var KEY = "throughline-language";
+    var saved = null;
+    try { saved = localStorage.getItem(KEY); } catch (e) {}
+    document.querySelectorAll(".code-tabs").forEach(function (box) {
+      var panes = Array.prototype.filter.call(box.children, function (el) { return el.tagName === "DETAILS"; });
+      if (!panes.length) return;
+      var bar = document.createElement("div");
+      bar.className = "tab-bar";
+      bar.setAttribute("role", "tablist");
+      var buttons = panes.map(function (pane) {
+        var name = pane.querySelector("summary").textContent.trim();
+        var b = document.createElement("button");
+        b.type = "button";
+        b.textContent = name;
+        b.setAttribute("role", "tab");
+        b.addEventListener("click", function () { selectAll(name); });
+        bar.appendChild(b);
+        return b;
+      });
+      box.insertBefore(bar, box.firstChild);
+      box.classList.add("tabbed");
+      box._select = function (name) {
+        var found = panes.some(function (p) { return p.querySelector("summary").textContent.trim() === name; });
+        if (!found) name = panes[0].querySelector("summary").textContent.trim();
+        panes.forEach(function (p, i) {
+          var on = p.querySelector("summary").textContent.trim() === name;
+          p.open = on;
+          buttons[i].setAttribute("aria-selected", on ? "true" : "false");
+        });
+      };
+      box._select(saved);
+    });
+    function selectAll(name) {
+      try { localStorage.setItem(KEY, name); } catch (e) {}
+      document.querySelectorAll(".code-tabs.tabbed").forEach(function (box) { box._select(name); });
+    }
+  });
+</script>
