@@ -93,3 +93,5 @@ A **wall clock** (time of day) is synchronised with others, usually by NTP, to w
 ## Go and look
 
 Find a place in something you've built where two updates to the same thing can arrive from different places. Find out how it decides which one wins. If the answer involves comparing timestamps from different machines, find out how far apart those machines' clocks are right now.
+
+Practise this: [the school's messages](../exercises/design/group-chat.md), group chat in the same order on every screen.

@@ -83,3 +83,5 @@ An operation is idempotent if performing it more than once has the same effect a
 ## Go and look
 
 Find the call in something you've built that charges, sends or creates something, and find what happens when it times out. If the code retries, check whether the other side would recognise the retry. If it doesn't retry, find out how many operations are being lost.
+
+Practise this: [the tutors' wages](../exercises/design/payments-ledger.md), a payments ledger, and [every click, once](../exercises/design/ad-click-counter.md), an ad-click counter that bills.
