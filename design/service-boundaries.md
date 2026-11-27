@@ -88,4 +88,4 @@ A **boundary** divides a system into parts with an interface between them. Insid
 
 Find the last feature you shipped and count the parts it changed: modules, services, repositories or teams. If it was more than two, ask whether the boundaries follow the way your system changes, or the way its data is shaped.
 
-Practise this: [the nearest car](../exercises/design/ride-hailing.md), where matching, trips and payments are separate for stated reasons.
+Practise this: [the nearest car](../exercises/design/ride-hailing.md), where matching, trips and payments are separate for stated reasons, and [the lecture that buffered](../exercises/design/video-streaming.md), where uploads, transcoding and playback need different things.

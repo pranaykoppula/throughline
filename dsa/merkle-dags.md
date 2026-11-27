@@ -83,3 +83,5 @@ A Merkle tree is a tree in which each leaf is labelled with the hash of a block 
 ## Go and look
 
 In a git repository, run `git cat-file -p HEAD`, then follow the tree hash it shows with `git cat-file -p` again. You're walking down a Merkle DAG by hand.
+
+Practise this (design): [the three laptops](../exercises/design/file-sync.md), file sync with blocks named by their contents.
