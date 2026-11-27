@@ -94,4 +94,4 @@ The word "state" has a second meaning, and it causes real confusion. In control 
 
 Find something in a system you work on that has a lifecycle, such as an order, an account or a job, and draw its states and arrows. Then check whether the code enforces your drawing, or merely hopes for it.
 
-Practise this: [the price column](../exercises/dsa/valid-number.md) (LeetCode 65, Hard), deciding whether text is a number with a nine-state table.
+Practise this: [the price column](../exercises/dsa/valid-number.md) (LeetCode 65, Hard), deciding whether text is a number with a nine-state table, and [the rule that took the afternoon](../exercises/dsa/regular-expression-matching.md) (LeetCode 10, Hard), tracking every place in a pattern you could be at.

@@ -88,3 +88,5 @@ Dynamic programming applies when a problem has optimal substructure (the best an
 ## Go and look
 
 Run `diff` or `git diff` on two versions of a file with a few changes, then on two files that are completely different. Notice how much longer the second takes: the work grows with the differences.
+
+Practise this: [the rule that took the afternoon](../exercises/dsa/regular-expression-matching.md) (LeetCode 10, Hard), where a table of (text position, pattern position) replaces exponential backtracking.

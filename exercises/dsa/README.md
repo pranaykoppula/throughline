@@ -10,9 +10,9 @@ Twenty-four LeetCode Hard problems, two for each kind of question. The categorie
 | Next in line, over a window | [The busiest five minutes](sliding-window-maximum.md) (239); [The shortest good run](shortest-subarray-with-sum-at-least-k.md) (862) | [queues](../../dsa/queues.md), [amortised cost](../../dsa/amortised-cost.md) |
 | Nesting and undo | [The biggest banner](largest-rectangle-in-histogram.md) (84); [The formula box](basic-calculator.md) (224) | [power and predictability](../../dsa/power-and-predictability.md) |
 | What connects to what | [The rescue boat's first chance](swim-in-rising-water.md) (778); [The cable you can't lose](critical-connections-in-a-network.md) (1192) | [graphs](../../dsa/graphs.md), [greedy algorithms](../../dsa/greedy.md) |
-| Which state, what next | [The price column](valid-number.md) (65); Regular Expression Matching (10) | [state machines](../../dsa/state-machines.md), [power and predictability](../../dsa/power-and-predictability.md) |
-| Everything with this prefix | Word Search II (212); Prefix and Suffix Search (745) | [tries](../../dsa/tries.md) |
-| Split, solve, combine | Count of Smaller Numbers After Self (315); Reverse Pairs (493) | [divide and conquer](../../dsa/divide-and-conquer.md), [sorting](../../dsa/sorting.md) |
+| Which state, what next | [The price column](valid-number.md) (65); [The rule that took the afternoon](regular-expression-matching.md) (10) | [state machines](../../dsa/state-machines.md), [power and predictability](../../dsa/power-and-predictability.md) |
+| Everything with this prefix | [The letter grid](word-search-ii.md) (212); [The shop's search box](prefix-and-suffix-search.md) (745) | [tries](../../dsa/tries.md) |
+| Split, solve, combine | [The readings that came after](count-of-smaller-numbers-after-self.md) (315); Reverse Pairs (493) | [divide and conquer](../../dsa/divide-and-conquer.md), [sorting](../../dsa/sorting.md) |
 | Overlapping questions | Burst Balloons (312); Distinct Subsequences (115) | [dynamic programming](../../dsa/dynamic-programming.md) |
 | The best step now | Candy (135); Course Schedule III (630) | [greedy algorithms](../../dsa/greedy.md), [heaps](../../dsa/heaps.md) |
 | Build a structure for the pattern | LFU Cache (460); All O`one Data Structure (432) | [choosing a data structure](../../dsa/choosing.md), [hash tables](../../dsa/hash-tables.md) |

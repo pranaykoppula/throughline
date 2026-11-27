@@ -322,6 +322,6 @@ impl Solution {
 
 ## Related
 
-- The other exercise in this category: Regular Expression Matching (LeetCode 10), coming in a later batch.
+- The other exercise in this category: [the rule that took the afternoon](regular-expression-matching.md) (LeetCode 10).
 - Concept pages: [state machines](../../dsa/state-machines.md), [power and predictability](../../dsa/power-and-predictability.md), [input validation](../../security/input-validation.md), [encodings](../../info/encodings.md).
 - More practice of the same shape: writing the same rules as a regular expression, `^[+-]?(\d+\.?\d*|\.\d+)([eE][+-]?\d+)?$`, and checking that it agrees with your table on the tests.
