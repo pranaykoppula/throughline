@@ -79,6 +79,7 @@ Motif: [copies disagree](motifs.md#copies-disagree).
 - Learning this is also learning [replication](data/replication.md), because the post that vanished and came back was Maya's read copies running behind the original.
 - Learning this is also learning [partitioning](data/partitioning.md), because splitting the data across machines is the step Maya hadn't taken yet, and it brings problems of its own.
 - Learning this is also learning [back-of-the-envelope estimates](design/estimates.md), because Maya's fifty reads for every write was an estimate that chose the design, and the champion's followers were the peak that an average hid.
+- Learning this is also learning [consensus and leader election](design/consensus.md), because copies need one place where writes go, and deciding which machine that is, safely, is a problem of its own.
 
 ## Resources
 

@@ -70,6 +70,7 @@ An append-only log is a sequence of records that can only be added to at the end
 - Learning this is also learning [Merkle DAGs](merkle-dags.md), because git's history is an append-only log whose entries vouch for everything before them.
 - Learning this is also learning [caching](../performance/caching.md), because a balance derived from a ledger is a cache, and the ledger wins when they disagree.
 - Learning this is also learning [migrations](../data/migrations.md), because a log of what happened lets you rebuild state in a new shape without guessing what the old shape meant.
+- Learning this is also learning [sagas](../design/sagas.md), because a compensation is a reversing entry, and a coordinator's log is how it knows where it got to.
 
 ## Resources
 

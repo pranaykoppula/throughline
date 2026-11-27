@@ -1570,6 +1570,147 @@ def fig_design_rate_limiting():
            "tm", 11.5, italic=True)
     return f
 
+
+def fig_design_idempotency():
+    f = Fig(420, "A retry, with and without a key",
+            "Two timelines between the app's server and the payment provider. Top, without a key: the first charge "
+            "succeeds but its reply is lost, the server times out after ten seconds and retries, and the provider charges "
+            "the card a second time. Bottom, with an idempotency key: the retry carries the same key, the provider "
+            "recognises it, and returns the first charge's result without charging again.")
+
+    def lanes(y0, title, sub):
+        f.heading(30, y0, title, sub)
+        top, bot = y0 + 50, y0 + 140
+        f.text(40, top + 4, "server", "t", 12.5, "start", "600")
+        f.text(40, bot + 4, "provider", "t", 12.5, "start", "600")
+        f.line(120, top, 720, top, "line", 1.2)
+        f.line(120, bot, 720, bot, "line", 1.2)
+        return top, bot
+
+    top, bot = lanes(32, "Without a key", "The reply is lost, so the server can't tell the charge went through")
+    f.line(150, top, 240, bot - 4, "accent", 1.8, arrow=True)
+    f.text(178, top + 30, "charge 45,000", "tm", 11)
+    f.rect(232, bot - 2, 74, 22, "f-soft-warn", 3)
+    f.text(269, bot + 13, "charged", "t", 11.5, "middle", "600")
+    f.line(300, bot - 4, 360, top + 34, "warn", 1.6, dash="4 3")
+    f.text(368, top + 36, "reply lost", "tm", 11)
+    f.text(420, top - 8, "10 s: timeout, retry", "tm", 11, "middle")
+    f.line(420, top, 510, bot - 4, "accent", 1.8, arrow=True)
+    f.text(476, top + 30, "charge 45,000", "tm", 11)
+    f.rect(500, bot - 2, 130, 22, "f-soft-warn", 3)
+    f.text(565, bot + 13, "charged again", "t", 11.5, "middle", "600")
+
+    top, bot = lanes(222, "With an idempotency key", "Every retry carries the key made before the first attempt")
+    f.line(150, top, 240, bot - 4, "accent", 1.8, arrow=True)
+    f.text(160, top + 30, "charge, key A17", "tm", 11)
+    f.rect(232, bot - 2, 110, 22, "f-soft-ok", 3)
+    f.text(287, bot + 13, "charged; A17 saved", "t", 11.5, "middle", "600")
+    f.line(320, bot - 4, 370, top + 34, "warn", 1.6, dash="4 3")
+    f.text(378, top + 36, "reply lost", "tm", 11)
+    f.text(430, top - 8, "10 s: timeout, retry", "tm", 11, "middle")
+    f.line(430, top, 520, bot - 4, "accent", 1.8, arrow=True)
+    f.text(442, top + 30, "charge, key A17", "tm", 11)
+    f.rect(512, bot - 2, 150, 22, "f-soft-ok", 3)
+    f.text(587, bot + 13, "A17 seen: same result", "t", 11.5, "middle", "600")
+    f.line(600, bot - 4, 650, top + 4, "ok", 1.8, arrow=True)
+    f.text(660, top + 4, "paid once", "t", 11.5, "start", "600")
+    f.text(30, 408, "Valeria's payments. The amount and key are illustrative.", "tm", 11.5, italic=True)
+    return f
+
+
+def fig_design_timeouts():
+    f = Fig(370, "Threads held by a slow dependency",
+            "A line chart of busy worker threads on one web server, during the minutes after the recommendations service "
+            "slowed down. Without timeouts, busy threads climb from about twenty to the limit of two hundred within ninety "
+            "seconds and stay there, so nothing else can be served. With a 150-millisecond timeout, a separate pool and a "
+            "circuit breaker, they stay close to twenty throughout.")
+    f.heading(30, 32, "Busy threads on one web server", "Recommendations slow from 30 milliseconds to 30 seconds at the dashed line")
+    p = axes(f, 100, 80, 600, 210, "seconds", "threads",
+             [(0, "0"), (60, "60"), (120, "120"), (180, "180"), (240, "240")],
+             [(0, "0"), (50, "50"), (100, "100"), (150, "150"), (200, "200")], (0, 240), (0, 215))
+    xs = list(range(0, 241, 2))
+
+    def without(t):
+        if t < 30:
+            return 20
+        return min(200, 20 + (t - 30) * 2.0)
+
+    def with_(t):
+        if t < 30:
+            return 20
+        bump = 6 * math.exp(-(t - 34) ** 2 / 20)
+        return 21 + bump
+    lim = p(0, 200)[1]
+    f.line(100, lim, 700, lim, "warn", 1.2, dash="5 4")
+    f.text(696, lim - 6, "the limit: 200 threads", "tm", 11, "end")
+    sx, _ = p(30, 0)
+    f.line(sx, 80, sx, 290, "line", 1.2, dash="4 4")
+    f.poly([p(t, without(t)) for t in xs], "warn", 2.5)
+    f.poly([p(t, with_(t)) for t in xs], "ok", 2.5)
+    f.text(p(130, 180)[0], p(130, 180)[1], "default timeout: every thread waits", "t", 12, "start", "600")
+    f.text(p(130, 36)[0], p(130, 36)[1], "150 ms timeout, own pool, circuit breaker", "t", 12, "start", "600")
+    f.text(30, 356, "Ji-woo's bookshop. The two hundred threads and the timings are from the story; the curves are illustrative.",
+           "tm", 11.5, italic=True)
+    return f
+
+
+def fig_design_consensus():
+    f = Fig(330, "The leader that slept through its lease",
+            "A timeline with two schedulers and the database. Scheduler A holds lease 7 and writes. It freezes for "
+            "forty-five seconds; its lease runs out; scheduler B is granted lease 8 and writes. A wakes, still believing "
+            "it leads, and tries to write with lease 7. The database, which has already seen 8, rejects the write.")
+    f.heading(30, 32, "Two schedulers, one database, numbered leases", "The database keeps the highest lease number it has seen")
+    rows = [("scheduler A", 90), ("scheduler B", 160), ("database", 230)]
+    for name, y in rows:
+        f.text(30, y + 4, name, "t", 12.5, "start", "600")
+        f.line(130, y, 730, y, "line", 1.2)
+    a, b, d = 90, 160, 230
+    f.rect(140, a - 12, 90, 24, "f-soft-accent", 4)
+    f.text(185, a + 4, "lease 7", "t", 11.5, "middle", "600")
+    f.line(200, a + 12, 220, d - 6, "accent", 1.6, arrow=True)
+    f.text(228, d - 18, "write (7): ok", "tm", 11)
+    f.rect(240, a - 12, 250, 24, "f-faint", 4)
+    f.rect(240, a - 12, 250, 24, "s-line", 4, extra='fill="none" stroke-width="1" stroke-dasharray="4 3"')
+    f.text(365, a + 4, "frozen for 45 seconds", "tm", 11.5, "middle")
+    f.text(330, a - 20, "lease 7 runs out", "tm", 11, "middle")
+    f.rect(340, b - 12, 90, 24, "f-soft-ok", 4)
+    f.text(385, b + 4, "lease 8", "t", 11.5, "middle", "600")
+    f.line(400, b + 12, 420, d - 6, "ok", 1.6, arrow=True)
+    f.text(426, d - 18, "write (8): ok", "tm", 11)
+    f.text(560, a - 20, "wakes, still sure it leads", "tm", 11, "middle")
+    f.line(560, a + 12, 590, d - 6, "warn", 1.6, arrow=True)
+    f.text(598, d - 18, "write (7)", "tm", 11)
+    f.rect(560, d + 8, 160, 24, "f-soft-warn", 4)
+    f.text(640, d + 24, "rejected: 8 already seen", "t", 11.5, "middle", "600")
+    f.text(30, 296, "Ilinca's invoice run. The pause and the lease numbers are from the story; the spacing is not to scale.",
+           "tm", 11.5, italic=True)
+    return f
+
+
+def fig_design_sagas():
+    f = Fig(320, "Each step, and its way back",
+            "Three steps of an order, left to right: reserve stock, hold a delivery slot, charge the card. Under each, an "
+            "arrow down to its compensating step: release stock, release the slot, refund. The first two are cheap and "
+            "invisible to the customer; the refund takes days and appears on their statement, which is why the charge "
+            "comes last.")
+    f.heading(30, 32, "An order as a saga", "Forward steps on top; the compensation for each underneath")
+    steps = [("reserve stock", "release stock", "f-soft-ok", "cheap, invisible"),
+             ("hold a slot", "release the slot", "f-soft-ok", "cheap, invisible"),
+             ("charge the card", "refund", "f-soft-amber", "days, on the statement")]
+    xs = [60, 290, 520]
+    for i, (fwd, back, cls, note) in enumerate(steps):
+        x = xs[i]
+        f.box(x, 80, 170, 46, fwd, cls)
+        f.box(x, 200, 170, 46, back, "f-faint")
+        f.line(x + 85, 128, x + 85, 196, "ink", 1.3, dash="4 3", arrow=True)
+        f.text(x + 85, 266, note, "tm", 11, "middle")
+        if i < 2:
+            f.line(x + 172, 103, xs[i + 1] - 4, 103, "ink", 1.6, arrow=True)
+    f.text(153, 166, "undo, if a later step fails", "tm", 11, "start")
+    f.text(30, 300, "Tolu's grocery orders. The card is charged last, so its compensation, the refund, is needed least.",
+           "tm", 11.5, italic=True)
+    return f
+
 FIGURES = {
     "00-representations": fig00, "01-one-machine-one-program": fig01, "02-one-machine-many-programs": fig02,
     "03-programs-too-big-for-one-head": fig03, "04-data-outlives-programs": fig04,
@@ -1589,7 +1730,8 @@ FIGURES = {
     "dsa-graphs": fig_dsa_graphs, "dsa-state-machines": fig_dsa_state_machines,
     "dsa-power-and-predictability": fig_dsa_power, "dsa-computability": fig_dsa_computability,
     "design-estimates": fig_design_estimates, "design-load-balancing": fig_design_load_balancing,
-    "design-rate-limiting": fig_design_rate_limiting,
+    "design-rate-limiting": fig_design_rate_limiting, "design-idempotency": fig_design_idempotency,
+    "design-timeouts": fig_design_timeouts, "design-consensus": fig_design_consensus, "design-sagas": fig_design_sagas,
 }
 
 

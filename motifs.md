@@ -55,6 +55,7 @@ Any copy, kept to be faster, safer or closer, is sometimes out of date. The work
 - [Replication](data/replication.md): Kwame's replica, and making sure only one copy accepts writes.
 - [Consistency](data/consistency.md): Tom's nine library branches, each with its own catalogue.
 - [Append-only logs](dsa/append-only-logs.md): Teresa's balance, a copy derived from the ledger, which wins whenever they disagree.
+- [Consensus and leader election](design/consensus.md): Ilinca's two schedulers, each sure it was in charge.
 
 ## Where the data is sets the cost
 
@@ -79,6 +80,7 @@ Most slowness isn't work; it's waiting for something shared. Systems near full u
 - [Event loops and threads](languages/event-loops-and-threads.md): Omar's two ways of sharing time.
 - [Round trips](performance/round-trips.md): every reply you wait for.
 - [Rate limiting and backpressure](design/rate-limiting.md): Farida's riders, waiting behind a stranger's bug.
+- [Timeouts and circuit breakers](design/timeouts.md): Ji-woo's shop, every thread waiting on recommendations.
 
 ## Costs move; they don't disappear
 
@@ -93,6 +95,7 @@ A design that makes one thing cheap usually makes something else dearer: later, 
 - [Data gravity](data/data-gravity.md): each terabyte raising the price of changing your mind.
 - [Queueing](performance/queueing.md): idle capacity saved, and paid for in other people's waiting.
 - [13, Everything still exists at once](13-everything-still-exists-at-once.md): switching costs paid now, benefits arriving later to someone else.
+- [Sagas](design/sagas.md): Tolu's missing transaction, paid for in a planned way back for every step.
 
 ## Layers hide things, until they leak
 

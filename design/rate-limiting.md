@@ -74,7 +74,7 @@ Rate limiting caps how much work each caller can ask for in a period. A **token 
 
 1. Stripe, ["Scaling your API with rate limiters"](https://stripe.com/blog/rate-limiters) (2017) (start here: four limiters, with the reasons for each).
 2. Google, *Site Reliability Engineering*, ["Handling Overload"](https://sre.google/sre-book/handling-overload/) and ["Addressing Cascading Failures"](https://sre.google/sre-book/addressing-cascading-failures/) (go deeper).
-3. Marc Brooker, ["Exponential Backoff and Jitter"](https://aws.amazon.com/blogs/architecture/exponential-backoff-and-jitter/) (2015) (short: why randomised retries matter). <!-- verify -->
+3. Marc Brooker, ["Exponential Backoff and Jitter"](https://aws.amazon.com/blogs/architecture/exponential-backoff-and-jitter/) (2015) (short: why randomised retries matter).
 4. [RFC 6585](https://www.rfc-editor.org/rfc/rfc6585), section 4 (reference: status 429).
 
 ## Names you'll hear
