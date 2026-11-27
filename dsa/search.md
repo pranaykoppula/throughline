@@ -94,3 +94,5 @@ Search has two parts: retrieval, finding the items that match, and ranking, orde
 ## Go and look
 
 Search for something in a tool you use every day and look past the first page of results. Then ask how it decided the order, and what you'd have to know about the collection to decide it better.
+
+Practise this (design): [three letters in](../exercises/design/search-as-you-type.md), suggestions as you type, and [the café round the corner](../exercises/design/places-near-me.md), text and location together.
