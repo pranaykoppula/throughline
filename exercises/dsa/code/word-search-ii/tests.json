@@ -1,0 +1,62 @@
+[
+ {
+  "name": "the example in the story",
+  "input": "4 4\noaan\netae\nihkr\niflv\n4\noath pea eat rain\n",
+  "output": "eat\noath\n"
+ },
+ {
+  "name": "no word fits",
+  "input": "2 2\nab\ncd\n1\nabcb\n",
+  "output": ""
+ },
+ {
+  "name": "a single square",
+  "input": "1 1\na\n2\na b\n",
+  "output": "a\n"
+ },
+ {
+  "name": "words sharing a prefix",
+  "input": "2 2\nab\ncd\n5\nab abd abdc ac acd\n",
+  "output": "ab\nabd\nabdc\nac\nacd\n"
+ },
+ {
+  "name": "a word that needs a square twice",
+  "input": "1 2\naa\n2\naaa aa\n",
+  "output": "aa\n"
+ },
+ {
+  "name": "the same word twice in the list",
+  "input": "2 2\nab\nba\n3\nab ab aba\n",
+  "output": "ab\naba\n"
+ },
+ {
+  "name": "random board 1",
+  "input": "5 6\nabaaab\nabaabb\nbabaaa\nbbabab\nbbbaab\n9\na aa aaababa ab abaabb ababbba ba bb bbbab\n",
+  "output": "a\naa\naaababa\nab\nabaabb\nababbba\nba\nbb\nbbbab\n"
+ },
+ {
+  "name": "random board 2",
+  "input": "2 6\nabbabb\naaaaaa\n17\na aaaaaa aaab aaba aababba ab aba ababbb abb abbaa ba baaaa bbaa bbabaab bbababa bbb bbbbaa\n",
+  "output": "a\naaaaaa\naaab\naaba\naababba\nab\naba\nabb\nabbaa\nba\nbaaaa\nbbaa\nbbabaab\n"
+ },
+ {
+  "name": "random board 3",
+  "input": "6 4\neecc\nceec\ncead\ncdea\naddd\nbdda\n19\nabceba abeabb acb adbe ae ba bacad bbbdec bbcaaba bcc bce bdb ccdbddb d dae dcaadce dce de ecaacea\n",
+  "output": "ae\nba\nd\ndae\ndce\nde\n"
+ },
+ {
+  "name": "random board 4",
+  "input": "6 7\nabaabab\nbababab\nbaabaab\nbbbbbaa\nbaabbba\nbababbb\n10\naa aaaab abaabab abb b babbbbb bba bbaba bbabbbb bbbbaa\n",
+  "output": "aa\naaaab\nabaabab\nabb\nb\nbabbbbb\nbba\nbbaba\nbbabbbb\nbbbbaa\n"
+ },
+ {
+  "name": "random board 5",
+  "input": "6 6\naddbcb\nddbcba\nbacaab\nabddaa\ncbdcda\nadaccb\n5\nc ca cadacda dbabbba dca\n",
+  "output": "c\nca\ndca\n"
+ },
+ {
+  "name": "a 12 by 12 board of one letter, with a near miss",
+  "input": "12 12\naaaaaaaaaaaa\naaaaaaaaaaaa\naaaaaaaaaaaa\naaaaaaaaaaaa\naaaaaaaaaaaa\naaaaaaaaaaaa\naaaaaaaaaaaa\naaaaaaaaaaaa\naaaaaaaaaaaa\naaaaaaaaaaaa\naaaaaaaaaaaa\naaaaaaaaaaaa\n11\na aa aaa aaaa aaaaa aaaaaa aaaaaaa aaaaaaaa aaaaaaaaa aaaaaaaaaa aaaaaaaaab\n",
+  "output": "a\naa\naaa\naaaa\naaaaa\naaaaaa\naaaaaaa\naaaaaaaa\naaaaaaaaa\naaaaaaaaaa\n"
+ }
+]

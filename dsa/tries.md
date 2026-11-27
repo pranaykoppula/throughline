@@ -83,3 +83,5 @@ A trie stores a set of strings as a tree in which each edge is labelled with a c
 ## Go and look
 
 Type slowly into a search box you use and watch the suggestions change with each letter. Then find out whether something you build answers prefix questions, and whether each keystroke starts a new search from the beginning.
+
+Practise this: [the letter grid](../exercises/dsa/word-search-ii.md) (LeetCode 212, Hard), walking a grid and a trie together, and [the shop's search box](../exercises/dsa/prefix-and-suffix-search.md) (LeetCode 745, Hard), turning a prefix and a suffix into one prefix.

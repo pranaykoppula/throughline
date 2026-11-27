@@ -1,0 +1,152 @@
+[
+ {
+  "name": "\"aa\" against \"a\"",
+  "input": "aa\na\n",
+  "output": "false\n"
+ },
+ {
+  "name": "\"aa\" against \"a*\"",
+  "input": "aa\na*\n",
+  "output": "true\n"
+ },
+ {
+  "name": "\"ab\" against \".*\"",
+  "input": "ab\n.*\n",
+  "output": "true\n"
+ },
+ {
+  "name": "\"aab\" against \"c*a*b\"",
+  "input": "aab\nc*a*b\n",
+  "output": "true\n"
+ },
+ {
+  "name": "\"mississippi\" against \"mis*is*p*.\"",
+  "input": "mississippi\nmis*is*p*.\n",
+  "output": "false\n"
+ },
+ {
+  "name": "\"ab\" against \".*c\"",
+  "input": "ab\n.*c\n",
+  "output": "false\n"
+ },
+ {
+  "name": "\"aaa\" against \"a*a\"",
+  "input": "aaa\na*a\n",
+  "output": "true\n"
+ },
+ {
+  "name": "\"aaa\" against \"ab*a*c*a\"",
+  "input": "aaa\nab*a*c*a\n",
+  "output": "true\n"
+ },
+ {
+  "name": "\"a\" against \"ab*\"",
+  "input": "a\nab*\n",
+  "output": "true\n"
+ },
+ {
+  "name": "\"bbbba\" against \".*a*a\"",
+  "input": "bbbba\n.*a*a\n",
+  "output": "true\n"
+ },
+ {
+  "name": "\"aaaaaaaaaaaaaaaaaaab\" against \"a*a*a*a*a*a*a*a*a*c\"",
+  "input": "aaaaaaaaaaaaaaaaaaab\na*a*a*a*a*a*a*a*a*c\n",
+  "output": "false\n"
+ },
+ {
+  "name": "\"abcd\" against \"d*\"",
+  "input": "abcd\nd*\n",
+  "output": "false\n"
+ },
+ {
+  "name": "\"a\" against \".*..a*\"",
+  "input": "a\n.*..a*\n",
+  "output": "false\n"
+ },
+ {
+  "name": "\"b\" against \".*bba*\"",
+  "input": "b\n.*bba*\n",
+  "output": "false\n"
+ },
+ {
+  "name": "\"baababab\" against \"b*.*a.*\"",
+  "input": "baababab\nb*.*a.*\n",
+  "output": "true\n"
+ },
+ {
+  "name": "\"abbaaaaa\" against \".*a*.\"",
+  "input": "abbaaaaa\n.*a*.\n",
+  "output": "true\n"
+ },
+ {
+  "name": "\"abaabaaa\" against \"b.*a*.\"",
+  "input": "abaabaaa\nb.*a*.\n",
+  "output": "false\n"
+ },
+ {
+  "name": "\"aab\" against \"ab\"",
+  "input": "aab\nab\n",
+  "output": "false\n"
+ },
+ {
+  "name": "\"abaaabbb\" against \".a\"",
+  "input": "abaaabbb\n.a\n",
+  "output": "false\n"
+ },
+ {
+  "name": "\"bbbaaabb\" against \"a*b\"",
+  "input": "bbbaaabb\na*b\n",
+  "output": "false\n"
+ },
+ {
+  "name": "\"babbbaa\" against \".b*..*\"",
+  "input": "babbbaa\n.b*..*\n",
+  "output": "true\n"
+ },
+ {
+  "name": "\"bab\" against \"a\"",
+  "input": "bab\na\n",
+  "output": "false\n"
+ },
+ {
+  "name": "\"ab\" against \"a*\"",
+  "input": "ab\na*\n",
+  "output": "false\n"
+ },
+ {
+  "name": "\"babbbbbb\" against \"b.*a*a\"",
+  "input": "babbbbbb\nb.*a*a\n",
+  "output": "false\n"
+ },
+ {
+  "name": "\"aabbabaa\" against \".ab*b*.\"",
+  "input": "aabbabaa\n.ab*b*.\n",
+  "output": "false\n"
+ },
+ {
+  "name": "\"baaa\" against \"a.b.\"",
+  "input": "baaa\na.b.\n",
+  "output": "false\n"
+ },
+ {
+  "name": "\"babbaaa\" against \".b.*b\"",
+  "input": "babbaaa\n.b.*b\n",
+  "output": "false\n"
+ },
+ {
+  "name": "\"b\" against \"bab\"",
+  "input": "b\nbab\n",
+  "output": "false\n"
+ },
+ {
+  "name": "\"bbbbb\" against \".*b.\"",
+  "input": "bbbbb\n.*b.\n",
+  "output": "true\n"
+ },
+ {
+  "name": "\"bababa\" against \"ba.*.*a*\"",
+  "input": "bababa\nba.*.*a*\n",
+  "output": "true\n"
+ }
+]
