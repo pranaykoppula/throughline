@@ -1482,6 +1482,94 @@ def fig_dsa_computability():
     return f
 
 
+
+# --------------------------------------------------------------------------- design figures
+
+def fig_design_estimates():
+    f = Fig(380, "An ordinary day and Halloween",
+            "A line chart of clip uploads through a day, as multiples of the daily average. An ordinary weekday rises "
+            "from almost nothing at night to about three times the average in the evening. On Halloween the evening "
+            "climbs to about twenty-five times the average between six and eight o'clock. A dashed line at three times "
+            "the average marks the upload capacity Nkechi rented, which the Halloween evening exceeds for two hours.")
+    f.heading(30, 32, "Clip uploads through the day", "As multiples of an ordinary day's average rate")
+    p = axes(f, 100, 80, 600, 220, "time of day", "× average",
+             [(0, "midnight"), (6, "6am"), (12, "noon"), (18, "6pm"), (24, "midnight")],
+             [(0, "0"), (5, "5"), (10, "10"), (15, "15"), (20, "20"), (25, "25")], (0, 24), (0, 27))
+
+    def g(h, c, w):
+        return math.exp(-((h - c) / w) ** 2)
+
+    hours = [i / 10 for i in range(0, 241)]
+    raw = [0.15 + 1.3 * g(h, 8, 1.3) + 0.8 * g(h, 13, 2.2) + 2.6 * g(h, 19, 1.7) for h in hours]
+    scale = len(raw) / sum(raw)
+    day = [v * scale for v in raw]
+    peak = max(day)
+    day = [v * 3 / peak for v in day]  # an ordinary evening at about three times the average
+
+    def plateau(h):
+        return 1 / (1 + math.exp(-(h - 17.8) * 4)) * (1 / (1 + math.exp((h - 20.2) * 4)))
+    halloween = [v + 22.5 * plateau(h) for v, h in zip(day, hours)]
+    f.poly([p(h, v) for h, v in zip(hours, halloween)], "warn", 2.5)
+    f.poly([p(h, v) for h, v in zip(hours, day)], "accent", 2.5)
+    cy = p(0, 3)[1]
+    f.line(100, cy, 700, cy, "amber", 1.4, dash="6 4")
+    f.text(104, cy - 7, "upload capacity: three times the average", "tm", 11.5)
+    f.text(p(15.6, 24)[0], p(15.6, 24)[1], "Halloween: about 25 times", "t", 12, "end", "600")
+    f.text(p(13, 6)[0], p(13, 6)[1], "an ordinary weekday", "t", 12, "middle", "600")
+    f.text(30, 366, "Nkechi's doorbells. The ordinary day's shape is illustrative; the three and twenty-five are from the story.",
+           "tm", 11.5, italic=True)
+    return f
+
+
+def fig_design_load_balancing():
+    f = Fig(330, "Where the broken server's share came from",
+            "A bar chart of the share of searches sent to the one broken server, out of twenty. Round robin: five "
+            "percent, its fair share. Least connections: about sixty percent, because failing fast made it look the "
+            "least busy. Two random choices: about ten percent at most, because it can only win when it's one of the "
+            "two picked.")
+    f.heading(30, 32, "Share of all searches sent to the broken server", "One server out of twenty, failing every search in two milliseconds")
+    p = axes(f, 100, 80, 600, 170, "", "share",
+             [], [(0, "0%"), (20, "20%"), (40, "40%"), (60, "60%")], (0, 3), (0, 66))
+    bars = [("round robin", 5, "accent", "5%: its turn, one in twenty"),
+            ("least connections", 60, "warn", "about 60%: it always looked least busy"),
+            ("two random choices", 10, "ok", "at most 10%: only when it's one of the two")]
+    for i, (label, v, colour, note) in enumerate(bars):
+        x0, _ = p(i + 0.2, 0)
+        x1, _ = p(i + 0.8, 0)
+        _, yt = p(0, v)
+        _, yb = p(0, 0)
+        f.rect(x0, yt, x1 - x0, yb - yt, f"f-{colour}", 3)
+        f.text((x0 + x1) / 2, yb + 18, label, "t", 12.5, "middle", "600")
+        f.text((x0 + x1) / 2, yt - 8, note, "tm", 11, "middle")
+    f.text(30, 316, "Tomasz's twenty search servers. The fair share is one in twenty; two random choices can at most double it.",
+           "tm", 11.5, italic=True)
+    return f
+
+
+def fig_design_rate_limiting():
+    f = Fig(370, "Doing less by accepting more",
+            "A line chart of useful answers per second against requests arriving per second. Without limits, useful "
+            "answers rise with demand up to the database's capacity of about 2,000 a second, then fall towards almost "
+            "nothing as timeouts and retries take over. With limits and load shedding, useful answers rise to the same "
+            "capacity and stay there, however much more arrives.")
+    f.heading(30, 32, "Useful answers, as demand grows past capacity", "Answers that reached someone still waiting for them")
+    p = axes(f, 100, 80, 600, 210, "requests arriving per second", "useful/s",
+             [(0, "0"), (2000, "2,000"), (4000, "4,000"), (6000, "6,000"), (8000, "8,000"), (10000, "10,000")],
+             [(0, "0"), (500, "500"), (1000, "1,000"), (1500, "1,500"), (2000, "2,000")], (0, 10000), (0, 2300))
+    xs = list(range(0, 10001, 100))
+    none = [x if x <= 2000 else 2000 * math.exp(-(x - 2000) / 2200) for x in xs]
+    limited = [x if x <= 2000 else 2000 - 0.015 * (x - 2000) for x in xs]
+    f.poly([p(x, y) for x, y in zip(xs, limited)], "ok", 2.5)
+    f.poly([p(x, y) for x, y in zip(xs, none)], "warn", 2.5)
+    cx, _ = p(2000, 0)
+    f.line(cx, 80, cx, 290, "line", 1.2, dash="4 4")
+    f.text(cx + 6, 96, "capacity", "tm", 11.5)
+    f.text(p(9800, 1850)[0], p(9800, 1850)[1] - 8, "with limits and load shedding", "t", 12, "end", "600")
+    f.text(p(5200, 600)[0], p(5200, 600)[1], "accepting everything", "t", 12, "start", "600")
+    f.text(30, 356, "Illustrative curves for Farida's API; the database's capacity is taken as 2,000 answers a second.",
+           "tm", 11.5, italic=True)
+    return f
+
 FIGURES = {
     "00-representations": fig00, "01-one-machine-one-program": fig01, "02-one-machine-many-programs": fig02,
     "03-programs-too-big-for-one-head": fig03, "04-data-outlives-programs": fig04,
@@ -1500,6 +1588,8 @@ FIGURES = {
     "dsa-merkle-dags": fig_dsa_merkle, "dsa-queues": fig_dsa_queues,
     "dsa-graphs": fig_dsa_graphs, "dsa-state-machines": fig_dsa_state_machines,
     "dsa-power-and-predictability": fig_dsa_power, "dsa-computability": fig_dsa_computability,
+    "design-estimates": fig_design_estimates, "design-load-balancing": fig_design_load_balancing,
+    "design-rate-limiting": fig_design_rate_limiting,
 }
 
 

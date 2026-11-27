@@ -58,6 +58,7 @@ Partitioning, or sharding, splits a dataset into pieces stored on different mach
 - Learning this is also learning [migrations](migrations.md), because moving partitions while the system runs is a migration.
 - Learning this is also learning [distributions and percentiles](../math/percentiles.md), because hot spots are the long tail of traffic per key.
 - Learning this is also learning [divide and conquer](../dsa/divide-and-conquer.md), because the key you split by decides which answers can be combined correctly afterwards.
+- Learning this is also learning [load balancing](../design/load-balancing.md), because sending each key to a fixed server is balancing that has to remember where things are.
 
 ## Resources
 

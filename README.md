@@ -44,6 +44,7 @@ Alongside the trunk:
 - [Forces](forces.md): the non-technical limits (money, law, distribution) that moved the field as much as hardware did.
 - [Pushback](pushback.md): questions for when a solution arrives before its problem.
 - [Choosing a data structure](dsa/choosing.md): start from the question you keep asking of your data, and find the structure built for it.
+- [How to approach a design](design/approach.md): the four questions turned into steps for designing a system, with the page for each step.
 - [Exercises](exercises/README.md): LeetCode Hard problems told as situations, with staged hints and solutions in five languages. Design cases will follow.
 - [Motifs](motifs.md): the shapes that keep recurring across these stories, such as *copies disagree* and *the sign drifts from the thing*, with every page where each appears and the sentence of the model each one echoes.
 
@@ -58,6 +59,7 @@ The dots are the families each page's Connections reach. A family is a field, an
 - [Algorithms and data structures](dsa/README.md)
 - [Data systems](data/README.md)
 - [Performance](performance/README.md)
+- [System design](design/README.md)
 - [Economics](economics/README.md)
 - [Security](security/README.md), including cryptography
 - [Programming languages](languages/README.md)

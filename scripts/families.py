@@ -8,6 +8,7 @@ FAMILIES = {
     "dsa": ("Algorithms and data structures", "DSA", "#1baa7a"),
     "data": ("Data systems", "Data", "#2a78d6"),
     "performance": ("Performance", "Performance", "#e09a1a"),
+    "design": ("System design", "Design", "#3f51b5"),
     "economics": ("Economics", "Economics", "#a87b4f"),
     "security": ("Security", "Security", "#d64a4a"),
     "languages": ("Programming languages", "Languages", "#e86fe0"),

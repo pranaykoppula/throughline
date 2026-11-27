@@ -59,6 +59,7 @@ Latency numbers are rough, order-of-magnitude costs for common operations: readi
 - Learning this is also learning [storage tiers](../economics/storage-tiers.md), because the fast rows of the table are also the expensive ones.
 - Learning this is also learning [arrays and linked lists](../dsa/arrays-and-linked-lists.md), because the gap between cache and memory is why data kept together is fast.
 - Learning this is also learning [profiling](profiling.md), because rough numbers tell you what to expect, and measurement tells you what's true.
+- Learning this is also learning [back-of-the-envelope estimates](../design/estimates.md), because these are the numbers estimates are built from.
 
 ## Resources
 

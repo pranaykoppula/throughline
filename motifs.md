@@ -78,6 +78,7 @@ Most slowness isn't work; it's waiting for something shared. Systems near full u
 - [Queues](dsa/queues.md): Yusuf's line, and deciding who goes next.
 - [Event loops and threads](languages/event-loops-and-threads.md): Omar's two ways of sharing time.
 - [Round trips](performance/round-trips.md): every reply you wait for.
+- [Rate limiting and backpressure](design/rate-limiting.md): Farida's riders, waiting behind a stranger's bug.
 
 ## Costs move; they don't disappear
 
@@ -150,6 +151,7 @@ A number, a label or a description stands for something you can't see directly. 
 - [Distributions and percentiles](math/percentiles.md): Leo's average, which described nobody.
 - [Statistical significance](math/statistics.md): Lucas's dashboard, read like a scoreboard.
 - [Meaning as use](info/meaning-as-use.md): Rui's documentation, and what users actually relied on.
+- [Load balancing](design/load-balancing.md): Tomasz's server, least busy because it failed every request.
 
 ## Every correction acts on old news
 
