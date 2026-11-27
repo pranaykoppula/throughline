@@ -15,7 +15,7 @@ import sys
 
 from families import FAMILIES
 
-GUIDES = {"dsa/choosing.md"}
+GUIDES = {"dsa/choosing.md", "design/approach.md"}
 NOT_FAMILIES = {"exercises"}  # practice problems: kept out of the graph and these checks (SPEC 3.8)
 LINK = re.compile(r"\]\(([^)\s]+)\)")
 

@@ -70,6 +70,8 @@ Motifs: [the sign drifts from the thing](motifs.md#the-sign-drifts-from-the-thin
 - Learning this is also learning [measures and targets](info/measures-and-targets.md), because "working" has to be defined from the customer's side before anyone is judged by it, or the number and the service drift apart.
 - Learning this is also learning [compression](info/compression.md), because an overall success rate is a lossy summary of every checkout, and the customers in Brazil were exactly what the summary threw away.
 - Learning this is also learning [sampling and aliasing](signals/sampling.md), because Rosa's robot bought a ticket once a minute, and anything that failed and recovered between its purchases was invisible to it.
+- Learning this is also learning [load balancing](design/load-balancing.md), because a balancer's health check asks the same question as Rosa's green squares, and a server can pass it while failing every customer.
+- Learning this is also learning [rate limiting and backpressure](design/rate-limiting.md), because an on-sale is a burst many times the usual, and deciding in advance who waits, and how they're told, is part of staying up.
 
 ## Resources
 

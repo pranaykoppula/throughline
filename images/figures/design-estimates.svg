@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 380" width="760" height="380" role="img" aria-labelledby="t d">
+<title id="t">An ordinary day and Halloween</title>
+<desc id="d">A line chart of clip uploads through a day, as multiples of the daily average. An ordinary weekday rises from almost nothing at night to about three times the average in the evening. On Halloween the evening climbs to about twenty-five times the average between six and eight o'clock. A dashed line at three times the average marks the upload capacity Nkechi rented, which the Halloween evening exceeds for two hours.</desc>
+
+<style>
+  .bg { fill: #ffffff; }
+  .t { fill: #1f2328; } .tm { fill: #59636e; }
+  .f-ink { fill: #1f2328; } .s-ink { stroke: #1f2328; }
+  .f-line { fill: #d0d7de; } .s-line { stroke: #d0d7de; }
+  .f-faint { fill: #f6f8fa; } .s-faint { stroke: #f6f8fa; }
+  .f-accent { fill: #2a78d6; } .s-accent { stroke: #2a78d6; }
+  .f-warn { fill: #d64a4a; } .s-warn { stroke: #d64a4a; }
+  .f-ok { fill: #1baa7a; } .s-ok { stroke: #1baa7a; }
+  .f-amber { fill: #e09a1a; } .s-amber { stroke: #e09a1a; }
+  .f-soft-accent { fill: #ddeaf9; } .f-soft-warn { fill: #f8dede; } .f-soft-ok { fill: #d8f1e8; } .f-soft-amber { fill: #faecd2; }
+  @media (prefers-color-scheme: dark) {
+    .bg { fill: #0d1117; }
+    .t { fill: #e6edf3; } .tm { fill: #9198a1; }
+    .f-ink { fill: #e6edf3; } .s-ink { stroke: #e6edf3; }
+    .f-line { fill: #3d444d; } .s-line { stroke: #3d444d; }
+    .f-faint { fill: #161b22; } .s-faint { stroke: #161b22; }
+    .f-accent { fill: #4c9aff; } .s-accent { stroke: #4c9aff; }
+    .f-warn { fill: #ff7b72; } .s-warn { stroke: #ff7b72; }
+    .f-ok { fill: #3fb950; } .s-ok { stroke: #3fb950; }
+    .f-amber { fill: #e3b341; } .s-amber { stroke: #e3b341; }
+    .f-soft-accent { fill: #102a4a; } .f-soft-warn { fill: #4a1c1c; } .f-soft-ok { fill: #0f3a2a; } .f-soft-amber { fill: #3d2e0e; }
+  }
+  @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+  text { font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; }
+</style>
+<defs><marker id="arrow-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" class="f-ink"/></marker><marker id="arrow-accent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" class="f-accent"/></marker><marker id="arrow-warn" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" class="f-warn"/></marker><marker id="arrow-ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" class="f-ok"/></marker><marker id="arrow-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" class="f-amber"/></marker><marker id="arrow-line" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" class="f-line"/></marker></defs>
+<rect width="760" height="380" class="bg"/>
+<text x="30" y="32" class="t" font-size="15" text-anchor="start" font-weight="600">Clip uploads through the day</text>
+<text x="30" y="51" class="tm" font-size="12.5" text-anchor="start" font-weight="normal">As multiples of an ordinary day's average rate</text>
+<line x1="100" y1="300" x2="700" y2="300" class="s-line" stroke-width="1" fill="none"/>
+<text x="92" y="304" class="tm" font-size="11.5" text-anchor="end" font-weight="normal">0</text>
+<line x1="100" y1="259.3" x2="700" y2="259.3" class="s-line" stroke-width="1" fill="none"/>
+<text x="92" y="263.3" class="tm" font-size="11.5" text-anchor="end" font-weight="normal">5</text>
+<line x1="100" y1="218.5" x2="700" y2="218.5" class="s-line" stroke-width="1" fill="none"/>
+<text x="92" y="222.5" class="tm" font-size="11.5" text-anchor="end" font-weight="normal">10</text>
+<line x1="100" y1="177.8" x2="700" y2="177.8" class="s-line" stroke-width="1" fill="none"/>
+<text x="92" y="181.8" class="tm" font-size="11.5" text-anchor="end" font-weight="normal">15</text>
+<line x1="100" y1="137" x2="700" y2="137" class="s-line" stroke-width="1" fill="none"/>
+<text x="92" y="141" class="tm" font-size="11.5" text-anchor="end" font-weight="normal">20</text>
+<line x1="100" y1="96.3" x2="700" y2="96.3" class="s-line" stroke-width="1" fill="none"/>
+<text x="92" y="100.3" class="tm" font-size="11.5" text-anchor="end" font-weight="normal">25</text>
+<text x="100" y="317" class="tm" font-size="11.5" text-anchor="middle" font-weight="normal">midnight</text>
+<text x="250" y="317" class="tm" font-size="11.5" text-anchor="middle" font-weight="normal">6am</text>
+<text x="400" y="317" class="tm" font-size="11.5" text-anchor="middle" font-weight="normal">noon</text>
+<text x="550" y="317" class="tm" font-size="11.5" text-anchor="middle" font-weight="normal">6pm</text>
+<text x="700" y="317" class="tm" font-size="11.5" text-anchor="middle" font-weight="normal">midnight</text>
+<line x1="100" y1="300" x2="700" y2="300" class="s-ink" stroke-width="1.2" fill="none"/>
+<text x="400" y="336" class="tm" font-size="12" text-anchor="middle" font-weight="normal">time of day</text>
+<text x="54" y="68" class="tm" font-size="12" text-anchor="start" font-weight="normal">× average</text>
+<path d="M 100 298.7 L 102.5 298.7 L 105 298.7 L 107.5 298.7 L 110 298.7 L 112.5 298.7 L 115 298.7 L 117.5 298.7 L 120 298.7 L 122.5 298.7 L 125 298.7 L 127.5 298.7 L 130 298.7 L 132.5 298.7 L 135 298.7 L 137.5 298.7 L 140 298.7 L 142.5 298.7 L 145 298.7 L 147.5 298.7 L 150 298.7 L 152.5 298.7 L 155 298.7 L 157.5 298.7 L 160 298.7 L 162.5 298.7 L 165 298.7 L 167.5 298.7 L 170 298.7 L 172.5 298.7 L 175 298.7 L 177.5 298.7 L 180 298.7 L 182.5 298.7 L 185 298.7 L 187.5 298.7 L 190 298.7 L 192.5 298.7 L 195 298.7 L 197.5 298.7 L 200 298.7 L 202.5 298.7 L 205 298.7 L 207.5 298.7 L 210 298.7 L 212.5 298.7 L 215 298.7 L 217.5 298.6 L 220 298.6 L 222.5 298.6 L 225 298.6 L 227.5 298.6 L 230 298.6 L 232.5 298.5 L 235 298.5 L 237.5 298.4 L 240 298.3 L 242.5 298.2 L 245 298 L 247.5 297.8 L 250 297.6 L 252.5 297.3 L 255 297 L 257.5 296.6 L 260 296.1 L 262.5 295.6 L 265 295 L 267.5 294.4 L 270 293.7 L 272.5 293 L 275 292.3 L 277.5 291.5 L 280 290.7 L 282.5 290 L 285 289.3 L 287.5 288.7 L 290 288.1 L 292.5 287.7 L 295 287.4 L 297.5 287.1 L 300 287.1 L 302.5 287.1 L 305 287.3 L 307.5 287.6 L 310 288.1 L 312.5 288.6 L 315 289.2 L 317.5 289.9 L 320 290.6 L 322.5 291.3 L 325 292 L 327.5 292.7 L 330 293.4 L 332.5 294 L 335 294.6 L 337.5 295 L 340 295.5 L 342.5 295.8 L 345 296.1 L 347.5 296.3 L 350 296.5 L 352.5 296.6 L 355 296.6 L 357.5 296.6 L 360 296.5 L 362.5 296.4 L 365 296.3 L 367.5 296.1 L 370 295.9 L 372.5 295.7 L 375 295.5 L 377.5 295.3 L 380 295 L 382.5 294.7 L 385 294.5 L 387.5 294.2 L 390 293.9 L 392.5 293.6 L 395 293.4 L 397.5 293.1 L 400 292.9 L 402.5 292.7 L 405 292.4 L 407.5 292.2 L 410 292.1 L 412.5 291.9 L 415 291.8 L 417.5 291.7 L 420 291.6 L 422.5 291.6 L 425 291.6 L 427.5 291.6 L 430 291.6 L 432.5 291.7 L 435 291.8 L 437.5 291.9 L 440 292.1 L 442.5 292.2 L 445 292.4 L 447.5 292.6 L 450 292.9 L 452.5 293.1 L 455 293.4 L 457.5 293.6 L 460 293.9 L 462.5 294.2 L 465 294.4 L 467.5 294.7 L 470 295 L 472.5 295.2 L 475 295.5 L 477.5 295.7 L 480 295.9 L 482.5 296.1 L 485 296.2 L 487.5 296.4 L 490 296.5 L 492.5 296.5 L 495 296.5 L 497.5 296.5 L 500 296.4 L 502.5 296.2 L 505 296 L 507.5 295.6 L 510 295.1 L 512.5 294.4 L 515 293.5 L 517.5 292.3 L 520 290.7 L 522.5 288.5 L 525 285.4 L 527.5 281.3 L 530 275.7 L 532.5 268.2 L 535 258.2 L 537.5 245.5 L 540 230 L 542.5 212.1 L 545 192.9 L 547.5 173.7 L 550 155.8 L 552.5 140.3 L 555 127.6 L 557.5 117.7 L 560 110.3 L 562.5 104.8 L 565 100.9 L 567.5 98.2 L 570 96.5 L 572.5 95.5 L 575 95.2 L 577.5 95.5 L 580 96.5 L 582.5 98.3 L 585 100.9 L 587.5 104.8 L 590 110.3 L 592.5 117.8 L 595 127.7 L 597.5 140.3 L 600 155.8 L 602.5 173.7 L 605 193 L 607.5 212.2 L 610 230.1 L 612.5 245.6 L 615 258.3 L 617.5 268.3 L 620 275.9 L 622.5 281.5 L 625 285.7 L 627.5 288.8 L 630 291 L 632.5 292.7 L 635 294 L 637.5 295 L 640 295.8 L 642.5 296.4 L 645 296.8 L 647.5 297.2 L 650 297.5 L 652.5 297.7 L 655 297.9 L 657.5 298.1 L 660 298.2 L 662.5 298.3 L 665 298.4 L 667.5 298.5 L 670 298.5 L 672.5 298.5 L 675 298.6 L 677.5 298.6 L 680 298.6 L 682.5 298.6 L 685 298.6 L 687.5 298.6 L 690 298.7 L 692.5 298.7 L 695 298.7 L 697.5 298.7 L 700 298.7" class="s-warn" stroke-width="2.5" fill="none" />
+<path d="M 100 298.7 L 102.5 298.7 L 105 298.7 L 107.5 298.7 L 110 298.7 L 112.5 298.7 L 115 298.7 L 117.5 298.7 L 120 298.7 L 122.5 298.7 L 125 298.7 L 127.5 298.7 L 130 298.7 L 132.5 298.7 L 135 298.7 L 137.5 298.7 L 140 298.7 L 142.5 298.7 L 145 298.7 L 147.5 298.7 L 150 298.7 L 152.5 298.7 L 155 298.7 L 157.5 298.7 L 160 298.7 L 162.5 298.7 L 165 298.7 L 167.5 298.7 L 170 298.7 L 172.5 298.7 L 175 298.7 L 177.5 298.7 L 180 298.7 L 182.5 298.7 L 185 298.7 L 187.5 298.7 L 190 298.7 L 192.5 298.7 L 195 298.7 L 197.5 298.7 L 200 298.7 L 202.5 298.7 L 205 298.7 L 207.5 298.7 L 210 298.7 L 212.5 298.7 L 215 298.7 L 217.5 298.6 L 220 298.6 L 222.5 298.6 L 225 298.6 L 227.5 298.6 L 230 298.6 L 232.5 298.5 L 235 298.5 L 237.5 298.4 L 240 298.3 L 242.5 298.2 L 245 298 L 247.5 297.8 L 250 297.6 L 252.5 297.3 L 255 297 L 257.5 296.6 L 260 296.1 L 262.5 295.6 L 265 295 L 267.5 294.4 L 270 293.7 L 272.5 293 L 275 292.3 L 277.5 291.5 L 280 290.7 L 282.5 290 L 285 289.3 L 287.5 288.7 L 290 288.1 L 292.5 287.7 L 295 287.4 L 297.5 287.1 L 300 287.1 L 302.5 287.1 L 305 287.3 L 307.5 287.6 L 310 288.1 L 312.5 288.6 L 315 289.2 L 317.5 289.9 L 320 290.6 L 322.5 291.3 L 325 292 L 327.5 292.7 L 330 293.4 L 332.5 294 L 335 294.6 L 337.5 295 L 340 295.5 L 342.5 295.8 L 345 296.1 L 347.5 296.3 L 350 296.5 L 352.5 296.6 L 355 296.6 L 357.5 296.6 L 360 296.5 L 362.5 296.4 L 365 296.3 L 367.5 296.1 L 370 295.9 L 372.5 295.7 L 375 295.5 L 377.5 295.3 L 380 295 L 382.5 294.7 L 385 294.5 L 387.5 294.2 L 390 293.9 L 392.5 293.6 L 395 293.4 L 397.5 293.1 L 400 292.9 L 402.5 292.7 L 405 292.4 L 407.5 292.2 L 410 292.1 L 412.5 291.9 L 415 291.8 L 417.5 291.7 L 420 291.6 L 422.5 291.6 L 425 291.6 L 427.5 291.6 L 430 291.6 L 432.5 291.7 L 435 291.8 L 437.5 291.9 L 440 292.1 L 442.5 292.2 L 445 292.4 L 447.5 292.6 L 450 292.9 L 452.5 293.1 L 455 293.4 L 457.5 293.6 L 460 293.9 L 462.5 294.2 L 465 294.4 L 467.5 294.7 L 470 295 L 472.5 295.2 L 475 295.5 L 477.5 295.7 L 480 295.9 L 482.5 296.1 L 485 296.2 L 487.5 296.4 L 490 296.5 L 492.5 296.6 L 495 296.6 L 497.5 296.6 L 500 296.5 L 502.5 296.4 L 505 296.3 L 507.5 296.1 L 510 295.8 L 512.5 295.4 L 515 295 L 517.5 294.5 L 520 294 L 522.5 293.3 L 525 292.6 L 527.5 291.8 L 530 291 L 532.5 290 L 535 289 L 537.5 288 L 540 286.8 L 542.5 285.7 L 545 284.6 L 547.5 283.4 L 550 282.3 L 552.5 281.2 L 555 280.1 L 557.5 279.1 L 560 278.2 L 562.5 277.5 L 565 276.8 L 567.5 276.3 L 570 275.9 L 572.5 275.6 L 575 275.6 L 577.5 275.6 L 580 275.9 L 582.5 276.3 L 585 276.8 L 587.5 277.5 L 590 278.3 L 592.5 279.2 L 595 280.1 L 597.5 281.2 L 600 282.3 L 602.5 283.5 L 605 284.6 L 607.5 285.8 L 610 286.9 L 612.5 288.1 L 615 289.1 L 617.5 290.2 L 620 291.1 L 622.5 292 L 625 292.9 L 627.5 293.6 L 630 294.3 L 632.5 295 L 635 295.5 L 637.5 296 L 640 296.4 L 642.5 296.8 L 645 297.1 L 647.5 297.4 L 650 297.6 L 652.5 297.8 L 655 298 L 657.5 298.1 L 660 298.2 L 662.5 298.3 L 665 298.4 L 667.5 298.5 L 670 298.5 L 672.5 298.5 L 675 298.6 L 677.5 298.6 L 680 298.6 L 682.5 298.6 L 685 298.6 L 687.5 298.6 L 690 298.7 L 692.5 298.7 L 695 298.7 L 697.5 298.7 L 700 298.7" class="s-accent" stroke-width="2.5" fill="none" />
+<line x1="100" y1="275.6" x2="700" y2="275.6" class="s-amber" stroke-width="1.4" fill="none" stroke-dasharray="6 4"/>
+<text x="104" y="268.6" class="tm" font-size="11.5" text-anchor="start" font-weight="normal">upload capacity: three times the average</text>
+<text x="490" y="104.4" class="t" font-size="12" text-anchor="end" font-weight="600">Halloween: about 25 times</text>
+<text x="425" y="251.1" class="t" font-size="12" text-anchor="middle" font-weight="600">an ordinary weekday</text>
+<text x="30" y="366" class="tm" font-size="11.5" text-anchor="start" font-weight="normal" font-style="italic">Nkechi's doorbells. The ordinary day's shape is illustrative; the three and twenty-five are from the story.</text>
+</svg>
