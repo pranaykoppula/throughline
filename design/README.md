@@ -16,5 +16,7 @@ In the order they build on one another. Each line says where the spine first nee
 6. [Timeouts and circuit breakers](timeouts.md): how long to wait, what to do instead, and when to stop asking a part that's failing. First needed on [page 11](../11-software-that-must-not-go-down.md).
 7. [Consensus and leader election](consensus.md): how several machines agree on one thing, such as which of them is in charge. First needed on [page 8](../08-too-many-users-too-much-data.md).
 8. [Sagas](sagas.md): one piece of work across several services, without a transaction, with a planned way back for each step. First needed on [page 4](../04-data-outlives-programs.md).
-
-More pages are planned: asynchronous work and message queues, batch or stream, service boundaries, and time and ordering.
+9. [Asynchronous work and message queues](async-work.md): handing work off to be done later, and deciding what happens to work nobody is watching. First needed on [page 2](../02-one-machine-many-programs.md).
+10. [Batch or stream](batch-or-stream.md): process data later, all at once, or as it arrives, and the two clocks in every record. First needed on [page 2](../02-one-machine-many-programs.md).
+11. [Time and ordering](time-and-ordering.md): why "which happened first?" can't be answered by comparing clocks across machines. First needed on [page 5](../05-machines-need-to-talk.md).
+12. [Service boundaries](service-boundaries.md): where to cut a system into parts, and whether the parts should be separate programs. First needed on [page 3](../03-programs-too-big-for-one-head.md).

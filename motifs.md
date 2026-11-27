@@ -56,6 +56,7 @@ Any copy, kept to be faster, safer or closer, is sometimes out of date. The work
 - [Consistency](data/consistency.md): Tom's nine library branches, each with its own catalogue.
 - [Append-only logs](dsa/append-only-logs.md): Teresa's balance, a copy derived from the ledger, which wins whenever they disagree.
 - [Consensus and leader election](design/consensus.md): Ilinca's two schedulers, each sure it was in charge.
+- [Time and ordering](design/time-and-ordering.md): Emre's servers, each clock a little wrong, deciding which update came last.
 
 ## Where the data is sets the cost
 

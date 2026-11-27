@@ -62,6 +62,8 @@ Motif: [waiting is where the time goes](motifs.md#waiting-is-where-the-time-goes
 - Learning this is also learning [graphs](dsa/graphs.md), because a deadlock is a cycle in a graph of who waits for whom, and finding cycles is a standard graph algorithm.
 - Learning this is also learning [cloud](09-buying-computers-is-too-slow.md), because a hypervisor is the same trick one floor down: dividing one machine among whole operating systems instead of programs. IBM was doing it by the late 1960s, and it's what the hyperscalers rent out by the hour, noisy neighbours included.
 - Learning this is also learning [heaps and priority queues](dsa/heaps.md), because a scheduler choosing who runs next is asking a priority queue "what's most urgent?" many times a second.
+- Learning this is also learning [asynchronous work and message queues](design/async-work.md), because handing a job to a queue and collecting the result later is Ruth's batch queue, now between services.
+- Learning this is also learning [batch or stream](design/batch-or-stream.md), because overnight runs and answers while you wait are still the two ways of processing data, and most systems need both.
 
 ## Resources
 

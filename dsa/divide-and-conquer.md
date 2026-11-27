@@ -67,6 +67,7 @@ Divide and conquer solves a problem by splitting it into smaller subproblems of 
 - Learning this is also learning [dynamic programming](dynamic-programming.md), because it's what to do when the pieces overlap instead of standing apart.
 - Learning this is also learning [growth](growth.md), because halving is why binary search grows only with the logarithm of the size, and splitting is why the good sorts grow as n log n.
 - Learning this is also learning [exact or approximate](exact-or-approximate.md), because mergeable summaries are the approximate way to combine distinct counts that don't add.
+- Learning this is also learning [batch or stream](../design/batch-or-stream.md), because batch processing at scale is splitting complete data and combining the answers.
 
 ## Resources
 
