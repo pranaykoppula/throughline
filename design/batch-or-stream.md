@@ -90,4 +90,4 @@ The distinction between when an event happened and when it's processed was set o
 
 Find a number on a dashboard you use that updates through the day. Find out whether it's computed as data arrives or in a periodic batch, and whether yesterday's value ever changes after the fact. If it never changes, ask what happens to data that arrives late.
 
-Practise this: [every click, once](../exercises/design/ad-click-counter.md), fast dashboards and exact invoices from the same clicks.
+Practise this: [every click, once](../exercises/design/ad-click-counter.md), fast dashboards and exact invoices from the same clicks, and [a million numbers a second](../exercises/design/metrics-monitoring.md), alerts as a stream and summaries as data ages.

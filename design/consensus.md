@@ -90,3 +90,5 @@ A **consensus protocol** lets a group of machines agree on a value, usually the 
 ## Go and look
 
 Find something you run that's meant to have exactly one of something: one primary database, one scheduler, one consumer. Find out how it decides, and what stops the old one from acting if it pauses for a minute and wakes up.
+
+Practise this: [ten o'clock on Friday](../exercises/design/flash-ticket-sale.md), where each section's seats have exactly one owner.

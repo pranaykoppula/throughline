@@ -78,3 +78,5 @@ Consistency is what a system promises about how copies of data relate to each ot
 ## Go and look
 
 Pick one piece of data you see on a screen every day and count how many copies of it exist between where it's stored and your eyes. For each one, ask how stale it's allowed to be, and who decided.
+
+Practise this: [two cursors, one sentence](../exercises/design/shared-document.md), where every copy must end up with the same document.
