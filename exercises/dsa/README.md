@@ -14,10 +14,10 @@ Twenty-four LeetCode Hard problems, two for each kind of question. The categorie
 | Everything with this prefix | [The letter grid](word-search-ii.md) (212); [The shop's search box](prefix-and-suffix-search.md) (745) | [tries](../../dsa/tries.md) |
 | Split, solve, combine | [The readings that came after](count-of-smaller-numbers-after-self.md) (315); [The price that more than halved](reverse-pairs.md) (493) | [divide and conquer](../../dsa/divide-and-conquer.md), [sorting](../../dsa/sorting.md) |
 | Overlapping questions | [The last balloon](burst-balloons.md) (312); [The marker in the sequence](distinct-subsequences.md) (115) | [dynamic programming](../../dsa/dynamic-programming.md) |
-| The best step now | [The stickers on the chart](candy.md) (135); Course Schedule III (630) | [greedy algorithms](../../dsa/greedy.md), [heaps](../../dsa/heaps.md) |
-| Build a structure for the pattern | LFU Cache (460); All O`one Data Structure (432) | [choosing a data structure](../../dsa/choosing.md), [hash tables](../../dsa/hash-tables.md) |
+| The best step now | [The stickers on the chart](candy.md) (135); [The training year](course-schedule-iii.md) (630) | [greedy algorithms](../../dsa/greedy.md), [heaps](../../dsa/heaps.md) |
+| Build a structure for the pattern | [The least-asked question](lfu-cache.md) (460); [The leaderboard's ends](all-oone-data-structure.md) (432) | [choosing a data structure](../../dsa/choosing.md), [hash tables](../../dsa/hash-tables.md) |
 
-Numbers are LeetCode's. All twenty-four were checked as Hard and free to view on 2026-11-26; LeetCode sometimes re-rates problems. Exercises without a link are still to be written.
+Numbers are LeetCode's. All twenty-four were checked as Hard and free to view on 2026-11-26; LeetCode sometimes re-rates problems.
 
 ## How the code works
 

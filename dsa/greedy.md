@@ -84,4 +84,4 @@ A greedy algorithm builds a solution step by step, at each step choosing the opt
 
 Find a rule in something you run that picks "the best one now": the least-busy server, the cheapest supplier, the nearest warehouse. Ask whether a choice it makes now could make a later choice worse, and whether anyone has ever compared its results with a better plan.
 
-Practise this: [splitting the translation](../exercises/dsa/split-array-largest-sum.md) (LeetCode 410, Hard), where a greedy fill is provably safe and answers a yes-or-no question for a binary search, and [the stickers on the chart](../exercises/dsa/candy.md) (LeetCode 135, Hard), two greedy passes that each give the least a rule allows.
+Practise this: [splitting the translation](../exercises/dsa/split-array-largest-sum.md) (LeetCode 410, Hard), where a greedy fill is provably safe and answers a yes-or-no question for a binary search, and [the stickers on the chart](../exercises/dsa/candy.md) (LeetCode 135, Hard), two greedy passes that each give the least a rule allows; and [the training year](../exercises/dsa/course-schedule-iii.md) (LeetCode 630, Hard), where a heap holds the choice you might need to undo.
