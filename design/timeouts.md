@@ -86,3 +86,5 @@ A **timeout** limits how long a caller waits. Good ones come from a budget: the 
 ## Go and look
 
 Find three calls in something you run that go to another service, and find each one's timeout. If any of them is the library's default, find out what that default is. Then ask what the caller is holding on to while it waits.
+
+Practise this: [the crawl](../exercises/design/web-crawler.md), where slow sites mustn't tie up the fetchers, and [the nearest car](../exercises/design/ride-hailing.md), where an unanswered offer has to expire.
