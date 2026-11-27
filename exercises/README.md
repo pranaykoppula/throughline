@@ -3,9 +3,12 @@
 Practice for the two areas where the wiki goes deep: [algorithms and data structures](../dsa/README.md), and system design. These pages aren't part of the wiki's graph of ideas. They're where you test whether the ideas have stuck.
 
 - [Algorithms and data structures](dsa/README.md): twenty-four LeetCode Hard problems, two for each kind of question a program keeps asking of its data.
-- [System design](design/README.md): design cases, worked through step by step. Coming after the system design pages.
+- [System design](design/README.md): sixteen design cases, two for each kind of system, each with two defensible designs and what each one costs.
 
 ## How each exercise works
+
+The algorithm exercises work like this; the design cases are similar, with designs and their trade-offs in place of code.
+
 
 Every exercise starts with a situation, because a problem is easier to think about when you know why anyone needs it solved. Then it says which question the problem is really asking, shows the answer most people reach for first and why it fails, and gives three hints, each hidden until you open it. The solution is hidden too: the idea in prose first, then code in Python, C++, Java, Go and Rust. On the published site the code is in tabs, and the site remembers your language. On GitHub each language is a section you can open.
 

@@ -91,6 +91,8 @@ The scope rule (a page must carry a mental model that recurs outside its own fie
 
 Each exercise page follows one shape: the situation (a short scene with a motive, in our own words, never LeetCode's text), the problem in a paragraph with a link to the original, the question it asks (linked to `dsa/choosing.md` and its concept pages), the tempting first answer and why it fails, three hints in collapsed sections, the solution in a collapsed section (the idea in prose, why it works, time and memory, then the code), where people slip, and related pages.
 
+A design case follows a parallel shape: the situation, requirements and rough numbers, the questions from `design/approach.md` that matter most, the tempting first design and where it breaks, three hints, two defensible designs in a collapsed section (each with what it costs), what breaks at ten times the size, where people slip, and related pages. Design cases have no code, and the set together exercises every page in `design/`; `exercises/design/README.md` keeps the table that shows it.
+
 Code comes in Python, C++, Java, Go and Rust, with LeetCode's signatures so it can be pasted there. The code lives in `exercises/<area>/code/<exercise>/`, one solution file per language, with a small driver per language and `tests.json`. `scripts/make_exercises.py` copies the solutions into the page between `<!-- code:start -->` and `<!-- code:end -->`, as one collapsible section per language; on the published site `_includes/head-custom.html` turns them into tabs and remembers the reader's language. `scripts/test_exercises.py` runs every solution in every language against its tests, and CI fails on any failure or any page out of date.
 
 ## 4. The model

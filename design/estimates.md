@@ -90,3 +90,5 @@ A back-of-the-envelope estimate multiplies a few rough numbers, such as users, a
 ## Go and look
 
 Pick something you run and find its busiest hour of the past year. Divide its requests in that hour by the average hour. That number is your peak factor, and it's worth knowing before the next design meeting.
+
+Practise this: [the final whistle](../exercises/design/social-feed.md), where the numbers decide between two designs.

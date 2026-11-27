@@ -90,3 +90,5 @@ A load balancer sits in front of a pool of servers and chooses one for each requ
 ## Go and look
 
 Find the health check behind something you run and read what it actually tests. Then ask what would happen to a server that answered it perfectly while failing every real request, and how long it would stay in rotation.
+
+Practise this: [the school's messages](../exercises/design/group-chat.md), with a million long-lived connections to spread.

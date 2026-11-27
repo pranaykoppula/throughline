@@ -78,3 +78,5 @@ Partitioning, or sharding, splits a dataset into pieces stored on different mach
 ## Go and look
 
 If a database you use is sharded, find its partition key and check whether your most common query can be answered from one partition or has to ask them all.
+
+Practise this: [every click, once](../exercises/design/ad-click-counter.md) and [the final whistle](../exercises/design/social-feed.md), where one hot key sets the speed of everything.

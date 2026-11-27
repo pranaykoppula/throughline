@@ -88,3 +88,5 @@ A **saga** is a sequence of local transactions, each committed in its own servic
 ## Go and look
 
 Find a piece of work in something you've built that calls two or more services that change something. Pick a point between two of the calls and ask what happens if the process dies right there: what's been done, who would notice, and what would undo it.
+
+Practise this: [the tutors' wages](../exercises/design/payments-ledger.md), where payouts to tutors' banks are a saga.
