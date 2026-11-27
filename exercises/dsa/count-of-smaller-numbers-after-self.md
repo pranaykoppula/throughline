@@ -289,6 +289,6 @@ impl Solution {
 
 ## Related
 
-- The other exercise in this category: Reverse Pairs (LeetCode 493), coming in a later batch.
+- The other exercise in this category: [the price that more than halved](reverse-pairs.md) (LeetCode 493).
 - Concept pages: [divide and conquer](../../dsa/divide-and-conquer.md), [sorting](../../dsa/sorting.md), [growth](../../dsa/growth.md).
 - More practice of the same shape: counting inversions, the number of pairs that are out of order, which is the same merge with a running total.
