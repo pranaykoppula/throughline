@@ -1,0 +1,62 @@
+[
+ {
+  "name": "the example in the story",
+  "input": "rabbbit\nrabbit\n",
+  "output": "3\n"
+ },
+ {
+  "name": "a second example",
+  "input": "babgbag\nbag\n",
+  "output": "5\n"
+ },
+ {
+  "name": "no way",
+  "input": "abc\nabd\n",
+  "output": "0\n"
+ },
+ {
+  "name": "the same text",
+  "input": "abc\nabc\n",
+  "output": "1\n"
+ },
+ {
+  "name": "t longer than s",
+  "input": "ab\nabc\n",
+  "output": "0\n"
+ },
+ {
+  "name": "one letter many times",
+  "input": "aaaaaaaaaa\naaa\n",
+  "output": "120\n"
+ },
+ {
+  "name": "random text 1",
+  "input": "aaabbbbbaaaababaaaaaaba\nababab\n",
+  "output": "972\n"
+ },
+ {
+  "name": "random text 2",
+  "input": "bbabbabbbaabbaaabbaaaabbbbbbbaaaaababbabbbabbbaaaaaabaaabb\naa\n",
+  "output": "378\n"
+ },
+ {
+  "name": "random text 3",
+  "input": "abaaabaaababaaaabbabaabbbbbaaaba\nbabbba\n",
+  "output": "12078\n"
+ },
+ {
+  "name": "random text 4",
+  "input": "bcccabbbabababcbbbabaccabbbabbcbca\nca\n",
+  "output": "40\n"
+ },
+ {
+  "name": "random text 5",
+  "input": "bcabacacccbacbcbcbcaccababbbccabc\nbbbcb\n",
+  "output": "636\n"
+ },
+ {
+  "name": "counts that overflow 64 bits along the way, with an answer of 0",
+  "input": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaab\n",
+  "output": "0\n"
+ }
+]
