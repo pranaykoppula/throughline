@@ -59,6 +59,7 @@ Data modelling identifies the entities in a domain, the attributes recorded abou
 - Learning this is also learning [migrations](migrations.md), because changing a model that's already full of data is a migration.
 - Learning this is also learning [type systems](../languages/type-systems.md), because a schema is the model written down for a machine to check.
 - Learning this is also learning [floating point](../math/floating-point.md), because choosing how to store money is a modelling decision.
+- Learning this is also learning [service boundaries](../design/service-boundaries.md), because a system's nouns are a model of its data, not automatically a good way to divide the work.
 
 ## Resources
 

@@ -72,6 +72,7 @@ Motif: [layers hide things, until they leak](motifs.md#layers-hide-things-until-
 - Learning this is also learning [amortised cost](dsa/amortised-cost.md), because the hash table Elena chose stays fast on average by occasionally stopping to grow and move every entry, and amortised cost is how you count that.
 - Learning this is also learning [power and predictability](dsa/power-and-predictability.md), because Turing-completeness, which nearly every language has, also means nobody can check in advance what a program will do; the least powerful language that does the job stays checkable.
 - Learning this is also learning [search](dsa/search.md), because Elena's catalogue answered one exact question, a part number, and search is what finding becomes when people ask in their own words.
+- Learning this is also learning [service boundaries](design/service-boundaries.md), because splitting a system into services is Elena's question about modules again, with a network at every boundary.
 
 ## Resources
 

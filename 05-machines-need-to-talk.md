@@ -76,6 +76,7 @@ Motif: [every correction acts on old news](motifs.md#every-correction-acts-on-ol
 - Learning this is also learning [greedy algorithms](dsa/greedy.md), because the shortest-path routing that carries every packet always extends the nearest unexplored router first, and for shortest paths that greedy choice is provably right.
 - Learning this is also learning [state estimation](signals/state-estimation.md), because Jacobson's fix also had TCP keep a running estimate of each connection's delay, smoothed from noisy measurements, to decide when a packet was really lost.
 - Learning this is also learning [idempotency](design/idempotency.md), because Lin's numbered blocks let a resent block be recognised, and every retry across a network needs the same protection.
+- Learning this is also learning [time and ordering](design/time-and-ordering.md), because Lin's numbered blocks put data in order without trusting any clock, which is how distributed systems order events too.
 
 ## Resources
 

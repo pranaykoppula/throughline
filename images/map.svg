@@ -21,19 +21,21 @@
 <text x="410.0" y="135" font-size="13" font-weight="700" text-anchor="middle" fill="#1f2328">2</text>
 <text x="410.0" y="170" font-size="13" text-anchor="middle" fill="#1f2328">One machine,</text>
 <text x="410.0" y="187" font-size="13" text-anchor="middle" fill="#1f2328">many programs</text>
-<circle cx="396.0" cy="208" r="5" fill="#1baa7a"/>
-<circle cx="410.0" cy="208" r="5" fill="#e09a1a"/>
-<circle cx="424.0" cy="208" r="5" fill="#e86fe0"/>
+<circle cx="389.0" cy="208" r="5" fill="#1baa7a"/>
+<circle cx="403.0" cy="208" r="5" fill="#e09a1a"/>
+<circle cx="417.0" cy="208" r="5" fill="#3f51b5"/>
+<circle cx="431.0" cy="208" r="5" fill="#e86fe0"/>
 <circle cx="570.0" cy="130" r="15" fill="#ffffff" stroke="#1f2328" stroke-width="4"/>
 <text x="570.0" y="135" font-size="13" font-weight="700" text-anchor="middle" fill="#1f2328">3</text>
 <text x="570.0" y="170" font-size="13" text-anchor="middle" fill="#1f2328">Programs too big</text>
 <text x="570.0" y="187" font-size="13" text-anchor="middle" fill="#1f2328">for one head</text>
-<circle cx="535.0" cy="208" r="5" fill="#1baa7a"/>
-<circle cx="549.0" cy="208" r="5" fill="#2a78d6"/>
-<circle cx="563.0" cy="208" r="5" fill="#e09a1a"/>
-<circle cx="577.0" cy="208" r="5" fill="#e86fe0"/>
-<circle cx="591.0" cy="208" r="5" fill="#8fb339"/>
-<circle cx="605.0" cy="208" r="5" fill="#6e7781"/>
+<circle cx="528.0" cy="208" r="5" fill="#1baa7a"/>
+<circle cx="542.0" cy="208" r="5" fill="#2a78d6"/>
+<circle cx="556.0" cy="208" r="5" fill="#e09a1a"/>
+<circle cx="570.0" cy="208" r="5" fill="#3f51b5"/>
+<circle cx="584.0" cy="208" r="5" fill="#e86fe0"/>
+<circle cx="598.0" cy="208" r="5" fill="#8fb339"/>
+<circle cx="612.0" cy="208" r="5" fill="#6e7781"/>
 <circle cx="730.0" cy="130" r="15" fill="#ffffff" stroke="#1f2328" stroke-width="4"/>
 <text x="730.0" y="135" font-size="13" font-weight="700" text-anchor="middle" fill="#1f2328">4</text>
 <text x="730.0" y="170" font-size="13" text-anchor="middle" fill="#1f2328">Data outlives</text>

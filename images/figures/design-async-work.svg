@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 370" width="760" height="370" role="img" aria-labelledby="t d">
+<title id="t">One photo that could never succeed</title>
+<desc id="d">A line chart of the age of the oldest waiting photo during the morning of the bad photo. Without a retry limit, every worker crashes on the same photo in turn and the oldest age climbs steadily to about two hours. With a limit of five tries and a dead-letter queue, the bad photo is set aside after about twenty minutes and the oldest age falls back to a few minutes.</desc>
+
+<style>
+  .bg { fill: #ffffff; }
+  .t { fill: #1f2328; } .tm { fill: #59636e; }
+  .f-ink { fill: #1f2328; } .s-ink { stroke: #1f2328; }
+  .f-line { fill: #d0d7de; } .s-line { stroke: #d0d7de; }
+  .f-faint { fill: #f6f8fa; } .s-faint { stroke: #f6f8fa; }
+  .f-accent { fill: #2a78d6; } .s-accent { stroke: #2a78d6; }
+  .f-warn { fill: #d64a4a; } .s-warn { stroke: #d64a4a; }
+  .f-ok { fill: #1baa7a; } .s-ok { stroke: #1baa7a; }
+  .f-amber { fill: #e09a1a; } .s-amber { stroke: #e09a1a; }
+  .f-soft-accent { fill: #ddeaf9; } .f-soft-warn { fill: #f8dede; } .f-soft-ok { fill: #d8f1e8; } .f-soft-amber { fill: #faecd2; }
+  @media (prefers-color-scheme: dark) {
+    .bg { fill: #0d1117; }
+    .t { fill: #e6edf3; } .tm { fill: #9198a1; }
+    .f-ink { fill: #e6edf3; } .s-ink { stroke: #e6edf3; }
+    .f-line { fill: #3d444d; } .s-line { stroke: #3d444d; }
+    .f-faint { fill: #161b22; } .s-faint { stroke: #161b22; }
+    .f-accent { fill: #4c9aff; } .s-accent { stroke: #4c9aff; }
+    .f-warn { fill: #ff7b72; } .s-warn { stroke: #ff7b72; }
+    .f-ok { fill: #3fb950; } .s-ok { stroke: #3fb950; }
+    .f-amber { fill: #e3b341; } .s-amber { stroke: #e3b341; }
+    .f-soft-accent { fill: #102a4a; } .f-soft-warn { fill: #4a1c1c; } .f-soft-ok { fill: #0f3a2a; } .f-soft-amber { fill: #3d2e0e; }
+  }
+  @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+  text { font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; }
+</style>
+<defs><marker id="arrow-ink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" class="f-ink"/></marker><marker id="arrow-accent" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" class="f-accent"/></marker><marker id="arrow-warn" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" class="f-warn"/></marker><marker id="arrow-ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" class="f-ok"/></marker><marker id="arrow-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" class="f-amber"/></marker><marker id="arrow-line" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" class="f-line"/></marker></defs>
+<rect width="760" height="370" class="bg"/>
+<text x="30" y="32" class="t" font-size="15" text-anchor="start" font-weight="600">Age of the oldest waiting photo</text>
+<text x="30" y="51" class="tm" font-size="12.5" text-anchor="start" font-weight="normal">From the moment the unreadable photo was uploaded</text>
+<line x1="100" y1="290" x2="700" y2="290" class="s-line" stroke-width="1" fill="none"/>
+<text x="92" y="294" class="tm" font-size="11.5" text-anchor="end" font-weight="normal">0</text>
+<line x1="100" y1="241.5" x2="700" y2="241.5" class="s-line" stroke-width="1" fill="none"/>
+<text x="92" y="245.5" class="tm" font-size="11.5" text-anchor="end" font-weight="normal">30 min</text>
+<line x1="100" y1="193.1" x2="700" y2="193.1" class="s-line" stroke-width="1" fill="none"/>
+<text x="92" y="197.1" class="tm" font-size="11.5" text-anchor="end" font-weight="normal">1 h</text>
+<line x1="100" y1="144.6" x2="700" y2="144.6" class="s-line" stroke-width="1" fill="none"/>
+<text x="92" y="148.6" class="tm" font-size="11.5" text-anchor="end" font-weight="normal">1.5 h</text>
+<line x1="100" y1="96.2" x2="700" y2="96.2" class="s-line" stroke-width="1" fill="none"/>
+<text x="92" y="100.2" class="tm" font-size="11.5" text-anchor="end" font-weight="normal">2 h</text>
+<text x="100" y="307" class="tm" font-size="11.5" text-anchor="middle" font-weight="normal">0</text>
+<text x="244" y="307" class="tm" font-size="11.5" text-anchor="middle" font-weight="normal">30</text>
+<text x="388" y="307" class="tm" font-size="11.5" text-anchor="middle" font-weight="normal">60</text>
+<text x="532" y="307" class="tm" font-size="11.5" text-anchor="middle" font-weight="normal">90</text>
+<text x="676" y="307" class="tm" font-size="11.5" text-anchor="middle" font-weight="normal">120</text>
+<line x1="100" y1="290" x2="700" y2="290" class="s-ink" stroke-width="1.2" fill="none"/>
+<text x="400" y="326" class="tm" font-size="12" text-anchor="middle" font-weight="normal">minutes since the bad photo arrived</text>
+<text x="54" y="68" class="tm" font-size="12" text-anchor="start" font-weight="normal">age</text>
+<path d="M 100 285.2 L 104.8 283.6 L 109.6 282.1 L 114.4 280.5 L 119.2 279 L 124 277.4 L 128.8 275.8 L 133.6 274.3 L 138.4 272.7 L 143.2 271.2 L 148 269.6 L 152.8 268.1 L 157.6 266.5 L 162.4 265 L 167.2 263.4 L 172 261.9 L 176.8 260.3 L 181.6 258.8 L 186.4 257.2 L 191.2 255.7 L 196 254.1 L 200.8 252.6 L 205.6 251 L 210.4 249.5 L 215.2 247.9 L 220 246.4 L 224.8 244.8 L 229.6 243.3 L 234.4 241.7 L 239.2 240.2 L 244 238.6 L 248.8 237.1 L 253.6 235.5 L 258.4 234 L 263.2 232.4 L 268 230.9 L 272.8 229.3 L 277.6 227.8 L 282.4 226.2 L 287.2 224.7 L 292 223.1 L 296.8 221.6 L 301.6 220 L 306.4 218.5 L 311.2 216.9 L 316 215.4 L 320.8 213.8 L 325.6 212.3 L 330.4 210.7 L 335.2 209.2 L 340 207.6 L 344.8 206.1 L 349.6 204.5 L 354.4 203 L 359.2 201.4 L 364 199.9 L 368.8 198.3 L 373.6 196.8 L 378.4 195.2 L 383.2 193.7 L 388 192.1 L 392.8 190.6 L 397.6 189 L 402.4 187.5 L 407.2 185.9 L 412 184.4 L 416.8 182.8 L 421.6 181.3 L 426.4 179.7 L 431.2 178.2 L 436 176.6 L 440.8 175 L 445.6 173.5 L 450.4 171.9 L 455.2 170.4 L 460 168.8 L 464.8 167.3 L 469.6 165.7 L 474.4 164.2 L 479.2 162.6 L 484 161.1 L 488.8 159.5 L 493.6 158 L 498.4 156.4 L 503.2 154.9 L 508 153.3 L 512.8 151.8 L 517.6 150.2 L 522.4 148.7 L 527.2 147.1 L 532 145.6 L 536.8 144 L 541.6 142.5 L 546.4 140.9 L 551.2 139.4 L 556 137.8 L 560.8 136.3 L 565.6 134.7 L 570.4 133.2 L 575.2 131.6 L 580 130.1 L 584.8 128.5 L 589.6 127 L 594.4 125.4 L 599.2 123.9 L 604 122.3 L 608.8 120.8 L 613.6 119.2 L 618.4 117.7 L 623.2 116.1 L 628 114.6 L 632.8 113 L 637.6 111.5 L 642.4 109.9 L 647.2 108.4 L 652 106.8 L 656.8 105.3 L 661.6 103.7 L 666.4 102.2 L 671.2 100.6 L 676 99.1 L 680.8 97.5 L 685.6 96 L 690.4 94.4 L 695.2 92.9 L 700 91.3" class="s-warn" stroke-width="2.5" fill="none" />
+<path d="M 100 285.2 L 104.8 283.6 L 109.6 282.1 L 114.4 280.5 L 119.2 279 L 124 277.4 L 128.8 275.8 L 133.6 274.3 L 138.4 272.7 L 143.2 271.2 L 148 269.6 L 152.8 268.1 L 157.6 266.5 L 162.4 265 L 167.2 263.4 L 172 261.9 L 176.8 260.3 L 181.6 258.8 L 186.4 257.2 L 191.2 255.7 L 196 254.1 L 200.8 256.7 L 205.6 259.3 L 210.4 261.9 L 215.2 264.5 L 220 267.1 L 224.8 269.6 L 229.6 272.2 L 234.4 274.8 L 239.2 277.4 L 244 280 L 248.8 282.6 L 253.6 283.5 L 258.4 283.5 L 263.2 283.5 L 268 283.5 L 272.8 283.5 L 277.6 283.5 L 282.4 283.5 L 287.2 283.5 L 292 283.5 L 296.8 283.5 L 301.6 283.5 L 306.4 283.5 L 311.2 283.5 L 316 283.5 L 320.8 283.5 L 325.6 283.5 L 330.4 283.5 L 335.2 283.5 L 340 283.5 L 344.8 283.5 L 349.6 283.5 L 354.4 283.5 L 359.2 283.5 L 364 283.5 L 368.8 283.5 L 373.6 283.5 L 378.4 283.5 L 383.2 283.5 L 388 283.5 L 392.8 283.5 L 397.6 283.5 L 402.4 283.5 L 407.2 283.5 L 412 283.5 L 416.8 283.5 L 421.6 283.5 L 426.4 283.5 L 431.2 283.5 L 436 283.5 L 440.8 283.5 L 445.6 283.5 L 450.4 283.5 L 455.2 283.5 L 460 283.5 L 464.8 283.5 L 469.6 283.5 L 474.4 283.5 L 479.2 283.5 L 484 283.5 L 488.8 283.5 L 493.6 283.5 L 498.4 283.5 L 503.2 283.5 L 508 283.5 L 512.8 283.5 L 517.6 283.5 L 522.4 283.5 L 527.2 283.5 L 532 283.5 L 536.8 283.5 L 541.6 283.5 L 546.4 283.5 L 551.2 283.5 L 556 283.5 L 560.8 283.5 L 565.6 283.5 L 570.4 283.5 L 575.2 283.5 L 580 283.5 L 584.8 283.5 L 589.6 283.5 L 594.4 283.5 L 599.2 283.5 L 604 283.5 L 608.8 283.5 L 613.6 283.5 L 618.4 283.5 L 623.2 283.5 L 628 283.5 L 632.8 283.5 L 637.6 283.5 L 642.4 283.5 L 647.2 283.5 L 652 283.5 L 656.8 283.5 L 661.6 283.5 L 666.4 283.5 L 671.2 283.5 L 676 283.5 L 680.8 283.5 L 685.6 283.5 L 690.4 283.5 L 695.2 283.5 L 700 283.5" class="s-ok" stroke-width="2.5" fill="none" />
+<line x1="196" y1="250.1" x2="196" y2="214.1" class="s-ink" stroke-width="1" fill="none" stroke-dasharray="3 3"/>
+<text x="202" y="222.1" class="tm" font-size="11" text-anchor="start" font-weight="normal">fifth failure: moved to the dead-letter queue</text>
+<text x="436" y="141.4" class="t" font-size="12" text-anchor="end" font-weight="600">no retry limit: every worker crashes in turn</text>
+<text x="388" y="270.6" class="t" font-size="12" text-anchor="start" font-weight="600">five tries, then a dead-letter queue</text>
+<text x="30" y="356" class="tm" font-size="11.5" text-anchor="start" font-weight="normal" font-style="italic">Siobhán's photo workers. The two hours and twenty minutes are from the story; the curves are illustrative.</text>
+</svg>

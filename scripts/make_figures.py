@@ -1711,6 +1711,122 @@ def fig_design_sagas():
            "tm", 11.5, italic=True)
     return f
 
+
+def fig_design_async_work():
+    f = Fig(370, "One photo that could never succeed",
+            "A line chart of the age of the oldest waiting photo during the morning of the bad photo. Without a retry "
+            "limit, every worker crashes on the same photo in turn and the oldest age climbs steadily to about two hours. "
+            "With a limit of five tries and a dead-letter queue, the bad photo is set aside after about twenty minutes and "
+            "the oldest age falls back to a few minutes.")
+    f.heading(30, 32, "Age of the oldest waiting photo", "From the moment the unreadable photo was uploaded")
+    p = axes(f, 100, 80, 600, 210, "minutes since the bad photo arrived", "age",
+             [(0, "0"), (30, "30"), (60, "60"), (90, "90"), (120, "120")],
+             [(0, "0"), (30, "30 min"), (60, "1 h"), (90, "1.5 h"), (120, "2 h")], (0, 125), (0, 130))
+    ts = list(range(0, 126))
+    no_limit = [3 + t * 0.96 for t in ts]
+    limited = [3 + t * 0.96 if t <= 20 else max(4, 3 + 20 * 0.96 - (t - 20) * 1.6) for t in ts]
+    f.poly([p(t, v) for t, v in zip(ts, no_limit)], "warn", 2.5)
+    f.poly([p(t, v) for t, v in zip(ts, limited)], "ok", 2.5)
+    x, y = p(20, 22.2)
+    f.line(x, y - 4, x, y - 40, "ink", 1, dash="3 3")
+    f.text(x + 6, y - 32, "fifth failure: moved to the dead-letter queue", "tm", 11)
+    f.text(p(70, 92)[0], p(70, 92)[1], "no retry limit: every worker crashes in turn", "t", 12, "end", "600")
+    f.text(p(60, 12)[0], p(60, 12)[1], "five tries, then a dead-letter queue", "t", 12, "start", "600")
+    f.text(30, 356, "Siobhán's photo workers. The two hours and twenty minutes are from the story; the curves are illustrative.",
+           "tm", 11.5, italic=True)
+    return f
+
+
+def fig_design_batch_or_stream():
+    f = Fig(470, "Too late, and out of order",
+            "Two panels. Top: a night's fraudulent purchases on copied cards, accumulating from evening until the two "
+            "o'clock batch run blocks the cards; with stream scoring, each card is blocked after its first few purchases. "
+            "Bottom: a bus's card reader, offline for six hours, sends fifteen fares at once when it reconnects; counted by "
+            "arrival time they look like fifteen purchases in a moment, counted by when they happened they're spread "
+            "across the day.")
+    f.heading(30, 32, "Purchases on one copied card overnight", "Batch blocks it at 2am; the stream blocks it within minutes")
+    p = axes(f, 100, 84, 600, 108, "", "purchases",
+             [(18, "6pm"), (21, "9pm"), (24, "midnight"), (26, "2am")],
+             [(0, "0"), (20, "20"), (40, "40")], (18, 27), (0, 48))
+    hours = [18 + i * 0.1 for i in range(0, 81)]
+    batch = [min(45, max(0, (h - 18.5) * 5.6)) if h < 26 else 45 for h in hours]
+    f.poly([p(h, v) for h, v in zip(hours, batch)], "warn", 2.5)
+    stream = [min(3, max(0, (h - 18.5) * 5.6)) for h in hours]
+    f.poly([p(h, v) for h, v in zip(hours, stream)], "ok", 2.5)
+    bx, _ = p(26, 0)
+    f.line(bx, 84, bx, 192, "amber", 1.2, dash="5 4")
+    f.text(bx - 6, 98, "batch run: card blocked", "tm", 11, "end")
+    f.text(p(22.5, 34)[0], p(22.5, 34)[1], "nightly batch", "t", 12, "end", "600")
+    f.text(p(21, 6)[0], p(21, 6)[1], "stream: blocked after three", "t", 12, "start", "600")
+
+    f.heading(30, 262, "Fifteen bus fares from one reader", "Dots by when each fare happened, and by when it reached the bank")
+    y1, y2 = 316, 372
+    f.text(40, y1 + 4, "happened", "t", 12, "start", "600")
+    f.text(40, y2 + 4, "arrived", "t", 12, "start", "600")
+    q = axes(f, 130, 300, 570, 90, "time of day", "", [(10, "10am"), (12, "noon"), (14, "2pm"), (16, "4pm"), (18, "6pm")],
+             [], (9.5, 18.5), (0, 1))
+    f.line(130, y1, 700, y1, "line", 1)
+    f.line(130, y2, 700, y2, "line", 1)
+    for i in range(15):
+        hx, _ = q(10 + i * 6 / 14, 0)
+        f.circle(hx, y1, 4.5, "f-accent")
+        ax, _ = q(16.2 + i * 0.008, 0)
+        f.circle(ax + (i % 5) * 2.2, y2 - 6 + (i // 5) * 6, 3.2, "f-warn")
+    ox, _ = q(16, 0)
+    f.text(ox - 16, y2 + 4, "offline six hours, then all at once", "tm", 11, "end")
+    f.text(30, 458, "Beatriz's bank. Counts and times are from the story; the shapes are illustrative.", "tm", 11.5, italic=True)
+    return f
+
+
+def fig_design_time_and_ordering():
+    f = Fig(360, "A clock four seconds fast",
+            "A timeline of two updates to the same hotel room, seen by two servers. In true time, the room is marked "
+            "available at 14:00:01 and then sold at 14:00:03. The fast server, four seconds ahead, stamps the older "
+            "\"available\" update 14:00:05, so by timestamps it looks later and wins, and the sold room goes back on sale. "
+            "With version numbers, the sale is version 8, the stale update names version 7, and the database refuses it.")
+    f.heading(30, 32, "Two updates to one room", "What really happened, what the timestamps said, and what version numbers say")
+    rows = [("true time", 96), ("timestamps", 176), ("versions", 256)]
+    for name, y in rows:
+        f.text(30, y + 4, name, "t", 12.5, "start", "600")
+        f.line(130, y, 730, y, "line", 1.2)
+    f.box(170, 76, 200, 40, "available", "f-soft-accent", sub="14:00:01, via the fast server")
+    f.box(420, 76, 200, 40, "sold", "f-soft-ok", sub="14:00:03, via another server")
+    f.box(170, 156, 200, 40, "sold", "f-soft-ok", sub="stamped 14:00:03")
+    f.box(420, 156, 200, 40, "available", "f-soft-warn", sub="stamped 14:00:05: wins")
+    f.text(640, 180, "room back on sale", "t", 11.5, "start", "600")
+    f.box(170, 236, 200, 40, "sold", "f-soft-ok", sub="version 7 to 8")
+    f.box(420, 236, 200, 40, "available", "f-soft-warn", sub="names version 7")
+    f.text(640, 260, "refused: now 8", "t", 11.5, "start", "600")
+    f.text(30, 320, "Emre's booking system. The four-second drift is from the story; the times are illustrative.",
+           "tm", 11.5, italic=True)
+    return f
+
+
+def fig_design_service_boundaries():
+    f = Fig(400, "Cut along the nouns, or along the changes",
+            "Two diagrams of the same quoting system. Before: fourteen services named after nouns, with nine of them "
+            "highlighted because adding pet insurance changed each one, and about thirty calls for a single quote. After: "
+            "three product modules inside one program, plus three separate services for payments, documents and "
+            "identity; adding pet insurance changes one module, and a quote makes four calls.")
+    f.heading(30, 32, "Before: fourteen services, one per noun", "Highlighted: changed to add pet insurance. About 30 calls per quote.")
+    names = ["customers", "addresses", "vehicles", "properties", "policies", "prices", "discounts",
+             "documents", "payments", "quotes", "claims", "notifications", "identity", "reports"]
+    touched = {"customers", "policies", "prices", "discounts", "documents", "quotes", "notifications", "reports", "properties"}
+    for i, n in enumerate(names):
+        x = 40 + (i % 7) * 98
+        y = 70 + (i // 7) * 46
+        f.box(x, y, 90, 36, n, "f-soft-warn" if n in touched else "f-faint", size=11.5)
+    f.heading(30, 206, "After: three products in one program, three services", "Adding pet insurance changes one module. Four calls per quote.")
+    f.rect(40, 236, 420, 110, "f-faint", 8)
+    f.rect(40, 236, 420, 110, "s-line", 8, extra='fill="none" stroke-width="1.2"')
+    f.text(52, 254, "one program, with enforced module boundaries", "tm", 11)
+    for i, (n, cls) in enumerate([("car", "f-faint"), ("home", "f-faint"), ("pet", "f-soft-warn")]):
+        f.box(56 + i * 134, 268, 120, 62, n + " insurance", cls, size=12, sub="its own rules")
+    for i, n in enumerate(["payments", "document generation", "identity"]):
+        f.box(490, 236 + i * 38, 230, 32, n, "f-soft-accent", size=12)
+    f.text(30, 386, "Thandiwe's insurer. The counts are from the story.", "tm", 11.5, italic=True)
+    return f
+
 FIGURES = {
     "00-representations": fig00, "01-one-machine-one-program": fig01, "02-one-machine-many-programs": fig02,
     "03-programs-too-big-for-one-head": fig03, "04-data-outlives-programs": fig04,
@@ -1732,6 +1848,8 @@ FIGURES = {
     "design-estimates": fig_design_estimates, "design-load-balancing": fig_design_load_balancing,
     "design-rate-limiting": fig_design_rate_limiting, "design-idempotency": fig_design_idempotency,
     "design-timeouts": fig_design_timeouts, "design-consensus": fig_design_consensus, "design-sagas": fig_design_sagas,
+    "design-async-work": fig_design_async_work, "design-batch-or-stream": fig_design_batch_or_stream,
+    "design-time-and-ordering": fig_design_time_and_ordering, "design-service-boundaries": fig_design_service_boundaries,
 }
 
 

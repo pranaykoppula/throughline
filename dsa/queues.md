@@ -66,6 +66,7 @@ A queue is a data structure where items are added at one end and removed from th
 - Learning this is also learning [sorting](sorting.md), because a priority queue is usually a heap, the same structure heapsort uses.
 - Learning this is also learning [greedy algorithms](greedy.md), because serving the shortest job next is a greedy rule that's good on average and unfair at the edges.
 - Learning this is also learning [heaps and priority queues](heaps.md), because a priority queue is usually a heap underneath.
+- Learning this is also learning [asynchronous work and message queues](../design/async-work.md), because a queue between services adds the questions of repeated delivery and work that never succeeds.
 
 ## Resources
 
