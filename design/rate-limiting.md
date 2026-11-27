@@ -90,3 +90,5 @@ Rate limiting caps how much work each caller can ask for in a period. A **token 
 ## Go and look
 
 Find the busiest API you call from something you've built. Find out what it does when you send too much: the status code, whether it says when to retry, and whether your code reads it. Then check what your own service does when it's full, and how long it takes to say so.
+
+Practise this: [ten o'clock on Friday](../exercises/design/flash-ticket-sale.md), a waiting room in front of a sale thirty times oversubscribed.

@@ -81,3 +81,5 @@ A distribution is the full spread of values something takes. A percentile is a p
 ## Go and look
 
 Find a latency chart for something you run. If it shows only an average, find the 99th percentile. If it shows percentiles, slice them by one dimension you've never checked: country, device, or customer size.
+
+Practise this: [a million numbers a second](../exercises/design/metrics-monitoring.md), where percentiles from many servers have to be merged, not averaged.
