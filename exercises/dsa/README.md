@@ -8,9 +8,9 @@ Twenty-four LeetCode Hard problems, two for each kind of question. The categorie
 | Order and halving | [Two depots, one median](median-of-two-sorted-arrays.md) (4); [Splitting the translation](split-array-largest-sum.md) (410) | [sorting](../../dsa/sorting.md), [divide and conquer](../../dsa/divide-and-conquer.md) |
 | The most urgent next | [The waiting-room screen](find-median-from-data-stream.md) (295); [The city's outline](the-skyline-problem.md) (218) | [heaps](../../dsa/heaps.md) |
 | Next in line, over a window | [The busiest five minutes](sliding-window-maximum.md) (239); [The shortest good run](shortest-subarray-with-sum-at-least-k.md) (862) | [queues](../../dsa/queues.md), [amortised cost](../../dsa/amortised-cost.md) |
-| Nesting and undo | [The biggest banner](largest-rectangle-in-histogram.md) (84); Basic Calculator (224) | [power and predictability](../../dsa/power-and-predictability.md) |
-| What connects to what | Swim in Rising Water (778); Critical Connections in a Network (1192) | [graphs](../../dsa/graphs.md), [greedy algorithms](../../dsa/greedy.md) |
-| Which state, what next | Valid Number (65); Regular Expression Matching (10) | [state machines](../../dsa/state-machines.md), [power and predictability](../../dsa/power-and-predictability.md) |
+| Nesting and undo | [The biggest banner](largest-rectangle-in-histogram.md) (84); [The formula box](basic-calculator.md) (224) | [power and predictability](../../dsa/power-and-predictability.md) |
+| What connects to what | [The rescue boat's first chance](swim-in-rising-water.md) (778); [The cable you can't lose](critical-connections-in-a-network.md) (1192) | [graphs](../../dsa/graphs.md), [greedy algorithms](../../dsa/greedy.md) |
+| Which state, what next | [The price column](valid-number.md) (65); Regular Expression Matching (10) | [state machines](../../dsa/state-machines.md), [power and predictability](../../dsa/power-and-predictability.md) |
 | Everything with this prefix | Word Search II (212); Prefix and Suffix Search (745) | [tries](../../dsa/tries.md) |
 | Split, solve, combine | Count of Smaller Numbers After Self (315); Reverse Pairs (493) | [divide and conquer](../../dsa/divide-and-conquer.md), [sorting](../../dsa/sorting.md) |
 | Overlapping questions | Burst Balloons (312); Distinct Subsequences (115) | [dynamic programming](../../dsa/dynamic-programming.md) |

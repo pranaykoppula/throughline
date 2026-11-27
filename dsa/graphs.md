@@ -82,3 +82,5 @@ A graph is a set of nodes connected by edges, which can have directions and weig
 ## Go and look
 
 Find one thing in a system you work on that's secretly a graph, such as dependencies between services, packages or tasks, and ask one graph question of it: is there a cycle?
+
+Practise this: [the rescue boat's first chance](../exercises/dsa/swim-in-rising-water.md) (LeetCode 778, Hard), Dijkstra's algorithm where a route costs its highest point, and [the cable you can't lose](../exercises/dsa/critical-connections-in-a-network.md) (LeetCode 1192, Hard), one depth-first walk that finds every connection on no loop.

@@ -1,0 +1,77 @@
+[
+ {
+  "name": "one plus one",
+  "input": "1 + 1\n",
+  "output": "2\n"
+ },
+ {
+  "name": "spaces everywhere",
+  "input": " 2-1 + 2 \n",
+  "output": "3\n"
+ },
+ {
+  "name": "nested brackets",
+  "input": "(1+(4+5+2)-3)+(6+8)\n",
+  "output": "23\n"
+ },
+ {
+  "name": "a negative bracket",
+  "input": "-(2+3)\n",
+  "output": "-5\n"
+ },
+ {
+  "name": "a negative number first",
+  "input": "-1 + 4\n",
+  "output": "3\n"
+ },
+ {
+  "name": "minus a bracket of minuses",
+  "input": "10 - (3 - (2 - 1))\n",
+  "output": "8\n"
+ },
+ {
+  "name": "deep nesting",
+  "input": "((((((7))))))\n",
+  "output": "7\n"
+ },
+ {
+  "name": "a single number",
+  "input": "42\n",
+  "output": "42\n"
+ },
+ {
+  "name": "a minus before nested brackets",
+  "input": "- (3 + (4 + 5))\n",
+  "output": "-12\n"
+ },
+ {
+  "name": "random expression 1",
+  "input": "-475\n",
+  "output": "-475\n"
+ },
+ {
+  "name": "random expression 2",
+  "input": "102 - (-((199+294 + 742-411)+93) + 54-88) - 451-(549 + 754 - 732-749)-(928 + 96-(262 - (309-471+957-972 + 305) + ((156 + 748 - 280)))-938)\n",
+  "output": "1452\n"
+ },
+ {
+  "name": "random expression 3",
+  "input": "168 + 665-(513+((79 - (480 + 814+956)+(369 + 864+430+598 + 808)-(564-339)) + 498+(547-715-886 - 909)-(116+120 - 384-638) + 745)+606) - (22-(873-566-731-730 - (269)))\n",
+  "output": "-2470\n"
+ },
+ {
+  "name": "random expression 4",
+  "input": "-(6) + 104+844+(241)+750\n",
+  "output": "1933\n"
+ },
+ {
+  "name": "random expression 5",
+  "input": "30-299-(867 + 607 + 660-(((747 + 773 - 319)))+407) - 240-733\n",
+  "output": "-2582\n"
+ },
+ {
+  "name": "random expression 6",
+  "input": "400\n",
+  "output": "400\n"
+ }
+]

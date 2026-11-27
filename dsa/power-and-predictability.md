@@ -93,4 +93,4 @@ Languages form a ladder of power, often called the Chomsky hierarchy. *Regular* 
 
 Find a regular expression in something you run that's applied to input from users. Find out whether your language's engine backtracks, then time the pattern against a long string that nearly matches. If the time grows much faster than the string, you've found Selim's Tuesday.
 
-Practise this: [the biggest banner](../exercises/dsa/largest-rectangle-in-histogram.md) (LeetCode 84, Hard), where a stack keeps track of what's still open, like brackets.
+Practise this: [the biggest banner](../exercises/dsa/largest-rectangle-in-histogram.md) (LeetCode 84, Hard), where a stack keeps track of what's still open, like brackets; [the formula box](../exercises/dsa/basic-calculator.md) (LeetCode 224, Hard), where the brackets are real; and [the price column](../exercises/dsa/valid-number.md) (LeetCode 65, Hard), the bottom rung, a fixed table of states.
