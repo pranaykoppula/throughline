@@ -200,6 +200,6 @@ impl Solution {
 
 ## Related
 
-- The other exercise in this category: Course Schedule III (LeetCode 630), coming in a later batch.
+- The other exercise in this category: [the training year](course-schedule-iii.md) (LeetCode 630).
 - Concept pages: [greedy algorithms](../../dsa/greedy.md), [growth](../../dsa/growth.md).
 - More practice of the same shape: problems tagged "two passes", such as trapping rain water between bars, where each position also depends on the best to its left and to its right.

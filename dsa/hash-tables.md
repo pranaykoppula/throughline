@@ -85,4 +85,4 @@ A hash table stores values in an array of slots, choosing each value's slot by h
 
 Find the biggest hash table, dictionary or map in something you've built and ask what happens when it grows. Then find out how big it gets on your busiest day.
 
-Practise this: [the first free locker](../exercises/dsa/first-missing-positive.md) (LeetCode 41, Hard), where the array itself is the table, and [the shortest crash signature](../exercises/dsa/minimum-window-substring.md) (LeetCode 76, Hard).
+Practise this: [the first free locker](../exercises/dsa/first-missing-positive.md) (LeetCode 41, Hard), where the array itself is the table, [the shortest crash signature](../exercises/dsa/minimum-window-substring.md) (LeetCode 76, Hard), and two where a hash table points into a linked list: [the least-asked question](../exercises/dsa/lfu-cache.md) (LeetCode 460, Hard) and [the leaderboard's ends](../exercises/dsa/all-oone-data-structure.md) (LeetCode 432, Hard).

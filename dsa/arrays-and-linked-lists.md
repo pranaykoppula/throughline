@@ -80,3 +80,5 @@ An array stores elements contiguously, so any element can be reached by position
 ## Go and look
 
 Find a list in code you've written that's walked often, and check how it's stored. If it's a linked structure, try the same loop over an array and time both.
+
+Practise this: [the least-asked question](../exercises/dsa/lfu-cache.md) (LeetCode 460, Hard) and [the leaderboard's ends](../exercises/dsa/all-oone-data-structure.md) (LeetCode 432, Hard), two places where a linked list earns its keep: moving any item in one step.

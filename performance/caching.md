@@ -82,3 +82,5 @@ A cache is a copy of data kept closer to where it's needed than the original, be
 ## Go and look
 
 Find one cache in something you work on and answer its three questions: how stale can it be, how does it learn about changes, and what happens to everything behind it when it's empty?
+
+Practise this: [the least-asked question](../exercises/dsa/lfu-cache.md) (LeetCode 460, Hard), a cache that evicts the least-used answer in constant time.

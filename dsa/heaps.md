@@ -87,4 +87,4 @@ A binary heap is a complete binary tree stored in an array, where every parent i
 
 Find out how the language or framework you use stores its timers, or what structure your scheduler uses for delayed jobs. Then check what happens to a timer that's cancelled: is it removed, or left to expire?
 
-Practise this: [the waiting-room screen](../exercises/dsa/find-median-from-data-stream.md) (LeetCode 295, Hard), two heaps keeping the middle in view, and [the city's outline](../exercises/dsa/the-skyline-problem.md) (LeetCode 218, Hard), with lazy deletion like Sigrid's dead timers.
+Practise this: [the waiting-room screen](../exercises/dsa/find-median-from-data-stream.md) (LeetCode 295, Hard), two heaps keeping the middle in view, and [the city's outline](../exercises/dsa/the-skyline-problem.md) (LeetCode 218, Hard), with lazy deletion like Sigrid's dead timers; and [the training year](../exercises/dsa/course-schedule-iii.md) (LeetCode 630, Hard), where the heap remembers which earlier choice to give up.
