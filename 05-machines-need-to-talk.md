@@ -75,6 +75,7 @@ Motif: [every correction acts on old news](motifs.md#every-correction-acts-on-ol
 - Learning this is also learning [error detection and correction](info/error-correction.md), because Lin's numbered blocks and confirmations were error detection: a way to notice that something was lost or repeated, and put it right.
 - Learning this is also learning [greedy algorithms](dsa/greedy.md), because the shortest-path routing that carries every packet always extends the nearest unexplored router first, and for shortest paths that greedy choice is provably right.
 - Learning this is also learning [state estimation](signals/state-estimation.md), because Jacobson's fix also had TCP keep a running estimate of each connection's delay, smoothed from noisy measurements, to decide when a packet was really lost.
+- Learning this is also learning [idempotency](design/idempotency.md), because Lin's numbered blocks let a resent block be recognised, and every retry across a network needs the same protection.
 
 ## Resources
 

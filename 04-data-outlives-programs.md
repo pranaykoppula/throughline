@@ -66,6 +66,7 @@ Motif: [costs move; they don't disappear](motifs.md#costs-move-they-dont-disappe
 - Learning this is also learning [append-only logs](dsa/append-only-logs.md), because the database could undo Walter's unfinished payments after the power cut only because it had logged each change before making it.
 - Learning this is also learning [data modelling](data/modelling.md), because Walter's tree was a picture of the company drawn from monthly statements, and the hospital question was the first one it couldn't answer.
 - Learning this is also learning [Bloom filters](dsa/bloom-filters.md), because stores built on LSM trees keep one for each file, so most lookups can skip files that can't hold the key without reading them.
+- Learning this is also learning [sagas](design/sagas.md), because once work spans services with their own databases, Walter's all-or-nothing transaction is gone and each step needs a planned way back.
 
 ## Resources
 

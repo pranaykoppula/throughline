@@ -12,5 +12,9 @@ In the order they build on one another. Each line says where the spine first nee
 2. [Back-of-the-envelope estimates](estimates.md): a few known numbers, multiplied and rounded, tell you whether a design can work before anyone builds it. First needed on [page 8](../08-too-many-users-too-much-data.md).
 3. [Load balancing](load-balancing.md): spreading requests across many servers, and the signs a balancer trusts to choose between them. First needed on [page 11](../11-software-that-must-not-go-down.md).
 4. [Rate limiting and backpressure](rate-limiting.md): saying no early, clearly and fairly, when more work arrives than a system can do. First needed on [page 11](../11-software-that-must-not-go-down.md).
+5. [Idempotency](idempotency.md): making an operation safe to repeat, because across a network you often can't tell whether it worked. First needed on [page 5](../05-machines-need-to-talk.md).
+6. [Timeouts and circuit breakers](timeouts.md): how long to wait, what to do instead, and when to stop asking a part that's failing. First needed on [page 11](../11-software-that-must-not-go-down.md).
+7. [Consensus and leader election](consensus.md): how several machines agree on one thing, such as which of them is in charge. First needed on [page 8](../08-too-many-users-too-much-data.md).
+8. [Sagas](sagas.md): one piece of work across several services, without a transaction, with a planned way back for each step. First needed on [page 4](../04-data-outlives-programs.md).
 
-More pages are planned: making retries safe, stopping failures from spreading, how machines agree, work across services, service boundaries, and time and ordering.
+More pages are planned: asynchronous work and message queues, batch or stream, service boundaries, and time and ordering.

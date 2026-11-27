@@ -72,6 +72,7 @@ Motifs: [the sign drifts from the thing](motifs.md#the-sign-drifts-from-the-thin
 - Learning this is also learning [sampling and aliasing](signals/sampling.md), because Rosa's robot bought a ticket once a minute, and anything that failed and recovered between its purchases was invisible to it.
 - Learning this is also learning [load balancing](design/load-balancing.md), because a balancer's health check asks the same question as Rosa's green squares, and a server can pass it while failing every customer.
 - Learning this is also learning [rate limiting and backpressure](design/rate-limiting.md), because an on-sale is a burst many times the usual, and deciding in advance who waits, and how they're told, is part of staying up.
+- Learning this is also learning [timeouts and circuit breakers](design/timeouts.md), because the checkout waited on a slow payment provider, and a wait with no chosen limit is how one slow part takes down the rest.
 
 ## Resources
 

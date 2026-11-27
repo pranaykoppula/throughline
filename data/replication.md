@@ -62,6 +62,7 @@ Replication keeps copies of data on several machines, usually one primary that a
 - Learning this is also learning [partitioning](partitioning.md), because replication copies data while partitioning splits it, and most large systems do both.
 - Learning this is also learning [error detection and correction](../info/error-correction.md), because a replica that copies faithfully also copies corruption, and only checksums can tell the copies apart.
 - Learning this is also learning [append-only logs](../dsa/append-only-logs.md), because a replica is a second reader of the same log of changes.
+- Learning this is also learning [consensus and leader election](../design/consensus.md), because promoting a replica safely means agreeing on one leader and fencing off the old one.
 
 ## Resources
 
