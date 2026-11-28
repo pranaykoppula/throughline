@@ -47,7 +47,7 @@ Motif: [the least power, for the shortest time](../motifs.md#the-least-power-for
 
 Selim is fictional; both kinds of engine are real. Stephen Kleene described regular languages in the early 1950s. In 1968 Ken Thompson published a way of compiling a regular expression into a machine that reads text once, in time proportional to its length. Many later libraries, following Perl, used backtracking instead, to support features such as backreferences, and gave up that guarantee. Russ Cox's 2007 article explaining the difference became widely read, and Google's RE2 library (2010) was built to give the guarantee back.
 
-On 20 July 2016 Stack Overflow went down because a post contained about 20,000 consecutive whitespace characters, and a regular expression meant to trim whitespace from the ends of lines backtracked over them. It was replaced with a simple substring function ([ADTmag's account of the postmortem](https://adtmag.com/blogs/dev-watch/2016/07/stack-overflow-crash.aspx) <!-- verify -->). On 2 July 2019 a single new rule in Cloudflare's web application firewall contained a regular expression that backtracked badly, and exhausted the CPU on every core serving web traffic across its network worldwide for about 27 minutes ([Cloudflare's postmortem](https://blog.cloudflare.com/details-of-the-cloudflare-outage-on-july-2-2019/)).
+On 20 July 2016 Stack Overflow went down because a post contained about 20,000 consecutive whitespace characters, and a regular expression meant to trim whitespace from the ends of lines backtracked over them. It was replaced with a simple substring function ([ADTmag's account of the postmortem](https://adtmag.com/blogs/dev-watch/2016/07/stack-overflow-crash.aspx)). On 2 July 2019 a single new rule in Cloudflare's web application firewall contained a regular expression that backtracked badly, and exhausted the CPU on every core serving web traffic across its network worldwide for about 27 minutes ([Cloudflare's postmortem](https://blog.cloudflare.com/details-of-the-cloudflare-outage-on-july-2-2019/)).
 
 The ladder itself was set out by Noam Chomsky in 1956, as a way of classifying grammars of human language. In 2006 Tim Berners-Lee and Noah Mendelsohn published "The Rule of Least Power" for the W3C: choose the least powerful language suitable for a purpose, because what it says can then be analysed and reused ([W3C TAG finding](https://www.w3.org/2001/tag/doc/leastPower-2006-2-13.html)). Bazel's configuration language, Starlark, follows the same idea and forbids recursion.
 
@@ -74,7 +74,7 @@ Languages form a ladder of power, often called the Chomsky hierarchy. *Regular* 
 
 ## Resources
 
-1. Russ Cox, ["Regular Expression Matching Can Be Simple And Fast"](https://swtch.com/~rsc/regexp/regexp1.html) (2007) (start here: the two kinds of engine, with graphs that make the difference obvious). <!-- verify -->
+1. Russ Cox, ["Regular Expression Matching Can Be Simple And Fast"](https://swtch.com/~rsc/regexp/regexp1.html) (2007) (start here: the two kinds of engine, with graphs that make the difference obvious).
 2. Cloudflare, ["Details of the Cloudflare outage on July 2, 2019"](https://blog.cloudflare.com/details-of-the-cloudflare-outage-on-july-2-2019/) (go deeper: a frank postmortem, with an appendix on backtracking).
 3. Tim Berners-Lee and Noah Mendelsohn, ["The Rule of Least Power"](https://www.w3.org/2001/tag/doc/leastPower-2006-2-13.html) (2006) (short and general).
 4. Michael Sipser, *Introduction to the Theory of Computation* (reference: the whole ladder, carefully).

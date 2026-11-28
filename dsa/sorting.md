@@ -59,9 +59,9 @@ Motif: [costs move; they don't disappear](../motifs.md#costs-move-they-dont-disa
 
 ## It really happened
 
-Margit is fictional; her methods arrived about when she met them. Herman Hollerith's tabulating machines processed the 1890 US census, and card sorters doing exactly her digit-by-digit radix sort were in common use by the 1920s. John von Neumann described merge sort in 1945, and sorting with merges across tapes was standard practice on early commercial computers. Tony Hoare devised quicksort in 1959, as a visiting student in Moscow working on machine translation, when he needed to sort the words of sentences; it was published in 1961 ([Stanford's history of quicksort](https://cs.stanford.edu/people/eroberts/courses/soco/projects/2008-09/tony-hoare/quicksort.html) <!-- verify -->). J. W. J. Williams published heapsort, and the binary heap with it, in 1964.
+Margit is fictional; her methods arrived about when she met them. Herman Hollerith's tabulating machines processed the 1890 US census, and card sorters doing exactly her digit-by-digit radix sort were in common use by the 1920s. John von Neumann described merge sort in 1945, and sorting with merges across tapes was standard practice on early commercial computers. Tony Hoare devised quicksort in 1959, as a visiting student in Moscow working on machine translation, when he needed to sort the words of sentences; it was published in 1961 ([Stanford's history of quicksort](https://cs.stanford.edu/people/eroberts/courses/soco/projects/2008-09/tony-hoare/quicksort.html)). J. W. J. Williams published heapsort, and the binary heap with it, in 1964.
 
-Quicksort's worst case is not only a matter of bad luck with sorted input. In 1999 Doug McIlroy showed how an adversary could construct input that drove many library quicksorts to their slowest possible behaviour, which is why careful libraries now guard against it. The modern answer to Margit's whole career is a hybrid. Tim Peters wrote Timsort for Python in 2002. It finds the runs that are already in order in real data, sorts short stretches by insertion, and merges the runs, stably. Java, Android and many other platforms adopted it. In 2015 researchers at CWI in Amsterdam, trying to prove Timsort correct with a formal verification tool, found an input that made the Java and Python implementations fail, and their fix was adopted ([de Gouw and de Boer, ERCIM News](https://ercim-news.ercim.eu/en102/r-i/fixing-the-sorting-algorithm-for-android-java-and-python) <!-- verify -->).
+Quicksort's worst case is not only a matter of bad luck with sorted input. In 1999 Doug McIlroy showed how an adversary could construct input that drove many library quicksorts to their slowest possible behaviour, which is why careful libraries now guard against it. The modern answer to Margit's whole career is a hybrid. Tim Peters wrote Timsort for Python in 2002. It finds the runs that are already in order in real data, sorts short stretches by insertion, and merges the runs, stably. Java, Android and many other platforms adopted it. In 2015 researchers at CWI in Amsterdam, trying to prove Timsort correct with a formal verification tool, found an input that made the Java and Python implementations fail, and their fix was adopted ([de Gouw and de Boer, ERCIM News](https://ercim-news.ercim.eu/en102/r-i/fixing-the-sorting-algorithm-for-android-java-and-python)).
 
 ## What it is
 
@@ -90,7 +90,7 @@ Sorting arranges items by a key. Comparison sorts decide by comparing pairs: ins
 
 ## Resources
 
-1. [VisuAlgo, sorting](https://visualgo.net/en/sorting) (start here: watch each algorithm run, step by step, on data you choose). <!-- verify -->
+1. [VisuAlgo, sorting](https://visualgo.net/en/sorting) (start here: watch each algorithm run, step by step, on data you choose).
 2. Robert Sedgewick and Kevin Wayne, *Algorithms*, 4th edition, chapter 2, with free material on the book's site (go deeper: sorting explained with working code and real measurements).
 3. Donald Knuth, *The Art of Computer Programming*, Volume 3: *Sorting and Searching* (reference: including the history of tape sorting).
 

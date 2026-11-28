@@ -44,7 +44,7 @@ Motifs: [every representation has an edge](../motifs.md#every-representation-has
 
 Kasia is fictional; her bookshop's problem was the web's. ASCII, published in 1963, gave numbers to 128 characters, enough for English. Every other language needed its own extension, and dozens appeared: separate standards for Western, Central and Eastern European text, several for Japanese, and others for Greek, Hebrew and Arabic, all reusing the same numbers for different letters. The Japanese even had a word for the result: *mojibake*, roughly "character transformation".
 
-Unicode, first published in 1991, set out to give every character in every writing system a single number. The encoding that made it practical was designed in September 1992 by Ken Thompson and Rob Pike, sketched on a placemat in a New Jersey diner, according to Pike's account ([Pike's history of UTF-8](https://doc.cat-v.org/bell_labs/utf-8_history) <!-- verify -->). UTF-8 stored the original 128 ASCII characters exactly as before, so old English text was already valid, and used longer sequences for everything else. It became the dominant encoding on the web.
+Unicode, first published in 1991, set out to give every character in every writing system a single number. The encoding that made it practical was designed in September 1992 by Ken Thompson and Rob Pike, sketched on a placemat in a New Jersey diner, according to Pike's account ([Pike's history of UTF-8](https://doc.cat-v.org/bell_labs/utf-8_history)). UTF-8 stored the original 128 ASCII characters exactly as before, so old English text was already valid, and used longer sequences for everything else. It became the dominant encoding on the web.
 
 One alphabet for everything brought its own trick. In 2017 the security researcher Xudong Zheng registered a domain written entirely in Cyrillic letters that looked identical to "apple.com", and showed that Chrome, Firefox and Opera displayed it as if it were the real thing. Chrome changed how it displayed such addresses in version 58 ([Zheng, "Phishing with Unicode Domains"](https://xudongz.com/blog/2017/idn-phishing/)). The bytes were different; the signs were the same to a human eye.
 
@@ -70,8 +70,8 @@ An encoding is a convention mapping meanings to bytes: characters to numbers (ch
 ## Resources
 
 1. Joel Spolsky, ["The Absolute Minimum Every Software Developer Absolutely, Positively Must Know About Unicode and Character Sets (No Excuses!)"](https://joelonsoftware.com/2003/10/08/the-absolute-minimum-every-software-developer-absolutely-positively-must-know-about-unicode-and-character-sets-no-excuses) (2003) (start here: still the clearest short introduction).
-2. Rob Pike, ["UTF-8 history"](https://doc.cat-v.org/bell_labs/utf-8_history) (2003) (go deeper: the placemat, in the designers' own emails). <!-- verify -->
-3. The Unicode Consortium, [*The Unicode Standard*](https://www.unicode.org/standard/standard.html) (reference: especially the sections on normalisation and security). <!-- verify -->
+2. Rob Pike, ["UTF-8 history"](https://doc.cat-v.org/bell_labs/utf-8_history) (2003) (go deeper: the placemat, in the designers' own emails).
+3. The Unicode Consortium, [*The Unicode Standard*](https://www.unicode.org/standard/standard.html) (reference: especially the sections on normalisation and security).
 
 ## Names you'll hear
 

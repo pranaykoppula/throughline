@@ -43,7 +43,7 @@ What these share is a question about beginnings, asked one step at a time. Stori
 
 ## It really happened
 
-Anjali is fictional. René de la Briandais described the idea in 1959, for file searching with keys of varying length, and Edward Fredkin independently described it in 1960. He named it *trie* from the middle of "retrieval", and it's usually pronounced "try" to tell it apart from "tree". In 1968 Donald Morrison published PATRICIA, a trie that skips one-way branches, the same compression Anjali used, and compressed tries of this kind are now often called radix trees ([NIST, "trie"](https://xlinux.nist.gov/dads/HTML/trie.html) <!-- verify -->).
+Anjali is fictional. René de la Briandais described the idea in 1959, for file searching with keys of varying length, and Edward Fredkin independently described it in 1960. He named it *trie* from the middle of "retrieval", and it's usually pronounced "try" to tell it apart from "tree". In 1968 Donald Morrison published PATRICIA, a trie that skips one-way branches, the same compression Anjali used, and compressed tries of this kind are now often called radix trees ([NIST, "trie"](https://xlinux.nist.gov/dads/HTML/trie.html)).
 
 Internet routers face the prefix problem billions of times a second. A router's table lists blocks of addresses, from very broad to very specific, and each packet must go to the route with the longest prefix matching its destination address. Software routers, including the one inside the Linux kernel, have long used compressed tries for this lookup, and dedicated hardware does the same job with specialised memory.
 
@@ -68,7 +68,7 @@ A trie stores a set of strings as a tree in which each edge is labelled with a c
 
 ## Resources
 
-1. [VisuAlgo, trie](https://visualgo.net/en/suffixtree) (start here: watch strings share their prefixes; this page covers the closely related suffix tree). <!-- verify -->
+1. [VisuAlgo, trie](https://visualgo.net/en/suffixtree) (start here: watch strings share their prefixes; this page covers the closely related suffix tree).
 2. Robert Sedgewick and Kevin Wayne, *Algorithms*, 4th edition, section 5.2, "Tries" (go deeper).
 3. Edward Fredkin, "Trie Memory", *Communications of the ACM* (1960) (reference).
 

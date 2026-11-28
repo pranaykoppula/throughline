@@ -43,7 +43,7 @@ What these share is a bet that the best step now is part of the best answer over
 
 ## It really happened
 
-Tunde is fictional; both of his greedy rules are classics. Edsger Dijkstra designed his shortest-path algorithm in 1956, by his own account in about twenty minutes, sitting at a café in Amsterdam with his fiancée, to demonstrate a new computer to a non-specialist audience. He published it in 1959 ([Gries's history, Cornell](https://courses.cs.cornell.edu/cs2110/2017sp/online/shortestPath/01shortestPathHistory.pdf) <!-- verify -->). David Huffman, a graduate student at MIT, found the greedy construction of optimal prefix codes in 1951 as a term paper, after his professor, Robert Fano, offered it as an alternative to the final exam; it was published in 1952.
+Tunde is fictional; both of his greedy rules are classics. Edsger Dijkstra designed his shortest-path algorithm in 1956, by his own account in about twenty minutes, sitting at a café in Amsterdam with his fiancée, to demonstrate a new computer to a non-specialist audience. He published it in 1959 ([Gries's history, Cornell](https://courses.cs.cornell.edu/cs2110/2017sp/online/shortestPath/01shortestPathHistory.pdf)). David Huffman, a graduate student at MIT, found the greedy construction of optimal prefix codes in 1951 as a term paper, after his professor, Robert Fano, offered it as an alternative to the final exam; it was published in 1952.
 
 The delivery problem is the travelling salesman problem, one of the most studied problems in computing. No method is known that finds the shortest route quickly for every case, which is why real routing software combines a fast greedy start with improvements like Tunde's crossing removal, the "2-opt" move described by G. A. Croes in 1958.
 
@@ -68,7 +68,7 @@ A greedy algorithm builds a solution step by step, at each step choosing the opt
 
 ## Resources
 
-1. [VisuAlgo, minimum spanning tree and shortest paths](https://visualgo.net/en/mst) (start here: watch two greedy algorithms that are provably right). <!-- verify -->
+1. [VisuAlgo, minimum spanning tree and shortest paths](https://visualgo.net/en/mst) (start here: watch two greedy algorithms that are provably right).
 2. Jon Kleinberg and Éva Tardos, *Algorithm Design*, the chapter on greedy algorithms (go deeper: how to prove a greedy rule correct, or find where it fails).
 3. William Cook, *In Pursuit of the Traveling Salesman* (2012) (reference: the history of the delivery problem, readable).
 

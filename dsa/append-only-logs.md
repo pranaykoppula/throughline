@@ -76,7 +76,7 @@ An append-only log is a sequence of records that can only be added to at the end
 
 1. Jay Kreps, ["The Log: What every software engineer should know about real-time data's unifying abstraction"](https://engineering.linkedin.com/distributed-systems/log-what-every-software-engineer-should-know-about-real-time-datas-unifying) (2013) (start here).
 2. Martin Kleppmann, *Designing Data-Intensive Applications*, chapters 3 and 11 (go deeper: logs inside storage engines and as the backbone of data systems).
-3. Martin Fowler, ["Event Sourcing"](https://martinfowler.com/eaaDev/EventSourcing.html) (reference: the application-design version, with its costs). <!-- verify -->
+3. Martin Fowler, ["Event Sourcing"](https://martinfowler.com/eaaDev/EventSourcing.html) (reference: the application-design version, with its costs).
 
 ## Names you'll hear
 

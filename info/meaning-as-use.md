@@ -44,7 +44,7 @@ Motifs: [the sign drifts from the thing](../motifs.md#the-sign-drifts-from-the-t
 
 Rui is fictional; the law has a name. Hyrum Wright, an engineer at Google, put it like this: with a sufficient number of users of an API, it does not matter what you promise in the contract; all observable behaviours of your system will be depended on by somebody. The idea is old in philosophy. In *Philosophical Investigations* (1953), Ludwig Wittgenstein argued that for a large class of cases, the meaning of a word is its use in the language, not a definition held somewhere.
 
-Engineering has many examples. Excel treats 1900 as a leap year, which it wasn't. Lotus 1-2-3 made that mistake first, and Microsoft copied it so that spreadsheets would calculate dates the same way in both. It has never been fixed, because fixing it would change results that existing spreadsheets depend on ([Microsoft support](https://learn.microsoft.com/en-us/troubleshoot/microsoft-365-apps/excel/wrongly-assumes-1900-is-leap-year) <!-- verify -->). Joel Spolsky reported that Windows 95 detected the game SimCity, which used memory after releasing it, and ran its memory allocator in a special mode so the game kept working ([Spolsky, "How Microsoft Lost the API War"](https://www.joelonsoftware.com/2004/06/13/how-microsoft-lost-the-api-war/)). When TLS 1.3 was being deployed around 2017, network equipment that had only ever seen older versions broke on the new one, so the final standard made TLS 1.3 connections look like TLS 1.2 to anything in the middle. Its designers then adopted Rui's last idea: GREASE (RFC 8701, 2020) has clients send random meaningless values in places reserved for future use, so that nobody can build equipment that depends on those places being empty ([RFC 8701](https://www.rfc-editor.org/rfc/rfc8701)).
+Engineering has many examples. Excel treats 1900 as a leap year, which it wasn't. Lotus 1-2-3 made that mistake first, and Microsoft copied it so that spreadsheets would calculate dates the same way in both. It has never been fixed, because fixing it would change results that existing spreadsheets depend on ([Microsoft support](https://learn.microsoft.com/en-us/troubleshoot/microsoft-365-apps/excel/wrongly-assumes-1900-is-leap-year)). Joel Spolsky reported that Windows 95 detected the game SimCity, which used memory after releasing it, and ran its memory allocator in a special mode so the game kept working ([Spolsky, "How Microsoft Lost the API War"](https://www.joelonsoftware.com/2004/06/13/how-microsoft-lost-the-api-war/)). When TLS 1.3 was being deployed around 2017, network equipment that had only ever seen older versions broke on the new one, so the final standard made TLS 1.3 connections look like TLS 1.2 to anything in the middle. Its designers then adopted Rui's last idea: GREASE (RFC 8701, 2020) has clients send random meaningless values in places reserved for future use, so that nobody can build equipment that depends on those places being empty ([RFC 8701](https://www.rfc-editor.org/rfc/rfc8701)).
 
 ## What it is
 
@@ -67,8 +67,8 @@ Meaning as use is the idea that what a sign means is settled by how it's used, n
 
 ## Resources
 
-1. Hyrum Wright, ["Hyrum's Law"](https://www.hyrumslaw.com/) (start here: one paragraph). <!-- verify -->
-2. Titus Winters, Tom Manshreck and Hyrum Wright, [*Software Engineering at Google*](https://abseil.io/resources/swe-book), the chapters on Hyrum's law and deprecation (go deeper: free online). <!-- verify -->
+1. Hyrum Wright, ["Hyrum's Law"](https://www.hyrumslaw.com/) (start here: one paragraph).
+2. Titus Winters, Tom Manshreck and Hyrum Wright, [*Software Engineering at Google*](https://abseil.io/resources/swe-book), the chapters on Hyrum's law and deprecation (go deeper: free online).
 3. Ludwig Wittgenstein, *Philosophical Investigations* (1953), with Ray Monk, *How to Read Wittgenstein* (2005) as a companion (the philosophical original).
 
 ## Names you'll hear

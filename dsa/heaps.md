@@ -71,7 +71,7 @@ A binary heap is a complete binary tree stored in an array, where every parent i
 
 ## Resources
 
-1. [VisuAlgo, binary heap](https://visualgo.net/en/heap) (start here: insert and remove, and watch items rise and sink). <!-- verify -->
+1. [VisuAlgo, binary heap](https://visualgo.net/en/heap) (start here: insert and remove, and watch items rise and sink).
 2. Confluent, ["Apache Kafka, Purgatory, and Hierarchical Timing Wheels"](https://www.confluent.io/blog/apache-kafka-purgatory-hierarchical-timing-wheels/) (go deeper: Sigrid's problem in a real system).
 3. George Varghese and Tony Lauck, "Hashed and Hierarchical Timing Wheels" (1987) (reference).
 

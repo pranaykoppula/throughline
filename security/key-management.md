@@ -68,7 +68,7 @@ Key management covers a key's whole life: generating it from good randomness, st
 
 ## Resources
 
-1. [OWASP Key Management Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Key_Management_Cheat_Sheet.html) (start here). <!-- verify -->
+1. [OWASP Key Management Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Key_Management_Cheat_Sheet.html) (start here).
 2. The US Cyber Safety Review Board's report on the 2023 Exchange Online intrusion (2024) (go deeper: a frank account of key management failing at very large scale).
 3. Your cloud provider's key management service documentation, on rotation and key IDs (reference).
 

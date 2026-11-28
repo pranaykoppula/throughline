@@ -45,7 +45,7 @@ Motif: [waiting is where the time goes](../motifs.md#waiting-is-where-the-time-g
 
 Ji-woo is fictional, and so is her bookshop. The patterns are well known. Michael Nygard's *Release It!* (2007) named the circuit breaker and the bulkhead for software, borrowing both from engineering outside it. In 2012 Netflix released Hystrix, a library that wrapped every call to another service with a timeout, a separate pool of threads and a circuit breaker; Netflix said it was making tens of billions of such isolated calls a day ([Netflix Technology Blog, "Introducing Hystrix for Resilience Engineering"](https://netflixtechblog.com/introducing-hystrix-for-resilience-engineering-13531c1ab362)). Netflix later stopped developing it, in favour of approaches that adjust limits automatically.
 
-Not everyone recommends breakers. Marc Brooker, writing about how Amazon handles retries, warns that circuit breakers introduce modes that are hard to test and can slow recovery, and describes limiting retries with a token bucket instead. The same article explains why retries at every layer are dangerous: five layers each trying three times can multiply the load on a struggling database by 243 ([Amazon Builders' Library, "Timeouts, retries, and backoff with jitter"](https://aws.amazon.com/builders-library/timeouts-retries-and-backoff-with-jitter/) <!-- verify -->).
+Not everyone recommends breakers. Marc Brooker, writing about how Amazon handles retries, warns that circuit breakers introduce modes that are hard to test and can slow recovery, and describes limiting retries with a token bucket instead. The same article explains why retries at every layer are dangerous: five layers each trying three times can multiply the load on a struggling database by 243 ([Amazon Builders' Library, "Timeouts, retries, and backoff with jitter"](https://aws.amazon.com/builders-library/timeouts-retries-and-backoff-with-jitter/)).
 
 ## What it is
 
@@ -70,7 +70,7 @@ A **timeout** limits how long a caller waits. Good ones come from a budget: the 
 
 ## Resources
 
-1. Amazon Builders' Library, ["Timeouts, retries, and backoff with jitter"](https://aws.amazon.com/builders-library/timeouts-retries-and-backoff-with-jitter/) (start here: short, and honest about the trade-offs). <!-- verify -->
+1. Amazon Builders' Library, ["Timeouts, retries, and backoff with jitter"](https://aws.amazon.com/builders-library/timeouts-retries-and-backoff-with-jitter/) (start here: short, and honest about the trade-offs).
 2. Michael Nygard, *Release It!*, second edition (2018) (go deeper: stability patterns and anti-patterns, with stories).
 3. Google, *Site Reliability Engineering*, ["Addressing Cascading Failures"](https://sre.google/sre-book/addressing-cascading-failures/) (reference: deadlines, retries and overload at scale).
 

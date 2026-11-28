@@ -46,7 +46,7 @@ Motif: [the sign drifts from the thing](../motifs.md#the-sign-drifts-from-the-th
 
 ## It really happened
 
-Tomasz is fictional, and so is his travel agency. The failure is well known. Amazon's guide to health checks describes a bug that left a few servers in a large fleet producing blank error pages much faster than healthy servers produced real ones; the load-balancing technology of the time favoured fast servers, so it sent them a disproportionate share of traffic. It names the general pattern: a failing server often fails quickly, and rules such as "least requests" turn it into a black hole that attracts more work than its healthy neighbours ([Amazon Builders' Library, "Implementing health checks"](https://aws.amazon.com/builders-library/implementing-health-checks/) <!-- verify -->).
+Tomasz is fictional, and so is his travel agency. The failure is well known. Amazon's guide to health checks describes a bug that left a few servers in a large fleet producing blank error pages much faster than healthy servers produced real ones; the load-balancing technology of the time favoured fast servers, so it sent them a disproportionate share of traffic. It names the general pattern: a failing server often fails quickly, and rules such as "least requests" turn it into a black hole that attracts more work than its healthy neighbours ([Amazon Builders' Library, "Implementing health checks"](https://aws.amazon.com/builders-library/implementing-health-checks/)).
 
 The two-choices rule comes from the mathematics of throwing balls into bins. Yossi Azar, Andrei Broder, Anna Karlin and Eli Upfal showed in 1994 that placing each ball in the emptier of two randomly chosen bins makes the fullest bin dramatically less full than choosing one bin at random, and Michael Mitzenmacher's 1996 doctoral thesis applied it to load balancing ([thesis](https://www.eecs.harvard.edu/~michaelm/postscripts/mythesis.pdf)). Envoy, a widely used proxy, makes it the default for its least-request balancer, and its documentation gives resistance to herding as the reason ([Envoy's load balancers](https://www.envoyproxy.io/docs/envoy/latest/intro/arch_overview/upstream/load_balancing/load_balancers)).
 
@@ -73,7 +73,7 @@ A load balancer sits in front of a pool of servers and chooses one for each requ
 
 ## Resources
 
-1. Amazon Builders' Library, ["Implementing health checks"](https://aws.amazon.com/builders-library/implementing-health-checks/) (start here: real failures, including fast-failing servers attracting traffic). <!-- verify -->
+1. Amazon Builders' Library, ["Implementing health checks"](https://aws.amazon.com/builders-library/implementing-health-checks/) (start here: real failures, including fast-failing servers attracting traffic).
 2. Google, *Site Reliability Engineering*, ["Load Balancing in the Datacenter"](https://sre.google/sre-book/load-balancing-datacenter/) (go deeper: subsetting, weighted round robin, and how a large fleet does it).
 3. Michael Mitzenmacher, Andréa Richa and Ramesh Sitaraman, ["The Power of Two Random Choices: A Survey of Techniques and Results"](https://www.eecs.harvard.edu/~michaelm/postscripts/handbook2001.pdf) (reference: the mathematics).
 

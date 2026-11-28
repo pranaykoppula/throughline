@@ -69,8 +69,8 @@ A feedback controller repeatedly measures a system's output, compares it with a 
 
 ## Resources
 
-1. Brian Douglas, *Control Systems Lectures* and MATLAB's *Understanding PID Control* videos (start here: short, visual and clear). <!-- verify -->
-2. Karl Johan Åström and Richard Murray, *Feedback Systems: An Introduction for Scientists and Engineers* (2nd edition, 2021) (go deeper: the authors have made a version available online). <!-- verify -->
+1. Brian Douglas, *Control Systems Lectures* and MATLAB's *Understanding PID Control* videos (start here: short, visual and clear).
+2. Karl Johan Åström and Richard Murray, [*Feedback Systems: An Introduction for Scientists and Engineers*](https://fbswiki.org/wiki/index.php/Feedback_Systems:_An_Introduction_for_Scientists_and_Engineers) (2nd edition, 2021) (go deeper: the authors have made a version available online).
 3. Jacobson and Karels, ["Congestion Avoidance and Control"](https://people.eecs.berkeley.edu/~sylvia/cs268/papers/congavoid.pdf) (1988) (reference: feedback control applied to the internet).
 
 ## Names you'll hear

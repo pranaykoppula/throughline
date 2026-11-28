@@ -74,7 +74,7 @@ A **saga** is a sequence of local transactions, each committed in its own servic
 
 1. Hector Garcia-Molina and Kenneth Salem, ["Sagas"](https://www.cs.cornell.edu/andru/cs711/2002fa/reading/sagas.pdf) (1987) (start here: short and readable).
 2. Pat Helland, "Life beyond Distributed Transactions: an Apostate's Opinion" (CIDR 2007; revised in *ACM Queue*, 2016) (go deeper: why large systems end up working this way).
-3. Chris Richardson, ["Pattern: Saga"](https://microservices.io/patterns/data/saga.html) (reference: orchestration and choreography, with examples). <!-- verify -->
+3. Chris Richardson, ["Pattern: Saga"](https://microservices.io/patterns/data/saga.html) (reference: orchestration and choreography, with examples).
 
 ## Names you'll hear
 

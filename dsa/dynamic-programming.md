@@ -48,7 +48,7 @@ Motif: [costs move; they don't disappear](../motifs.md#costs-move-they-dont-disa
 
 ## It really happened
 
-Imelda is fictional. Richard Bellman developed dynamic programming at the RAND Corporation in the early 1950s, for problems of planning decisions over time. In his autobiography he said he chose the name partly as camouflage: the Secretary of Defense, he wrote, hated the word "research", and "dynamic programming" was a name not even a Congressman could object to. "Programming" then meant planning, not writing code. Historians have pointed out that Bellman used the term before that Secretary took office, so the story may be partly hindsight ([notes on the origins of the name](https://notes.zachmanson.com/on-the-origins-of-dynamic-programming) <!-- verify -->).
+Imelda is fictional. Richard Bellman developed dynamic programming at the RAND Corporation in the early 1950s, for problems of planning decisions over time. In his autobiography he said he chose the name partly as camouflage: the Secretary of Defense, he wrote, hated the word "research", and "dynamic programming" was a name not even a Congressman could object to. "Programming" then meant planning, not writing code. Historians have pointed out that Bellman used the term before that Secretary took office, so the story may be partly hindsight ([notes on the origins of the name](https://notes.zachmanson.com/on-the-origins-of-dynamic-programming)).
 
 The comparison problem is the one behind `diff`, the Unix tool for comparing files, which James Hunt and Douglas McIlroy described in 1976. In 1986 Eugene Myers published the method Imelda read about, whose work grows with the number of differences, not the size of the files; versions of it are still the default in git.
 
@@ -73,7 +73,7 @@ Dynamic programming applies when a problem has optimal substructure (the best an
 
 ## Resources
 
-1. [VisuAlgo, recursion](https://visualgo.net/en/recursion) (start here: watch a recursion repeat itself, then watch memoisation cut it down). <!-- verify -->
+1. [VisuAlgo, recursion](https://visualgo.net/en/recursion) (start here: watch a recursion repeat itself, then watch memoisation cut it down).
 2. Steven Skiena, *The Algorithm Design Manual*, the chapter on dynamic programming (go deeper: how to spot it in practice).
 3. Eugene Myers, "An O(ND) Difference Algorithm and Its Variations", *Algorithmica* (1986) (reference: the diff in your version control).
 
