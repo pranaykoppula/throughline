@@ -82,3 +82,5 @@ Replication keeps copies of data on several machines, usually one primary that a
 ## Go and look
 
 Find out how a database you depend on is replicated: synchronously or not, how far behind its replicas usually are, and who or what decides to fail over.
+
+Practise this: [the three laptops](../exercises/design/file-sync.md), where copies change independently for days.

@@ -93,4 +93,4 @@ A **message queue** stores messages from producers until consumers take them. Mo
 
 Find a queue in something you run and find three numbers: the age of its oldest message right now, how many times a message may be retried, and where it goes after that. If any of them is unknown, that's the place a bad message will hide.
 
-Practise this: [the school's messages](../exercises/design/group-chat.md), where every message fans out through a queue.
+Practise this: [the school's messages](../exercises/design/group-chat.md), where every message fans out through a queue, and [the lecture that buffered](../exercises/design/video-streaming.md), transcoding as a pipeline of jobs.
