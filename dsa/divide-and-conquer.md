@@ -71,8 +71,8 @@ Divide and conquer solves a problem by splitting it into smaller subproblems of 
 
 ## Resources
 
-1. [VisuAlgo, sorting](https://visualgo.net/en/sorting) (start here: watch merge sort split and combine). <!-- verify -->
-2. Jeffrey Dean and Sanjay Ghemawat, ["MapReduce: Simplified Data Processing on Large Clusters"](https://research.google/pubs/mapreduce-simplified-data-processing-on-large-clusters/) (2004) (go deeper: divide and conquer across thousands of machines). <!-- verify -->
+1. [VisuAlgo, sorting](https://visualgo.net/en/sorting) (start here: watch merge sort split and combine).
+2. Jeffrey Dean and Sanjay Ghemawat, ["MapReduce: Simplified Data Processing on Large Clusters"](https://research.google/pubs/mapreduce-simplified-data-processing-on-large-clusters/) (2004) (go deeper: divide and conquer across thousands of machines).
 3. Jon Bentley, *Programming Pearls*, the column on binary search (reference: why the simplest version is so easy to get wrong).
 
 ## Names you'll hear

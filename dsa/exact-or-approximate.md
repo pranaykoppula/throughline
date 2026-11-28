@@ -42,7 +42,7 @@ What these share is a trade of exactness for space or time, made deliberately. I
 
 ## It really happened
 
-Dmitri is fictional. In 1977 Robert Morris at Bell Labs described *approximate counting*, a way to count up to very large numbers of events in a single byte by increasing the counter with decreasing probability. In 2007 Philippe Flajolet and colleagues published HyperLogLog, the distinct-count summary Dmitri used. Redis, the widely used in-memory database, added it in 2014: each counter uses at most 12 kilobytes and has a standard error of 0.81%, and counters can be merged ([Redis documentation](https://redis.io/docs/data-types/hyperloglogs) <!-- verify -->; [antirez, "Redis new data structure: the HyperLogLog"](https://www.antirez.com/news/75) <!-- verify -->). Many analytics databases offer an approximate distinct count alongside the exact one, and say so in its name.
+Dmitri is fictional. In 1977 Robert Morris at Bell Labs described *approximate counting*, a way to count up to very large numbers of events in a single byte by increasing the counter with decreasing probability. In 2007 Philippe Flajolet and colleagues published HyperLogLog, the distinct-count summary Dmitri used. Redis, the widely used in-memory database, added it in 2014: each counter uses at most 12 kilobytes and has a standard error of 0.81%, and counters can be merged ([Redis documentation](https://redis.io/docs/latest/develop/data-types/probabilistic/hyperloglogs/); [antirez, "Redis new data structure: the HyperLogLog"](https://www.antirez.com/news/75)). Many analytics databases offer an approximate distinct count alongside the exact one, and say so in its name.
 
 ## What it is
 
@@ -65,7 +65,7 @@ Approximate, or probabilistic, data structures answer questions with a known err
 
 ## Resources
 
-1. antirez, ["Redis new data structure: the HyperLogLog"](https://www.antirez.com/news/75) (2014) (start here: a clear, practical explanation from the person who added it to Redis). <!-- verify -->
+1. antirez, ["Redis new data structure: the HyperLogLog"](https://www.antirez.com/news/75) (2014) (start here: a clear, practical explanation from the person who added it to Redis).
 2. Philippe Flajolet and others, "HyperLogLog: the analysis of a near-optimal cardinality estimation algorithm" (2007) (go deeper).
 3. Graham Cormode and Shan Muthukrishnan, "An Improved Data Stream Summary: The Count-Min Sketch and its Applications" (2005) (reference).
 

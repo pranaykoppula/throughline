@@ -43,9 +43,9 @@ Motif: [a cheap check before an expensive one](../motifs.md#a-cheap-check-before
 
 ## It really happened
 
-Joaquín is fictional; the structure and its uses are real. Burton Bloom described it in 1970 as a way to save memory when an occasional wrong "yes" was tolerable, at a time when memory was scarce and checks were done against slow storage ([Bloom, *Communications of the ACM*](https://dl.acm.org/doi/10.1145/362686.362692) <!-- verify -->). Google's Bigtable paper (2006) described keeping Bloom filters for its sorted files so that most reads for missing data never touched the disk ([Chang et al.](https://research.google/pubs/bigtable-a-distributed-storage-system-for-structured-data/)), and later storage engines did the same.
+Joaquín is fictional; the structure and its uses are real. Burton Bloom described it in 1970 as a way to save memory when an occasional wrong "yes" was tolerable, at a time when memory was scarce and checks were done against slow storage ([Bloom, *Communications of the ACM*](https://dl.acm.org/doi/10.1145/362686.362692)). Google's Bigtable paper (2006) described keeping Bloom filters for its sorted files so that most reads for missing data never touched the disk ([Chang et al.](https://research.google/pubs/bigtable-a-distributed-storage-system-for-structured-data/)), and later storage engines did the same.
 
-The trade can also be undone when circumstances change. Chrome's Safe Browsing check, which tests visited addresses against Google's lists of dangerous sites, kept those lists locally as a Bloom filter. In 2011 its engineers added an exact compressed structure they called a prefix set. On their data it used less memory than the Bloom filter and gave no false matches at that stage, and they ran the two side by side, comparing results, while they switched ([Chromium code review](https://codereview.chromium.org/6286072) <!-- verify -->).
+The trade can also be undone when circumstances change. Chrome's Safe Browsing check, which tests visited addresses against Google's lists of dangerous sites, kept those lists locally as a Bloom filter. In 2011 its engineers added an exact compressed structure they called a prefix set. On their data it used less memory than the Bloom filter and gave no false matches at that stage, and they ran the two side by side, comparing results, while they switched ([Chromium code review](https://codereview.chromium.org/6286072)).
 
 ## What it is
 
@@ -69,9 +69,9 @@ A Bloom filter is a bit array with several hash functions. Adding an item sets t
 
 ## Resources
 
-1. Burton H. Bloom, ["Space/Time Trade-offs in Hash Coding with Allowable Errors"](https://dl.acm.org/doi/10.1145/362686.362692), *Communications of the ACM* (1970) (start here: short, and the motive is on the first page). <!-- verify -->
+1. Burton H. Bloom, ["Space/Time Trade-offs in Hash Coding with Allowable Errors"](https://dl.acm.org/doi/10.1145/362686.362692), *Communications of the ACM* (1970) (start here: short, and the motive is on the first page).
 2. Chang et al., ["Bigtable: A Distributed Storage System for Structured Data"](https://research.google/pubs/bigtable-a-distributed-storage-system-for-structured-data/) (2006) (go deeper: a filter in a production storage system).
-3. RocksDB, ["RocksDB Bloom Filter"](https://github.com/facebook/rocksdb/wiki/RocksDB-Bloom-Filter) (reference: sizing and the practical trade-offs). <!-- verify -->
+3. RocksDB, ["RocksDB Bloom Filter"](https://github.com/meta/rocksdb/wiki/RocksDB-Bloom-Filter) (reference: sizing and the practical trade-offs).
 
 ## Names you'll hear
 

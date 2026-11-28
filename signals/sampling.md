@@ -69,8 +69,8 @@ Sampling measures a continuous signal at regular intervals; quantisation rounds 
 
 ## Resources
 
-1. Monty Montgomery, ["Digital Show & Tell"](https://xiph.org/video/vid2.shtml) (2013) (start here: a video that demonstrates sampling, quantisation and aliasing on real equipment). <!-- verify -->
-2. Steven W. Smith, [*The Scientist and Engineer's Guide to Digital Signal Processing*](https://www.dspguide.com/) (go deeper: free online, and written for practical people). <!-- verify -->
+1. Monty Montgomery, ["Digital Show & Tell"](https://xiph.org/video/vid2.shtml) (2013) (start here: a video that demonstrates sampling, quantisation and aliasing on real equipment).
+2. Steven W. Smith, [*The Scientist and Engineer's Guide to Digital Signal Processing*](https://www.dspguide.com/) (go deeper: free online, and written for practical people).
 3. Hans Dieter Lüke, "The Origins of the Sampling Theorem", *IEEE Communications Magazine* (1999) (reference: who found what, and when).
 
 ## Names you'll hear

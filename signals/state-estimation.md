@@ -67,7 +67,7 @@ State estimation infers quantities you can't measure directly, such as position,
 
 ## Resources
 
-1. Tim Babb, ["How a Kalman filter works, in pictures"](https://www.bzarg.com/p/how-a-kalman-filter-works-in-pictures/) (2015) (start here: the whole idea, with diagrams and almost no prerequisites). <!-- verify -->
+1. Tim Babb, ["How a Kalman filter works, in pictures"](https://www.bzarg.com/p/how-a-kalman-filter-works-in-pictures/) (2015) (start here: the whole idea, with diagrams and almost no prerequisites).
 2. Sebastian Thrun, Wolfram Burgard and Dieter Fox, *Probabilistic Robotics* (2005) (go deeper: estimation, mapping and planning, all under uncertainty).
 3. Rudolf Kálmán, "A New Approach to Linear Filtering and Prediction Problems" (1960) (reference).
 

@@ -51,7 +51,7 @@ What these share is a question about shape, not speed: when the input gets ten t
 
 Ruairí is fictional; his two mistakes are among the most common in software. The notation for describing how a function grows, *O(n)*, "order n", was introduced by the number theorists Paul Bachmann in 1894 and Edmund Landau soon after. Donald Knuth brought it into computing and, in 1976, set out the related notations for lower and tight bounds that computer scientists still use.
 
-In 2021 a player who wrote under the name t0st got tired of waiting six minutes for the online mode of *Grand Theft Auto V* to load, and traced where the time went. The game read a 10-megabyte file of about 63,000 store items. The way it parsed the file re-measured the length of the whole remaining text for every item it read, and each item was checked for duplicates by comparing it with every item already stored. Both grew with the square of the number of items. Fixing just those two things cut the loading time by about 70% ([t0st, "How I cut GTA Online loading times by 70%"](https://nee.lv/2021/02/28/How-I-cut-GTA-Online-loading-times-by-70/) <!-- verify -->). Nelson Elhage collected dozens of real cases like it in a blog called *Accidentally Quadratic*.
+In 2021 a player who wrote under the name t0st got tired of waiting six minutes for the online mode of *Grand Theft Auto V* to load, and traced where the time went. The game read a 10-megabyte file of about 63,000 store items. The way it parsed the file re-measured the length of the whole remaining text for every item it read, and each item was checked for duplicates by comparing it with every item already stored. Both grew with the square of the number of items. Fixing just those two things cut the loading time by about 70% ([t0st, "How I cut GTA Online loading times by 70%"](https://nee.lv/2021/02/28/How-I-cut-GTA-Online-loading-times-by-70/)). Nelson Elhage collected dozens of real cases like it in a blog called *Accidentally Quadratic*.
 
 ## What it is
 
@@ -74,9 +74,9 @@ Growth, or asymptotic complexity, describes how the cost of an algorithm (time, 
 
 ## Resources
 
-1. [VisuAlgo](https://visualgo.net/en) (start here: watch how the number of steps changes as you make the input bigger). <!-- verify -->
+1. [VisuAlgo](https://visualgo.net/en) (start here: watch how the number of steps changes as you make the input bigger).
 2. Steven Skiena, *The Algorithm Design Manual*, chapter 2, on algorithm analysis (go deeper: practical, with war stories).
-3. Nelson Elhage, [*Accidentally Quadratic*](https://accidentallyquadratic.tumblr.com/) (reference: real quadratic bugs in real software). <!-- verify -->
+3. Nelson Elhage, [*Accidentally Quadratic*](https://accidentallyquadratic.tumblr.com/) (reference: real quadratic bugs in real software).
 
 ## Names you'll hear
 

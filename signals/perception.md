@@ -42,9 +42,9 @@ Motif: [every representation has an edge](../motifs.md#every-representation-has-
 
 ## It really happened
 
-Zainab is fictional; the mistake was everywhere. In 2010 a page by Eric Brasseur drew wide attention by showing that many popular programs, including image editors and web browsers, scaled images without accounting for gamma, and darkened them ([Brasseur, "Gamma error in picture scaling"](http://www.ericbrasseur.org/gamma.html) <!-- verify -->). Gamma began as a property of cathode-ray-tube screens, whose brightness didn't rise in step with their input voltage. It survived the end of those screens because the curve also roughly matched human perception, which made it an efficient way to store images. The web's standard colour space, sRGB, was proposed by Hewlett-Packard and Microsoft in 1996 and standardised in 1999 ([W3C's copy of the proposal](https://www.w3.org/Graphics/Color/sRGB.html)).
+Zainab is fictional; the mistake was everywhere. In 2010 a page by Eric Brasseur drew wide attention by showing that many popular programs, including image editors and web browsers, scaled images without accounting for gamma, and darkened them ([Brasseur, "Gamma error in picture scaling"](http://www.ericbrasseur.org/gamma.html)). Gamma began as a property of cathode-ray-tube screens, whose brightness didn't rise in step with their input voltage. It survived the end of those screens because the curve also roughly matched human perception, which made it an efficient way to store images. The web's standard colour space, sRGB, was proposed by Hewlett-Packard and Microsoft in 1996 and standardised in 1999 ([W3C's copy of the proposal](https://www.w3.org/Graphics/Color/sRGB.html)).
 
-Colour itself is defined by people. The CIE 1931 colour space was built from experiments in which observers matched colours by eye, and every colour standard since rests on it. And the model of a person can be narrow. For decades Kodak's colour film was calibrated against "Shirley cards", reference photos of a woman whose skin was used to set the colour balance in photo labs. Until the 1970s the model was always white, and film reproduced darker skin poorly. The communications researcher Lorna Roth has documented how that changed ([NPR](https://www.npr.org/transcripts/363517842) <!-- verify -->). In February 2015 a photograph of a dress divided millions of people over whether it was blue and black or white and gold, a reminder that colour is something the brain constructs, not something the numbers contain.
+Colour itself is defined by people. The CIE 1931 colour space was built from experiments in which observers matched colours by eye, and every colour standard since rests on it. And the model of a person can be narrow. For decades Kodak's colour film was calibrated against "Shirley cards", reference photos of a woman whose skin was used to set the colour balance in photo labs. Until the 1970s the model was always white, and film reproduced darker skin poorly. The communications researcher Lorna Roth has documented how that changed ([NPR](https://www.npr.org/transcripts/363517842)). In February 2015 a photograph of a dress divided millions of people over whether it was blue and black or white and gold, a reminder that colour is something the brain constructs, not something the numbers contain.
 
 ## What it is
 
@@ -67,8 +67,8 @@ Formats for images, video and sound encode values according to human perception,
 
 ## Resources
 
-1. Eric Brasseur, ["Gamma error in picture scaling"](http://www.ericbrasseur.org/gamma.html) (start here: the striped-image test, and how to check your own software). <!-- verify -->
-2. Charles Poynton, ["Gamma FAQ"](https://poynton.ca/GammaFAQ.html) (go deeper: why gamma exists, from someone who helped standardise video). <!-- verify -->
+1. Eric Brasseur, ["Gamma error in picture scaling"](http://www.ericbrasseur.org/gamma.html) (start here: the striped-image test, and how to check your own software).
+2. Charles Poynton, ["Gamma FAQ"](https://www.poynton.ca/pdf/GammaFAQ.pdf) (go deeper: why gamma exists, from someone who helped standardise video).
 3. Michael Stokes and others, ["A Standard Default Color Space for the Internet: sRGB"](https://www.w3.org/Graphics/Color/sRGB.html) (1996) (reference).
 
 ## Names you'll hear

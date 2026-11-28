@@ -42,7 +42,7 @@ What the rows share is that a repeat can't be prevented, only recognised. Give e
 
 ## It really happened
 
-Valeria is fictional, and so is her app. Idempotency keys are standard in payments. In 2017 Stripe described how its API accepts an `Idempotency-Key` header on every request that changes something: the first request with a key does the work, and a retry with the same key gets the saved result. Its own client libraries retry automatically with a key, with increasing delays and randomness ([Stripe, "Designing robust and predictable APIs with idempotency"](https://stripe.com/blog/idempotency)). Amazon's guide to timeouts and retries makes the same point from the other side: APIs with side effects aren't safe to retry unless they provide idempotency, and some, such as the call that starts EC2 instances, take a client token for exactly that reason ([Amazon Builders' Library, "Timeouts, retries, and backoff with jitter"](https://aws.amazon.com/builders-library/timeouts-retries-and-backoff-with-jitter/) <!-- verify -->).
+Valeria is fictional, and so is her app. Idempotency keys are standard in payments. In 2017 Stripe described how its API accepts an `Idempotency-Key` header on every request that changes something: the first request with a key does the work, and a retry with the same key gets the saved result. Its own client libraries retry automatically with a key, with increasing delays and randomness ([Stripe, "Designing robust and predictable APIs with idempotency"](https://stripe.com/blog/idempotency)). Amazon's guide to timeouts and retries makes the same point from the other side: APIs with side effects aren't safe to retry unless they provide idempotency, and some, such as the call that starts EC2 instances, take a client token for exactly that reason ([Amazon Builders' Library, "Timeouts, retries, and backoff with jitter"](https://aws.amazon.com/builders-library/timeouts-retries-and-backoff-with-jitter/)).
 
 The idea is older than payments APIs. HTTP has always distinguished methods that are meant to be safe to repeat, such as GET, PUT and DELETE, from POST, which isn't; the current definition is in [RFC 9110](https://www.rfc-editor.org/rfc/rfc9110#name-idempotent-methods), section 9.2.2. The word itself comes from mathematics, where an idempotent function gives the same result applied once or many times.
 
@@ -69,7 +69,7 @@ An operation is idempotent if performing it more than once has the same effect a
 ## Resources
 
 1. Stripe, ["Designing robust and predictable APIs with idempotency"](https://stripe.com/blog/idempotency) (2017) (start here: keys, retries and backoff together).
-2. Brandur Leach, ["Implementing Stripe-like Idempotency Keys in Postgres"](https://brandur.org/idempotency-keys) (go deeper: storing keys and results atomically, step by step). <!-- verify -->
+2. Brandur Leach, ["Implementing Stripe-like Idempotency Keys in Postgres"](https://brandur.org/idempotency-keys) (go deeper: storing keys and results atomically, step by step).
 3. Pat Helland, "Idempotence Is Not a Medical Condition", *ACM Queue* (2012) (reference: why messages are repeated, and what to do about it).
 
 ## Names you'll hear

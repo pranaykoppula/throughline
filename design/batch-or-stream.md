@@ -72,7 +72,7 @@ The distinction between when an event happened and when it's processed was set o
 
 ## Resources
 
-1. Tyler Akidau, ["Streaming 101"](https://www.oreilly.com/radar/the-world-beyond-batch-streaming-101/) (2015) (start here: event time, processing time and windows, with pictures). <!-- verify -->
+1. Tyler Akidau, ["Streaming 101"](https://www.oreilly.com/radar/the-world-beyond-batch-streaming-101/) (2015) (start here: event time, processing time and windows, with pictures).
 2. Jay Kreps, ["Questioning the Lambda Architecture"](https://www.oreilly.com/radar/questioning-the-lambda-architecture/) (2014) (short: one pipeline or two).
 3. Martin Kleppmann, *Designing Data-Intensive Applications*, chapters 10 and 11 (go deeper: batch and stream processing side by side).
 4. Akidau et al., ["The Dataflow Model"](https://www.vldb.org/pvldb/vol8/p1792-Akidau.pdf) (2015) (reference).

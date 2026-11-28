@@ -52,7 +52,7 @@ What these share is a question that changes as the collection grows: first *wher
 
 ## It really happened
 
-Agnes is fictional; the methods arrived roughly when she met them. Hans Peter Luhn at IBM worked on automatic indexing in the 1950s, including keyword-in-context indexes, and Gerard Salton's SMART system at Cornell in the 1960s established much of how documents are represented for retrieval. In 1972 Karen Spärck Jones published "A statistical interpretation of term specificity and its application in retrieval" in the *Journal of Documentation*. It introduced what became known as inverse document frequency: weight a word by how few documents contain it. Combined with term frequency, as tf-idf, it was the basis of most text ranking for decades ([Robertson, on the history of idf](https://www.staff.city.ac.uk/~sbrp622/idf.html) <!-- verify -->).
+Agnes is fictional; the methods arrived roughly when she met them. Hans Peter Luhn at IBM worked on automatic indexing in the 1950s, including keyword-in-context indexes, and Gerard Salton's SMART system at Cornell in the 1960s established much of how documents are represented for retrieval. In 1972 Karen Spärck Jones published "A statistical interpretation of term specificity and its application in retrieval" in the *Journal of Documentation*. It introduced what became known as inverse document frequency: weight a word by how few documents contain it. Combined with term frequency, as tf-idf, it was the basis of most text ranking for decades ([Robertson, on the history of idf](https://www.staff.city.ac.uk/~sbrp622/idf.html)).
 
 On the web, matching words wasn't enough, because anyone could stuff a page with them. In 1998 Sergey Brin and Larry Page described ranking pages partly by the links pointing to them, which became Google. The open-source Lucene library, which Doug Cutting started in 1999, put inverted indexes and tf-idf ranking into a form any developer could use, and it still sits inside Elasticsearch and many other search systems.
 
@@ -78,9 +78,9 @@ Search has two parts: retrieval, finding the items that match, and ranking, orde
 
 ## Resources
 
-1. Christopher Manning, Prabhakar Raghavan and Hinrich Schütze, [*Introduction to Information Retrieval*](https://nlp.stanford.edu/IR-book/) (2008) (start here: free online, and chapters 1 and 6 cover this page). <!-- verify -->
+1. Christopher Manning, Prabhakar Raghavan and Hinrich Schütze, [*Introduction to Information Retrieval*](https://nlp.stanford.edu/IR-book/) (2008) (start here: free online, and chapters 1 and 6 cover this page).
 2. Karen Spärck Jones, "A statistical interpretation of term specificity and its application in retrieval", *Journal of Documentation* (1972) (go deeper: short, and the origin of idf).
-3. The [Apache Lucene](https://lucene.apache.org/) documentation (reference: a real inverted index and ranking engine). <!-- verify -->
+3. The [Apache Lucene](https://lucene.apache.org/) documentation (reference: a real inverted index and ranking engine).
 
 ## Names you'll hear
 

@@ -56,4 +56,4 @@ Structures hold data; these are the main ways of working out an answer from it.
 
 1. Steven Skiena, *The Algorithm Design Manual* (start here: the second half is a catalogue of problems and which structures and algorithms fit them).
 2. Robert Sedgewick and Kevin Wayne, *Algorithms*, 4th edition, with free lectures and code from the book's site (go deeper).
-3. [VisuAlgo](https://visualgo.net/en) (reference: animations of most of the structures above). <!-- verify -->
+3. [VisuAlgo](https://visualgo.net/en) (reference: animations of most of the structures above).
